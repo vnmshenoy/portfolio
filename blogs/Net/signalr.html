@@ -17,8 +17,8 @@
         <meta name="keywords" content="">
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
         <!-- Bootstrap and Font Awesome css -->
-        <link href="css/font-awesome.css" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <style>
             .pfont {
                 font-family: 'Roboto';
@@ -29,20 +29,23 @@
     <body>
         <!-- *** NAVBAR ***
 _________________________________________________________ -->
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Manjunath Shenoy</a>
-                </div>
-                <!--  <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                    </ul>
-                -->
+          <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand scrollTo" href="#intro">Manjunath Shenoyr</a>
             </div>
-        </nav>
+
+          
+            <!--/.nav-collapse -->
+
+        </div>
+    </div>
 
         <div class="container">
             <h3>Signal R</h3>
@@ -74,8 +77,8 @@ _________________________________________________________ -->
 
                         Consider there is a User called Bob and he types in www.abc.com/shoes on the browser. The request goes to the Server and the Server processes the request and returns all the shoes on their website. Bob sees all the shoes he wanted to see. Now he decides to see all clothes on abc website and therefore enters  www.abc.com/clothes and this time Server shows all results of  clothes to Bob. Bob is happy 😊.
                     </p>
-                    <img src="img/signalr/img1.PNG" alt="requesting for shoes"/>
-                    <img src="img/signalr/img2.PNG" alt="requesting for clothes"/>   
+                    <img src="../../img/signalr/img1.PNG" alt="requesting for shoes"/>
+                    <img src="../../img/signalr/img2.PNG" alt="requesting for clothes"/>   
                     <p><br>
                         Now as you may be aware HTTP calls  are stateless. What that means is that Server doesn’t know that it was the same User Bob who made a request to Display all Clothes and Shoes in the store .As far as Server is concerned, it just got the request from the Client and it responded by serving it. If we need the server to remember the Client, then we either need to use HTTP Cookies, maintain Server Side Sessions,hidden variable,URL-rewritring etc. Going to depth of these is out of scope of this blog. 
                         Now If you go back to eg of Bob, it was Bob/Client who was requesting the  Server for details everytime and not the other way around.
@@ -92,31 +95,31 @@ _________________________________________________________ -->
         <!-- #### JAVASCRIPT FILES ### -->
 
         <!-- js base -->
-        <script src="js/jquery-1.11.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="../../js/jquery-1.11.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
 
         <!-- for demo purpose -->
-        <script src="js/jquery.cookie.js"></script>
+        <script src="../../js/jquery.cookie.js"></script>
 
         <!-- waypoints for scroll spy -->
-        <script src="js/waypoints.min.js"></script>
+        <script src="../../js/waypoints.min.js"></script>
 
 
         <!-- masonry layout -->
-        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="../../js/masonry.pkgd.min.js"></script>
 
         <!-- owl carousel -->
-        <script src="js/owl.carousel.min.js"></script>
+        <script src="../../js/owl.carousel.min.js"></script>
 
 
         <!-- jQuery scroll to -->
-        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="../../js/jquery.scrollTo.min.js"></script>
 
         <!-- jQuery counter -->
-        <script src="js/jquery.counterup.min.js"></script>
+        <script src="../../js/jquery.counterup.min.js"></script>
 
         <!-- jQuery parallax -->
-        <script src="js/jquery.parallax-1.1.3.js"></script>
+        <script src="../../js/jquery.parallax-1.1.3.js"></script>
     </body>
 
 </html>
