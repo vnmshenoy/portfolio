@@ -1,13 +1,13 @@
-    <!DOCTYPE html>
-    <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <html class="no-js">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
     <!--<![endif]-->
 
     <head>
-     <meta charset="utf-8">
+        <meta charset="utf-8">
         <meta name="robots" content="all,follow">
         <meta name="googlebot" content="index,follow,snippet,archive">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,90 +15,81 @@
         <title>Manjunath Shenoy</title>
 
         <meta name="keywords" content="">
-
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
-
         <!-- Bootstrap and Font Awesome css -->
         <link href="css/font-awesome.css" rel="stylesheet">
         <link href="css/bootstrap.min.css" rel="stylesheet">
-
-
         <style>
-    .pfont {
-        font-family: 'Roboto';
-        font-size: 16px;
-    }
-   
-    </style>
+            .pfont {
+                font-family: 'Roboto';
+                font-size: 16px;
+            }
+        </style>
     </head>
-
     <body>
+        <!-- *** NAVBAR ***
+_________________________________________________________ -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Manjunath Shenoy</a>
+                </div>
+                <!--  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                    </ul>
+                -->
+            </div>
+        </nav>
 
-     
-         <!-- *** NAVBAR ***
-    _________________________________________________________ -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Manjunath Shenoy</a>
-    </div>
-  <!--  <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>-->
-  </div>
-</nav>
-  
-<div class="container">
-  <h3>Signal R</h3>
-    
-    <div class="row">
-          <div class="col-sm-9">
-          <p class=" text-left">In this blog am going to take you through step by step process to create a ChatApplication. You guys might have come across many applications where you can join a chat room and then send messages to different people in that room. We will do the same using SignalR package. In the process of doing it we will also learn how the SignalR works.Though this blog is mainly focused on learning SignalR, it will be beneficial to know the basics.</p>
-              Basics Required
-          <ul>
-              <li>C# programming or any other programming language</li>
-              <li>Familiarity with Visual Studio 2017</li>
-         </ul>  
-          What we will achieve at the end of this blog
-          <ul>
-                <li>What is SignalR </li>
-                <li>How to install it</li>
-                <li>Issues I faced while installing and how to fix them</li>
-                <li>Step by step approach to create a Chat application using Visual Studio which mimics room chat(multiple users can chat)</li>
-                <li>Complete source code is shared on Git </li>
-                <li>A quick 2 min demo video   </li>      
-                <li>Step by step approach to create a Chat application using Visual Studio which mimics room chat(multiple users can chat)</li>
-          </ul>
-          <p>
-    So What is SignalR
+        <div class="container">
+            <h3>Signal R</h3>
+            <div class="row">
+                <div class="col-sm-9">
+                    <p class=" text-left">In this blog am going to take you through step by step process to create a ChatApplication. You guys might have come across many applications where you can join a chat room and then send messages to different people in that room. We will do the same using SignalR package. In the process of doing it we will also learn how the SignalR works.Though this blog is mainly focused on learning SignalR, it will be beneficial to know the basics.</p>
+                    Basics Required
+                    <ul>
+                        <li>C# programming or any other programming language</li>
+                        <li>Familiarity with Visual Studio 2017</li>
+                    </ul>  
+                    What we will achieve at the end of this blog
+                    <ul>
+                        <li>What is SignalR </li>
+                        <li>How to install it</li>
+                        <li>Issues I faced while installing and how to fix them</li>
+                        <li>Step by step approach to create a Chat application using Visual Studio which mimics room chat(multiple users can chat)</li>
+                        <li>Complete source code is shared on Git </li>
+                        <li>A quick 2 min demo video   </li>      
+                        <li>Step by step approach to create a Chat application using Visual Studio which mimics room chat(multiple users can chat)</li>
+                    </ul>
+                    <p>
+                        So What is SignalR
 
-    Ever wondered how chat applications work? How do people chat with each other (either in a group or a private chat with one person). You might be aware of client server architecture and you may get  that this approach won’t work in chat room applications. So, lets take a step back and understand what is client server architecture and how it is different from chat applications
+                        Ever wondered how chat applications work? How do people chat with each other (either in a group or a private chat with one person). You might be aware of client server architecture and you may get  that this approach won’t work in chat room applications. So, lets take a step back and understand what is client server architecture and how it is different from chat applications
 
-    In Client Server architecture, Client i.e the Browser(Chrome, Internet Explorer etc) makes a request for a particular Resource on the Web. Let’s take an eg to understand better.
-    Suppose there is a shopping website which sells “Shoes” and “Clothes”.  Lets also assume that www.abc.com/shoes is the endpoint for shoes and in in www.abc.com/clothes  is the endpoint for clothes
+                        In Client Server architecture, Client i.e the Browser(Chrome, Internet Explorer etc) makes a request for a particular Resource on the Web. Let’s take an eg to understand better.
+                        Suppose there is a shopping website which sells “Shoes” and “Clothes”.  Lets also assume that www.abc.com/shoes is the endpoint for shoes and in in www.abc.com/clothes  is the endpoint for clothes
 
-    Consider there is a User called Bob and he types in www.abc.com/shoes on the browser. The request goes to the Server and the Server processes the request and returns all the shoes on their website. Bob sees all the shoes he wanted to see. Now he decides to see all clothes on abc website and therefore enters  www.abc.com/clothes and this time Server shows all results of  clothes to Bob. Bob is happy 😊.
-          </p>
-    <img src="img/signalr/img1.PNG" alt="requesting for shoes"/>
-    <img src="img/signalr/img2.PNG" alt="requesting for clothes"/>      
-        <p>
-        Now as you may be aware HTTP calls  are stateless. What that means is that Server doesn’t know that it was the same User Bob who made a request to Display all Clothes and Shoes in the store .As far as Server is concerned, it just got the request from the Client and it responded by serving it. If we need the server to remember the Client, then we either need to use HTTP Cookies, maintain Server Side Sessions,hidden variable,URL-rewritring etc. Going to depth of these is out of scope of this blog. 
-        Now If you go back to eg of Bob, it was Bob/Client who was requesting the  Server for details everytime and not the other way around.
+                        Consider there is a User called Bob and he types in www.abc.com/shoes on the browser. The request goes to the Server and the Server processes the request and returns all the shoes on their website. Bob sees all the shoes he wanted to see. Now he decides to see all clothes on abc website and therefore enters  www.abc.com/clothes and this time Server shows all results of  clothes to Bob. Bob is happy 😊.
+                    </p>
+                    <img src="img/signalr/img1.PNG" alt="requesting for shoes"/>
+                    <img src="img/signalr/img2.PNG" alt="requesting for clothes"/>   
+                    <p><br>
+                        Now as you may be aware HTTP calls  are stateless. What that means is that Server doesn’t know that it was the same User Bob who made a request to Display all Clothes and Shoes in the store .As far as Server is concerned, it just got the request from the Client and it responded by serving it. If we need the server to remember the Client, then we either need to use HTTP Cookies, maintain Server Side Sessions,hidden variable,URL-rewritring etc. Going to depth of these is out of scope of this blog. 
+                        Now If you go back to eg of Bob, it was Bob/Client who was requesting the  Server for details everytime and not the other way around.
 
-        If you wait a second and absorb above details and give a thought about it,you can find that above approach is not a efficient way to develop any chat applications.This is where Push Architecture comes into picture. What it means is that the moment server receives any message, it pushes the message to all the clients connected to it.
-        </p>
-      </div>
-    </div>
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
-</div>
+                        If you wait a second and absorb above details and give a thought about it,you can find that above approach is not a efficient way to develop any chat applications.This is where Push Architecture comes into picture. What it means is that the moment server receives any message, it pushes the message to all the clients connected to it.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-        
+
         <!-- /#navbar -->
-       
-     <!-- #### JAVASCRIPT FILES ### -->
+
+        <!-- #### JAVASCRIPT FILES ### -->
 
         <!-- js base -->
         <script src="js/jquery-1.11.0.min.js"></script>
@@ -128,4 +119,4 @@
         <script src="js/jquery.parallax-1.1.3.js"></script>
     </body>
 
-    </html>
+</html>
