@@ -4,179 +4,245 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js">
-<!--<![endif]-->
+    <!--<![endif]-->
 
-<head>
+    <head>
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-2264462236439566",
-            enable_page_level_ads: true
-        });
-    </script>
-    <meta charset="utf-8">
-    <meta name="robots" content="all,follow">
-    <meta name="googlebot" content="index,follow,snippet,archive">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-2264462236439566",
+                enable_page_level_ads: true
+            });
+        </script>
+        <meta charset="utf-8">
+        <meta name="robots" content="all,follow">
+        <meta name="googlebot" content="index,follow,snippet,archive">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Manjunath Shenoy</title>
+        <title>Manjunath Shenoy</title>
 
-    <meta name="keywords" content="">
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
-    <!-- Bootstrap and Font Awesome css -->
-    <link href="../../css/font-awesome.css" rel="stylesheet">
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
-    <!-- Theme stylesheet -->
-    <link href="../../css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+        <meta name="keywords" content="">
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap and Font Awesome css -->
+        <link href="../../css/font-awesome.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <!-- Theme stylesheet -->
+        <link href="../../css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
-    <!-- Custom stylesheet - for your changes -->
-    <link href="../../css/custom.css" rel="stylesheet">
-    <style>
-        .pfont {
-            font-family: 'Roboto';
-            font-size: 16px;
-        }
-    </style>
-</head>
+        <!-- Custom stylesheet - for your changes -->
+        <link href="../../css/custom.css" rel="stylesheet">
+        <style>
+            .pfont {
+                font-family: 'Roboto';
+                font-size: 16px;
+            }
+        </style>
+    </head>
 
-<body>
-    <!-- *** NAVBAR ***
+    <body>
+        <!-- *** NAVBAR ***
 _________________________________________________________ -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand scrollTo" href="../../index.html">Manjunath Shenoyr</a>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand scrollTo" href="../../index.html">Manjunath Shenoyr</a>
+                </div>
+
+
+                <!--/.nav-collapse -->
+
             </div>
-
-
-            <!--/.nav-collapse -->
-
         </div>
-    </div>
 
-    <div class="container" style="margin-top:5%;">
-        <h3>Signal R</h3>
-        <div class="row">
-            <div class="col-sm-9">
-                <p class=" text-left">In this blog am going to take you through step by step process to create a ChatApplication. You guys might have come across many applications where you can join a chat room and then send messages to different people in that room. We will do the same using SignalR package. In the process of doing it we will also learn how the SignalR works.Though this blog is mainly focused on learning SignalR, it will be beneficial to know the basics.</p>
-                Basics Required
-                <ul>
-                    <li>C# programming or any other programming language</li>
-                    <li>Familiarity with Visual Studio 2017</li>
-                </ul>
-                What we will achieve at the end of this blog
-                <ul>
-                    <li>What is SignalR </li>
-                    <li>How to install it</li>
-                    <li>Issues I faced while installing and how to fix them</li>
-                    <li>Step by step approach to create a Chat application using Visual Studio which mimics room chat(multiple users can chat)</li>
-                    <li>Complete source code is shared on Git </li>
-                    <li>A quick 2 min demo video </li>
-                    <li>Step by step approach to create a Chat application using Visual Studio which mimics room chat(multiple users can chat)</li>
-                </ul>
-                <p>
-                    So What is SignalR Ever wondered how chat applications work? How do people chat with each other (either in a group or a private chat with one person). You might be aware of client server architecture and you may get that this approach won’t work in chat room applications. So, lets take a step back and understand what is client server architecture and how it is different from chat applications In Client Server architecture, Client i.e the Browser(Chrome, Internet Explorer etc) makes a request for a particular Resource on the Web. Let’s take an eg to understand better. Suppose there is a shopping website which sells “Shoes” and “Clothes”. Lets also assume that www.abc.com/shoes is the endpoint for shoes and in in www.abc.com/clothes is the endpoint for clothes Consider there is a User called Bob and he types in www.abc.com/shoes on the browser. The request goes to the Server and the Server processes the request and returns all the shoes on their website. Bob sees all the shoes he wanted to see. Now he decides to see all clothes on abc website and therefore enters www.abc.com/clothes and this time Server shows all results of clothes to Bob. Bob is happy 😊.
-                </p>
-                <img src="../../img/signalr/img1.PNG" alt="requesting for shoes" />
-                <img src="../../img/signalr/img2.PNG" alt="requesting for clothes" />
-                <p><br> Now as you may be aware HTTP calls are stateless. What that means is that Server doesn’t know that it was the same User Bob who made a request to Display all Clothes and Shoes in the store .As far as Server is concerned, it just got the request from the Client and it responded by serving it. If we need the server to remember the Client, then we either need to use HTTP Cookies, maintain Server Side Sessions,hidden variable,URL-rewritring etc. Going to depth of these is out of scope of this blog. Now If you go back to eg of Bob, it was Bob/Client who was requesting the Server for details everytime and not the other way around. If you wait a second and absorb above details and give a thought about it,you can find that above approach is not a efficient way to develop any chat applications.In any chat applications,2 users (private chat) or more Users(group chat) are connected to each other and they chat. Each of the User involved in the chat , expect to see the other person’s message instantly. It’s not like User will keep on hitting (refresh/f5) to see whether the other guy part of the chat typed any message etc.This is where Push Architecture comes into picture. Push architecture means that it is the server who pushes the message to the clients (registered)/browser . So In the case of chat application, the moment user types a message, the message goes to the server and the server then broadcasts the message to all the clients. SignalR Library helps us do exactly above
-                </p>
+        <div class="container" style="margin-top:5%;">
+            <h3>Signal R</h3>
+            <div class="row">
+                <div class="col-sm-9">
+                    <p class=" text-left">In this blog am going to take you through step by step process to create a ChatApplication. You guys might have come across many applications where you can join a chat room and then send messages to different people in that room. We will do the same using SignalR package. In the process of doing it we will also learn how the SignalR works.Though this blog is mainly focused on learning SignalR, it will be beneficial to know the basics.</p>
+                    Basics Required
+                    <ul>
+                        <li>C# programming or any other programming language</li>
+                        <li>Familiarity with Visual Studio 2017</li>
+                    </ul>
+                    What we will achieve at the end of this blog
+                    <ul>
+                        <li>What is SignalR </li>
+                        <li>How to install it</li>
+                        <li>Issues I faced while installing and how to fix them</li>
+                        <li>Step by step approach to create a Chat application using Visual Studio which mimics room chat(multiple users can chat)</li>
+                        <li>Complete source code is shared on Git </li>
+                        <li>A quick 2 min demo video </li>
+                        <li>Step by step approach to create a Chat application using Visual Studio which mimics room chat(multiple users can chat)</li>
+                    </ul>
+                    <p>
+                        So What is SignalR Ever wondered how chat applications work? How do people chat with each other (either in a group or a private chat with one person). You might be aware of client server architecture and you may get that this approach won’t work in chat room applications. So, lets take a step back and understand what is client server architecture and how it is different from chat applications In Client Server architecture, Client i.e the Browser(Chrome, Internet Explorer etc) makes a request for a particular Resource on the Web. Let’s take an eg to understand better. Suppose there is a shopping website which sells “Shoes” and “Clothes”. Lets also assume that www.abc.com/shoes is the endpoint for shoes and in in www.abc.com/clothes is the endpoint for clothes Consider there is a User called Bob and he types in www.abc.com/shoes on the browser. The request goes to the Server and the Server processes the request and returns all the shoes on their website. Bob sees all the shoes he wanted to see. Now he decides to see all clothes on abc website and therefore enters www.abc.com/clothes and this time Server shows all results of clothes to Bob. Bob is happy 😊.
+                    </p>
+                    <img src="../../img/signalr/img1.PNG" alt="requesting for shoes" />
+                    <img src="../../img/signalr/img2.PNG" alt="requesting for clothes" />
+                    <p><br> Now as you may be aware HTTP calls are stateless. What that means is that Server doesn’t know that it was the same User Bob who made a request to Display all Clothes and Shoes in the store .As far as Server is concerned, it just got the request from the Client and it responded by serving it. If we need the server to remember the Client, then we either need to use HTTP Cookies, maintain Server Side Sessions,hidden variable,URL-rewritring etc. Going to depth of these is out of scope of this blog. Now If you go back to eg of Bob, it was Bob/Client who was requesting the Server for details everytime and not the other way around. If you wait a second and absorb above details and give a thought about it,you can find that above approach is not a efficient way to develop any chat applications.In any chat applications,2 users (private chat) or more Users(group chat) are connected to each other and they chat. Each of the User involved in the chat , expect to see the other person’s message instantly. It’s not like User will keep on hitting (refresh/f5) to see whether the other guy part of the chat typed any message etc.This is where Push Architecture comes into picture. Push architecture means that it is the server who pushes the message to the clients (registered)/browser . So In the case of chat application, the moment user types a message, the message goes to the server and the server then broadcasts the message to all the clients. SignalR Library helps us do exactly above
+                    </p>
 
-                <h3> So Here comes SignalR....</h3>
-                <ul>
-                    <li>
-                        It is a ASP.NET Library</li>
-                    <li>Helps in adding real time web functionality to applications</li>
-                    <li> Now in my eg above, I considered a chat application. But our use case is just not limited to chat application. Actually any application where user has to keep on refreshing is a candidate for SignalR. Eg, dashboards, sports websites which shows live scores etc
+                    <h3> So Here comes SignalR....</h3>
+                    <ul>
+                        <li>
+                            It is a ASP.NET Library</li>
+                        <li>Helps in adding real time web functionality to applications</li>
+                        <li> Now in my eg above, I considered a chat application. But our use case is just not limited to chat application. Actually any application where user has to keep on refreshing is a candidate for SignalR. Eg, dashboards, sports websites which shows live scores etc
                         <li> Server pushes data to the client</li>
                         <li> Has wrapper functions which makes developers life easy </li>
                         <li> Abstracts from the different techniques to implement push data</li>
-                </ul>
+                    </ul>
 
-                <h3> SignalR- Connection Management</h3>
-                <ul>
-                    <li>Manages Connections automatically </li>
-                    <li> Broadcasts messages to the connected clients simultaneously </li>
-                    <li> Can send messages to specific client</li>
-                    <li> Connection between Client and Server is persistent, unlike HTTP connections which are stateless</li>
-                </ul>
-                <p>
-                    In order to understand better, Lets take an eg. Lets assume User 1,User 2,User 3 and User 4 are all connected to a chat room .Now say User 2 types a message. Server receives it and send it all the other 3 clients simultaneously. The same is depicted in the diagram.( signalR1)
-                </p>
+                    <h3> SignalR- Connection Management</h3>
+                    <ul>
+                        <li>Manages Connections automatically </li>
+                        <li> Broadcasts messages to the connected clients simultaneously </li>
+                        <li> Can send messages to specific client</li>
+                        <li> Connection between Client and Server is persistent, unlike HTTP connections which are stateless</li>
+                    </ul>
+                    <p>
+                        In order to understand better, Lets take an eg. Lets assume User 1,User 2,User 3 and User 4 are all connected to a chat room .Now say User 2 types a message. Server receives it and send it all the other 3 clients simultaneously. The same is depicted in the diagram.( signalR1)
+                    </p>
 
-                <img src="../../img/signalr/signalR1.jpg" alt="signal r " />
-                <p>
-                    Now when I said "Push",there are various varieties of "Push" .Eg are Periodic Polling, Long Polling,ForeverFrame,SSE(Server Sent Events) ,Web Sockets In this blog, am showing the Hubs programming modal though Persistent Connections model is also available but is less popular.
-                </p>
+                    <img src="../../img/signalr/signalR1.jpg" alt="signal r " />
+                    <p>
+                        Now when I said "Push",there are various varieties of "Push" .Eg are Periodic Polling, Long Polling,ForeverFrame,SSE(Server Sent Events) ,Web Sockets In this blog, am showing the Hubs programming modal though Persistent Connections model is also available but is less popular.
+                    </p>
 
-                <h3> What are Hubs....</h3>
+                    <h3> What are Hubs....</h3>
 
-                <ul>
+                    <ul>
 
-                    <li>Hubs are classes to implement push services in SignalR</li>
-                    <li>Abstraction on top of Persistent Connection programming methodology</li>
-                    <li>Provide a higher level Remote Procedure Call framework(What is RPC…we will see in next section)</li>
-                    <li>Perfect for different types of messages to send between Server and client</li>
-                    <li> No need to take care of Serialization/Deserialization etc</li>
-                    <li> Clients property allows to access all clients connected to hub</li>
-                    <li>Can Return simple type (eg int,string,long etc) or complex type (objects of complex type) or Task
-                        <ul>
-                            <li>Complex objects and arrays of objects are automatically serialized/deserialized to/from JSON</li>
-                            <li> Communication between Hub on the server side and Client/Browser is JSON</li>
+                        <li>Hubs are classes to implement push services in SignalR</li>
+                        <li>Abstraction on top of Persistent Connection programming methodology</li>
+                        <li>Provide a higher level Remote Procedure Call framework(What is RPC…we will see in next section)</li>
+                        <li>Perfect for different types of messages to send between Server and client</li>
+                        <li> No need to take care of Serialization/Deserialization etc</li>
+                        <li> Clients property allows to access all clients connected to hub</li>
+                        <li>Can Return simple type (eg int,string,long etc) or complex type (objects of complex type) or Task
+                            <ul>
+                                <li>Complex objects and arrays of objects are automatically serialized/deserialized to/from JSON</li>
+                                <li> Communication between Hub on the server side and Client/Browser is JSON</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>RPC- What is Remote procedure call?</h3>
+                    <p>Above, I briefly mentioned about RPC.RPC is a distributed computing methodology. RPC is a concept which enables a computer program to execute a method or a piece of program located even in another computer on a network.
+                        In the Object oriented world, there is equivalent to it called Remote Method Invocation (RMI). For eg Java has JavaRMI.SignalR  enables us to perform server to client RPCs by providing wrapper functions through APIs which abstracts the complexity of performing RPCs. i.e Server which run .NET core code  can call Javascript functions running on the client’s browser.</p>
+
+                    <p>
+                        Lets do a small egample to get a better handle of the same. I have shared the whole source code in the git repository. The git URL is <a href="https://github.com/manjusa/sportschatroom.git">Source Code Link</a>
+                        Above source code is to create a ChatRoom for Sports. People based on the interest,can join any room they wish to and chat with people of common interest.Below are the steps to create this application. It incldues all steps i followed,right from scratch to create the project. I have also included a section called "common errors" and fixes to the errorsmay come handy if you come across same issues.
+                    </p>
+
+
+                    <h3> Steps:</h3>
+                    <ol>
+                        <li>Create a ASP.Net application <br> <img style="width:100%;height:100%" src="../../img/signalr/step1.png"/>
+                        </li><br>
+                        <li>Choose The Application type- I select “Empty”. Give Name “SportsChatRoom”<br> <img style="width:100%;height:100%" src="../../img/signalr/step2.png"/>
+                        </li><br>
+                        <li>When above project is created, you wont have references for SignalR.Below is the screenshot of my references and as you can see there is no "SignalR" or related libraries
+                            <br> <img style="width:100%;height:100%" src="../../img/signalr/step2a.png"/>
+                        </li><br>
+                        <li><ul><li>Now lets add Hub class (MainHub.cs).So right click the project and Click on “Add”
+                            <br>  <img style="width:100%;height:100%" src="../../img/signalr/step4.png"/></li><br>
+                            <li>Under “Web” choose “SignalR”.Call the "Hub" class as "MainHub.cs". MainHub gets all the features by extending  Hub  class from "Microsoft.AspNet.SignalR.Hub" class
+                                <br> <img style="width:100%;height:100%" src="../../img/signalr/step4a.png"/></li><br>
+                            <li>Doing above will create references for signal r library and all references related to Owin
+                                <br> <img style="width:100%;height:100%" src="../../img/signalr/step4b.png"/></li><br>
+                            <li>It also downloads "signalR javascript" and since signalR javascript depends on jquery, it also downloads "jQuery" javascript
+                                <br> <img style="width:100%;height:100%" src="../../img/signalr/step4c.png"/></li> <br>                      
+                            </ul>
+                        </li>
+                        <li>If you want to install the SignalR from Nuget,you can run below command.(Ignore the below command if you have followed above steps and if you see all references related to SignalR (including scripts) and Owin included in your project already)
+                            Install-package Microsoft.Aspnet.SignalR
+                        </li><br>
+                        <li>SingalR servers can be self-hosted, for which it uses self-host library which is built on OWIN. OWIN stands for Open Web Interface for .Net. Every Owin Application has a Startup class where you can register services and inject modules in HTTP pipeline. Now there are quite a few number of ways to bind the startup class with the runtime environment. Below , various approaches are depicted in a diagram
+                            <br> <img style="width:100%;height:100%" src="../../img/signalr/step6.png"/>
+                        </li><br>
+                        <li>In the startup class, ensure that you have "app.MapSignalR()" line of code.This single line of code does the setup required for SignalR to work correctly
+                        </li><br>
+                        <li>Create the startup page</li>
+                        <ul>  <li>Create "Index.html" and add it as a “start page”.
+                            </li><br>
+                            <li>Add “jQuery”,”signalR” and “signalr/hubs” javascript to the index.html’s header.
+                            </li><br>
+                            <li>I also added “bootstrap.js”. Though bootstrap has nothing to do with signalR, I added it just to create a simple User Interface quickly.Below is how my index html's header looks like
+                                <br> <img style="width:100%;height:100%" src="../../img/signalr/step8.png"/></li> <br>   
                         </ul>
-                    </li>
-                </ul>
-                
-                <h3>RPC- What is Remote procedure call?</h3>
-                <p>Above, I briefly mentioned about RPC.RPC is a distributed computing methodology. RPC is a concept which enables a computer program to execute a method or a piece of program located even in another computer on a network.
-                In the Object oriented world, there is equivalent to it called Remote Method Invocation (RMI). For eg Java has JavaRMI.SignalR  enables us to perform server to client RPCs by providing wrapper functions through APIs which abstracts the complexity of performing RPCs. i.e Server which run .NET core code  can call Javascript functions running on the client’s browser.</p>
-                
-                <p>
-                Lets do a small egample to get a better handle of the same. I have shared the whole source code in the git repository
-                
-                </p>
+                        <li>Once your SignalR application starts successfully,to verify if configuration and everything is related to signalr is done right, go to Chrome Dev tools (F12 on Chrome) and look for sources. If everything is correct, then you will see a "signalr" folder and a javascript file "hubs" downloaded automatically. 
+                            <br> <img style="width:100%;height:100%" src="../../img/signalr/step8.png"/>                       
+                    </ol>
+
+                    <h3> Common Errors Faced and Solutions:</h3>
+                    <ol>
+                        <li>Issue 1: Incase you have "Global.asax.cs" file and you get below error
+                            <br> <img style="width:100%;height:100%" src="../../img/signalr/issue1.png"/>
+                            Solution to above problem is simple.Ensure that you follow these steps
+                            <ul>                                
+                                <li>In the global application class, remove the call to MapHubs.</li>
+                                <li>Right-click the solution, and select Add, New Item.... In the dialog, select Owin Startup Class. Name the new class Startup.cs (Incase you dont have one)</li>
+                                <li>Replace the contents of Startup.cs with the following code
+                                <br> <img style="width:100%;height:100%" src="../../img/signalr/sol1.PNG"/>                                
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>Issue 2: Incase you get an error which says SignalR is not loaded like below
+                            <br> <img style="width:100%;height:100%" src="../../img/signalr/issue2.png"/>
+                            Solution to above problem is simple.Ensure that you follow these steps
+                            <ul>                                
+                                <li>In the HTML file where you have included SignalR,(in this case "index.html"), ensure that signalr javascript is loaded after jquery javascript. Correct order as shown in diagram below is
+                                    First, jquery-x.x.x.js, then you should have jquery.signalR-x.x.x.js and then you should have /signalr/hubs. This order is important for the page to load properly
+                                <br> <img style="width:100%;height:100%" src="../../img/signalr/step8.png"/>    
+                                </li> 
+                            </ul>
+                        </li>                       
+                    </ol>
+                </div>
             </div>
         </div>
-    </div>
 
 
-    <!-- /#navbar -->
+        <!-- /#navbar -->
 
-    <!-- #### JAVASCRIPT FILES ### -->
+        <!-- #### JAVASCRIPT FILES ### -->
 
-    <!-- js base -->
-    <script src="../../js/jquery-1.11.0.min.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
+        <!-- js base -->
+        <script src="../../js/jquery-1.11.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
 
-    <!-- for demo purpose -->
-    <script src="../../js/jquery.cookie.js"></script>
+        <!-- for demo purpose -->
+        <script src="../../js/jquery.cookie.js"></script>
 
-    <!-- waypoints for scroll spy -->
-    <script src="../../js/waypoints.min.js"></script>
-
-
-    <!-- masonry layout -->
-    <script src="../../js/masonry.pkgd.min.js"></script>
-
-    <!-- owl carousel -->
-    <script src="../../js/owl.carousel.min.js"></script>
+        <!-- waypoints for scroll spy -->
+        <script src="../../js/waypoints.min.js"></script>
 
 
-    <!-- jQuery scroll to -->
-    <script src="../../js/jquery.scrollTo.min.js"></script>
+        <!-- masonry layout -->
+        <script src="../../js/masonry.pkgd.min.js"></script>
 
-    <!-- jQuery counter -->
-    <script src="../../js/jquery.counterup.min.js"></script>
+        <!-- owl carousel -->
+        <script src="../../js/owl.carousel.min.js"></script>
 
-    <!-- jQuery parallax -->
-    <script src="../../js/jquery.parallax-1.1.3.js"></script>
-</body>
+
+        <!-- jQuery scroll to -->
+        <script src="../../js/jquery.scrollTo.min.js"></script>
+
+        <!-- jQuery counter -->
+        <script src="../../js/jquery.counterup.min.js"></script>
+
+        <!-- jQuery parallax -->
+        <script src="../../js/jquery.parallax-1.1.3.js"></script>
+    </body>
 
 </html>
