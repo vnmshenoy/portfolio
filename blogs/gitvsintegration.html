@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+    <!--<![endif]-->
+
+    <head>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-2264462236439566",
+                enable_page_level_ads: true
+            });
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-131742548-1');
+        </script>
+
+        <meta charset="utf-8">
+        <meta name="robots" content="all,follow">
+        <meta name="googlebot" content="index,follow,snippet,archive">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Manjunath Shenoy</title>
+
+        <meta name="keywords" content="">
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap and Font Awesome css -->
+        <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome CSS-->
+        <link rel="stylesheet" href="../../vendor/font-awesome/css/font-awesome.min.css">   
+        <link rel="stylesheet" href="../../css/style.default.css">
+    </head>
+
+    <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=365426597524008&autoLogAppEvents=1';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- *** NAVBAR ***
+_________________________________________________________ -->
+        <header class="header">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container"><a href="../../index.html" class="navbar-brand scrollTo">Manjunath Shenoy</a>
+                    <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
+                    <div id="navbarcollapse" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a href="#intro" class="nav-link link-scroll">All Blogs</a></li>             
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- /#navbar -->
+
+        <br>
+        <section class="about-section">
+            <div class="container">
+                <h3>Using Visual Studio 2017 with GIT</h3>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <p class=" text-left">In this blog am going to take you through step by step process to integrate VS 2017 with GIT repository.I will also let you know how to create a git repository etc</p>
+                        Software Used:
+                        <ul>
+                            <li>Visual Studio 20l7</li>
+                        </ul>
+                        What we will achieve at the end of this blog
+                        <ul>
+                            <li>Creating GIT Repository</li>
+                            <li>Using GIT in VS2017</li>
+                            <li>Creating a dummy project and staging,commiting the changes</li>
+                            <li>Pusing the changes to the repository</li>  
+                            <li>Common errors faced and fixes</li>  
+                        </ul>
+                        <ul>
+                            <li>Create a folder in you local machine where you will do the development.I created a folder named "GITVSDemo" in C:\ drive</li>
+                            <li>Loginto you git hub account(https://github.com/) . Create an accouunt if you dont have one</li>
+                            <li>After successfully logging into the github account, Create a repostiory by clicking on "New Repository" button.Also,give name of the repo. (eg gitvsintdemo) <br>
+                                <img style="width:100%;height:100%" src="../img/gitvsintegration/1createNewRepo.png" alt="create repo" />
+
+                            <li>Ensure above that you create the repo with a "readme" file.This will ensure that a file is created when you create the repo itself</li>
+                            <li>Now,once the git repository is created, just check the url of the repo.You can click the "clone" button and get the URL of the repo like shown below <br>
+                                <img style="width:100%;height:100%" src="../img/gitvsintegration/2urlOfRepo.png" alt="url repo" />
+                            </li>
+                            <li>Now,lets open IDE i.e VS2017 (or the version you have installed).We will also create a project and integrate it with GIT.The source code of the project will be checked into the git repository we created above<li>
+                            <li>Click on Team Explorer and then click on Home/Offline and click on settings <br>
+                                <img style="width:100%;height:100%" src="../img/gitvsintegration/3clickOnTeamExplorer.png" alt="url repo" />
+                            </li>
+                            <br>
+                            <li>Now click on Settings-→Offline and Manage Connections<br>
+                                <img style="width:70%;height:50%" src="../img/gitvsintegration/4homeOfflineSettings.png" alt="url repo" />
+                            </li>
+                            <li>Open command prompt on windows and go to the dev folder("GITVSDemo" in C:\ drive) and type in "git status" <br>
+                                <img style="width:100%;height:100%" src="../img/gitvsintegration/6NotAGitRepo.png" alt="url repo" />
+                                <br>
+                                Doing above,confirms that it is still not a git repository
+                            </li>
+                            <li>Now back to VS, and Click on "clone"<br>
+                                <img style="width:100%;height:100%" src="../img/gitvsintegration/7CloneRepo.png" alt="url repo" />
+                            </li>
+                            <li>Cloning will create a .git folder in the dev folder("GITVSDemo" in C:\ drive).Also,  "git status" will confirm that this folder is now tracked by git repo <br>
+                                <img style="width:100%;height:100%" src="../img/gitvsintegration/8ClonedRepo.png" alt="url repo" />
+                            </li>
+                            <li>Cloning will create a .git folder in the dev folder("GITVSDemo" in C:\ drive).Also,  "git status" will confirm that this folder is now tracked by git repo <br>
+                                <img style="width:100%;height:100%" src="../img/gitvsintegration/8ClonedRepo.png" alt="url repo" />
+                            </li>
+                            <li>Cloning will create a .git folder in the dev folder("GITVSDemo" in C:\ drive).Also,  "git status" will confirm that this folder is now tracked by git repo <br>
+                                <img style="width:100%;height:100%" src="../img/gitvsintegration/8ClonedRepo.png" alt="url repo" />
+                            </li>
+
+                        </ul>
+
+                        <h3> SignalR- Connection Management</h3>
+                        <ul>
+                            <li>Manages Connections automatically </li>
+                            <li> Broadcasts messages to the connected clients simultaneously </li>
+                            <li> Can send messages to specific client</li>
+                            <li> Connection between Client and Server is persistent, unlike HTTP connections which are stateless</li>
+                        </ul>
+                        <p>
+                            In order to understand better, Lets take an eg. Lets assume User 1,User 2,User 3 and User 4 are all connected to a chat room .Now say User 2 types a message. Server receives it and send it all the other 3 clients simultaneously. The same is depicted in the diagram.( signalR1)
+                        </p>
+
+                        <img src="../../img/signalr/signalR1.jpg" alt="signal r " />
+                        <p>
+                            Now when I said "Push",there are various varieties of "Push" .Eg are Periodic Polling, Long Polling,ForeverFrame,SSE(Server Sent Events) ,Web Sockets In this blog, am showing the Hubs programming modal though Persistent Connections model is also available but is less popular.
+                        </p>
+
+                        <h3> What are Hubs....</h3>
+
+                        <ul>
+
+                            <li>Hubs are classes to implement push services in SignalR</li>
+                            <li>Abstraction on top of Persistent Connection programming methodology</li>
+                            <li>Provide a higher level Remote Procedure Call framework(What is RPC…we will see in next section)</li>
+                            <li>Perfect for different types of messages to send between Server and client</li>
+                            <li> No need to take care of Serialization/Deserialization etc</li>
+                            <li> Clients property allows to access all clients connected to hub</li>
+                            <li>Can Return simple type (eg int,string,long etc) or complex type (objects of complex type) or Task
+                                <ul>
+                                    <li>Complex objects and arrays of objects are automatically serialized/deserialized to/from JSON</li>
+                                    <li> Communication between Hub on the server side and Client/Browser is JSON</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3>RPC- What is Remote procedure call?</h3>
+                        <p>Above, I briefly mentioned about RPC.RPC is a distributed computing methodology. RPC is a concept which enables a computer program to execute a method or a piece of program located even in another computer on a network.
+                            In the Object oriented world, there is equivalent to it called Remote Method Invocation (RMI). For eg Java has JavaRMI.SignalR  enables us to perform server to client RPCs by providing wrapper functions through APIs which abstracts the complexity of performing RPCs. i.e Server which run .NET core code  can call Javascript functions running on the client’s browser.</p>
+
+                        <p>
+                            Lets do a small egample to get a better handle of the same. I have shared the whole source code in the git repository. The git URL is <a href="https://github.com/manjusa/sportschatroom.git">Source Code Link</a>
+                            Above source code is to create a ChatRoom for Sports. People based on the interest,can join any room they wish to and chat with people of common interest.Below are the steps to create this application. It incldues all steps i followed,right from scratch to create the project. I have also included a section called "common errors" and fixes to the errorsmay come handy if you come across same issues.
+                        </p>
+
+
+                        <h3> Steps:</h3>
+                        <ol>
+                            <li>Create a ASP.Net application <br> <img style="width:100%;height:100%" src="../../img/signalr/step1.png"/>
+                            </li><br>
+                            <li>Choose The Application type- I select “Empty”. Give Name “SportsChatRoom”<br> <img style="width:100%;height:100%" src="../../img/signalr/step2.png"/>
+                            </li><br>
+                            <li>When above project is created, you wont have references for SignalR.Below is the screenshot of my references and as you can see there is no "SignalR" or related libraries
+                                <br> <img style="width:100%;height:100%" src="../../img/signalr/step2a.png"/>
+                            </li><br>
+                            <li><ul><li>Now lets add Hub class (MainHub.cs).So right click the project and Click on “Add”
+                                <br>  <img style="width:100%;height:100%" src="../../img/signalr/step4.png"/></li><br>
+                                <li>Under “Web” choose “SignalR”.Call the "Hub" class as "MainHub.cs". MainHub gets all the features by extending  Hub  class from "Microsoft.AspNet.SignalR.Hub" class
+                                    <br> <img style="width:100%;height:100%" src="../../img/signalr/step4a.png"/></li><br>
+                                <li>Doing above will create references for signal r library and all references related to Owin
+                                    <br> <img style="width:100%;height:100%" src="../../img/signalr/step4b.png"/></li><br>
+                                <li>It also downloads "signalR javascript" and since signalR javascript depends on jquery, it also downloads "jQuery" javascript
+                                    <br> <img style="width:100%;height:100%" src="../../img/signalr/step4c.png"/></li> <br>                      
+                                </ul>
+                            </li>
+                            <li>If you want to install the SignalR from Nuget,you can run below command.(Ignore the below command if you have followed above steps and if you see all references related to SignalR (including scripts) and Owin included in your project already)
+                                Install-package Microsoft.Aspnet.SignalR
+                            </li><br>
+                            <li>SingalR servers can be self-hosted, for which it uses self-host library which is built on OWIN. OWIN stands for Open Web Interface for .Net. Every Owin Application has a Startup class where you can register services and inject modules in HTTP pipeline. Now there are quite a few number of ways to bind the startup class with the runtime environment. Below , various approaches are depicted in a diagram
+                                <br> <img style="width:100%;height:100%" src="../../img/signalr/step6.png"/>
+                            </li><br>
+                            <li>In the startup class, ensure that you have "app.MapSignalR()" line of code.This single line of code does the setup required for SignalR to work correctly
+                            </li><br>
+                            <li>Create the startup page</li>
+                            <ul>  <li>Create "Index.html" and add it as a “start page”.
+                                </li><br>
+                                <li>Add “jQuery”,”signalR” and “signalr/hubs” javascript to the index.html’s header.
+                                </li><br>
+                                <li>I also added “bootstrap.js”. Though bootstrap has nothing to do with signalR, I added it just to create a simple User Interface quickly.Below is how my index html's header looks like
+                                    <br> <img style="width:100%;height:100%" src="../../img/signalr/step8.PNG"/></li> <br>   
+                            </ul>
+                            <li>Once your SignalR application starts successfully,to verify if configuration and everything is related to signalr is done right, go to Chrome Dev tools (F12 on Chrome) and look for sources. If everything is correct, then you will see a "signalr" folder and a javascript file "hubs" downloaded automatically. 
+                                <br> <img style="width:100%;height:100%" src="../../img/signalr/step9.PNG"/>                       
+                        </ol>
+
+                        <h3> Common Errors Faced and Solutions:</h3>
+                        <ol>
+                            <li>Issue 1: Incase you have "Global.asax.cs" file and you get below error
+                                <br> <img style="width:100%;height:100%" src="../../img/signalr/issue1.png"/>
+                                Solution to above problem is simple.Ensure that you follow these steps
+                                <ul>                                
+                                    <li>In the global application class, remove the call to MapHubs.</li>
+                                    <li>Right-click the solution, and select Add, New Item.... In the dialog, select Owin Startup Class. Name the new class Startup.cs (Incase you dont have one)</li>
+                                    <li>Replace the contents of Startup.cs with the following code
+                                        <br> <img style="width:100%;height:100%" src="../../img/signalr/sol1.PNG"/>                                
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>Issue 2: Incase you get an error which says SignalR is not loaded like below
+                                <br> <img style="width:100%;height:100%" src="../../img/signalr/issue2.png"/>
+                                Solution to above problem is simple.Ensure that you follow these steps
+                                <ul>                                
+                                    <li>In the HTML file where you have included SignalR,(in this case "index.html"), ensure that signalr javascript is loaded after jquery javascript. Correct order as shown in diagram below is
+                                        First, jquery-x.x.x.js, then you should have jquery.signalR-x.x.x.js and then you should have /signalr/hubs. This order is important for the page to load properly
+                                        <br> <img style="width:100%;height:100%" src="../../img/signalr/step8.PNG"/>    
+                                    </li> 
+                                </ul>
+                            </li>                       
+                        </ol>
+                        <h4>
+                            <a href="https://github.com/manjusa/sportschatroom.git">Source Code For this app</a></h4>
+                        <br>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <h4>Lets see a quick demo of the app</h4>
+                            <p>
+                                <a href="https://youtu.be/F9i2sd0uiXw">Demo link</a> is shared below.In the video, I use <b>"Chrome"</b> and <b>"Firefox"</b> just to mimic 2 different users since I have hosted my application locally.(You can also test on one browser by launching them in incognito mode).In real time, it can be any number of users using any browser.</p>
+                            <p>Lets understand the scenario.Assume, there are 2 people(lets call them Bob and Tim ) decide to chat on cricket and join a chat room.</p>
+                            <p>1)Bob,the first User,goes to the website using Firefox and clicks on "Cricket Chat Room" and then enters the name in the popup prompted and click on "Join Room".</p>
+                            <p>2)James,the other User does the same above using Chrome.</p>
+                            <p> After joining room successfully,both of them can share any number of messages in the room .In the demo, you can see that when a user types in message the other gets the message instantly.If 
+                                any other person joins the room, he too can see and send the messages like these 2 people.This whole scenario is demonstrated in the video.</p>
+
+                            <h4>
+                                <a href="https://youtu.be/F9i2sd0uiXw">Link to the demo</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h4>Did you like the blog or have questions, please add your comments</h4>
+                <div class="fb-comments" data-href="http://manjunathshenoy.com/blogs/Net/signalr.html" data-numposts="1"></div>
+            </div>
+        </section>
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-lg-left">
+                        <p class="social"><a href="http://www.facebook.com/shenoyvnm
+                            " class="external facebook wow fadeInUp"><i class="fa fa-facebook"></i></a>
+                            <a style="background-color:grey;" href="http://www.linkedin.com/in/manjunathshenoywebdev" class="external linkedin wow fadeInUp"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                    <!-- /.6-->
+                    <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+                        <p>© 2018 Manjunath Shenoy. All rights reserved.</p>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <p class="template-bootstrapious">Designed by <a href="https://www.bootstrapious.com">Bootstrapious</a>
+                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+        <!-- /#navbar -->
+
+        <!-- JavaScript files-->
+        <script src="../../vendor/jquery/jquery.min.js"></script>
+        <script src="../../vendor/popper.js/umd/popper.min.js"> </script>
+        <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../vendor/jquery.cookie/jquery.cookie.js"> </script>
+        <script src="../../vendor/owl.carousel/owl.carousel.min.js"></script>
+        <script src="../../vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+        <script src="../../vendor/jquery.counterup/jquery.counterup.js"></script>
+        <script src="../../js/front.js"></script>
+    </body>
+
+</html>
