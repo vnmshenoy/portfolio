@@ -89,49 +89,49 @@ _________________________________________________________ -->
                             <li>Create a folder in you local machine where you will do the development.I created a folder named "GITVSDemo" in C:\ drive</li>
                             <li>Loginto you git hub account(https://github.com/) . Create an accouunt if you dont have one</li>
                             <li>After successfully logging into the github account, Create a repostiory by clicking on "New Repository" button.Also,give name of the repo. (eg gitvsintdemo) <br>
-                                <img style="width:100%;height:100%" src="../img/gitvsintegration/1createNewRepo.png" alt="create repo" />
+                                <img style="width:100%;height:100%" src="../../img/gitvsintegration/1createNewRepo.png" alt="create repo" />
 
                             <li>Ensure above that you create the repo with a "readme" file.This will ensure that a file is created when you create the repo itself</li>
                             <li>Now,once the git repository is created, just check the url of the repo.You can click the "clone" button and get the URL of the repo like shown below <br>
-                                <img style="width:100%;height:100%" src="../img/gitvsintegration/2urlOfRepo.png" alt="url repo" />
+                                <img style="width:100%;height:100%" src="../../img/gitvsintegration/2urlOfRepo.png" alt="url repo" />
                             </li>
                             <li>Now,lets open IDE i.e VS2017 (or the version you have installed).We will also create a project and integrate it with GIT.The source code of the project will be checked into the git repository we created above<li>
                             <li>Click on Team Explorer and then click on Home/Offline and click on settings <br>
-                                <img style="width:100%;height:100%" src="../img/gitvsintegration/3clickOnTeamExplorer.png" alt="url repo" />
+                                <img style="width:100%;height:100%" src="../../img/gitvsintegration/3clickOnTeamExplorer.png" alt="url repo" />
                             </li>
                             <br>
                             <li>Now click on Settings-→Offline and Manage Connections<br>
-                                <img style="width:70%;height:50%" src="../img/gitvsintegration/4homeOfflineSettings.png" alt="url repo" />
+                                <img style="width:70%;height:50%" src="../../img/gitvsintegration/4homeOfflineSettings.png" alt="url repo" />
                             </li>
                             <li>Open command prompt on windows and go to the dev folder("GITVSDemo" in C:\ drive) and type in "git status" <br>
-                                <img style="width:100%;height:100%" src="../img/gitvsintegration/6NotAGitRepo.png" alt="url repo" />
+                                <img style="width:100%;height:100%" src="../../img/gitvsintegration/6NotAGitRepo.png" alt="url repo" />
                                 <br>
                                 Doing above,confirms that it is still not a git repository
                             </li>
                             <li>Now back to VS, and Click on "clone"<br>
-                                <img style="width:100%;height:100%" src="../img/gitvsintegration/7CloneRepo.png" alt="url repo" />
+                                <img style="width:100%;height:100%" src="../../img/gitvsintegration/7CloneRepo.png" alt="url repo" />
                             </li>
                             <li>Cloning will create a .git folder in the dev folder("GITVSDemo" in C:\ drive).Also,  "git status" will confirm that this folder is now tracked by git repo <br>
-                                <img style="width:100%;height:100%" src="../img/gitvsintegration/8ClonedRepo.png" alt="url repo" />
+                                <img style="width:100%;height:100%" src="../../img/gitvsintegration/8ClonedRepo.png" alt="url repo" />
                             </li>
                             <li>Create a project in the development folder ("GITVSDemo") we created.I created a project named "Test1"<br>
                                 Type in "git status" again and you will see that "test1" needs to be added
-                                <img style="width:100%;height:100%" src="../img/gitvsintegration/9GitStatusAfterTest.png" alt="test project" />
+                                <img style="width:100%;height:100%" src="../../img/gitvsintegration/9GitStatusAfterTest.png" alt="test project" />
                             </li>
                             <li>Go to Home -→Settings → Repository Settings
                                 --> remote repositories -->Remote<br>
-                                <img style="width:100%;height:100%" src="../img/gitvsintegration/10remoteRepoSettings.png" alt="remote repo" />
+                                <img style="width:100%;height:100%" src="../../img/gitvsintegration/10remoteRepoSettings.png" alt="remote repo" />
                             </li>
                             <li>Ignore the files you dont want to commit. Eg  .vs folder,orobj/debug folder etc.Basically anything you dont want to be part of the commited code can be ignored by right clicking the folder and "ignore changes""<br>
-                                <img style="width:100%;height:100%" src="../img/gitvsintegration/11IgnoreLocalChanges.png" alt="ignore changes" />
+                                <img style="width:100%;height:100%" src="../../img/gitvsintegration/11IgnoreLocalChanges.png" alt="ignore changes" />
                             </li>
                             <li>"Stage" and "commit" the changes<br>
                                 <img style="width:100%;height:100%" src="../img/gitvsintegration/StageChanges.jpg" alt="StageChanges" /><br>
                                 Once changes are "staged" you will see them in the "stage changes section"
-                                <img style="width:100%;height:100%" src="../img/gitvsintegration/StagedChangesSection.JPG" alt="stage changes section" />
+                                <img style="width:100%;height:100%" src="../../img/gitvsintegration/StagedChangesSection.JPG" alt="stage changes section" />
                             </li>
                             <li>Once changes are staged and commited, "Push" to the repo<br>
-                                <img style="width:100%;height:100%" src="../img/gitvsintegration/12Push.png" alt="push to repo" />
+                                <img style="width:100%;height:100%" src="../../img/gitvsintegration/12Push.png" alt="push to repo" />
                             </li>
                         </ul>                        
                         <h3> Common Errors Faced and Solutions:</h3>
@@ -139,6 +139,17 @@ _________________________________________________________ -->
                             <li>Issue 1:  I was pushing the code to repository (in VS 2017), I was getting an error with error code 403</li>
                             Solution to above problem is simple.Ensure that you follow these steps
                             <li>The reason for the error was that earlier I was logged into github using another account and later I changed the github account. However VS never prompted for the change of github account because it stores the github user id and password in the registry.
+                            To fix the issue, go to start and click "run" and then type in the command
+                            "rundll32.exe keymgr.dll,KRShowKeyMgr"
+                                <br>
+                             <img style="width:100%;height:100%" src="../../img/gitvsintegration/run.jpg" alt="run" />
+                                <br>
+                            Running above command will open "Stored username and passwords" entry and remove the entry for github
+                            <img style="width:100%;height:100%" src="../../img/gitvsintegration/registryEntry.png" alt="registryEntry" />
+                                <br>
+                           Once you remove the entry,then try pushing the commited changes to the repo again then 
+                           you will see that github box to enter user id and password is prompted. <br>
+                            <img style="width:100%;height:100%" src="../../img/gitvsintegration/useridnpwd.png" alt="registryEntry" />
                             </li>
                         </ol>
                     </div>                    
