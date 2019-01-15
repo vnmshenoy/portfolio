@@ -20,6 +20,8 @@ $message = Swift_Message::newInstance('Test Subject')
     ->setBody("name is: " . $name . " \n enquiry is: " . $comment . "\n email " . $email. "\n phone number " . $phoneNumber);
 
 $result = $mailer->send($message);    
-
+echo '<h4>Thanks for your message. I will get back to you soon</h4><br>
+        <a href="/index.html">Go Back to Home Page</a>
+      ';
 
 ?> 
