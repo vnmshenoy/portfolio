@@ -6,13 +6,13 @@ $name ='';
 $email ='';
 $phoneNumber ='';
 $comment='';
-$name=$_REQUEST['name'];
-$comment = $_REQUEST['comment'];
-$email = $_REQUEST['email'];
-$phoneNumber = $_REQUEST['phone'];
+$name = preg_replace("/[^a-zA-Z]/", "", $_REQUEST['name']);
+$comment = preg_replace("/[^a-zA-Z]/", "", $_REQUEST['comment']);
+$email = preg_replace("/[^a-zA-Z]/", "", $_REQUEST['email']);
+$phoneNumber = preg_replace("/[^a-zA-Z]/", "", $_REQUEST['phone']);
 $transport = Swift_SmtpTransport::newInstance('smtp.ipage.com', 465, 'ssl')
     ->setUsername("vnmshenoy@manjunathshenoy.com")
-    ->setPassword("iPage#123");
+    ->setPassword("");
 $mailer = Swift_Mailer::newInstance($transport);
 $message = Swift_Message::newInstance('Test Subject')
     ->setFrom(array('vnmshenoy@manjunathshenoy.com' => 'You have a new enquiry'))
