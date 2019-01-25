@@ -1,6 +1,6 @@
 
 <?php
-
+/*
 require_once 'swiftmailer/lib/swift_required.php';
 $name ='';
 $email ='';
@@ -23,5 +23,23 @@ $result = $mailer->send($message);
 echo '<h4>Thanks for your message. I will get back to you soon</h4><br>
         <a href="/index.html">Go Back to Home Page</a>
       ';
+*/
 
-?> 
+$name ='';
+$email ='';
+$phoneNumber ='';
+$comment='';
+$name = preg_replace("/[^a-zA-Z]/", "", $_REQUEST['name']);
+$comment = preg_replace("/[^a-zA-Z]/", "", $_REQUEST['comment']);
+$email = preg_replace("/[^a-zA-Z]/", "", $_REQUEST['email']);
+$phoneNumber = preg_replace("/[^a-zA-Z]/", "", $_REQUEST['phone']);
+echo '<h4>Thanks for your message. I will get back to you soon</h4><br>
+        <a href="/index.html">Go Back to Home Page</a><br>
+      ';
+echo $name;
+$myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
+$txt = "name:".$name.",comment:". $comment.",email:".$email.",phoneNumber:".$phoneNumber."---------";
+fwrite($myfile,"\n". $txt);
+
+fclose($myfile);
+?>
