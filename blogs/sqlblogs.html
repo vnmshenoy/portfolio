@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Bootstrap and Font Awesome css -->
+        <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+        <!-- Bootstrap and Font Awesome css -->
+        <link rel="stylesheet" href="../css/style.default.css">
+        <link rel="stylesheet" href="../css/custom.css">   
+        <link rel="stylesheet" href="../css/custom.css">
+        <script>
+            function onload(){
+                $('#dashboardcontent').show();
+            }
+            function showDiv(a){
+                var id=$(a).attr("id");
+                $("[id$='content']").hide();
+                $('#'+id+"content").show();
+            }
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container"><a href="../index.html" class="navbar-brand scrollTo">Manjunath Shenoy</a>
+                    <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
+                    <div id="navbarcollapse" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a href="#intro" class="nav-link link-scroll">All Blogs</a></li>             
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="d-flex" style="position:relative;padding-top:6em" id="wrapper">
+
+            <!-- Sidebar -->
+            <div class="bg-light border-right" id="sidebar-wrapper">
+                <div class="list-group list-group-flush">
+                    <a id="dashboard" onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+                    <a id="shortcut"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+                    <a id="test"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+                    <a id="nice"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+                </div>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+
+                <div class="container-fluid">
+                    <div id="dashboardcontent" style="display:none;">
+                        <h1 class="mt-4">Simple Sidebar</h1>
+                        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+                    </div>
+                    <div id="shortcutcontent" style="display:none;">
+                        <h1 class="mt-4">Short Sidebar</h1>
+                        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+                    </div>
+                    <div id="testcontent" style="display:none;">
+                        <h1 class="mt-4">test Sidebar</h1>
+                        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+                    </div>
+                    <div id="nicecontent" style="display:none;">
+                        <h1 class="mt-4">nice Sidebar</h1>
+                        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+
+
+
+
+        <!-- JavaScript files-->
+        <script src="../vendor/jquery/jquery.min.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
