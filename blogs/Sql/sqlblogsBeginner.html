@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Bootstrap and Font Awesome css -->
+        <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+        <!-- Bootstrap and Font Awesome css -->
+        <link rel="stylesheet" href="../../css/style.default.css">
+        <link rel="stylesheet" href="../../css/custom.css">   
+        <link rel="stylesheet" href="../../css/custom.css">
+        <!-- JavaScript files-->
+        <script src="../../vendor/jquery/jquery.min.js"></script>
+        <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#databasesetupcontent').show();
+            });
+            var html='';
+            function showDiv(a){
+                var id=$(a).attr("id");
+                $("[id$='content']").hide();                
+                $('#'+id+"content").show();
+                var fileName="sqltxt/dashboardcontent.text";
+                $.get( "../sqltxt/dashboardcontent.txt",function( data ) {
+                    // console.log(data[id+'content']);
+                    alert("inside");
+                    html=$.parseHTML(data )
+                    $('#'+id+"content").html(html);
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container"><a href="../../index.html" class="navbar-brand scrollTo">Manjunath Shenoy</a>
+                    <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
+                    <div id="navbarcollapse" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blogs</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="/blogs/blogs.html">C# blogs</a>
+                                    <a class="dropdown-item" href="/blogs/sqlblogs.html">Sql Blogs</a>
+                                    <a class="dropdown-item" href="#">Travel Blogs</a>
+                                </div>
+                            </li>             
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="d-flex" style="position:relative;padding-top:6em" id="wrapper">
+
+            <!-- Sidebar -->
+            <div class="bg-light border-right" id="sidebar-wrapper">
+                <div class="list-group list-group-flush">
+                    <a id="dashboard" onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Installing Sql Server Management Studio</a>
+                    <a id="shortcut"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+                    <a id="test"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+                    <a id="nice"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+                </div>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div id="databasesetupcontent" style="display:none;">
+                        <h1 class="mt-4">Database Setup</h1>
+                        <p>Assuming that you have installed SQL Server Manamgent Studio(SSMS) from the official Microsoft Website, lets look at the steps to get you started</p>
+                        <ul>
+                            <li>Launch SQL Server Management Studio</li>
+                            <li>Used windows authentication and connected to the SQL Server Database Engine as shown below
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/1connectToDbEngine.PNG" alt="connect to db" />
+                            </li>
+                            <ul>Creating a new Database
+                                <li>Rt click on the "databases" and click on “New Database” as shown in  img below 
+                                    <img style="width:60%;height:40%" src="../../img/sqlforBeginners/2CreateAnewDB.PNG" alt="create new db" /> 
+                                </li>
+                                <li>Name the database whatever you want as shown in  img below.I named it "TestingDB"
+                                    <img style="width:60%;height:40%" src="../../img/sqlforBeginners/2aNameOfDB.PNG" alt="name db" /> 
+                                </li>
+                            </ul>
+                            <li>You can create a new query as shown in img below.Ensure that you select the database on left and then click on "New Query" to ensure that your query runs against the correct database <img style="width:60%;height:40%" src="../../img/sqlforBeginners/3aSelectOnNewQueryWithDBSelected.PNG" alt="select query" /> </li>
+                            <li>Lets create few tables and data and get the ball rolling.I have shared the model and the data scripts in the github project
+                                <a href="https://github.com/manjusa/SqlBeginners.git">Link to the github files which has model and data for db</a></li>
+                            <li>After you have downloaded the files,just create a new query and first run "model.sql" which would create the tables and then run "data.sql" which would insert dummy records into the database tables</li>
+                            <li>Above ensure that you have the correct name of the database on the first line </li>
+                            <li>After running above steps,you should see the content in the database</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-lg-left">
+                        <p class="social"><a href="facebook.com/shenoyvnm
+                            " class="external facebook wow fadeInUp"><i class="fa fa-facebook"></i></a>
+                            <a style="background-color:grey;" href="www.linkedin.com/in/manjunathshenoywebdev" class="external facebook wow fadeInUp"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                    <!-- /.6-->
+                    <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+                        <p>© 2018 Manjunath Shenoy. All rights reserved.</p>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <p class="template-bootstrapious">Designed by <a href="https://www.bootstrapious.com">Bootstrapious</a>
+                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
