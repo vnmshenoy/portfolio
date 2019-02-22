@@ -67,28 +67,42 @@
             <div id="page-content-wrapper" style="width:84% !important">
                 <div class="container-fluid">
                     <div id="ssmscontent" style="display:none;">    
-                        <h1 class="mt-4">Restore the Database</h1>
-                        <p>We created a backup file in the previous section. Using that file,we will try to restore the database. In real time, someone else can share the backup file with you and you can restore it in your SQL server.In order to restore the database,do the following</p>
+                        <h1 class="mt-4">Database Diagrams</h1>
+                        <p>Database Diagrams are a way to visualise a database model .When the model is small its quite easy to understand the relationship between the tables, however as the complexity grows and in the real world applications it becomes tough to see the relationship between the tables. Therefore, it is imperative to generate database diagrams as it can graphically show the structure of the database.</p>
+                        <p>With SSMS you can easily create database diagrams.Below are the steps you should follow to create database diagrams</p>
                         <ul>
                             <li>Login to the Server using steps we saw earlier(Use Windows authentication)</li>
-                            <li>Expand the server,and rt click on the "Databases" and select Restore Database
-                            as shown in image below
-                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/6Restore.PNG" alt="db restore" /> 
+                            <li>Expand the server and click on the database you want to generate diagrams for.
                             </li>
-                            <li>The Restore Database screen is very much similar to the Back Up Database screen.In "Source", you should select "Device". Selecting Device allows you to restore directly from a file                           
+                            <li>Expand the selected database and click on Database Diagrams
                             </li>
-                            <li>Click on Device and click on the three dots to the right as shown in  image
-                                 <img style="width:60%;height:40%" src="../../img/sqlforBeginners/7device.PNG" alt="db restore device" /> 
+                            <li>Rt click on the Database Diagrams and click on “New Diagram” as shown in image
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/9databaseDiag.PNG" alt="new db diagram" /> 
                             </li>
-                            <li>This will open up “Select Backup Devices”, click on “Add” and navigate to the backup file. In the last "Backup database" section, i saved my "backup.bak" in C$.
+                            <li>When you create the diagram for the first time, you may get popup screen asking to create support object required to create db diagrams as shown in the image
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/10FirstTime.PNG" alt="first time db diagram error" /> 
                             </li>
-                             <li>Once you have successfully given the back up file location,Click on OK. and then again Click on OK on "Select Backup devices".If all is good you will see as shown in image below 
-                             <img style="width:60%;height:40%" src="../../img/sqlforBeginners/8backuprestored.PNG" alt="db restored" /> </li>
-                             <li>Before Importing,you can go and have a look at the "Options" pane on the left.Under options,you will see configurations for restoring database such as "Overwrite the Existing Database" etc.You can select these options based on your need. In my case i will leave them unchecked and click on OK </li>
-                             <li>Once Restoration is done, SSMS will notify you through a prompt "Database [YourName] restored successfully" </li>
-                                                  
+                            <li>SSMS needs few system procedures and a table that are not created with the database. So just click on OK on the above popup and doing so will create following system procedures in your database.
+                                This happens because,initially if you look into the database system stored procedure (SP), you will only see SP with “sys” and no system tables.Below is the image how it looks before clickin on OK                                  
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/11anodboSPs.PNG" alt="sys schema only" />
+                                After you click OK on the error popup shown above(asking to create support objects), you will see one table is created in systables and few sps with <b>dbo</b> schema created as shown in image
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/11bafterok.PNG" alt="dbo schema only" />
+                            </li>
+                            <li>Again click on new database diagram. A new window will open and select all the tables (click “Add” button) you want to generate diagram for as shown in image
+                            <img style="width:60%;height:40%" src="../../img/sqlforBeginners/12AddTable.PNG" alt="add tables" />
+                            </li>
+                            <li>This will create a diagram with the tables columns, primary keys, and relationships that were read from the schema.Assume you selected only 2 tables then it will look like in the image                             
+                             <img style="width:60%;height:40%" src="../../img/sqlforBeginners/14DBTableDiagram.PNG" alt="add tables" />
+                            </li>
+                              <li>You can make it look smaller by selecting all tables using control A and right click and then doing “Autosize selected tables” as shown in below image
+                                   <img style="width:60%;height:40%" src="../../img/sqlforBeginners/15AutoSize.PNG" alt="before auto size tables" />
+                                  <br>
+                                  After autosizing, tables will look like below
+                                  <img style="width:60%;height:40%" src="../../img/sqlforBeginners/16MoreCompact.PNG" alt="after auto size tables" />
+                            </li>
+
                         </ul>
-                        
+
                         <p>Congratulations... :-) you have restored the database using a backup file </p>
                         <br>
                     </div>                            
