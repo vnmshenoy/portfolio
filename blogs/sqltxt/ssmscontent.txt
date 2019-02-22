@@ -1,0 +1,10 @@
+<h1 class="mt-4">SQL  Server Management Studio</h1>
+                        <p>You can download SQL Server Manamgent Studio(SSMS) from the official Microsoft Website. SSMS is a powerful tool and below are its benefits:</p>
+                        <ul>
+                            <li>First and foremost,most people dont like to remember commands,and this tool  provides a graphical interface to manage Sql Server</li>
+                            <li>Used for configuring, managing, and administering all components within Microsoft SQL Server</li>
+                            <li>You can open SSMS in Windows by clicking on "Search" and start typing in "Sql...",it should show the SSMS if its installed as shown in the image below
+                            <img style="width:60%;height:40%" src="../../img/sqlforBeginners/startSSMS.PNG" alt="open ssms" /> 
+                            </li>
+                        </ul>
+                        <br>

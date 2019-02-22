@@ -17,12 +17,10 @@
             var html='';
             function showDiv(a){
                 var id=$(a).attr("id");
-                $("[id$='content']").hide();                
+                $("[id$='content']").hide();              
                 $('#'+id+"content").show();
-                var fileName="sqltxt/dashboardcontent.text";
-                $.get( "../sqltxt/dashboardcontent.txt",function( data ) {
-                    // console.log(data[id+'content']);
-                    alert("inside");
+                var fileName=id+"content.txt";
+                $.get( "../sqltxt/"+fileName,function( data ) {
                     html=$.parseHTML(data )
                     $('#'+id+"content").html(html);
                 });
@@ -54,9 +52,10 @@
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="list-group list-group-flush">
-                    <a id="dashboard" onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Installing Sql Server Management Studio</a>
-                    <a id="shortcut"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-                    <a id="test"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+                    <a id="ssms" onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Sql Server Mgmt Studio</a>
+                    <a id="databasesetup" onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Database (DB) Setup</a>
+                    <a id="createbackup"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Back up DB</a>
+                    <a id="restoredatabase"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Restore DB</a>
                     <a id="nice"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Events</a>
                     <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
                     <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
@@ -67,29 +66,37 @@
             <!-- Page Content -->
             <div id="page-content-wrapper">
                 <div class="container-fluid">
-                    <div id="databasesetupcontent" style="display:none;">
-                        <h1 class="mt-4">Database Setup</h1>
-                        <p>Assuming that you have installed SQL Server Manamgent Studio(SSMS) from the official Microsoft Website, lets look at the steps to get you started</p>
+                    <div id="ssmscontent" style="display:none;">    
+                        <h1 class="mt-4">Restore the Database</h1>
+                        <p>We created a backup file in the previous section. Using that file,we will try to restore the database. In real time, someone else can share the backup file with you and you can restore it in your SQL server.In order to restore the database,do the following</p>
                         <ul>
-                            <li>Launch SQL Server Management Studio</li>
-                            <li>Used windows authentication and connected to the SQL Server Database Engine as shown below
-                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/1connectToDbEngine.PNG" alt="connect to db" />
+                            <li>Login to the Server using steps we saw earlier(Use Windows authentication)</li>
+                            <li>Expand the server,and rt click on the "Databases" and select Restore Database
+                            as shown in image below
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/6Restore.PNG" alt="db restore" /> 
                             </li>
-                            <ul>Creating a new Database
-                                <li>Rt click on the "databases" and click on “New Database” as shown in  img below 
-                                    <img style="width:60%;height:40%" src="../../img/sqlforBeginners/2CreateAnewDB.PNG" alt="create new db" /> 
-                                </li>
-                                <li>Name the database whatever you want as shown in  img below.I named it "TestingDB"
-                                    <img style="width:60%;height:40%" src="../../img/sqlforBeginners/2aNameOfDB.PNG" alt="name db" /> 
-                                </li>
-                            </ul>
-                            <li>You can create a new query as shown in img below.Ensure that you select the database on left and then click on "New Query" to ensure that your query runs against the correct database <img style="width:60%;height:40%" src="../../img/sqlforBeginners/3aSelectOnNewQueryWithDBSelected.PNG" alt="select query" /> </li>
-                            <li>Lets create few tables and data and get the ball rolling.I have shared the model and the data scripts in the github project
-                                <a href="https://github.com/manjusa/SqlBeginners.git">Link to the github files which has model and data for db</a></li>
-                            <li>After you have downloaded the files,just create a new query and first run "model.sql" which would create the tables and then run "data.sql" which would insert dummy records into the database tables</li>
-                            <li>Above ensure that you have the correct name of the database on the first line </li>
-                            <li>After running above steps,you should see the content in the database</li>
+                            <li>The Restore Database screen is very much similar to the Back Up Database screen.In "Source", you should select "Device". Selecting Device allows you to restore directly from a file                           
+                            </li>
+                            <li>Click on Device and click on the three dots to the right as shown in  image
+                                 <img style="width:60%;height:40%" src="../../img/sqlforBeginners/7device.PNG" alt="db restore device" /> 
+                            </li>
+                            <li>This will open up “Select Backup Devices”, click on “Add” and navigate to the backup file. In the last "Backup database" section, i saved my "backup.bak" in C$.
+                            </li>
+                             <li>Once you have successfully given the back up file location,Click on OK. and then again Click on OK on "Select Backup devices".If all is good you will see as shown in image below 
+                             <img style="width:60%;height:40%" src="../../img/sqlforBeginners/8backuprestored.PNG" alt="db restored" /> </li>
+                             <li>Before Importing,you can go and have a look at the "Options" pane on the left.Under options,you will see configurations for restoring database such as "Overwrite the Existing Database" etc.You can select these options based on your need. In my case i will leave them unchecked and click on OK </li>
+                             <li>Once Restoration is done, SSMS will notify you through a prompt "Database [YourName] restored successfully" </li>
+                                                  
                         </ul>
+                        
+                        <p>Congratulations... :-) you have restored the database using a backup file </p>
+                        <br>
+                    </div>                            
+                    <div id="databasesetupcontent" style="display:none;">                       
+                    </div>
+                    <div id="createbackupcontent" style="display:none;">                       
+                    </div>
+                    <div id="restoredatabasecontent" style="display:none;">                       
                     </div>
                 </div>
             </div>
