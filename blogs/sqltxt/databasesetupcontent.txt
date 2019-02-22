@@ -1,4 +1,4 @@
- <h1 class="mt-4">Database Setup</h1>
+ <h1 class="mt-4 h1-tutorial">Database Setup</h1>
                         <p>Assuming that you have installed SQL Server Manamgent Studio(SSMS) from the official Microsoft Website, lets look at the steps to get you started</p>
                         <ul>
                             <li>Launch SQL Server Management Studio</li>

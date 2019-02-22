@@ -1,4 +1,4 @@
- <h1 class="mt-4">Restore the Database</h1>
+ <h1 class="mt-4 h1-tutorial">Restore the Database</h1>
                         <p>We created a backup file in the previous section. Using that file,we will try to restore the database. In real time, someone else can share the backup file with you and you can restore it in your SQL server.In order to restore the database,do the following</p>
                         <ul>
                             <li>Login to the Server using steps we saw earlier(Use Windows authentication)</li>

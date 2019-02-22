@@ -1,4 +1,4 @@
-<h1 class="mt-4">SQL  Server Management Studio</h1>
+<h1 class="mt-4 h1-tutorial">SQL  Server Management Studio</h1>
                         <p>You can download SQL Server Manamgent Studio(SSMS) from the official Microsoft Website. SSMS is a powerful tool and below are its benefits:</p>
                         <ul>
                             <li>First and foremost,most people dont like to remember commands,and this tool  provides a graphical interface to manage Sql Server</li>

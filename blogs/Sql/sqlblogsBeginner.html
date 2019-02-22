@@ -12,7 +12,7 @@
         <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
         <script>
             $(document).ready(function() {
-                $('#databasesetupcontent').show();
+                $('#ssmscontent').show();
             });
             var html='';
             function showDiv(a){
@@ -26,6 +26,12 @@
                 });
             }
         </script>
+        <style>
+            .h1-tutorial{
+                font-size:2.6rem;
+                
+            }
+        </style>
     </head>
     <body>
         <header class="header">
@@ -67,7 +73,7 @@
             <div id="page-content-wrapper" style="width:84% !important">
                 <div class="container-fluid">
                     <div id="ssmscontent" style="display:none;">    
-                        <h1 class="mt-4">Database Diagrams</h1>
+                        <h1 class="mt-4 h1-tutorial" >Database Diagrams</h1>
                         <p>Database Diagrams are a way to visualise a database model .When the model is small its quite easy to understand the relationship between the tables, however as the complexity grows and in the real world applications it becomes tough to see the relationship between the tables. Therefore, it is imperative to generate database diagrams as it can graphically show the structure of the database.</p>
                         <p>With SSMS you can easily create database diagrams.Below are the steps you should follow to create database diagrams</p>
                         <ul>

@@ -1,4 +1,4 @@
- <h1 class="mt-4">Create back up of the database</h1>
+ <h1 class="mt-4 h1-tutorial">Create back up of the database</h1>
                         <p>There are instances when you want to take the bakcup of the database. To do we need to follow below steps</p>
                         <ul>
                             <li>Login to the Server using steps we saw earlier(Use Windows authentication)</li>
