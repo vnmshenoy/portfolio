@@ -1,0 +1,96 @@
+ <h1 class="mt-4 h1-tutorial" >Database Diagrams</h1>
+                        <p>Database Diagrams are a way to visualise a database model .When the model is small its quite easy to understand the relationship between the tables, however as the complexity grows and in the real world applications it becomes tough to see the relationship between the tables. Therefore, it is imperative to generate database diagrams as it can graphically show the structure of the database.</p>
+                        <p>With SSMS you can easily create database diagrams.Below are the steps you should follow to create database diagrams</p>
+                        <ul>
+                            <li>Login to the Server using steps we saw earlier(Use Windows authentication)</li>
+                            <li>Expand the server and click on the database you want to generate diagrams for.
+                            </li>
+                            <li>Expand the selected database and click on Database Diagrams
+                            </li>
+                            <li>Rt click on the Database Diagrams and click on “New Diagram” as shown in image
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/9databaseDiag.PNG" alt="new db diagram" /> 
+                            </li>
+                            <li>When you create the diagram for the first time, you may get popup screen asking to create support object required to create db diagrams as shown in the image
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/10FirstTime.PNG" alt="first time db diagram error" /> 
+                            </li>
+                            <li>SSMS needs few system procedures and a table that are not created with the database. So just click on OK on the above popup and doing so will create following system procedures in your database.
+                                This happens because,initially if you look into the database system stored procedure (SP), you will only see SP with “sys” and no system tables.Below is the image how it looks before clickin on OK                                  
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/11anodboSPs.PNG" alt="sys schema only" />
+                                After you click OK on the error popup shown above(asking to create support objects), you will see one table is created in systables and few sps with <b>dbo</b> schema created as shown in image
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/11bafterok.PNG" alt="dbo schema only" />
+                            </li>
+                            <li>Again click on new database diagram. A new window will open and select all the tables (click “Add” button) you want to generate diagram for as shown in image
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/12AddTable.PNG" alt="add tables" />
+                            </li>
+                            <li>This will create a diagram with the tables columns, primary keys, and relationships that were read from the schema.Assume you selected only 2 tables then it will look like in the image                             
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/14DBTableDiagram.PNG" alt="add tables" />
+                            </li>
+                            <li>You can make it look smaller by selecting all tables using control A and right click and then doing “Autosize selected tables” as shown in below image
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/15AutoSize.PNG" alt="before auto size tables" />
+                                <br>
+                                After autosizing, tables will look like below
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/16MoreCompact.PNG" alt="after auto size tables" />
+                            </li>
+
+                            <li>Now we know that "Order" table is related to "OrderDetails" table. However,like we saw above, we had not included OrderDetails in the initial draft of our diagram.We can include it now by right clicking on the "order" table, and select add related table as shown in image
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/17AddRelatedTable.PNG" alt="add related table" />
+                            </li>
+                            <li>We can also create a new table all together through the diagram sections itself. Just follow below steps
+                                <ul>
+                                    <li>Rt click anywhere on the diagram editor</li>
+                                    <li>Click on “New Table” as shown in image
+                                        <img style="width:60%;height:40%" src="../../img/sqlforBeginners/17NewTableThru.PNG" alt="new table" />
+                                    </li>
+                                    <li>You will get a popup window where in you can enter the table name. I will call this “test” table and click OK</li>
+                                    <li>Doing so will allow you to enter column names etc and then click on save which will prompt you a confirmation as shown in image below
+                                        <img style="width:60%;height:40%" src="../../img/sqlforBeginners/19PromptSave.PNG" alt="save" />     
+                                        Click on yes and refresh the database and you will see the new table generated</ul>                         
+                            </li>
+                            <li>You can also create primary keys through the tools itself. Right click on column which needs to be made primary key. Choose option "Set Primary Key" as shown in the diagram. 
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/20SetPrimaryKey.PNG" alt="set primary key" /> 
+                            </li>
+                            <li>You can also click on individual tables and decide how to display them.Follow below steps
+                                <ul>
+                                    <li>Right click on the table and select “Table View” and click on Standard which will display coulumns within DataType and Attr
+                                    <img style="width:60%;height:40%" src="../../img/sqlforBeginners/22TableView.PNG" alt="table view" />
+                                    </li>
+                                    <li>Column Names will only show column names
+                                    </li>
+                                    <li>Keys will only show the keys like Primary Key, Foreign Key etc
+                                    </li>
+                                    <li>Name will only have tabe name etc
+                                    </li>	
+                                </ul>
+                            </li>
+                            <li>Database diagrams will be stored in "Database Diagrams".To reach to it, expand the "database" you created diagram for and then you will see "Database Diagrams".Below is the image
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/13DbDiagramStoreLoc.PNG" alt="db diagrams" /> 
+                                
+                            Click on refresh incase diagram not reflecting even after you saved.
+                            </li>
+                            <li>
+                                If you want your diagrams to be easily understood by others,then you can add comments/notes etc to it.
+                                You can add comments and notes  by right clicking the pane and selecting "New Text Annotation" as shown in image below
+                                 <img style="width:60%;height:40%" src="../../img/sqlforBeginners/21Annotation.PNG" alt="new text annotations" />                                
+                            </li>
+                             <li>You can export diagrams ,right click on the diagram pane and choose Copy Diagram to Clipboard. You can now paste it into graphic software or into a document. As shown in image below
+                                 <img style="width:60%;height:40%" src="../../img/sqlforBeginners/23ExportDiagram.PNG" alt="export diagram" />
+                            </li>
+                        </ul>
+                        <h3> Common Errors Faced and Solutions:</h3>
+                        <ol>
+                            <li>Issue 1: When I tried to generate the database diagrams, I got an error which said "Could not obtain information about Windows NT group/user".Complete error is shown in img below
+                                <br><img style="width:60%;height:40%" src="../../img/sqlforBeginners/24error.PNG" alt="error" /> 
+                                Solution to above problem is simple.Ensure that you follow these steps
+                                <ul>                                
+                                    <li>Right click on the db</li>
+                                    <li>Go to "properties".See below image
+                                     <br><img style="width:60%;height:40%" src="../../img/sqlforBeginners/25solution.png" alt="properties" /> </li>
+                                     <li>Click on "Files".See below image
+                                     <br><img style="width:60%;height:40%" src="../../img/sqlforBeginners/26Files.png" alt="files" /> </li>
+                                    <li>Click on "Owner" and add the user you want to be the owner</li>
+                                    <li>Like mentioned earlier,I connect to sql server engine using "Windows authentication" so I just selected the user I logged in to my windows machine</li>
+                                    <li>Doing above should fix the issue</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <br>
