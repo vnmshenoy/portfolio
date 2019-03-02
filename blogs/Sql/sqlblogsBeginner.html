@@ -12,7 +12,11 @@
         <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
         <script>
             $(document).ready(function() {
-                $('#ssmscontent').show();
+                //$('#ssmscontent').show();
+                $.get( "../sqltxt/ssmscontent.txt",function( data ) {                  
+                    html=$.parseHTML(data);
+                    $("#current").html(html);
+                });
             });
             var html='';
             function showDiv(a){
@@ -21,8 +25,8 @@
                 $('#'+id+"content").show();
                 var fileName=id+"content.txt";
                 $.get( "../sqltxt/"+fileName,function( data ) {
-                    html=$.parseHTML(data )
-                    $('#'+id+"content").html(html);
+                    html=$.parseHTML(data);
+                    $("#current").html(html);                   
                 });
             }
         </script>
@@ -63,7 +67,7 @@
                     <a id="databasesetup" onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Database (DB) Setup</a>
                     <a id="createbackup"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Back up DB</a>
                     <a id="restoredatabase"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Restore DB</a> 
-                     <a id="dbd"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">DB Diagrams</a> 
+                    <a id="dbd"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">DB Diagrams</a> 
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -71,7 +75,35 @@
             <!-- Page Content -->
             <div id="page-content-wrapper" style="width:84% !important">
                 <div class="container-fluid">
-                    <div id="ssmscontent" style="display:none;">    
+                    <script type="text/javascript">
+                        ( function() {
+                            if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+                            var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
+                            var placement_id = window.CHITIKA.units.length;
+                            window.CHITIKA.units.push(unit);
+                            document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+                        }());
+                    </script>
+                    <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div id="current">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <script type="text/javascript">
+                                ( function() {
+                                    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+                                    var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
+                                    var placement_id = window.CHITIKA.units.length;
+                                    window.CHITIKA.units.push(unit);
+                                    document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+                                }());
+                            </script>
+                            <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script></div>
+                    </div>
+                    <div id="ssmscontent" style="display:none;"> 
+
                         <h1 class="mt-4 h1-tutorial">SQL  Server Management Studio</h1>
                         <p>You can download SQL Server Manamgent Studio(SSMS) from the official Microsoft Website. <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017">Download SSMS</a>
                             I have downloaded SSMS 2017 version
@@ -96,8 +128,8 @@
                         <a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-changelog-ssms?view=sql-server-2017#previous-ssms-releases">Release Notes</a>
                         <br>
                         <br>
-                    </div>                            
-                    <div id="databasesetupcontent" style="display:none;">  
+                    </div>
+                    <div id="databasesetupcontent" style="display:none;">
                         <h1 class="mt-4 h1-tutorial">Database Setup</h1>
                         <p>Assuming that you have installed SQL Server Manamgent Studio(SSMS) from the official Microsoft Website, lets look at the steps to get you started</p>
                         <ul>
@@ -127,6 +159,7 @@
                             <li>After running above steps,you should see the content in the database</li>
                         </ul>
                         <p>Wohooo... now as we have data in the tables we can start writing queries on our database</p>
+
                         <br>
                     </div>
                     <div id="createbackupcontent" style="display:none;">                       
@@ -136,6 +169,7 @@
                     </div>
                     <div id="dbdcontent" style="display:none;">                       
                     </div>
+
                 </div>
             </div>
             <!-- /#page-content-wrapper -->

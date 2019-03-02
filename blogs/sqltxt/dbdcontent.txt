@@ -52,6 +52,8 @@
 							<br/><br/>
                                 <img style="width:60%;height:40%" src="../../img/sqlforBeginners/20SetPrimaryKey.PNG" alt="set primary key" /> 
                             </li><br/><br/>
+							  
+
                             <li>You can also click on individual tables and decide how to display them.Follow below steps
                                 <ul>
                                     <li>Right click on the table and select “Table View” and click on Standard which will display coulumns within DataType and Attr <br/><br/>
@@ -99,3 +101,5 @@
                         </ol>
 						<p><b>Doing above will fix the issue</b></p>
                         <br>
+						
+					
