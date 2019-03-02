@@ -2,25 +2,24 @@
                         <p>There are instances when you want to take the bakcup of the database. To do we need to follow below steps</p>
                         <ul>
                             <li>Login to the Server using steps we saw earlier(Use Windows authentication)</li>
-                            <li>Expand the server, expand Databases, select the database you want to take back up of.Right Click on the database </li>
-                            <li>Click on “Tasks” and select back up as shown in image below
-                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/4backup.PNG" alt="db backup" /> 
+                            <li>Expand the server, expand Databases, select the database you want to take back up of.Right Click on the database name</li>
+                            <li>Click on <b>"Tasks"</b> and select back up as shown in image below <br> <br>
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/4backup.PNG" alt="db backup" />  <br> <br>
                             </li>
-                            <li>Now you are at the "Back Up Database Screen".There are quite a few number of options here like you can choose database Backup Type as Full or Differential etc.For our eg, we will keep it as "Full". 
+                            <li>Now you are at the <b>"Back Up Database Screen"</b>.There are quite a few number of options here like you can choose database Backup Type as Full or Differential etc.For our eg, we will keep it as "Full". 
 
-                            In the "Destination" option Select "Back up to" as “Disk”(place where back up file will be stored).You can click “Add” and then enter path of your choice. See below image
-                            <img style="width:60%;height:40%" src="../../img/sqlforBeginners/5backupTo.PNG" a
-                                 lt="add backup file"  /> 
-                            <br>You will see a prompt and enter the file location and the file name and append it with ".bak". I entered my local disk's <b>C$</b> and called it <b>"backup.bak"</b>
-                            Then click on OK on "Select Backup Destination " prompt
+                            In the "Destination" option Select <b>"Back up to"</b> as <b>"Disk" </b>(place where back up file will be stored).You can click "Add" and then enter path of your choice. See below image <br><br>
+                            <img style="width:60%;height:40%" src="../../img/sqlforBeginners/5backupTo.PNG" alt="add backup file"  /> 
+                            <br><br>
+							You will see a prompt and enter the file location and the file name and append it with ".bak". I entered my local disk's <b>C$</b> and called it <b>"backup.bak"</b>
+                            Then click on OK on <b>"Select Backup Destination"</b> prompt
                             </li>
                             <li>Ensure that above path we gave to save our backup file has proper read/write access for SQL Services
                             </li>
-                            <li>Press OK on the "Back Up Database" window and the database will begin backing up
+                            <li>Press OK on the 'Back Up Database' window and the database will begin backing up
                             </li>
-                             <li>You will see a progress bar and when backup is completed, SSMS will notify you thorugh a prompt saying 'The backup of database [YouDBNAME]  completed successfully'   </li>
-                             <li>Go to the saved directory and you should see the backup file (in my case backup.bak)   </li>                            
-                        </ul>
-                        
+                             <li>You will see a progress bar and when backup is completed, SSMS will notify you thorugh a prompt saying <b>'The backup of database [YouDBNAME]  completed successfully'</b></li>
+                             <li>Go to the saved directory and you should see the backup file (in my case <b> backup.bak </b>)</li>                            
+                        </ul>                        
                         <p>Congratulations... :-) you have created a back up file </p>
                         <br>

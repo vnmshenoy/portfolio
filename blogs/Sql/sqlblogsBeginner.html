@@ -38,7 +38,7 @@
         <script async defer src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
         <header class="header">
             <nav class="navbar navbar-expand-lg fixed-top">
-                <div class="container"><a href="../../index.html" class="navbar-brand scrollTo">SManju</a>
+                <div class="container"><a href="../../index.html" class="navbar-brand scrollTo headerHref">SManju</a>
                     <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
                     <div id="navbarcollapse" class="collapse navbar-collapse">
                         <ul class="navbar-nav ml-auto">
@@ -47,7 +47,6 @@
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="/blogs/blogs.html">C# blogs</a>
                                     <a class="dropdown-item" href="/blogs/sqlblogs.html">Sql Blogs</a>
-                                    <a class="dropdown-item" href="#">Travel Blogs</a>
                                 </div>
                             </li>             
                         </ul>
@@ -63,7 +62,8 @@
                     <a id="ssms" onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Sql Server Mgmt Studio</a>
                     <a id="databasesetup" onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Database (DB) Setup</a>
                     <a id="createbackup"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Back up DB</a>
-                    <a id="restoredatabase"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Restore DB</a>                    
+                    <a id="restoredatabase"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Restore DB</a> 
+                     <a id="dbd"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">DB Diagrams</a> 
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -80,20 +80,54 @@
                         <ul>
                             <li>First and foremost,most people dont like to remember commands,and this tool  provides a graphical interface to manage Sql Server</li>
                             <li>Used for configuring, managing, and administering all components within Microsoft SQL Server</li>
-                            <li>Apart from connecting to database engine, it also connects to analysis services, integration services and reporting services.With SSMS 17.2 onwards, the Performance Dashboard now comes as part of the Standard Reports. We do not need to download and install it separately.With this dashboard, its helps in troubleshooting performance issues</li>
+                            <li>Apart from connecting to database engine, it also connects to analysis services, integration services and reporting services.With <b>SSMS 17.2 onwards</b>, the Performance Dashboard now comes as part of the Standard Reports. We do not need to download and install it separately.With this dashboard, its helps in troubleshooting performance issues</li>
                             <li>It also supports managing Azure components such as Azure SQL Database and Data Warehouse, as well as hybrid cloud features such as StretchDB</li>
-                            <li>It’s a gateway to SQL Profiler</li>
+                            <li>It's a gateway to SQL Profiler</li>
                             <li>Can develop T-SQL code</li>                            
                         </ul>
-                        <p>In order to open SSMS in Windows, you can click on "Search" and start typing in "Sql...",it should show the SSMS if its installed as shown in the image below
+                        <p>In order to <b>open</b> SSMS in Windows, you can click on "Search" and start typing in "Sql...",it should show the SSMS if its installed as shown in the image below
+                            <br>
                             <img style="width:60%;height:40%" src="../../img/sqlforBeginners/startSSMS.PNG" alt="open ssms" /> 
+                            <br>
+                            <br>
+                        <h4>Please see</h4>
+                        If you want to read more,then check the following link
 
-                            Read more about SQL Server Management Studio release notes.
-                            <a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-changelog-ssms?view=sql-server-2017#previous-ssms-releases">Release Notes</a>
-                        </p>                        
+                        <a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-changelog-ssms?view=sql-server-2017#previous-ssms-releases">Release Notes</a>
+                        <br>
                         <br>
                     </div>                            
-                    <div id="databasesetupcontent" style="display:none;">                       
+                    <div id="databasesetupcontent" style="display:none;">  
+                        <h1 class="mt-4 h1-tutorial">Database Setup</h1>
+                        <p>Assuming that you have installed SQL Server Manamgent Studio(SSMS) from the official Microsoft Website, lets look at the steps to get you started</p>
+                        <ul>
+                            <li>Launch SQL Server Management Studio</li>
+                            <li>Used windows authentication and connected to the SQL Server Database Engine as shown below
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/1connectToDbEngine.PNG" alt="connect to db" />
+                                <br>
+                            </li>
+                            <li>Now that you have connected to the SQL Server DB, lets create a new Database. Below are the steps to create a new database:
+                                <ul>
+                                    <li>Rt click on the "databases" and click on “New Database” as shown in  img below 
+                                        <img style="width:60%;height:40%" src="../../img/sqlforBeginners/2CreateAnewDB.PNG" alt="create new db" />
+                                        <br>
+                                    </li>
+                                    <li>Name the database whatever you want as shown in  img below.I named it "TestingDB"
+                                        <img style="width:60%;height:40%" src="../../img/sqlforBeginners/2aNameOfDB.PNG" alt="name db" /> 
+                                        <br>
+                                    </li>
+                                </ul>                            
+                            <li>You can create a new query as shown in img below.Ensure that you select the database on left and then click on "New Query" to ensure that your query runs against the correct database <img style="width:60%;height:40%" src="../../img/sqlforBeginners/3aSelectOnNewQueryWithDBSelected.PNG" alt="select query" />                             
+                                <br>
+                            </li>
+                            <li>Lets create few tables and data and get the ball rolling.I have shared the model and the data scripts in the github project
+                                <a href="https://github.com/manjusa/SqlBeginners.git">Link to the github files which has model and data for db</a></li>
+                            <li>After you have downloaded the files,just create a new query and first run "model.sql" which would create the tables and then run "data.sql" which would insert dummy records into the database tables</li>
+                            <li>Above ensure that you have the correct name of the database on the first line </li>
+                            <li>After running above steps,you should see the content in the database</li>
+                        </ul>
+                        <p>Wohooo... now as we have data in the tables we can start writing queries on our database</p>
+                        <br>
                     </div>
                     <div id="createbackupcontent" style="display:none;">                       
                     </div>
