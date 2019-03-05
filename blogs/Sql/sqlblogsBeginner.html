@@ -1,40 +1,302 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-2264462236439566",
+                enable_page_level_ads: true
+            });
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-131742548-1');
+        </script>
+
+        <meta charset="utf-8">
+        <meta name="robots" content="all,follow">
+        <meta name="googlebot" content="index,follow,snippet,archive">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>SManju</title>
+
+        <meta name="keywords" content="">
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
         <!-- Bootstrap and Font Awesome css -->
         <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
-        <!-- Bootstrap and Font Awesome css -->
+        <!-- Font Awesome CSS-->
+        <link rel="stylesheet" href="../../vendor/font-awesome/css/font-awesome.min.css">   
         <link rel="stylesheet" href="../../css/style.default.css">
-        <link rel="stylesheet" href="../../css/custom.css">   
-        <link rel="stylesheet" href="../../css/custom.css">
-        <!-- JavaScript files-->
         <script src="../../vendor/jquery/jquery.min.js"></script>
+        <script src="../../vendor/popper.js/umd/popper.min.js"> </script>
         <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <style>
+            /*.sidenav {
+            height: 100%;
+            width: 0;
+            margin-top:5em;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+
+
+            .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+            color: #f1f1f1;
+            }
+
+            .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            }
+
+            @media (min-height: 550px) and (max-height:800px) {
+            .sidenav {
+            padding-top: 15px;
+            margin-top: 5em;
+            height: 100%;
+            width: 0;
+            margin-top:5em;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: red;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            }   
+            .sidenav a {font-size: 18px;}
+            .sidenavcontent  {
+            position: relative;
+
+            margin-top: 8%;margin-left:8%;
+            background-color: red;
+            }
+
+            }https://www.bootply.com/oCPVdkTvd3#
+
+            }*/
+
+        </style>
+        <!-- <script>
+$(document).ready(function() {
+//$('#ssmscontent').show();
+$.get( "../sqltxt/ssmscontent.txt",function( data ) {                  
+html=$.parseHTML(data);
+$("#current").html(html);
+});
+});
+var html='';
+function showDiv(a){
+var id=$(a).attr("id");
+$("[id$='content']").hide();             
+$('#'+id+"content").show();
+var fileName=id+"content.txt";
+$.get( "../sqltxt/"+fileName,function( data ) {
+html=$.parseHTML(data);
+$("#current").html(html);                   
+});
+}
+</script>-->
         <script>
-            $(document).ready(function() {
-                //$('#ssmscontent').show();
-                $.get( "../sqltxt/ssmscontent.txt",function( data ) {                  
-                    html=$.parseHTML(data);
-                    $("#current").html(html);
+            $(document).ready(function () {
+                $('[data-toggle=offcanvas]').click(function () {
+                    // a terrible hack to address the 
+                    if ($('.sidebar-offcanvas').css('background-color') == 'rgb(255, 255, 255)') {
+                        $('.nav-link').attr('tabindex', '-1');
+                    } else {
+                        $('.nav-link').attr('tabindex', '');
+                    }
+                    $('.row-offcanvas').toggleClass('active');
+
                 });
             });
-            var html='';
-            function showDiv(a){
-                var id=$(a).attr("id");
-                $("[id$='content']").hide();              
-                $('#'+id+"content").show();
-                var fileName=id+"content.txt";
-                $.get( "../sqltxt/"+fileName,function( data ) {
-                    html=$.parseHTML(data);
-                    $("#current").html(html);                   
-                });
-            }
-        </script>
-        <style>
-            .h1-tutorial{
-                font-size:2.6rem;
 
+        </script>
+        <style>nav-link {
+            ;
             }
+            /* zig zag action; see Ana Tudor */
+            .footer {
+                background: linear-gradient(white 40%, transparent 40%), 
+                    linear-gradient(-45deg, #428BCA 33%, transparent 33%) 0 50%, 
+                    #428BCA 
+                    linear-gradient(45deg, #428BCA 33%, white 33%) 0 50%;	
+                background-repeat: repeat-x;
+                background-size: 1px 100%, 20px 20px, 20px 20px;
+                color: #ffffff;
+                min-height: 40px;
+            }
+
+            /* Wrapper for page content to push down footer */
+            #wrap {
+                min-height: 100%;
+                height: auto !important;
+                height: 100%;
+                /* Negative indent footer by its height */
+                margin: 0 auto -40px;
+                /* Pad bottom by footer height */
+                padding: 0 0 0px;
+            }
+
+            .panel-heading .panel-title>a {
+                position: relative;
+                display: block;
+                padding: 10px 15px;
+                margin: -10px -15px; /* expand to size of DIV */
+            }
+            body {
+                padding-top: 0px;
+            }
+            /*
+            * Style tweaks
+            * --------------------------------------------------
+            */
+            html,
+            body {
+                overflow-x: hidden; /* Prevent scroll on narrow devices */
+                height: 100%;
+            }
+            footer {
+                padding: 0px 0;
+            }
+
+            /*
+            * Off Canvas
+            * --------------------------------------------------
+            * Greater thav 768px shows the menu by default and also flips the semantics
+            * The issue is to show menu for large screens and to hide for small
+            * Also need to do something clever to turn off the tabs for when the navigation is hidden
+            * Otherwise keyboard users cannot find the focus point
+            * (For now I will ignore that for mobile users and also not worry about
+            * screen re-sizing popping the menu out.)
+            */
+            @media screen and (min-width: 768px) {
+                .row-offcanvas {
+                    position: relative;
+                    -webkit-transition: all .25s ease-out;
+                    -moz-transition: all .25s ease-out;
+                    transition: all .25s ease-out;
+                }
+
+                .row-offcanvas-right {
+                    right: 25%;
+                }
+
+                .row-offcanvas-left {
+                    left: 25%;
+                }
+
+                .row-offcanvas-right .sidebar-offcanvas {
+                    right: -25%; /* 3 columns */
+                    background-color: rgb(255, 255, 255);
+                }
+
+                .row-offcanvas-left .sidebar-offcanvas {
+                    left: -25%; /* 3 columns */
+                    background-color: rgb(255, 255, 255);
+                }
+
+                .row-offcanvas-right.active {
+                    right: 0; /* 3 columns */
+                }
+
+                .row-offcanvas-left.active {
+                    left: 0; /* 3 columns */
+                }
+
+                .row-offcanvas-right.active .sidebar-offcanvas {
+                    background-color: rgb(254, 254, 254);
+                }
+                .row-offcanvas-left.active .sidebar-offcanvas {
+                    background-color: rgb(254, 254, 254);
+                }
+
+                .row-offcanvas .content {
+                    width: 75%; /* 9 columns */
+                    -webkit-transition: all .25s ease-out;
+                    -moz-transition: all .25s ease-out;
+                    transition: all .25s ease-out;
+
+                }
+
+                .row-offcanvas.active .content {
+                    width: 100%; /* 12 columns */
+                }
+
+                .sidebar-offcanvas {
+                    position: absolute;
+                    top: 0;
+                    width: 25%; /* 3 columns */
+                }
+            }
+            @media screen and (max-width: 767px) {
+                .row-offcanvas {
+                    position: relative;
+                    -webkit-transition: all .25s ease-out;
+                    -moz-transition: all .25s ease-out;
+                    transition: all .25s ease-out;
+                }
+
+                .row-offcanvas-right {
+                    right: 0;
+                }
+
+                .row-offcanvas-left {
+                    left: 0;
+                }
+
+                .row-offcanvas-right
+                .sidebar-offcanvas {
+                    right: -50%; /* 6 columns */
+                }
+
+                .row-offcanvas-left
+                .sidebar-offcanvas {
+                    left: -50%; /* 6 columns */
+                }
+
+                .row-offcanvas-right.active {
+                    right: 50%; /* 6 columns */
+                }
+
+                .row-offcanvas-left.active {
+                    left: 50%; /* 6 columns */
+                }
+
+                .sidebar-offcanvas {
+                    position: absolute;
+                    top: 0;
+                    width: 50%; /* 6 columns */
+                }
+            }
+            #accordion .glyphicon { margin-right:10px; }
+            .panel-collapse>.list-group .list-group-item:first-child {border-top-right-radius: 0;border-top-left-radius: 0;}
+            .panel-collapse>.list-group .list-group-item {border-width: 1px 0;}
+            .panel-collapse>.list-group {margin-bottom: 0;}
+            .panel-collapse .list-group-item {border-radius:0;}
         </style>
     </head>
     <body>
@@ -58,147 +320,218 @@
                 </div>
             </nav>
         </header>
-        <div class="d-flex" style="position:relative;padding-top:6em" id="wrapper">
-
-            <!-- Sidebar -->
-            <div class="bg-light border-right" id="sidebar-wrapper" style="width:16% !important">
-                <div class="list-group list-group-flush">
-                    <a id="ssms" onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Sql Server Mgmt Studio</a>
-                    <a id="databasesetup" onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Database (DB) Setup</a>
-                    <a id="createbackup"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Back up DB</a>
-                    <a id="restoredatabase"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">Restore DB</a> 
-                    <a id="dbd"  onclick="showDiv(this)" href="#" class="list-group-item list-group-item-action bg-light">DB Diagrams</a> 
-                </div>
+        <div id="wrap">
+            <div class="navbar navbar-default navbar-static-top">
             </div>
-            <!-- /#sidebar-wrapper -->
+            <div class="container-fluid" style="margin-top:2%">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+            <div class="container-fluid">
+                <div class="row row-offcanvas row-offcanvas-left">
 
-            <!-- Page Content -->
-            <div id="page-content-wrapper" style="width:84% !important">
-                <div class="container-fluid">
-                    <script type="text/javascript">
-                        ( function() {
-                            if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-                            var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
-                            var placement_id = window.CHITIKA.units.length;
-                            window.CHITIKA.units.push(unit);
-                            document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-                        }());
-                    </script>
-                    <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
-                    <div class="row">
-                        <div class="col-sm-9">
-                            <div id="current">
+                    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                        <!-- from http://bootsnipp.com/snippets/featured/accordion-list-group-menu -->
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                            <span class="glyphicon glyphicon-folder-close">
+                                            </span>Content
+                                        </a>
+                                    </h4>
+                                </div>
+                               <!-- <div id="collapseOne" class="panel-collapse collapse in">
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li class="active"><a class="nav-link" href="http://fb.com/moinakbarali"><span class="glyphicon glyphicon-pencil text-primary"></span>Articles</a></li>
+
+                                        <li><a class="nav-link" href="http://fb.com/moinakbarali"><span class="glyphicon glyphicon-flash text-success"></span>News</a></li>
+
+                                        <li><a class="nav-link" href="http://fb.com/moinakbarali"><span class="glyphicon glyphicon-file text-info"></span>Newsletters</a></li>
+
+                                        <li><a class="nav-link" href="http://fb.com/moinakbarali"><span class="glyphicon glyphicon-comment text-success"></span>Comments <span class="badge">42</span></a></li>
+
+                                    </ul>
+                                </div>-->
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-file">
+                                            </span>Reports</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item active nav-link">
+                                            Cras justo odio
+                                        </a>
+                                        <a href="#" class="list-group-item nav-link">Dapibus ac facilisis in</a>
+                                        <a href="#" class="list-group-item nav-link">Morbi leo risus</a>
+                                        <a href="#" class="list-group-item nav-link">Porta ac consectetur ac</a>
+                                        <a href="#" class="list-group-item nav-link">Vestibulum at eros</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-heart">
+                                            </span>Reports</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFive" class="panel-collapse collapse">
+                                    <div class="list-group">
+                                        <a class="nav-link" href="#">
+                                            <h4 class="list-group-item-heading">List group item heading</h4>
+                                            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        </a>
+                                    </div>
+                                    <div class="list-group">
+                                        <a class="nav-link" href="#">
+                                            <h4 class="list-group-item-heading">List group item heading</h4>
+                                            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        </a>
+                                    </div>
+                                    <div class="list-group">
+                                        <a class="nav-link" href="#">
+                                            <h4 class="list-group-item-heading">List group item heading</h4>
+                                            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-3">
-                            <script type="text/javascript">
-                                ( function() {
-                                    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-                                    var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
-                                    var placement_id = window.CHITIKA.units.length;
-                                    window.CHITIKA.units.push(unit);
-                                    document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-                                }());
-                            </script>
-                            <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script></div>
-                    </div>
-                    <div id="ssmscontent" style="display:none;"> 
-
-                        <h1 class="mt-4 h1-tutorial">SQL  Server Management Studio</h1>
-                        <p>You can download SQL Server Manamgent Studio(SSMS) from the official Microsoft Website. <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017">Download SSMS</a>
-                            I have downloaded SSMS 2017 version
-                            <br>
-                            SSMS is a powerful tool and below are its benefits:</p>
-                        <ul>
-                            <li>First and foremost,most people dont like to remember commands,and this tool  provides a graphical interface to manage Sql Server</li>
-                            <li>Used for configuring, managing, and administering all components within Microsoft SQL Server</li>
-                            <li>Apart from connecting to database engine, it also connects to analysis services, integration services and reporting services.With <b>SSMS 17.2 onwards</b>, the Performance Dashboard now comes as part of the Standard Reports. We do not need to download and install it separately.With this dashboard, its helps in troubleshooting performance issues</li>
-                            <li>It also supports managing Azure components such as Azure SQL Database and Data Warehouse, as well as hybrid cloud features such as StretchDB</li>
-                            <li>It's a gateway to SQL Profiler</li>
-                            <li>Can develop T-SQL code</li>                            
-                        </ul>
-                        <p>In order to <b>open</b> SSMS in Windows, you can click on "Search" and start typing in "Sql...",it should show the SSMS if its installed as shown in the image below
-                            <br>
-                            <img style="width:60%;height:40%" src="../../img/sqlforBeginners/startSSMS.PNG" alt="open ssms" /> 
-                            <br>
-                            <br>
-                        <h4>Please see</h4>
-                        If you want to read more,then check the following link
-
-                        <a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-changelog-ssms?view=sql-server-2017#previous-ssms-releases">Release Notes</a>
-                        <br>
-                        <br>
-                    </div>
-                    <div id="databasesetupcontent" style="display:none;">
-                        <h1 class="mt-4 h1-tutorial">Database Setup</h1>
-                        <p>Assuming that you have installed SQL Server Manamgent Studio(SSMS) from the official Microsoft Website, lets look at the steps to get you started</p>
-                        <ul>
-                            <li>Launch SQL Server Management Studio</li>
-                            <li>Used windows authentication and connected to the SQL Server Database Engine as shown below
-                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/1connectToDbEngine.PNG" alt="connect to db" />
-                                <br>
-                            </li>
-                            <li>Now that you have connected to the SQL Server DB, lets create a new Database. Below are the steps to create a new database:
-                                <ul>
-                                    <li>Rt click on the "databases" and click on “New Database” as shown in  img below 
-                                        <img style="width:60%;height:40%" src="../../img/sqlforBeginners/2CreateAnewDB.PNG" alt="create new db" />
-                                        <br>
-                                    </li>
-                                    <li>Name the database whatever you want as shown in  img below.I named it "TestingDB"
-                                        <img style="width:60%;height:40%" src="../../img/sqlforBeginners/2aNameOfDB.PNG" alt="name db" /> 
-                                        <br>
-                                    </li>
-                                </ul>                            
-                            <li>You can create a new query as shown in img below.Ensure that you select the database on left and then click on "New Query" to ensure that your query runs against the correct database <img style="width:60%;height:40%" src="../../img/sqlforBeginners/3aSelectOnNewQueryWithDBSelected.PNG" alt="select query" />                             
-                                <br>
-                            </li>
-                            <li>Lets create few tables and data and get the ball rolling.I have shared the model and the data scripts in the github project
-                                <a href="https://github.com/manjusa/SqlBeginners.git">Link to the github files which has model and data for db</a></li>
-                            <li>After you have downloaded the files,just create a new query and first run "model.sql" which would create the tables and then run "data.sql" which would insert dummy records into the database tables</li>
-                            <li>Above ensure that you have the correct name of the database on the first line </li>
-                            <li>After running above steps,you should see the content in the database</li>
-                        </ul>
-                        <p>Wohooo... now as we have data in the tables we can start writing queries on our database</p>
-
-                        <br>
-                    </div>
-                    <div id="createbackupcontent" style="display:none;">                       
-                    </div>
-                    <div id="restoredatabasecontent" style="display:none;">
-
-                    </div>
-                    <div id="dbdcontent" style="display:none;">                       
-                    </div>
-
-                </div>
-            </div>
-            <!-- /#page-content-wrapper -->
-        </div>
-        <div style="margin-left:25%">
-            <h4>Did you like the blog or have questions, please add your comments</h4>
-            <div class="fb-comments" data-href="http://manjustechblog.com/blogs/Net/signalr.html" data-width="400" data-numposts="10">
-            </div>
-        </div>
-
-        <footer class="main-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-lg-left">
-                        <p class="social"><a href="facebook.com/shenoyvnm
-                            " class="external facebook wow fadeInUp"><i class="fa fa-facebook"></i></a>
-                            <a style="background-color:grey;" href="www.linkedin.com/in/manjunathshenoywebdev" class="external facebook wow fadeInUp"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                    <!-- /.6-->
-                    <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
-                        <p>© 2018 SManju. All rights reserved.</p>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <p class="template-bootstrapious">Designed by <a href="https://www.bootstrapious.com">Bootstrapious</a>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                    </div><!--/span-->
+                    <div class="col-xs-12 col-sm-9 content">
+                        <p class="pull-left">
+                            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">
+                                <span class="glyphicon glyphicon-th-list"></span> Toggle nav
+                            </button>
                         </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+
+                        <div class="text-center">
+                            <h1>Bootstrap forms</h1>
+                            <p class="lead">Example of a form with 3 columns and labels aligned to the left of the 
+                                fields at &gt; 1200px (large) screen sizes, 2 columns and labels aligned to the left of the 
+                                fields at &gt;992px (medium) screen sizes, 2 columns labels above fields at &gt; 768px (small), and single 
+                                column at &lt; 768px (Extra small). 
+                            </p>
+                        </div>
+                        <form class="form-horizontal" role="form">
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="inputEmail" class="col-md-4 control-label">Email:</label>
+                                        <div class="col-md-8">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="inputPassword" class="col-md-4 control-label">Password:</label>
+                                        <div class="col-md-8">
+                                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="inputLabel3" class="col-md-4 control-label">Label 3:</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="inputLabel3" placeholder="Label 3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="inputLabel4" class="col-md-4 control-label">Label 4:</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="inputLabel4" placeholder="Label 4">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="input5" class="col-md-4 control-label">1234567890:</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="input5" placeholder="input 5">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="input6" class="col-md-4 control-label">123456789012:</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="input6" placeholder="input 6">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="input7" class="col-md-4 control-label">12345678901234:</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="input7" placeholder="input 7">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="input8" class="col-md-4 control-label">1234567890123456:</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="input8" placeholder="input 8">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="input9" class="col-md-4 control-label">123456789012345678:</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="input9" placeholder="input 9">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="input10" class="col-md-4 control-label">12345678901234567890:</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="input10" placeholder="input 10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row this actually does not appear to be needed with the form-horizontal -->
+                        </form>
+                        <p>Note: label text will occupy as much space as the text takes regardless of the 
+                            column size, so be sure to validate your spacing.
+                        </p>
+                    </div><!--/span-->
+
+                </div><!--/row-->
+
+            </div><!-- /.container -->
+        </div><!-- wrap -->
+        <footer class="footer"></footer>
+        <!-- JavaScript files-->
+        <script src="../../vendor/jquery.cookie/jquery.cookie.js"> </script>
+        <script src="../../vendor/owl.carousel/owl.carousel.min.js"></script>
+        <script src="../../vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+        <script src="../../vendor/jquery.counterup/jquery.counterup.js"></script>
+        <script src="../../js/front.js"></script>
     </body>
 </html>
