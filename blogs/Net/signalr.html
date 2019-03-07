@@ -43,15 +43,15 @@ _________________________________________________________ -->
             <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container"><a href="../../index.html" class="navbar-brand scrollTo headerHref">SManju</a>
                     <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
-                     <div id="navbarcollapse" class="collapse navbar-collapse">
-                       <ul class="navbar-nav ml-auto">
+                    <div id="navbarcollapse" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
                             <li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blogs</a>
-								<div class="dropdown-menu">
-								  <a class="dropdown-item" href="/blogs/blogs.html">C# blogs</a>
-								  <a class="dropdown-item" href="/blogs/sqlblogs.html">Sql Blogs</a>
-								</div>
-							</li>             
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blogs</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="/blogs/blogs.html">C# blogs</a>
+                                    <a class="dropdown-item" href="/blogs/sqlblogs.html">Sql Blogs</a>
+                                </div>
+                            </li>             
                         </ul>
                     </div>
                 </div>
@@ -86,16 +86,16 @@ _________________________________________________________ -->
                         </p>
                         <img src="../../img/signalr/img1.PNG" alt="requesting for shoes" />
                         <img src="../../img/signalr/img2.PNG" alt="requesting for clothes" />
-                         <script type="text/javascript">
-  ( function() {
-    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-    var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
-    var placement_id = window.CHITIKA.units.length;
-    window.CHITIKA.units.push(unit);
-    document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-}());
-</script>
-<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+                        <script type="text/javascript">
+                            ( function() {
+                                if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+                                var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
+                                var placement_id = window.CHITIKA.units.length;
+                                window.CHITIKA.units.push(unit);
+                                document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+                            }());
+                        </script>
+                        <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
                         <p><br> Now as you may be aware HTTP calls are stateless. What that means is that Server doesn’t know that it was the same User Bob who made a request to Display all Clothes and Shoes in the store .As far as Server is concerned, it just got the request from the Client and it responded by serving it. If we need the server to remember the Client, then we either need to use HTTP Cookies, maintain Server Side Sessions,hidden variable,URL-rewritring etc. Going to depth of these is out of scope of this blog. Now If you go back to eg of Bob, it was Bob/Client who was requesting the Server for details everytime and not the other way around. If you wait a second and absorb above details and give a thought about it,you can find that above approach is not a efficient way to develop any chat applications.In any chat applications,2 users (private chat) or more Users(group chat) are connected to each other and they chat. Each of the User involved in the chat , expect to see the other person’s message instantly. It’s not like User will keep on hitting (refresh/f5) to see whether the other guy part of the chat typed any message etc.This is where Push Architecture comes into picture. Push architecture means that it is the server who pushes the message to the clients (registered)/browser . So In the case of chat application, the moment user types a message, the message goes to the server and the server then broadcasts the message to all the clients. SignalR Library helps us do exactly above
                         </p>
 
@@ -153,16 +153,16 @@ _________________________________________________________ -->
                             Above source code is to create a ChatRoom for Sports. People based on the interest,can join any room they wish to and chat with people of common interest.Below are the steps to create this application. It incldues all steps i followed,right from scratch to create the project. I have also included a section called "common errors" and fixes to the errorsmay come handy if you come across same issues.
                         </p>
 
-<script type="text/javascript">
-  ( function() {
-    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-    var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
-    var placement_id = window.CHITIKA.units.length;
-    window.CHITIKA.units.push(unit);
-    document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-}());
-</script>
-<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+                        <script type="text/javascript">
+                            ( function() {
+                                if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+                                var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
+                                var placement_id = window.CHITIKA.units.length;
+                                window.CHITIKA.units.push(unit);
+                                document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+                            }());
+                        </script>
+                        <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
                         <h3> Steps:</h3>
                         <ol>
                             <li>Create a ASP.Net application <br> <img style="width:100%;height:100%" src="../../img/signalr/step1.png"/>
@@ -233,15 +233,15 @@ _________________________________________________________ -->
 
                     </div>
                     <script type="text/javascript">
-  ( function() {
-    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-    var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
-    var placement_id = window.CHITIKA.units.length;
-    window.CHITIKA.units.push(unit);
-    document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-}());
-</script>
-<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+                        ( function() {
+                            if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+                            var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
+                            var placement_id = window.CHITIKA.units.length;
+                            window.CHITIKA.units.push(unit);
+                            document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+                        }());
+                    </script>
+                    <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
                     <div class="row">
                         <div class="col-sm-9">
                             <h4>Lets see a quick demo of the app</h4>

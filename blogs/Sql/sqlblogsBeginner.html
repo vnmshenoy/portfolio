@@ -33,73 +33,9 @@
         <link rel="stylesheet" href="../../vendor/font-awesome/css/font-awesome.min.css">   
         <link rel="stylesheet" href="../../css/style.default.css">
         <script src="../../vendor/jquery/jquery.min.js"></script>
-        <script src="../../vendor/popper.js/umd/popper.min.js"> </script>
+        <!-- <script src="../../vendor/popper.js/umd/popper.min.js"> </script>-->
         <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
-        <style>
-            /*.sidenav {
-            height: 100%;
-            width: 0;
-            margin-top:5em;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-
-
-            .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-            }
-
-            .sidenav a:hover {
-            color: #f1f1f1;
-            }
-
-            .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-            }
-
-            @media (min-height: 550px) and (max-height:800px) {
-            .sidenav {
-            padding-top: 15px;
-            margin-top: 5em;
-            height: 100%;
-            width: 0;
-            margin-top:5em;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: red;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-            }   
-            .sidenav a {font-size: 18px;}
-            .sidenavcontent  {
-            position: relative;
-
-            margin-top: 8%;margin-left:8%;
-            background-color: red;
-            }
-
-            }https://www.bootply.com/oCPVdkTvd3#
-
-            }*/
-
-        </style>
+        <link rel="stylesheet" href="../../css/custom.css">  
         <!-- <script>
 $(document).ready(function() {
 //$('#ssmscontent').show();
@@ -108,19 +44,10 @@ html=$.parseHTML(data);
 $("#current").html(html);
 });
 });
-var html='';
-function showDiv(a){
-var id=$(a).attr("id");
-$("[id$='content']").hide();             
-$('#'+id+"content").show();
-var fileName=id+"content.txt";
-$.get( "../sqltxt/"+fileName,function( data ) {
-html=$.parseHTML(data);
-$("#current").html(html);                   
-});
 }
 </script>-->
         <script>
+            var html='';
             $(document).ready(function () {
                 $('[data-toggle=offcanvas]').click(function () {
                     // a terrible hack to address the 
@@ -134,21 +61,36 @@ $("#current").html(html);
                 });
             });
 
+            function showDiv(a){
+                var id=$(a).attr("id");               
+                var fileName=id+"content.txt";
+                var updateStr='';
+                var substitue = '$1<b>'; 
+                //([^~]*~[^~]*)~
+
+                $.get( "../sqltxt/"+fileName,function( data ) {
+                    var re = /([^~]*~[^~]*)~/gm; 
+                    var subst = '$1</b>'; 
+                    //https://.com/questions/32370777/replace-odd-occurrences-of-a-character-using-regex-in-javascript
+                    var result = data.replace(re, subst);
+                    result=result.replace("~",'<b>');
+                    // alert(result);                   
+                });
+            }
+
         </script>
-        <style>nav-link {
-            ;
-            }
+        <style>
             /* zig zag action; see Ana Tudor */
-            .footer {
-                background: linear-gradient(white 40%, transparent 40%), 
-                    linear-gradient(-45deg, #428BCA 33%, transparent 33%) 0 50%, 
-                    #428BCA 
-                    linear-gradient(45deg, #428BCA 33%, white 33%) 0 50%;	
-                background-repeat: repeat-x;
-                background-size: 1px 100%, 20px 20px, 20px 20px;
-                color: #ffffff;
-                min-height: 40px;
-            }
+            /* .footer {
+            background: linear-gradient(white 40%, transparent 40%), 
+            linear-gradient(-45deg, #428BCA 33%, transparent 33%) 0 50%, 
+            #428BCA 
+            linear-gradient(45deg, #428BCA 33%, white 33%) 0 50%;	
+            background-repeat: repeat-x;
+            background-size: 1px 100%, 20px 20px, 20px 20px;
+            color: #ffff    ff;
+            min-height: 40px;
+            }*/
 
             /* Wrapper for page content to push down footer */
             #wrap {
@@ -297,6 +239,12 @@ $("#current").html(html);
             .panel-collapse>.list-group .list-group-item {border-width: 1px 0;}
             .panel-collapse>.list-group {margin-bottom: 0;}
             .panel-collapse .list-group-item {border-radius:0;}
+
+            /**My CSS*/
+            .pstyle{
+                text-align:left !important;
+                margin-bottom:0px;
+            }
         </style>
     </head>
     <body>
@@ -350,30 +298,20 @@ $("#current").html(html);
                             <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                        <a id="ssms" class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="showDiv(this)">
                                             <span class="glyphicon glyphicon-folder-close">
-                                            </span>Content
+                                            </span>SSMS
                                         </a>
                                     </h4>
                                 </div>
-                               <!-- <div id="collapseOne" class="panel-collapse collapse in">
-                                    <ul class="nav nav-pills nav-stacked">
-                                        <li class="active"><a class="nav-link" href="http://fb.com/moinakbarali"><span class="glyphicon glyphicon-pencil text-primary"></span>Articles</a></li>
 
-                                        <li><a class="nav-link" href="http://fb.com/moinakbarali"><span class="glyphicon glyphicon-flash text-success"></span>News</a></li>
-
-                                        <li><a class="nav-link" href="http://fb.com/moinakbarali"><span class="glyphicon glyphicon-file text-info"></span>Newsletters</a></li>
-
-                                        <li><a class="nav-link" href="http://fb.com/moinakbarali"><span class="glyphicon glyphicon-comment text-success"></span>Comments <span class="badge">42</span></a></li>
-
-                                    </ul>
-                                </div>-->
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-file">
-                                            </span>Reports</a>
+                                        <!-- <a id="databasesetup" class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">-->
+                                        <a id="databasesetup" class="nav-link" data-toggle="collapse" data-parent="#accordion" onclick="showDiv(this)"><span class="glyphicon glyphicon-file">
+                                            </span>DBSetup</a>
                                     </h4>
                                 </div>
                                 <div id="collapseFour" class="panel-collapse collapse">
@@ -424,99 +362,42 @@ $("#current").html(html);
                                 <span class="glyphicon glyphicon-th-list"></span> Toggle nav
                             </button>
                         </p>
+                        '
+                        <div id="current" class="text-center">
+                            <!--<h1>Bootstrap forms</h1>
+<p class="lead">Example of a form with 3 columns and labels aligned to the left of the 
+fields at &gt; 1200px (large) screen sizes, 2 columns and labels aligned to the left of the 
+fields at &gt;992px (medium) screen sizes, 2 columns labels above fields at &gt; 768px (small), and single 
+column at &lt; 768px (Extra small). 
+</p>-->
+                            <h4 style="margin-top:4%;display:inline-block">SQL  Server Management Stusdio</h4><div>
+                            <br>
+                            <p class="pstyle"> You can download SQL Server Manamgent Studio(SSMS) from the official Microsoft Website
+                                <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017">Download SSMS</a>  </p> 
+                            <p class="pstyle">I have downloaded SSMS 2017 version</p>
+                            <br>
+                            <p style="text-align:left !important;margin-bottom:0px;"> SSMS is a powerful tool and below are its benefits:</p></p>
 
-                        <div class="text-center">
-                            <h1>Bootstrap forms</h1>
-                            <p class="lead">Example of a form with 3 columns and labels aligned to the left of the 
-                                fields at &gt; 1200px (large) screen sizes, 2 columns and labels aligned to the left of the 
-                                fields at &gt;992px (medium) screen sizes, 2 columns labels above fields at &gt; 768px (small), and single 
-                                column at &lt; 768px (Extra small). 
-                            </p>
-                        </div>
-                        <form class="form-horizontal" role="form">
-                            <div class="row">
-                                <div class="col-sm-6 col-lg-4">
-                                    <div class="form-group">
-                                        <label for="inputEmail" class="col-md-4 control-label">Email:</label>
-                                        <div class="col-md-8">
-                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-4">
-                                    <div class="form-group">
-                                        <label for="inputPassword" class="col-md-4 control-label">Password:</label>
-                                        <div class="col-md-8">
-                                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-4">
-                                    <div class="form-group">
-                                        <label for="inputLabel3" class="col-md-4 control-label">Label 3:</label>
-                                        <div class="col-md-8">
-                                            <input type="text" class="form-control" id="inputLabel3" placeholder="Label 3">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-4">
-                                    <div class="form-group">
-                                        <label for="inputLabel4" class="col-md-4 control-label">Label 4:</label>
-                                        <div class="col-md-8">
-                                            <input type="text" class="form-control" id="inputLabel4" placeholder="Label 4">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-4">
-                                    <div class="form-group">
-                                        <label for="input5" class="col-md-4 control-label">1234567890:</label>
-                                        <div class="col-md-8">
-                                            <input type="text" class="form-control" id="input5" placeholder="input 5">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-4">
-                                    <div class="form-group">
-                                        <label for="input6" class="col-md-4 control-label">123456789012:</label>
-                                        <div class="col-md-8">
-                                            <input type="text" class="form-control" id="input6" placeholder="input 6">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-4">
-                                    <div class="form-group">
-                                        <label for="input7" class="col-md-4 control-label">12345678901234:</label>
-                                        <div class="col-md-8">
-                                            <input type="text" class="form-control" id="input7" placeholder="input 7">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-4">
-                                    <div class="form-group">
-                                        <label for="input8" class="col-md-4 control-label">1234567890123456:</label>
-                                        <div class="col-md-8">
-                                            <input type="text" class="form-control" id="input8" placeholder="input 8">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-4">
-                                    <div class="form-group">
-                                        <label for="input9" class="col-md-4 control-label">123456789012345678:</label>
-                                        <div class="col-md-8">
-                                            <input type="text" class="form-control" id="input9" placeholder="input 9">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-4">
-                                    <div class="form-group">
-                                        <label for="input10" class="col-md-4 control-label">12345678901234567890:</label>
-                                        <div class="col-md-8">
-                                            <input type="text" class="form-control" id="input10" placeholder="input 10">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- /.row this actually does not appear to be needed with the form-horizontal -->
-                        </form>
+                            <ul>
+                                <li>First and foremost,most people dont like to remember commands,and this tool  provides a graphical interface to manage Sql Server</li>
+                                <li>Used for configuring, managing, and administering all components within Microsoft SQL Server</li>
+                                <li>Apart from connecting to database engine, it also connects to analysis services, integration services and reporting services.With <b>SSMS 17.2 onwards</b>, the Performance Dashboard now comes as part of the Standard Reports. We do not need to download and install it separately.With this dashboard, its helps in troubleshooting performance issues</li>
+                                <li>It also supports managing Azure components such as Azure SQL Database and Data Warehouse, as well as hybrid cloud features such as StretchDB</li>
+                                <li>It's a gateway to SQL Profiler</li>
+                                <li>Can develop T-SQL code</li>                            
+                            </ul>
+                            <p>In order to <b>open</b> SSMS in Windows, you can click on "Search" and start typing in "Sql...",it should show the SSMS if its installed as shown in the image below
+                                <br>
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/startSSMS.PNG" alt="open ssms" /> 
+                                <br>
+                                <br>
+                            <h4>Please see</h4>
+                            If you want to read more,then check the following link
+
+                            <a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-changelog-ssms?view=sql-server-2017#previous-ssms-releases">Release Notes</a>
+
+                            <br>
+                        </div> 
                         <p>Note: label text will occupy as much space as the text takes regardless of the 
                             column size, so be sure to validate your spacing.
                         </p>
@@ -526,7 +407,26 @@ $("#current").html(html);
 
             </div><!-- /.container -->
         </div><!-- wrap -->
-        <footer class="footer"></footer>
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-lg-left">
+                        <p class="social"><a href="facebook.com/shenoyvnm
+                            " class="external facebook wow fadeInUp"><i class="fa fa-facebook"></i></a>
+                            <a style="background-color:grey;" href="www.linkedin.com/in/manjunathshenoywebdev" class="external facebook wow fadeInUp"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                    <!-- /.6-->
+                    <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+                        <p>© 2018 SManju. All rights reserved.</p>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <p class="template-bootstrapious">Designed by <a href="https://www.bootstrapious.com">Bootstrapious</a>
+                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
         <!-- JavaScript files-->
         <script src="../../vendor/jquery.cookie/jquery.cookie.js"> </script>
         <script src="../../vendor/owl.carousel/owl.carousel.min.js"></script>
