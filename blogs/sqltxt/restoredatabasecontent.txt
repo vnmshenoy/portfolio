@@ -1,4 +1,4 @@
-<h1><span class="myheader">Restore the Database</span></h1>
+<h4><span class="myheader">Restore the Database</span></h4>
                         <p class="pstyle">We created a backup file in the previous section. Using that file,we will try to restore the database. In real time, someone else can share the backup file with you and you can restore it in your SQL server.In order to restore the database,do the following</p>
                         <ul>
                             <li>Login to the Server using steps we saw earlier(Use Windows authentication)</li>
@@ -57,5 +57,5 @@
                             </li>
                             <li>Click on "Next" again will open "Summary" page. Click on "Next" again and ta-da scripts are generated </li>
                             <li>Click on "Finish" </li>
-                        </ul>
-						<p class="pstyle">You will see the insert statements used to create the data in the tables</p>
+                        </ul><br>
+						<p class="pstyle"><b>You will see the insert statements used to create the data in the tables</b></p>
