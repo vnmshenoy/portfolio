@@ -19,8 +19,7 @@
                             <img style="width:60%;height:40%" src="../../img/sqlforBeginners/startSSMS.PNG" alt="open ssms" /> 
                             <br>
                             <br>
-                        <h4>Please see</h4>
-                                If you want to read more,then check the following link
+                        <p class="pstyle"> <b>Please See </b> : If you want to read more,then check the following link 
                         
-                            <a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-changelog-ssms?view=sql-server-2017#previous-ssms-releases">Release Notes</a>                        
+                            <a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-changelog-ssms?view=sql-server-2017#previous-ssms-releases">Release Notes</a> </p>                       
                         <br>

@@ -1,5 +1,5 @@
- <h1 class="mt-4 h1-tutorial">Create back up of the database</h1>
-                        <p>There are instances when you want to take the bakcup of the database. To do we need to follow below steps</p>
+ <h4><span class="myheader">Create back up of the database</span></h4>
+                        <p class="pstyle">There are instances when you want to take the bakcup of the database. To do we need to follow below steps</p>
                         <ul>
                             <li>Login to the Server using steps we saw earlier(Use Windows authentication)</li>
                             <li>Expand the server, expand Databases, select the database you want to take back up of.Right Click on the database name</li>
@@ -21,5 +21,5 @@
                              <li>You will see a progress bar and when backup is completed, SSMS will notify you thorugh a prompt saying <b>'The backup of database [YouDBNAME]  completed successfully'</b></li>
                              <li>Go to the saved directory and you should see the backup file (in my case <b> backup.bak </b>)</li>                            
                         </ul>                        
-                        <p>Congratulations... :-) you have created a back up file </p>
+                        <p class="pstyle">Congratulations... :-) you have created a back up file </p>
                         <br>

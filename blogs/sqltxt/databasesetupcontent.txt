@@ -1,5 +1,5 @@
- <h1 class="mt-4 h1-tutorial">Database Setup</h1>
-                        <p>Assuming that you have installed SQL Server Manamgent Studio(SSMS) from the official Microsoft Website, lets look at the steps to get you started</p>
+ <h4><span class="myheader">Database Setup</span></h4>
+                        <p class="pstyle">Assuming that you have installed SQL Server Manamgent Studio(SSMS) from the official Microsoft Website, lets look at the steps to get you started</p>
                         <ul>
                             <li>Launch SQL Server Management Studio</li>
                             <li>Used windows authentication and connected to the SQL Server Database Engine as shown below<br><br>
@@ -22,5 +22,5 @@
                             <li>Above ensure that you have the correct name of the database on the first line </li>
                             <li>After running above steps,you should see the content in the database</li>
                         </ul>
-                        <p>Wohooo... now as we have data in the tables we can start writing queries on our database</p>
+                        <p class="pstyle">Wohooo... now as we have data in the tables we can start writing queries on our database</p>
                         <br>

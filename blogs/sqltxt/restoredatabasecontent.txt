@@ -1,5 +1,5 @@
-<h1 class="mt-4 h1-tutorial">Restore the Database</h1>
-                        <p>We created a backup file in the previous section. Using that file,we will try to restore the database. In real time, someone else can share the backup file with you and you can restore it in your SQL server.In order to restore the database,do the following</p>
+<h1><span class="myheader">Restore the Database</span></h1>
+                        <p class="pstyle">We created a backup file in the previous section. Using that file,we will try to restore the database. In real time, someone else can share the backup file with you and you can restore it in your SQL server.In order to restore the database,do the following</p>
                         <ul>
                             <li>Login to the Server using steps we saw earlier(Use Windows authentication)</li>
                             <li>Expand the server,and right click on the "Databases" and select Restore Database
@@ -19,9 +19,9 @@
                             <li>Once Restoration is done, SSMS will notify you through a prompt <b>"Database [YourName] restored successfully"</b> </li>
 
                         </ul>
-                        <p>Congratulations... :-) you have restored the database using a backup file </p>
+                        <p class="pstyle">Congratulations... :-) you have restored the database using a backup file </p>
 
-                        <p>Now <b>lets consider another scenario</b> where someone gave you the backup file and you have restored the database successfully as well.When you restored the database, tables and the data in them would have been created for you already...all good..:-) . But imagine that you want to generate the database schema scripts (create table etc) or in that matter even the scripts used to insert the data into the tables from an existing database.You need to follow below steps:
+                        <p class="pstyle">Now <b>lets consider another scenario</b> where someone gave you the backup file and you have restored the database successfully as well.When you restored the database, tables and the data in them would have been created for you already...all good..:-) . But imagine that you want to generate the database schema scripts (create table etc) or in that matter even the scripts used to insert the data into the tables from an existing database.You need to follow below steps:
                         </p>
                         <ul>
                             <li>Right click on database go to <b>"Tasks ->Generate Scripts"</b> as shown in image below
@@ -58,4 +58,4 @@
                             <li>Click on "Next" again will open "Summary" page. Click on "Next" again and ta-da scripts are generated </li>
                             <li>Click on "Finish" </li>
                         </ul>
-						<p>You will see the insert statements used to create the data in the tables</p>
+						<p class="pstyle">You will see the insert statements used to create the data in the tables</p>
