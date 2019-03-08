@@ -66,14 +66,14 @@ $("#current").html(html);
                 var fileName=id+"content.txt";
                 var updateStr='';
                 var substitue = '$1<b>'; 
-                //([^~]*~[^~]*)~
-
                 $.get( "../sqltxt/"+fileName,function( data ) {
                     var re = /([^~]*~[^~]*)~/gm; 
                     var subst = '$1</b>'; 
                     //https://.com/questions/32370777/replace-odd-occurrences-of-a-character-using-regex-in-javascript
                     var result = data.replace(re, subst);
                     result=result.replace("~",'<b>');
+                    html=$.parseHTML(result);
+                    $("#current").html(html);
                     // alert(result);                   
                 });
             }
@@ -144,20 +144,20 @@ $("#current").html(html);
                 }
 
                 .row-offcanvas-right {
-                    right: 25%;
+                    right: 17%;
                 }
 
                 .row-offcanvas-left {
-                    left: 25%;
+                    left: 17%;
                 }
 
                 .row-offcanvas-right .sidebar-offcanvas {
-                    right: -25%; /* 3 columns */
+                    right: -17%; /* 3 columns */
                     background-color: rgb(255, 255, 255);
                 }
 
                 .row-offcanvas-left .sidebar-offcanvas {
-                    left: -25%; /* 3 columns */
+                    left: -17%; /* 3 columns */
                     background-color: rgb(255, 255, 255);
                 }
 
@@ -177,7 +177,7 @@ $("#current").html(html);
                 }
 
                 .row-offcanvas .content {
-                    width: 75%; /* 9 columns */
+                    width: 83%; /* 10 columns */
                     -webkit-transition: all .25s ease-out;
                     -moz-transition: all .25s ease-out;
                     transition: all .25s ease-out;
@@ -190,8 +190,8 @@ $("#current").html(html);
 
                 .sidebar-offcanvas {
                     position: absolute;
-                    top: 0;
-                    width: 25%; /* 3 columns */
+                    top: 10px;
+                    width: 17%; /* 2 columns */
                 }
             }
             @media screen and (max-width: 767px) {
@@ -245,6 +245,99 @@ $("#current").html(html);
                 text-align:left !important;
                 margin-bottom:0px;
             }
+            .customLeftPane{
+                color:rgba(0,0,0,.65);
+                font-size:1.4rem;
+                letter-spacing:0.1rem;
+                font-weight: 500;
+                    margin-top:1em;
+            }
+
+            /* 
+            ##Device = Desktops
+            ##Screen = 1281px to higher resolution desktops
+            */
+
+            @media (min-width: 1281px) {
+                .myheader{
+                    display:inline-block;
+                    margin-left: 4%;
+                    background: orange;
+
+                }    
+            }
+
+            /* 
+            ##Device = Laptops, Desktops
+            ##Screen = B/w 1025px to 1280px
+            */
+
+            @media (min-width: 1025px) and (max-width: 1280px) {
+
+                .myheader{
+                     margin-left:-18%;
+                   /* background: maroon;*/
+                }    
+            }
+
+            /* 
+            ##Device = Tablets, Ipads (portrait)
+            ##Screen = B/w 768px to 1024px
+            */
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+
+                .myheader{
+                    display:inline-block;
+                    margin-left: 4%;
+                    background: orange;
+                } 
+            }
+
+            /* 
+            ##Device = Tablets, Ipads (landscape)
+            ##Screen = B/w 768px to 1024px
+            */
+
+            @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+                .myheader{
+                    display:inline-block;
+                    margin-left: 4%;
+                    background: green;
+
+                }  
+
+            }
+
+            /* 
+            ##Device = Low Resolution Tablets, Mobiles (Landscape)
+            ##Screen = B/w 481px to 767px
+            */
+
+            @media (min-width: 481px) and (max-width: 767px) {
+                .myheader{
+                    display:inline-block;
+                    margin-left: 4%;
+                    background: green;
+                }  
+            }
+
+            /* 
+            ##Device = Most of the Smartphones Mobiles (Portrait)
+            ##Screen = B/w 320px to 479px
+            */
+
+            @media (min-width: 320px) and (max-width: 480px) {
+
+                .myheader{
+                    display:inline-block;
+                    margin-left: 4%;
+                    background: red;
+
+                }  
+            }
+
         </style>
     </head>
     <body>
@@ -298,18 +391,27 @@ $("#current").html(html);
                             <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a id="ssms" class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="showDiv(this)">
+                                        <a id="ssms" class="customLeftPane" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="showDiv(this)">
                                             <span class="glyphicon glyphicon-folder-close">
                                             </span>SSMS
                                         </a>
                                     </h4>
                                 </div>
-
                             </div>
-                            <div class="panel panel-default">
+                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <!-- <a id="databasesetup" class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">-->
+                                        <a id="ssms" class="nav-link link-scroll" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="showDiv(this)">
+                                            <span class="glyphicon glyphicon-folder-close">
+                                            </span>DBSetup
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                            <!--<div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a id="databasesetup" class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"></a>
                                         <a id="databasesetup" class="nav-link" data-toggle="collapse" data-parent="#accordion" onclick="showDiv(this)"><span class="glyphicon glyphicon-file">
                                             </span>DBSetup</a>
                                     </h4>
@@ -325,8 +427,8 @@ $("#current").html(html);
                                         <a href="#" class="list-group-item nav-link">Vestibulum at eros</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-info">
+                            </div>-->
+                            <!--<div class="panel panel-info">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-heart">
@@ -353,16 +455,16 @@ $("#current").html(html);
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div><!--/span-->
                     <div class="col-xs-12 col-sm-9 content">
                         <p class="pull-left">
                             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">
-                                <span class="glyphicon glyphicon-th-list"></span> Toggle nav
+                                <span class="glyphicon glyphicon-th-list"></span>Toggle Left Panel
                             </button>
-                        </p>
-                        '
+                        </p><br>
+                        
                         <div id="current" class="text-center">
                             <!--<h1>Bootstrap forms</h1>
 <p class="lead">Example of a form with 3 columns and labels aligned to the left of the 
@@ -370,13 +472,13 @@ fields at &gt; 1200px (large) screen sizes, 2 columns and labels aligned to the 
 fields at &gt;992px (medium) screen sizes, 2 columns labels above fields at &gt; 768px (small), and single 
 column at &lt; 768px (Extra small). 
 </p>-->
-                            <h4 style="margin-top:4%;display:inline-block">SQL  Server Management Stusdio</h4><div>
+                            <h4><span class="myheader">SQL  Server Management Stusdio</span></h4><div>
                             <br>
                             <p class="pstyle"> You can download SQL Server Manamgent Studio(SSMS) from the official Microsoft Website
                                 <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017">Download SSMS</a>  </p> 
                             <p class="pstyle">I have downloaded SSMS 2017 version</p>
                             <br>
-                            <p style="text-align:left !important;margin-bottom:0px;"> SSMS is a powerful tool and below are its benefits:</p></p>
+                            <p style="text-align:left !important;margin-bottom:0px;"> SSMS is a powerful tool and below are its benefits:</p>
 
                             <ul>
                                 <li>First and foremost,most people dont like to remember commands,and this tool  provides a graphical interface to manage Sql Server</li>
@@ -397,41 +499,41 @@ column at &lt; 768px (Extra small).
                             <a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-changelog-ssms?view=sql-server-2017#previous-ssms-releases">Release Notes</a>
 
                             <br>
-                        </div> 
-                        <p>Note: label text will occupy as much space as the text takes regardless of the 
-                            column size, so be sure to validate your spacing.
-                        </p>
-                    </div><!--/span-->
+                            </div> 
+                            <p>Note: label text will occupy as much space as the text takes regardless of the 
+                                column size, so be sure to validate your spacing.
+                            </p>
+                        </div><!--/span-->
 
-                </div><!--/row-->
+                    </div><!--/row-->
 
-            </div><!-- /.container -->
-        </div><!-- wrap -->
-        <footer class="main-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-lg-left">
-                        <p class="social"><a href="facebook.com/shenoyvnm
-                            " class="external facebook wow fadeInUp"><i class="fa fa-facebook"></i></a>
-                            <a style="background-color:grey;" href="www.linkedin.com/in/manjunathshenoywebdev" class="external facebook wow fadeInUp"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                    <!-- /.6-->
-                    <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
-                        <p>© 2018 SManju. All rights reserved.</p>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <p class="template-bootstrapious">Designed by <a href="https://www.bootstrapious.com">Bootstrapious</a>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        </p>
+                </div><!-- /.container -->
+            </div><!-- wrap -->
+            <footer class="main-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-lg-left">
+                            <p class="social"><a href="facebook.com/shenoyvnm
+                                " class="external facebook wow fadeInUp"><i class="fa fa-facebook"></i></a>
+                                <a style="background-color:grey;" href="www.linkedin.com/in/manjunathshenoywebdev" class="external facebook wow fadeInUp"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                        <!-- /.6-->
+                        <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+                            <p>© 2018 SManju. All rights reserved.</p>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <p class="template-bootstrapious">Designed by <a href="https://www.bootstrapious.com">Bootstrapious</a>
+                                <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-        <!-- JavaScript files-->
-        <script src="../../vendor/jquery.cookie/jquery.cookie.js"> </script>
-        <script src="../../vendor/owl.carousel/owl.carousel.min.js"></script>
-        <script src="../../vendor/waypoints/lib/jquery.waypoints.min.js"></script>
-        <script src="../../vendor/jquery.counterup/jquery.counterup.js"></script>
-        <script src="../../js/front.js"></script>
-    </body>
-</html>
+            </footer>
+            <!-- JavaScript files-->
+            <script src="../../vendor/jquery.cookie/jquery.cookie.js"> </script>
+            <script src="../../vendor/owl.carousel/owl.carousel.min.js"></script>
+            <script src="../../vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+            <script src="../../vendor/jquery.counterup/jquery.counterup.js"></script>
+            <script src="../../js/front.js"></script>
+            </body>
+        </html>
