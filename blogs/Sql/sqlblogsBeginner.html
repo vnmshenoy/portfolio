@@ -22,9 +22,7 @@
         <meta name="robots" content="all,follow">
         <meta name="googlebot" content="index,follow,snippet,archive">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>SManju</title>
-
         <meta name="keywords" content="">
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
         <!-- Bootstrap and Font Awesome css -->
@@ -36,19 +34,12 @@
         <!-- <script src="../../vendor/popper.js/umd/popper.min.js"> </script>-->
         <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../../css/custom.css">  
-        <!-- <script>
-$(document).ready(function() {
-//$('#ssmscontent').show();
-$.get( "../sqltxt/ssmscontent.txt",function( data ) {                  
-html=$.parseHTML(data);
-$("#current").html(html);
-});
-});
-}
-</script>-->
+        
         <script>
             var html='';
             $(document).ready(function () {
+                $('#headermenu').load("header.html #menu",function(){
+                });
                 $('[data-toggle=offcanvas]').click(function () {
                     // a terrible hack to address the 
                     if ($('.sidebar-offcanvas').css('background-color') == 'rgb(255, 255, 255)') {
@@ -75,7 +66,7 @@ $("#current").html(html);
                     html=$.parseHTML(result);
                     $("#current").html(html);
                     $("#toggleLeft").click();
-                    
+
                     // alert(result);                   
                 });
             }
@@ -96,11 +87,11 @@ $("#current").html(html);
 
             /* Wrapper for page content to push down footer */
             #wrap {
-                min-height: 100%;
+                min-height: 90%;
                 height: auto !important;
-                height: 100%;
+                height: 100%;*/
                 /* Negative indent footer by its height */
-                margin: 0 auto -40px;
+               /* margin: 0 auto -40px;*/
                 /* Pad bottom by footer height */
                 padding: 0 0 0px;
             }
@@ -244,7 +235,7 @@ $("#current").html(html);
 
             /**My CSS*/
             li{
-                 text-align:left !important;
+                text-align:left !important;
             }
             .pstyle{
                 text-align:left !important;
@@ -282,8 +273,8 @@ $("#current").html(html);
             @media (min-width: 1025px) and (max-width: 1280px) {
 
                 .myheader{
-                     margin-left:-18%;
-                   /* background: maroon;*/
+                    margin-left:-18%;
+                    /* background: maroon;*/
                 }    
             }
 
@@ -361,6 +352,8 @@ $("#current").html(html);
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="/blogs/blogs.html">C# blogs</a>
                                     <a class="dropdown-item" href="/blogs/sqlblogs.html">Sql Blogs</a>
+                                    <a class="dropdown-item" href="blogs/sqlblogs.html">JS and jQuery Blogs</a>
+
                                 </div>
                             </li>             
                         </ul>
@@ -395,7 +388,7 @@ $("#current").html(html);
                     <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
                         <!-- from http://bootsnipp.com/snippets/featured/accordion-list-group-menu -->
                         <div class="panel-group" id="accordion">
-                          <div class="panel panel-info">
+                            <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a id="ssms" class="customLeftPane" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="showDiv(this)">
@@ -405,7 +398,7 @@ $("#current").html(html);
                                     </h4>
                                 </div>
                             </div>
-                             <div class="panel panel-info">
+                            <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a id="databasesetup" class="customLeftPane" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="showDiv(this)">
@@ -415,7 +408,7 @@ $("#current").html(html);
                                     </h4>
                                 </div>
                             </div>
-                             <div class="panel panel-info">
+                            <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a id="createbackup" class="customLeftPane" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="showDiv(this)">
@@ -425,7 +418,7 @@ $("#current").html(html);
                                     </h4>
                                 </div>
                             </div>
-                             <div class="panel panel-info">
+                            <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a id="restoredatabase" class="customLeftPane" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="showDiv(this)">
@@ -435,7 +428,7 @@ $("#current").html(html);
                                     </h4>
                                 </div>
                             </div>
-                             <div class="panel panel-info">
+                            <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a id="dbd" class="customLeftPane" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="showDiv(this)">
@@ -445,64 +438,7 @@ $("#current").html(html);
                                     </h4>
                                 </div>
                             </div>
-                             <!--<div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a id="ssms" class="nav-link link-scroll" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="showDiv(this)">
-                                            <span class="glyphicon glyphicon-folder-close">
-                                            </span>DBSetup
-                                        </a>
-                                    </h4>
-                                </div>
-                            </div>-->
-                            <!--<div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                    <a id="databasesetup" class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"></a>
-                                        <a id="databasesetup" class="nav-link" data-toggle="collapse" data-parent="#accordion" onclick="showDiv(this)"><span class="glyphicon glyphicon-file">
-                                            </span>DBSetup</a>
-                                    </h4>
-                                </div>
-                                <div id="collapseFour" class="panel-collapse collapse">
-                                    <div class="list-group">
-                                        <a href="#" class="list-group-item active nav-link">
-                                            Cras justo odio
-                                        </a>
-                                        <a href="#" class="list-group-item nav-link">Dapibus ac facilisis in</a>
-                                        <a href="#" class="list-group-item nav-link">Morbi leo risus</a>
-                                        <a href="#" class="list-group-item nav-link">Porta ac consectetur ac</a>
-                                        <a href="#" class="list-group-item nav-link">Vestibulum at eros</a>
-                                    </div>
-                                </div>
-                            </div>-->
-                            <!--<div class="panel panel-info">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a class="nav-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-heart">
-                                            </span>Reports</a>
-                                    </h4>
-                                </div>
-                                <div id="collapseFive" class="panel-collapse collapse">
-                                    <div class="list-group">
-                                        <a class="nav-link" href="#">
-                                            <h4 class="list-group-item-heading">List group item heading</h4>
-                                            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                        </a>
-                                    </div>
-                                    <div class="list-group">
-                                        <a class="nav-link" href="#">
-                                            <h4 class="list-group-item-heading">List group item heading</h4>
-                                            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                        </a>
-                                    </div>
-                                    <div class="list-group">
-                                        <a class="nav-link" href="#">
-                                            <h4 class="list-group-item-heading">List group item heading</h4>
-                                            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>-->
+
                         </div>
                     </div><!--/span-->
                     <div class="col-xs-12 col-sm-9 content">
@@ -511,14 +447,9 @@ $("#current").html(html);
                                 <span class="glyphicon glyphicon-th-list"></span>Toggle Left Panel
                             </button>
                         </p><br>
-                        
+
                         <div id="current" class="text-center">
-                            <!--<h1>Bootstrap forms</h1>
-<p class="lead">Example of a form with 3 columns and labels aligned to the left of the 
-fields at &gt; 1200px (large) screen sizes, 2 columns and labels aligned to the left of the 
-fields at &gt;992px (medium) screen sizes, 2 columns labels above fields at &gt; 768px (small), and single 
-column at &lt; 768px (Extra small). 
-</p>-->
+                            
                             <h4><span class="myheader">SQL  Server Management Stusdio</span></h4><div>
                             <br>
                             <p class="pstyle"> You can download SQL Server Manamgent Studio(SSMS) from the official Microsoft Website
@@ -545,17 +476,18 @@ column at &lt; 768px (Extra small).
 
                             <a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-changelog-ssms?view=sql-server-2017#previous-ssms-releases">Release Notes</a>
 
-                            <br>
-                            </div> 
-                            <p>Note: label text will occupy as much space as the text takes regardless of the 
+                             <p>Note: label text will occupy as much space as the text takes regardless of the 
                                 column size, so be sure to validate your spacing.
                             </p>
+                            </div> 
+                           
                         </div><!--/span-->
 
                     </div><!--/row-->
 
                 </div><!-- /.container -->
             </div><!-- wrap -->
+        </div>
             <footer class="main-footer">
                 <div class="container">
                     <div class="row">
@@ -577,10 +509,6 @@ column at &lt; 768px (Extra small).
                 </div>
             </footer>
             <!-- JavaScript files-->
-            <script src="../../vendor/jquery.cookie/jquery.cookie.js"> </script>
-            <script src="../../vendor/owl.carousel/owl.carousel.min.js"></script>
-            <script src="../../vendor/waypoints/lib/jquery.waypoints.min.js"></script>
-            <script src="../../vendor/jquery.counterup/jquery.counterup.js"></script>
-            <script src="../../js/front.js"></script>
+        
             </body>
         </html>

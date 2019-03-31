@@ -9,7 +9,22 @@
             });
         </script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"></script>
+        <script src="../vendor/jquery/jquery.min.js"></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-131742548-1');
+        </script>
+        <script>
+            $(document).ready(function(){
+                $('#headermenu').load("header.html #menu",function(){
+                });
+            });
+        </script>
+
         <meta charset="utf-8">
         <meta name="robots" content="all,follow">
         <meta name="googlebot" content="index,follow,snippet,archive">
@@ -22,13 +37,19 @@
         <!-- Font Awesome CSS-->
         <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css">   
         <link rel="stylesheet" href="../css/style.default.css">
-        <link rel="stylesheet" href="../css/custom.css">   
-        
+        <link rel="stylesheet" href="../css/custom.css">
         <style>
             .card{
-              max-height:210px !important;  
+                max-height:210px !important;  
             }            
         </style>
+        <script>
+            $(document).ready(function() {
+                $('#headermenu').load("../header.html #menu",function(){
+                });   
+            });
+        </script>
+
     </head>
 
     <body>
@@ -41,28 +62,18 @@ _________________________________________________________ -->
                     <div id="navbarcollapse" class="collapse navbar-collapse">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blogs</a>
-								<div class="dropdown-menu">
-								  <a class="dropdown-item" href="/blogs/blogs.html">C# blogs</a>
-								  <a class="dropdown-item" href="/blogs/sqlblogs.html">Sql Blogs</a>
-								</div>
-							</li>             
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blogs</a>
+                                <div id="headermenu" class="dropdown-menu">
+
+                                </div>
+                            </li>             
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
         <br>
-        <script type="text/javascript">
-  ( function() {
-    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-    var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
-    var placement_id = window.CHITIKA.units.length;
-    window.CHITIKA.units.push(unit);
-    document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-}());
-</script>
-<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+
         <div class="index-content">
             <div class="container">
                 <div class="row">
@@ -102,13 +113,7 @@ _________________________________________________________ -->
 
 
         <!-- JavaScript files-->
-        <script src="../vendor/jquery/jquery.min.js"></script>
-        <script src="../vendor/popper.js/umd/popper.min.js"> </script>
-        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-        <script src="../vendor/jquery.cookie/jquery.cookie.js"> </script>
-        <script src="../vendor/owl.carousel/owl.carousel.min.js"></script>
-        <script src="../vendor/waypoints/lib/jquery.waypoints.min.js"></script>
-        <script src="../vendor/jquery.counterup/jquery.counterup.js"></script>
-        <script src="../js/front.js"></script>
+
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>       
     </body>
 </html>
