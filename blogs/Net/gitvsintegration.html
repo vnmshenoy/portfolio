@@ -24,6 +24,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>SManju</title>
+        <script>
+            $(document).ready(function () {
+                $('#headermenu').load("header.html #menu",function(){
+                });                
+            });
+        </script>
 
         <meta name="keywords" content="">
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
@@ -49,15 +55,14 @@ _________________________________________________________ -->
             <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container"><a href="../../index.html" class="navbar-brand scrollTo headerHref">Manju</a>
                     <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
-                    <div id="navbarcollapse" class="collapse navbar-collapse">
-                       <ul class="navbar-nav ml-auto">
+                   <div id="navbarcollapse" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
                             <li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blogs</a>
-								<div class="dropdown-menu">
-								  <a class="dropdown-item" href="/blogs/blogs.html">C# blogs</a>
-								  <a class="dropdown-item" href="/blogs/sqlblogs.html">Sql Blogs</a>
-								</div>
-							</li>             
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blogs</a>
+                                <div id="headermenu" class="dropdown-menu">
+
+                                </div>
+                            </li>             
                         </ul>
                     </div>
                 </div>
@@ -83,17 +88,7 @@ _________________________________________________________ -->
                             <li>Creating a dummy project and staging,commiting the changes</li>
                             <li>Pusing the changes to the repository</li>  
                             <li>Common errors faced and fixes</li>  
-                        </ul>
-                        <script type="text/javascript">
-  ( function() {
-    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-    var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
-    var placement_id = window.CHITIKA.units.length;
-    window.CHITIKA.units.push(unit);
-    document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-}());
-</script>
-<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+                        </ul>                      
                         <ul>
                             <li>Create a folder in you local machine where you will do the development.I created a folder named "GITVSDemo" in C:\ drive</li>
                             <li>Loginto you git hub account(https://github.com/) . Create an accouunt if you dont have one</li>
@@ -142,17 +137,7 @@ _________________________________________________________ -->
                             <li>Once changes are staged and commited, "Push" to the repo<br>
                                 <img style="width:100%;height:100%" src="../../img/gitvsintegration/12Push.png" alt="push to repo" />
                             </li>
-                        </ul>   
-                        <script type="text/javascript">
-  ( function() {
-    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-    var unit = {"calltype":"async[2]","publisher":"vnmshenoy","width":550,"height":250,"sid":"Chitika Default"};
-    var placement_id = window.CHITIKA.units.length;
-    window.CHITIKA.units.push(unit);
-    document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-}());
-</script>
-<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+                        </ul>                          
                         <h3> Common Errors Faced and Solutions:</h3>
                         <ol>
                             <li>Issue 1:  I was pushing the code to repository (in VS 2017), I was getting an error with error code 403</li>
