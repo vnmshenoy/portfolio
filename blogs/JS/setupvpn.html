@@ -70,87 +70,49 @@ _________________________________________________________ -->
         <br>       
         <section class="about-section">
             <div class="container">
-                <h3>Create Dates in Javascript</h3>
+                <h3>Setting up OpenVPN in your router</h3>
                 <div class="row">
                     <div class="col-sm-9">
-                        <p class=" text-left">In this blog we will see how we can creates "Dates" using Javascript's Date function.</p>                       
+                        <p class=" text-left">In this blog I will explain you how to set up OpenVPN on the router in your home or small office</p>                       
                         <b> What we will achieve at the end of this blog</b>
                         <p>
-                            At the end of this tutorial, we will see various ways to create Dates in Javascript. Idea is to get more familiar with the Date() and its overloaded options provided to us by Javascript.
-                        </p>
-                        <p><b>Source code</b> of the functionality <a style="font-weight:bold" href="https://github.com/manjusa/datecreatingoptionsinjs.git">Github Link</a></p>
-                        <b>Below is a quick demo to wrap your head around to what we are trying to achieve</b><br>
-                        <br>
-                        <video width="100%" height="330" controls>
-                            <source src="../../videos/creatingdate/datecreatingoptions.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <ul style="padding-left:0px"><b>JS to be downloaded</b>
-                            <li style="margin-left:30px">jQuery  <a style="font-weight:bold" href="https://jquery.com/download/"> Link to download</a></li>    
-                            <li style="margin-left:30px">Bootstrap  <a style="font-weight:bold" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"> Link to download</a></li>  
-                            <li style="margin-left:30px">Bootstrap  CSS <a style="font-weight:bold" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> Link to download</a></li>   
-
-                        </ul>                        
-                        <p>So what we are trying to achieve is quite clear from the demo/video above.Basically, we are trying to explore various ways with which we can create dates in Javascript.I used to find it tricky when dealing with dates in Javascript and thought of putting all together in one place.I assume this will help you guys as well. There may be other ways to creating dates so feel free to add them below in comments and I will accomodate
-                        </p>
-
-                        <p><b>PS</b> You will see that i have used callback functions to make code reusable</p>
-                        <b>Like we saw in the demo, we have 4 approaches to accomplish this.I have added below a quick snapshot of the createDate() function i wrote which is a wrapper over Javascripts 
-                        Date function. In the createDate() function you will see all the 4 approaches(if else statements)</b> 
-                        <br><br>
-                        <ul style="padding-left:0px">
-                            <li style="margin-left:30px"><p>First,we are creating Dates by calling new Date() and passing no arguments</p></li>
-                            <li style="margin-left:30px"><p style="margin-bottom:0rem">Second, we take inputs of Year, Month and Day from the User.If you wish you can also take input of hours,seconds and milliseconds.<br>
-                                The inputs entered by User are captured and passed as argument to Javascript's Date function. Javascript's date function takes</p>
-                                <ul>                               
-                                    <li>Year</li>
-                                    <li>Month</li>
-                                    <li>Day</li>
-                                    <li>Hours</li>
-                                    <li>Minutes</li>
-                                    <li>Seconds</li>
-                                    <li>Milliseconds</li>                               
-                                </ul>
-                            <p>
-                            as arguments, in the order they are passed.
-                            Incase you skip the argument, then it defaults to 0. In our eg, we only pass the first 3 arguments, i.e Year,Month and Day therefore rest all becomes 0.
-                            One interesting thing I learnt is that month is 0 based in Javascript. i.e 0 refers to January and 11 means December.This is little tough to comprehend but yeah that is how the Date Javascript function works.</p>
-                            </li>
-                            <li style="margin-left:30px"><p style="margin-bottom:0rem">Third option is to pass the Date a String as a paramenter.
-                                Some Eg which you can try entering are:</p>
-                                <ul>                               
-                                    <li>Ocotber 3</li>
-                                    <li>Ocotber 3,2019</li>
-                                    <li>October 13, 2019 11:13:00</li>                                    <li>October 13, 2019 11:13:00</li>
-
-                                </ul>                                     
-                            </li>
-                            <li style="margin-left:30px"><p style="margin-bottom:0rem">Last option we see is just passing the milliseconds.One thing to understand is that JavaScript stores dates as number of milliseconds since January 01, 1970, 00:00:00 UTC (Universal Time Coordinated).You can try passing values like</p>
-                                <ul>                               
-                                    <li>0</li>
-                                    <li>10000</li>                                                            
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <pre style="margin:0;background:lightgrey;">
-function createDate(year,month,day,dateStr,milliseconds){
-            if(year==undefined && month==undefined && day==undefined
-                && dateStr==undefined && milliseconds==undefined)
-                    return new Date(); //First approach- No Arguments
-            else if (year !=undefined && month !=undefined && day !=undefined 
-                 && dateStr==undefined && milliseconds==undefined)
-                    return new Date(year,month,day);//Second approach- Year,Month and Day passed in
-            else if (dateStr !=undefined && year==undefined && month==undefined 
-                 && day==undefined && milliseconds==undefined)
-                    return new Date(dateStr);//Third approach- Date string passed in as argument
-            else
-                    return new Date(milliseconds);//Fourth approach- Argument pass in as milliseconds
-
-                    }
-                                </pre>
+                            At the end of this tutorial, we will see how to configure OpenVPN on your rotuer and therefore, how all devices connected to that local network can use the VPN 
+                        </p>                      
+                        <p>You would have come across many articles which say how important it is to use VPN from security and Anonymity perspective.So,I won't dwell into that.Rather,I would just concentrate on the steps required to setup VPN on your router
                         
-                    <p>So this ends this tutorial where we saw various options to create Dates in Javascript.You can download the code I shared from Github and extend it if you wish.Please feel free to leave comments or questions below</p>
+                        For any average consumer, VPNs- Virtual Private Networks can be an excellent security aid,specially if you are running a small business. VPNs provide security to data in transit as they encrypt the data.
+                        
+                        The main question is how to achieve the privacy and security all the time at your home or office.One way is to install separate VPN clients on all your devices as well as all those being used by your family or small business co-workers.But installing a separate client on a multitude of different devices is a pain and tiresome job.Also ensuring everyone connecting through VPN is also tough task.
+                        
+                        Other way is to configure your VPN on the router so that all the devices connected to it     automatically will use VPN. With a VPN client on your router, anyone using your local network to browse the web or access a cloud service will automatically be using the VPN as it'll be running 24x7.This is the way we are discussing here.      
+                        </p>
+                                           
+                         <ul style="padding-left:0px"><b> Below are the steps one should follow</b>
+                            <li style="margin-left:30px">Buy a router that supports <b>OpenVPN</b>. You can buy it online and there are many options available. I bought online from Amazon.All you need to ensure before buying is that it supports OpenVPN.</li> 
+                            <li style="margin-left:30px">Power on the router. Pretty basic but should not be missed &#128522; </li> 
+                            <li style="margin-left:30px">Your ISP-Internet Service Provider might have provided you with a Wi-Fi-modem. My ISP's network had SSID of say BELONG-XXXX. This was the network i used to connect to so far to connect to internet(without VPN)
+                            This Wi-Fi modem shall have an Ethernet LAN port that can be used to connect to the router’s (the one you bought) WAN port . You can connect your ISP's modem to router by cable directly</li>  
+                            <li style="margin-left:30px">Now its time to connect your device(windows,android,ios  etc) to the router. You can connect to the router via Ethernet cable or Wi-Fi.I connected through Wi-Fi (Am sure connecting through LAN will be equally simple as well)
+                            Doing so only connects your devices to the local area network (LAN) of the router. You cannot access the Internet currently
+                             </li> 
+                            <li style="margin-left:30px">Once connected to the router,you can search for the <b>SSID </b> of the router(must be provided in the router’s documentation). My router's SSID started with GL-XXXXX-XXX .
+                            To access the Web Admin panel I had to visit <b>http://192.168.8.1</b> Once logged in, you can view the rotuer's Web Admin panel.
+                            Once connected, you can login to the web-based interface of the router.Once you succesfully log in, you will see the daashboard.I have added mine for reference only.Yours may look different obviously.
+                            <img src="../../img/openVPN/1img.PNG" alt="Router Web Based Interface" />
+                            <b>Note:</b> Look for the URL, Userid and the Password in the router’s documentation itself     
+                             </li> 
+                             <li style="margin-left:30px">Web Admin panel allows you to check the status and manage the settings of the router.Once in the admin panel, configure your router to access the internet so that it can talk to the outside world. To do so,I clicked on the <b>“repeater”</b> settings of the router.  It takes an existing signal from a wireless router or wireless access poin and rebroadcasts it to create a second network.
+                             In Repeater section, click <b>Scan</b> to search for the available wireless networks nearby (in my case the original wireless network with SSID BELONG-XXX).Connect using user ISP’s username and password
+                             </li> 
+                             <li style="margin-left:30px">Doing above would ensure that your router is communicating with outside world and you connect to the Internet even if you are connecting to the SSID of the router
+                             </li> 
+                             
+
+                        </ul>  
+                        
+
+                     
+                       
                     </div>
                 </div>                
             </div>
