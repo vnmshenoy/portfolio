@@ -14,3 +14,7 @@ github link to source code is : https://github.com/manjusa/QuickBudgetTracker.gi
 
 This demo is used in my website "http://manjustechblog.com/blogs/JS/quickbudgetingtool.html"
 Its open source code and can be extended if required
+
+---------
+
+https://resizeimage.net/ is good website to resize images
