@@ -80,19 +80,24 @@ _________________________________________________________ -->
                     <p>
                         At the end of this tutorial, we will see how to configure OpenVPN on your rotuer and therefore, how all devices connected to that local network can use the VPN
                     </p>
-                    <p>You would have come across many articles which say how important it is to use VPN from security and Anonymity perspective.So,I won't dwell into that.Rather,I would just concentrate on the steps required to setup VPN on your router For any average consumer, VPNs- Virtual Private Networks can be an excellent security aid,specially if you are running a small business. VPNs provide security to data in transit as they encrypt the data. The main question is how to achieve the privacy and security all the time at your home or office.One way is to install separate VPN clients on all your devices as well as all those being used by your family or small business co-workers.But installing a separate client on a multitude of different devices is a pain and tiresome job.Also ensuring everyone connecting through VPN is also tough task. Other way is to configure your VPN on the router so that all the devices connected to it automatically will use VPN. With a VPN client on your router, anyone using your local network to browse the web or access a cloud service will automatically be using the VPN as it'll be running 24x7.This is the way we are discussing here.
+                    <p>You would have come across many articles which say how important it is to use VPN from security and Anonymity perspective.So,I won't dwell into that.Rather,I would just concentrate on the steps required to setup VPN on your router.</p>
+                    <p> For any average consumer, VPNs- Virtual Private Networks can be an excellent security aid,specially if you are running a small business. VPNs provide security to data in transit as they encrypt the data. The main question is how to achieve the privacy and security all the time at your home or office.</p>
+                    <p> <b>One way</b> is to install separate VPN clients on all your devices as well as all those being used by your family or small business co-workers.But installing a separate client on a multitude of different devices is a pain and tiresome job.Also ensuring everyone connecting through VPN is also tough task. <b>Other way</b> is to configure your VPN on the router so that all the devices connected to it automatically will use VPN. With a VPN client on your router, anyone using your local network to browse the web or access a cloud service will automatically be using the VPN as it'll be running 24x7.This is the way we are discussing here.
                     </p>
 
                     <ul style="padding-left:0px"><b> Below are the steps one should follow</b>
                         <li style="margin-left:30px">Buy a router that supports <b>OpenVPN</b>. You can buy it online and there are many options available. I bought online from Amazon.All you need to ensure before buying is that it supports OpenVPN.</li>
                         <li style="margin-left:30px">Power on the router. Pretty basic but should not be missed &#128522; </li>
-                        <li style="margin-left:30px">Your ISP-Internet Service Provider might have provided you with a Wi-Fi-modem. My ISP's network had SSID of say BELONG-XXXX. This was the network i used to connect to so far to connect to internet(without VPN) This Wi-Fi modem shall have an Ethernet LAN port that can be used to connect to the router’s (the one you bought) WAN port . You can connect your ISP's modem to router by cable directly</li>
-                        <li style="margin-left:30px">Now its time to connect your device(windows,android,ios etc) to the router. You can connect to the router via Ethernet cable or Wi-Fi.I connected through Wi-Fi (Am sure connecting through LAN will be equally simple as well) Doing so only connects your devices to the local area network (LAN) of the router. You cannot access the Internet currently
+                        <li style="margin-left:30px">Your ISP-Internet Service Provider might have provided you with a Wi-Fi-modem. My ISP's network had SSID of say <b>BELONG-XXXX</b>. This was the network I used to connect to so far to connect to internet(without VPN). This Wi-Fi modem shall have an Ethernet LAN port that can be used to connect to the router’s (the one you bought) WAN port. You can connect your ISP's modem to router by cable directly</li>
+                    </ul>
+                    <ul style="padding-left:0px"><b>Now its time to connect your device(Windows,Android,iOS etc) to the router. You can connect to the router via Ethernet cable or Wi-Fi.I connected through Wi-Fi</b>
+
+                        <li style="margin-left:30px">To connect your device to the router,you can search for the <b>SSID </b> of the router.Enter UserName and Password as well(SSID,Username,Password must be available in router's documentation). My router's SSID started with <b>GL-XXXXX-XXX</b>.To access the <b>Web Admin panel</b> of the router I had to visit <b>http://192.168.8.1</b> Once logged in, you can view the router's Web Admin panel. Once connected, you can login to the web-based interface of the router.Once you succesfully log in, you will see the dashboard.I have added mine for reference only.Yours may look different obviously.
+                            <img src="../../img/openVPN/1img.png" alt="Router Web Based Interface" /><br>
+                            <p><b>Note:</b> Look for the URL, Userid and the Password in the router’s documentation itself</p>
                         </li>
-                        <li style="margin-left:30px">Once connected to the router,you can search for the <b>SSID </b> of the router(must be provided in the router’s documentation). My router's SSID started with GL-XXXXX-XXX . To access the Web Admin panel I had to visit <b>http://192.168.8.1</b> Once logged in, you can view the rotuer's Web Admin panel. Once connected, you can login to the web-based interface of the router.Once you succesfully log in, you will see the daashboard.I have added mine for reference only.Yours may look different obviously.
-                            <img src="../../img/openVPN/1img.PNG" alt="Router Web Based Interface" />
-                            <b>Note:</b> Look for the URL, Userid and the Password in the router’s documentation itself
-                        </li>
+                        <li style="margin-left:30px">Now you should be able to connect your devices to the local area network (LAN) of the router. You <b>cannot</b> access the Internet currently </li>
+
                         <li style="margin-left:30px">Web Admin panel allows you to check the status and manage the settings of the router.Once in the admin panel, configure your router to access the internet so that it can talk to the outside world. To do so,I clicked on the <b>“repeater”</b> settings of the router. It takes an existing signal from a wireless router or wireless access poin and rebroadcasts it to create a second network. In Repeater section, click <b>Scan</b> to search for the available wireless networks nearby (in my case the original wireless network with SSID BELONG-XXX).Connect using user ISP’s username and password
                         </li>
                         <li style="margin-left:30px">Doing above would ensure that your router is communicating with outside world and you connect to the Internet even if you are connecting to the SSID of the router
@@ -107,28 +112,31 @@ _________________________________________________________ -->
                     <ul style="padding-left:0px"><b>Steps to follow on VPN provider's website </b>
                         <li style="margin-left:30px">Buy a subscription. Most of them offer a trial period of 30 days or so which is excellent option to try out</li>
                         <li style="margin-left:30px">I am taking an eg of SurfShark.Navigate to surfshark’s website <b>https://support.surfshark.com/hc/en-us/categories/360001458953-Tutorial</b> This link is available at the time of download.Basically you need to search how to setup manual configuration irrespective of which provider you are using </li>
-                        <li style="margin-left:30px">Since am using Windows laptop i follow the steps to download .opvn file for windows device.I downloaded both <b>.tcpovpn</b> and <b>.udpovpn</b> files 
-                            
-                         UDP and TCP are protocols with their own pros and cons.I wont get into depth of it but I would say The OpenVPN UDP protocol is usually a little bit faster, while OpenVPN TCP is usually a little bit more stable.However, that is not always the case, therefore, we always suggest trying them both out and checking what works best for you.
+                        <li style="margin-left:30px">Since am using Windows laptop i follow the steps to download .opvn file for windows device.I downloaded both <b>.tcpovpn</b> and <b>.udpovpn</b> files UDP and TCP are protocols with their own pros and cons.I wont get into depth of it but I would say The OpenVPN UDP protocol is usually a little bit faster, while OpenVPN TCP is usually a little bit more stable.However, that is not always the case, therefore, we always suggest trying them both out and checking what works best for you.
 
                         </li>
-                         <li style="margin-left:30px">Once you have downloaded this .opvn file, you will also have to copy paste service credential from surfsharks website as shown in img 4 below.Save these somewhere as you will need it soon 
-                         <img src="../../img/openVPN/4img.PNG" alt="VPN Service Credentials" />
+                        <li style="margin-left:30px">Once you have downloaded this .opvn file, you will also have to copy paste service credential from surfsharks website as shown in img 4 below.Save these somewhere as you will need it soon
                         </li>
-                        
+                        <img src="../../img/openVPN/4img.png" alt="VPN Service Credentials" />
+
+
                     </ul>
-                     <ul style="padding-left:0px"><b> Now go back to the routers admin panel for final steps </b>
-                         <li style="margin-left:30px">Look for <b>OpenVpn Client</b>. My router’s webadmin had below settings as shown in img 2
-                           <img src="../../img/openVPN/2img.PNG" alt="configure open vpn client" />
-                         </li>
-                        <li style="margin-left:30px">Click on the OpenVPN client and you will see a page which asks you to add .ovpn file something like in img 3
-                          <img src="../../img/openVPN/3img.png" alt="VPN Service management" />
-                         </li>
+                    <ul style="padding-left:0px"><b> Now go back to the routers admin panel for final steps </b>
+                        <li style="margin-left:30px;margin-top:2%;">Look for <b>OpenVpn Client</b>. My router’s webadmin had below settings as shown in img 2
+                            <img src="../../img/openVPN/2img.png" alt="configure open vpn client" />
+
+                        </li>
+
+                        <li style="margin-left:30px;margin-top:2%;">Click on the <b>OpenVPN client</b> and you will see a page which asks you to add .ovpn file something like in img 3
+                            <img src="../../img/openVPN/3img.png" alt="VPN Service management" />
+
+                        </li>
+
                         <li style="margin-left:30px">Drop the .ovpn file you saved on your machine(the file you saved on desktop in our earlier steps).It will ask for name(eg mumbai_myvpnserver1) just for you to identify the server location quickly. It will also ask for server's username and password).Copy paste the username and password your got from your vpn providers website(in this case surfshark)
                         </li>
-                         <li style="margin-left:30px">Click connect and you are all set to go.Happy surfing using VPN
+                        <li style="margin-left:30px">Click connect and you are all set to go.Happy surfing using VPN
                         </li>
-                       
+
                     </ul>
 
 
