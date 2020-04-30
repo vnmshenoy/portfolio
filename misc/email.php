@@ -10,7 +10,7 @@ $bodystart='My comment is: ';
 $bodyemail=' My email id is: ';
 $bodyph=' My mobile is: ';
 $name = preg_replace("/[^a-zA-Z]/", "", $_REQUEST['name']);
-$comment = preg_replace("/[^a-zA-Z]/", "", $_REQUEST['comment']);
+$comment = preg_replace("/[^a-zA-Z.]/", " ", $_REQUEST['comment']);
 $email = preg_replace("/[^a-zA-Z]/", "", $_REQUEST['email']);
 $phoneNumber = preg_replace("/[^a-zA-Z]/", "", $_REQUEST['phone']);
  
