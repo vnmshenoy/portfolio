@@ -73,63 +73,37 @@ _________________________________________________________ -->
         <br>
         <section class="about-section">
             <div class="container">
-                <h3>QR Codes: What is it, history and generation on your website</h3>
+                <h3>QR code generation and reading using Javascript</h3>
                 <div class="row">
                     <div class="col-sm-9">
-                        <p class=" text-left"><b>In this blog</b> we will see what is QRCode,little bit of history of QR Codes and how to generate and scan QR Codes in your application</p> 
-
-                        <b>What is a QR Code</b>
-                        <p> QR code stands for <b>Quick Response code</b>.Many of you might have not heard about QRCode but there is a high probability that you are subconsciously familiar with them.</p>
+                        <p class=" text-left"><b>In this blog</b> we will see how to gerenate QR code on your website and read it as well.</p>                       
+                        <b> What we will achieve at the end of this blog</b>
                         <p>
-                            What better can explain a QR Code than an image?<br><br>
-                            <img style="width:20%;height:auto" src="../../img/qrcode/sample.png" alt="sample" />
+                            At the end of this tutorial, we will see how to generate and read QRcodes using Javascript
                         </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-9">
-                        <p>  You can download any QR reader/scanner application from Google Playstore or Apple store. After downloading open the QR reader app and scan above QRCode. I have put my scan and the result image below
+                        <p><b>Source code</b> of the functionality <a style="font-weight:bold" href="https://github.com/manjusa/qrcodegeneration.git">Github Link</a></p>
+                        <b>Below is a quick demo to wrap your head around to what we are trying to achieve</b><br>
+                        <br>
+                        <video width="100%" height="330" controls>
+                            <source src="../../videos/qrcode/QRCodegerenationandread.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <ul style="padding-left:0px"><b> JS to be downloaded</b>
+                            <li style="margin-left:30px">QRCode Generator<a style="font-weight:bold" href="https://github.com/davidshimjs/qrcodejs/blob/master/qrcode.js"> Link to download</a></li> 
+                            <li style="margin-left:30px">QRCode Decoder<a style="font-weight:bold" href="https://www.npmjs.com/package/qrcode-decoder"> Link to download</a></li>
+                            <li style="margin-left:30px">jQuery  <a style="font-weight:bold" href="https://jquery.com/download/"> Link to download</a></li>    
+                            <li style="margin-left:30px">Bootstrap  <a style="font-weight:bold" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"> Link to download</a></li>  
+                            <li style="margin-left:30px">Bootstrap  CSS <a style="font-weight:bold" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> Link to download</a></li>  
+                        </ul>                        
+                        <p><b>P.S</b>I modified the original QRCodeGenerator script (QRCode Generator) a bit since I found that "clear()" function was not doing the intended thing i.e clearing the existing "QRCode". It might be a bug or so but am not sure. Anyway, I modified the script and in my source code am using "qrcode_ms.js" which has one extra function which clears the QRCode. You can download the Javascript file from my git repository if you cant make "clear()" work with original script
                         </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <img src="../../img/qrcode/scanimg.png" alt="scanqrcode" />
-                    </div>
-                    <div class="col-sm-2" style="margin-top:10%">
-                        <span style='font-size:100px;'>&#8594;</span>
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="../../img/qrcode/resultofscanimg.png" alt="resultofscanimg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-9">
-                        <p>
-                            If you take a look at the images above, you'll notice that there is this graphic consisting of black squares and dots. This, essentially, is what a QR code looks like.
+                        <br><br>
+                        <p>In the demo code you will see 2 approaches.<b>First one</b> is hardcoded QR code. You can just use any QRScanner app and scan the code 
+                        <b>Second One</b> is an approach which allows user to enter any value and a corresponding QR code will be generated dynamically. Then you can click on "Read QRCode generated above" button which will read the QRCode programitically and display the value(you entered initially)
                         </p>
+                        <p>So this ends this tutorial where we saw various ways to generate and read QR Codes.You can download the code I shared from Github and extend it if you wish.Please feel free to leave comments or questions below</p>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-9">
-                        <ul style="padding-left:0px"> <b>Advantages of QR Code</b>                           
-                            <li style="margin-left:30px">QRCode is a two dimensional barcode i.e you can say its an upraded version of barcodes. Upgraded because it can contain more information since they have the ability to hold information both horizontally and vertically (Barcodes only store horizontally).</li>
-                            <li style="margin-left:30px"> The idea behind a QR code is to create an image and that image can be quickly scanned by a  Smartphone.Once you scan through this application, the QR image gets translated into something more useful.Like we saw in the image above where it gives the url of the website
-                                But the question may arise,why cant you just type in a web address on your phone and visit the website that way? While that may be true, the point of a QR code is to make the whole process simple. How many of you can back themselves writing the url on the browser using Smartphone (or tablet PC) keyboards without any mistake in one go. Compared to it scanning is far more simpler and accurate.Also, people simply can't be bothered to type in website addresses on their Smartphone.</li>  
-                            <li style="margin-left:30px">Other advantage of QR code is its versatility. QR codes can be used for anything and everything. They are useful from customer as well as businesses point of view. For example, a business saves money and advertising costs by distributing a QR code to their website or URL.</li>  
-                            <li style="margin-left:30px">QR codes can be used to engage with rich content.We know words are good to advertise something. Pictures are even better. But best way to express yourself these days is through video or audio. These forms of rich content can easily be shared via a QRCode. When user scans the QR code, simply redirect the user to the video or the website you want him/her to go</li>  
-                        </ul> 
-
-                    </div>
-                </div>
-                 <div class="row">
-                    <div class="col-sm-9">    
-                        <b>Technical implementaion on your website</b>
-                        <p> I have created a separate blog for technical aspect of it as i didnt want to mix the tech side and business side of it
-                            link to that blog is
-                        </p>
-                    </div>
-                </div>
+                </div>                
             </div>
         </section>
         <section style="padding:20px !important">
