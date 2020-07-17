@@ -87,11 +87,12 @@ _________________________________________________________ -->
                     <div class="col-sm-9">
                         <p class=" text-left">In this blog we will see various <b>function definitions </b> possible in Javascript</p> 
                     </div>
-                </div>
-                <p>Let me jump right into it.Like you be aware there are few ways you can write functions in Javascript.Initially,I used to get confused between the syntaxes.Having said that I still used to manage it to make the code work.And then one day I spent some time to understand these syntaxes and that helped a lot. I came up wtih quick notes as well so that i remember the syntax without actually going to google everytime. I am sharing the way i understood it and hope it helps you as well in some way
-                </p>
-                <p>I have compared the ways and put it in a table format (below) so that it becomes easier for you to compare( no need to scroll down etc)
-                </p>
+              
+                    <p>Let me jump right into it.Like you be aware there are few ways you can write functions in Javascript.Initially,I used to get confused between the syntaxes.Having said that I still used to manage it to make the code work.And then one day I spent some time to understand these syntaxes and that helped a lot. I came up wtih quick notes as well so that i remember the syntax without actually going to google everytime. I am sharing the way i understood it and hope it helps you as well in some way
+                    </p>
+                    <p>I have compared the ways and put it in a table format (below) so that it becomes easier for you to compare( no need to scroll down etc)
+                    </p>
+                </div>               
                 <div class="row mb-3">
                     <div class="col-4 themed-grid-col"><h6>Using Function keyword</h6>
                         <p>The most traditional way to declare a function. If  you have coded in Java,C# etc this syntax would come naturally to you.Lets take a scenario where we are trying to add two numbers.I have written a function called <b>addSum</b></p>
@@ -103,10 +104,29 @@ _________________________________________________________ -->
                     console.log(x);//will print 5 ofcourse
                 </pre>
                     </div>
-                    <div class="col-4 themed-grid-col"><b></b></div>
-                    <div class="col-4 themed-grid-col"><b>Result</b>
-                        <pre><input type="text">name</pre> 
+                    <div class="col-4 themed-grid-col"><h6>Using Function with a variable</h6>
+                        <p>The most traditional way to declare a function. If  you have coded in Java,C# etc this syntax would come naturally to you.Lets take a scenario where we are trying to add two numbers.I have written a function called <b>addSum</b></p>
+                        <pre>
+                    function addSum(a, b) {
+                                    return a + b
+                        }
+                    var z = addSum(2, 3);
+                    console.log(x);//will print 5 ofcourse
+                </pre></div>
+                    <div class="col-4 themed-grid-col"><h6>Using Arrow keyword</h6>
+                        <p>The most traditional way to declare a function. If  you have coded in Java,C# etc this syntax would come naturally to you.Lets take a scenario where we are trying to add two numbers.I have written a function called <b>addSum</b></p>
+                        <pre>
+                    function addSum(a, b) {
+                                    return a + b
+                        }
+                    var z = addSum(2, 3);
+                    console.log(x);//will print 5 ofcourse
+                </pre>
                     </div>
+                </div>
+                 <div class="row">
+                    <p>This it the <b>Link to</b> my JSFiddle. I have provided you with above code
+                    </p>
                 </div>
                 <section style="padding:20px !important">
                     <div class="container">
