@@ -2038,3 +2038,9 @@ code {
 .headerHref{                
     color:#4fbfa8 !important;
 }
+pre{
+    background: white;
+    text-align: left;
+    white-space: pre-line;
+    padding:inherit;
+}
