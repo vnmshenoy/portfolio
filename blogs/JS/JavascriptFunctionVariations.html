@@ -48,7 +48,13 @@
                 padding-bottom: 1rem; 
                 background-color: rgba(86, 61, 124, .15);
                 border: 1px solid rgba(86, 61, 124, .2);
-            }       
+            }  
+            [class*="col-12"] {
+                padding-top: 1rem;
+                padding-bottom: 1rem; 
+                background-color: rgba(86, 61, 124, .15);
+                border: 1px solid rgba(86, 61, 124, .2);
+            }  
 
         </style>
 
@@ -82,12 +88,12 @@ _________________________________________________________ -->
         <br>
         <section class="about-section">
             <div class="container">
-                <h3>JS: Function Definition variations</h3>
+                <h3>Javascript function definitions- traditional, anonynous and arrow approach</h3>
                 <div class="row">
                     <div class="col-sm-9">
                         <p class=" text-left">In this blog we will see various <b>function definitions </b> possible in Javascript</p> 
                     </div>
-              
+
                     <p>Let me jump right into it.Like you be aware there are few ways you can write functions in Javascript.Initially,I used to get confused between the syntaxes.Having said that I still used to manage it to make the code work.And then one day I spent some time to understand these syntaxes and that helped a lot. I came up wtih quick notes as well so that i remember the syntax without actually going to google everytime. I am sharing the way i understood it and hope it helps you as well in some way
                     </p>
                     <p>I have compared the ways and put it in a table format (below) so that it becomes easier for you to compare( no need to scroll down etc)
@@ -105,29 +111,117 @@ _________________________________________________________ -->
                 </pre>
                     </div>
                     <div class="col-4 themed-grid-col"><h6>Using Function with a variable</h6>
-                        <p>The most traditional way to declare a function. If  you have coded in Java,C# etc this syntax would come naturally to you.Lets take a scenario where we are trying to add two numbers.I have written a function called <b>addSum</b></p>
+                        <p>Declare a <b>variable</b> and assign the function to this variable.Function can be <b>invoked</b> using the variable name as shown below
+                            I have written a function called <b>subtractSum</b></p>
                         <pre>
-                    function addSum(a, b) {
-                                    return a + b
+                        const subtractSum = function (a, b) {
+                        return a - b
                         }
-                    var z = addSum(2, 3);
-                    console.log(x);//will print 5 ofcourse
-                </pre></div>
-                    <div class="col-4 themed-grid-col"><h6>Using Arrow keyword</h6>
-                        <p>The most traditional way to declare a function. If  you have coded in Java,C# etc this syntax would come naturally to you.Lets take a scenario where we are trying to add two numbers.I have written a function called <b>addSum</b></p>
+                        var z = subtractSum(2, 3);
+                        $("#resultSubtract").text(z);//will print -1
+                        </pre>
+                        <p>Quick point to note here is that we still use the <b>function keyword</b>. Other point to note is that there is no name given to the function and therefore we also call it <b>anonymous function</b></p>
+                    </div>
+                    <div class="col-4 themed-grid-col"><h6>Using Arrow functions</h6>
+                        <p>These functions were introduced in <b>ES6</b>.Helps us to write functions in more concise way.These are also called <b>fat arrow functions</b></p>
+
+                        <p>Below function takes two nummbers and multiplies them using arrow syntax</p>
                         <pre>
-                    function addSum(a, b) {
-                                    return a + b
-                        }
-                    var z = addSum(2, 3);
-                    console.log(x);//will print 5 ofcourse
-                </pre>
+                        var multiplySum = (a, b) => {
+                        return a * b;
+                            }
+                        var z = multiplySum(2, 3);
+                        $("#resultMultiply").text(z);//prints 6
+                    </pre>
                     </div>
                 </div>
-                 <div class="row">
-                    <p>This it the <b>Link to</b> my JSFiddle. I have provided you with above code
-                    </p>
+                <div class="row">
+                    <p>I would dwell little more into <b>arrow functions</b> because they are kind of new and somewhat confusing for new comers.When I started I was not sure how to write an arrow function.So I followed 3 steps and it helped me to get going.Hope it helps you too.</p>
+                    <p>Given a normal function expression,<b>follow below steps</b> to convert it into an arrow function</p>
+                    <ul>
+                        <li>Remove the <b>function keyword</b> and just take the parameters with you if any</li>
+                        <li>After the parameters, immediately put  <b>arrow</b> which is represented as <b>=></b> There has to be an arrow somewhere isnt it. After all we are talking about arrow functions</li>
+                        <li>After arrow is the <b>body</b> which is represented as <b>{...}</b></li>
+                    </ul>
+                    <p> and that's it.It should get you started. Ofcourse there are more variations to it which i have discussed below.But my suggestion is not to get overwhelmed with so many variations of arrow functions and options (to write even shorter syntaxes). I would suggest start  with above 3 steps and learn other variations slowly.<br>
+                        I have provided a JSfiddle link to my above eg for you guys to play with <a href="https://jsfiddle.net/manjutech/8q54k0fs/">Link to jsfiddle</a></p>
                 </div>
+                <div class="row">
+                    <h4>Now lets look at the <b>variations of arrow functions</b></h4>
+
+                    <p>
+                        <img style="width:80%;height:auto" src="../../img/jsfunctionvariation/variations.jpg" alt="sample" />
+                    </p>
+                    <p>I will explain variations and approaches to write arrow function under different circumstances.Again, I will use a table format so that you can quickly compare the result set</p>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 themed-grid-col"><h6 style="margin-left: 40%"> <ul>No Parameters</ul> </h6>                       
+                    </div>  
+                </div>
+                <div class="row mb-3" style="margin-top:-15px">
+                    <div class="col-4 themed-grid-col"><h6>Traditional Approach</h6>      
+                        <pre>
+                        function display()
+                            {
+                                return 42;
+                            }
+                            console.log(display()); //prints 42
+                        </pre>
+                    </div>                    
+                    <div class="col-4 themed-grid-col"><h6>Arrow Approach</h6>
+                        <pre>
+                        var  display2 = <mark>()</mark>=> 44
+                        </pre>
+                        <b>OR</b>
+                        <pre>
+                        var  display2 = <mark>_</mark> => 44
+                        </pre>
+                        <b>OR</b>
+                        <pre>
+                        var  display2 = ()=> {
+                        return 44
+                        }
+                        console.log(display2()); //prints 44
+                        </pre>
+                    </div>
+                    <div class="col-4 themed-grid-col"><h6>Point to Note</h6>
+                        <p>Remember the three steps i mentioned earlier to convert traditional function into arrow function.That comes to use here</p>
+                        <p>You see three variations in arrow function approach. All gives the same result. 
+                            One point to remember is that if arrow function has <b>one expression like "44'</b> here so it returns the result of the expression. Therefore <b> no need of explicit return statement</b>.
+                            However, if you use the block syntax, you <b>need to specify the return keyword</b>
+
+                    </div>                    
+                </div>
+                <div class="row mb-3" style="margin-top:-15px">
+                    <div class="col-12 themed-grid-col"><h6 style="margin-left: 40%"> <ul>Single Parameter</ul> </h6>                       
+                    </div>  
+                </div>
+                <div class="row mb-3" style="margin-top:-15px">
+                    <div class="col-4 themed-grid-col"><h6>Traditional Approach</h6>      
+                        <pre>
+                         function display(x) 
+                         {
+                            return "hello"+ x;
+                         }
+                         console.log(display("manju"));//prints hellomanju 
+                        </pre>
+                    </div>                    
+                    <div class="col-4 themed-grid-col"><h6>Arrow Approach</h6>
+                        <pre>
+                          var display2 = <mark>(x)</mark> => "hello"+ x
+                        </pre>
+                        <b>OR</b>
+                         <pre>
+                          var display2 = x => "hello"+ x
+                           console.log(display("manju"));//prints hellomanju 
+                        </pre>
+                    </div>
+                    <div class="col-4 themed-grid-col"><h6>Point to Note</h6>
+                        <p>If there is a single parameter no need to have paranthesis(<b>highlighted</b>) around the parameter( here for x ). <b>Paranthesis is optional</b></p>
+
+                    </div>                    
+                </div>
+
                 <section style="padding:20px !important">
                     <div class="container">
                         <h4>Did you like the blog or have questions, please add your comments</h4>
