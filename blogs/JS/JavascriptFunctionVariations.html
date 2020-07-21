@@ -187,7 +187,7 @@ _________________________________________________________ -->
                     <div class="col-4 themed-grid-col"><h6>Point to Note</h6>
                         <p>Remember the three steps i mentioned earlier to convert traditional function into arrow function.That comes to use here</p>
                         <p>You see three variations in arrow function approach. All gives the same result. 
-                            One point to remember is that if arrow function has <b>one expression like "44'</b> here so it returns the result of the expression. Therefore <b> no need of explicit return statement</b>.
+                            One point to remember is that if arrow function has <b>single line like "44'</b> here,then it returns the result of the expression by default. Therefore <b> no need of explicit return statement</b>.
                             However, if you use the block syntax, you <b>need to specify the return keyword</b>
 
                     </div>                    
@@ -211,13 +211,67 @@ _________________________________________________________ -->
                           var display2 = <mark>(x)</mark> => "hello"+ x
                         </pre>
                         <b>OR</b>
-                         <pre>
+                        <pre>
                           var display2 = x => "hello"+ x
                            console.log(display("manju"));//prints hellomanju 
                         </pre>
                     </div>
                     <div class="col-4 themed-grid-col"><h6>Point to Note</h6>
                         <p>If there is a single parameter no need to have paranthesis(<b>highlighted</b>) around the parameter( here for x ). <b>Paranthesis is optional</b></p>
+
+                    </div>                    
+                </div>
+                 <div class="row mb-3" style="margin-top:-15px">
+                    <div class="col-12 themed-grid-col"><h6 style="margin-left: 40%"> <ul>Multiple Parameters</ul> </h6>                       
+                    </div>  
+                </div>
+                <div class="row mb-3" style="margin-top:-15px">
+                    <div class="col-4 themed-grid-col"><h6>Traditional Approach</h6>      
+                        <pre>
+                         function display(x,y) 
+                         {
+                            return "hello "+ x +" and "+y;
+                         }
+                         console.log(display("manju","s"));
+                         //prints hello manju and s 
+                        </pre>
+                    </div>                    
+                    <div class="col-4 themed-grid-col"><h6>Arrow Approach</h6>
+                        <pre>
+                           var display2 = <mark>(x,y)</mark> => "hello " + x + " and " + y;
+                           console.log(display2("manju","s"));
+                           //prints hello manju and s 
+                        </pre>
+                    </div>
+                    <div class="col-4 themed-grid-col"><h6>Point to Note</h6>
+                        <p>Parenthesis are <b>mandatory</b> since we have two parameters here i.e x and y </p>
+
+                    </div>                    
+                </div>
+                 <div class="row mb-3" style="margin-top:-15px">
+                    <div class="col-12 themed-grid-col"><h6 style="margin-left: 40%"> <ul>Returning object literals</ul> </h6>                       
+                    </div>  
+                </div>
+                <div class="row mb-3" style="margin-top:-15px">
+                    <div class="col-4 themed-grid-col"><h6>Traditional Approach</h6>      
+                        <pre>
+                         function display(x,y) 
+                         {
+                            return "hello "+ x +" and "+y;
+                         }
+                         console.log(display("manju","s"));
+                         //prints hello manju and s 
+                        </pre>
+                    </div>                    
+                    <div class="col-4 themed-grid-col"><h6>Arrow Approach</h6>
+                        <pre>
+                           var display2 = <mark>(x,y)</mark> => "hello " + x + " and " + y;
+                           console.log(display2("manju","s"));
+                           //prints hello manju and s 
+                        </pre>
+                    </div>
+                    <div class="col-4 themed-grid-col"><h6>Point to Note</h6>
+                        <p>Parenthesis are <b>mandatory</b> since we have two parameters here i.e x and y </p>
 
                     </div>                    
                 </div>
