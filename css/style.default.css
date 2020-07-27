@@ -2044,3 +2044,6 @@ pre{
     white-space: pre-line;
     padding:inherit;
 }
+.custommark{
+    background: chocolate;
+}

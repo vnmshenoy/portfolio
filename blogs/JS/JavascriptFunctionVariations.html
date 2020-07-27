@@ -49,6 +49,12 @@
                 background-color: rgba(86, 61, 124, .15);
                 border: 1px solid rgba(86, 61, 124, .2);
             }  
+            [class*="col-6"] {
+                padding-top: 1rem;
+                padding-bottom: 1rem; 
+                background-color: rgba(86, 61, 124, .15);
+                border: 1px solid rgba(86, 61, 124, .2);
+            }  
             [class*="col-12"] {
                 padding-top: 1rem;
                 padding-bottom: 1rem; 
@@ -93,10 +99,10 @@ _________________________________________________________ -->
         <br>
         <section class="about-section">
             <div class="container">
-                <h3>Javascript function definitions- traditional, anonynous and arrow approach</h3>
+                <h3>Javascript function definitions- traditional, anonymous and arrow approach</h3>
                 <div class="row">
                     <div class="col-sm-9">
-                        <p class=" text-left">In this blog we will see various <b>function definitions </b> possible in Javascript</p> 
+                        <p class=" text-left">In this blog we will see various <b>function definitions </b> possible in Javascript. <b>I recommend this blog to be read on desktop as i have included comparisons of the approaches using Javascript code</b></p> 
                     </div>
 
                     <p>Let me jump right into it.Like you be aware there are few ways you can write functions in Javascript.Initially,I used to get confused between the syntaxes.Having said that I still used to manage it to make the code work.And then one day I spent some time to understand these syntaxes and that helped a lot. I came up wtih quick notes as well so that i remember the syntax without actually going to google everytime. I am sharing the way i understood it and hope it helps you as well in some way
@@ -288,10 +294,109 @@ _________________________________________________________ -->
                 <div class="row">
                     <div class="col-sm-9">
                         <h6>Advantages of Arrow functions</h6>
-                        <p>Again i will keep this more practical</p>https://medium.com/tfogo/advantages-and-pitfalls-of-arrow-functions-a16f0835799e
-                        https://www.javascripttutorial.net/es6/javascript-arrow-function/
-                    </div>
+                        <p>I will keep this more practical and include as many eg as I can for clarity</p>  
+                        <h6>this keyword-Enclosing Scope Context</h6>
+                        <p>First thing to remember is that arrow functions do not have their own execution context. What that means is that in case of arrow functions, both <b>"this" and "arguments"</b> are inherited from their parent function.Lets look at an eg below</p> <h6>Eg1:</h6>
+                    </div>                    
                 </div>
+                <div class="row mb-3">
+                        <div class="col-6 themed-grid-col">    
+                           <pre>                      
+                              var key = "Outside";
+                              let obj = {
+                                key: "Inside",
+                                printkey: () => {
+                                    console.log("where am i declared?? answer is**** " + this.key); // no 'this' binding here
+                                },
+                                printkey1() {
+                                    console.log("where am i declared?? answer is**** " + this.key); // 'this' binding works here
+                                }
+                             };
+                            obj.printkey(); <b>//where am i declared?? answer is**** <mark> Outside</mark></b>
+                            obj.printkey1(); <b>//where am i declared?? answer is**** <mark>Inside</mark></b>
+                            </pre>    
+                        </div>                    
+                        <div class="col-6 themed-grid-col">
+                            <p>In the eg you see on left, we have an arrowfuncton called <b>"printkey()"</b> and a normal traditional function with "function" keyword called  <b>"printkey1()"</b>.<br>
+                            <b>OUTPUT:</b> printkey (arrow fn) prints "Outside" while printkey1 prints "Inside"</p>
+                            <p>The reason for above is simple.In classic/traditional function expressions, the <b>this</b> keyword is bound to different values based on the <b>"context"</b> in which the function is called. Whereas arrow functions use the value of this in their <b>lexical scope</b></p>
+                            <p>You may be wondering difference between <b>context</b> and <b>scope</b>.Context, more or less is the <b>object</b> that calls the <b>function</b>.In our eg,<b>printkey1()</b> is called by <b>obj</b> so the context inside printkey1() will be of obj.On the other hand,scope is all the <b>variables</b> visible to a function based on <b>where it is defied..yes where it is defined is important</b>.In <b>printkey</b> this is bound to the global window object
+                        </div>
+                </div>
+                <h6>Eg 2:</h6>
+                <div class="row mb-3">
+                        <div class="col-6 themed-grid-col">    
+                           <pre>                      
+                         const obj2 = {
+                                    key: 'test object',
+                                   <mark>tradFn:</mark> function () {
+                                       console.log("inside tradFn this is "+this);
+                                       <mark class="custommark"> return function innerFunction() {
+                                            console.log("inside tradFn's return fn this is"+this);
+                                            console.log("inside tradFn's return fn arguments are "+ arguments);
+                                        };</mark>
+                                    },
+
+                                   <mark>arrowFn:</mark> function () {
+                                        console.log("inside arrowFn this is "+this);
+                                       <mark  class="custommark"> return () => {
+                                            console.log("inside arrowFn's return fn this is "+this);
+                                            console.log("inside arrowFn's return fn arguments are "+ arguments);
+                                        };</mark>
+                                    }
+                                };
+                                const traditionaWay = obj2.tradFn('hello', 'manju');
+                                const newArrowWay = obj2.arrowFn('hello', 'manju');
+                                traditionaWay();
+                                newArrowWay();
+                            </pre>    
+                        </div>                    
+                        <div class="col-6 themed-grid-col">
+                            <p>In the eg you see on left,we see that there is an object called obj2. It has a property called <b>key</b>, and it has two functions called <b>tradFn</b> which returns a traditional function (marked in chocolate) and <b>arrowFn</b> which returns a arrow function(marked again in chocolate).When you run above you get below output</p>
+                            <pre>
+                              1.inside tradFn this is [object Object]
+                              2.inside arrowFn this is [object Object]
+                              3.inside tradFn's return fn this is [object Window]
+                              4.inside tradFn's return fn arguments are [object Arguments]
+                              5.inside arrowFn's return fn this is [object Object]
+                              6.inside arrowFn's return fn arguments are [object Arguments]
+                            </pre>
+                            <p>If you notice above output,3rd and 5th one are to be noted.3rd output <b>prints [object Window]</b> which means that if you would have done <b>this.key</b> there,it would have returned <b>undefined</b>.JavaScript loses scope of this when it is inside of a function that is contained inside of another function. When it is lost, by default, this is bound to global window object. </p>
+                            <p>However,5th output where <b>arrow function</b> is returned, it is <b>bound to obj2</b>.Same is the case with <b>arguments</b>. Output at <b>line 4</b> wont have access to arguments while output at <b>at lin 6</b> will print both the <b>arguments</b> i.e hello  and manju</p>
+                        </div>
+                    
+                 
+                </div>
+                <div class="row">
+                   <p> If you are keen and extend or play with the above egamples, i have provided the JSFiddle link below<br>
+                        <a href="https://jsfiddle.net/manjutech/14xaf5vs/"> Eg 1 - Link to jsfiddle</a><br>
+                       <a href="https://jsfiddle.net/manjutech/0bwf7rLd/"> Eg 2 - Link to jsfiddle</a></p>
+                </div>
+                  <div class="row">
+                      <h6>Use with map,reduce functions</h6>
+                      <p> Arrow functions is also useful with methods such as map and reduce, because I think it makes my code more readable. I will cover map and reduce in a separate blog</p>
+                </div>
+                  <div class="row">
+                    <div class="col-sm-9">
+                        <h6>Disadvantages of Arrow functions</h6>
+                        <ul>
+                            <li>Its hardet to get hold of syntax for new comers</li>
+                            <li>Since arrow functions are anonymous functions,which also means that there are no names associated with them,it becomes little challenging to debug,as when we get an error, we can't track the name of the function or the exact line number where it occurred.</li>
+                            <li>Won't work in cases where self-referencing is required ,eg recursion</li>
+                            <li>Cannot be used as a constructor.JavaScript implicitly prevents from doing that by throwing an exception.Eg below
+                                <pre style="background: antiquewhite">
+                                const obj3 = (text) => {
+                                          this.text = text;
+                                        };
+                                // Throws "TypeError: obj3 is not a constructor"
+                                const helloWorld = new obj3('Hello World!');
+                                </pre>
+                            
+                            </li>
+                        </ul>
+                    </div>                    
+                </div>
+                
             </div>
         </section>
         <section style="padding:20px !important">
