@@ -179,7 +179,6 @@
     <Content Include="img\sqlforBeginners\9databaseDiag.PNG" />
     <Content Include="img\sqlforBeginners\startSSMS.PNG" />
     <Content Include="Index.aspx" />
-    <Content Include="index.html" />
     <Content Include="js\front.js" />
     <Content Include="js\modernizr-2.8.3.js" />
     <Content Include="js\osmplayer.compressed.js" />
