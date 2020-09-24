@@ -178,7 +178,7 @@
     <Content Include="img\sqlforBeginners\8backuprestored.PNG" />
     <Content Include="img\sqlforBeginners\9databaseDiag.PNG" />
     <Content Include="img\sqlforBeginners\startSSMS.PNG" />
-    <Content Include="Index.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="js\front.js" />
     <Content Include="js\modernizr-2.8.3.js" />
     <Content Include="js\osmplayer.compressed.js" />
@@ -342,12 +342,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
