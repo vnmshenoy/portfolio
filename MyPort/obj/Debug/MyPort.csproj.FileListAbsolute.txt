@@ -1,3 +1,4 @@
+C:\vnmshenoy-portrelated\portfolio\MyPort\obj\Debug\MyPort.csproj.CoreCompileInputs.cache
 C:\vnmshenoy-portrelated\portfolio\MyPort\bin\MyPort.dll.config
 C:\vnmshenoy-portrelated\portfolio\MyPort\bin\MyPort.dll
 C:\vnmshenoy-portrelated\portfolio\MyPort\bin\MyPort.pdb
@@ -52,8 +53,6 @@ C:\vnmshenoy-portrelated\portfolio\MyPort\bin\roslyn\VBCSCompiler.exe
 C:\vnmshenoy-portrelated\portfolio\MyPort\bin\roslyn\VBCSCompiler.exe.config
 C:\vnmshenoy-portrelated\portfolio\MyPort\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\vnmshenoy-portrelated\portfolio\MyPort\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\vnmshenoy-portrelated\portfolio\MyPort\obj\Debug\MyPort.csprojAssemblyReference.cache
-C:\vnmshenoy-portrelated\portfolio\MyPort\obj\Debug\MyPort.csproj.CoreCompileInputs.cache
 C:\vnmshenoy-portrelated\portfolio\MyPort\obj\Debug\MyPort.csproj.CopyComplete
 C:\vnmshenoy-portrelated\portfolio\MyPort\obj\Debug\MyPort.dll
 C:\vnmshenoy-portrelated\portfolio\MyPort\obj\Debug\MyPort.pdb

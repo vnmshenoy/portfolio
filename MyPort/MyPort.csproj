@@ -14,6 +14,10 @@
     <RootNamespace>MyPort</RootNamespace>
     <AssemblyName>MyPort</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44320</IISExpressSSLPort>
@@ -93,7 +97,6 @@
     <Content Include="css\simple-sidebar.css" />
     <Content Include="css\style.default.css" />
     <Content Include="favicon.png" />
-    <Content Include="fun\justforfun.html" />
     <Content Include="header.html" />
     <Content Include="img\centerimg.png" />
     <Content Include="img\favicon.png" />
