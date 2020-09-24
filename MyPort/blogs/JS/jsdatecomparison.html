@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-2264462236439566",
+                enable_page_level_ads: true
+            });
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-131742548-1');
+        </script>
+
+        <meta charset="utf-8">
+        <meta name="robots" content="all,follow">
+        <meta name="googlebot" content="index,follow,snippet,archive">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>SManju</title>
+
+        <meta name="keywords" content="">
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap and Font Awesome css -->
+        <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome CSS-->
+        <link rel="stylesheet" href="../../vendor/font-awesome/css/font-awesome.min.css">   
+        <link rel="stylesheet" href="../../css/style.default.css">
+        <script src="../../vendor/jquery/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#headermenu').load("../../header.html #menu",function(){
+                });
+
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="fb-root"></div>
+        <script async defer src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
+
+        <!-- *** NAVBAR ***
+_________________________________________________________ -->
+        <header class="header">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container"><a href="/" class="navbar-brand scrollTo headerHref">SManju</a>
+                    <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
+                    <div id="navbarcollapse" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blogs</a>
+                                <div id="headermenu" class="dropdown-menu">
+
+                                </div>
+                            </li>             
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- /#navbar -->
+
+        <br>       
+        <section class="about-section" style="padding:50px !important">
+            <div class="container"><br>
+                <h3>Date Comparisons using Javascript</h3>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <p class=" text-left">In this blog we will see how we can create date object using Bootstrap Datepicker.First, we will create "Date object" from 'Date' and 'Time' string values.Now that we have dates to compare, we will see various ways to compare Dates and figure out if a particular date is greater,equal or less than the other date.
+                        In the process, we will also learn how to validate date and time using regex in Javascript</p>                       
+                        <b>What we will achieve at the end of this blog</b>
+                        <p>
+                            We will learn how to create Date objects in Javascript and also how to compare them.Let's not forget there may be multiple ways to do that apart from the one shown in the eg source code.</p>
+                        <b>Our Use Case</b>
+                        <p>
+                            Let’s assume you are developing a website where in the users need to key in start date, start time, end date and end time.Best eg for this may be some holiday/vacation planning website.So lets assume this website caters needs based on the user's vacation start/end date and start/end time.User Enters the date and time and based on the details entered "Get availability" is enabled</p>
+                        <b>Below is a quick demo to wrap your head around to what we are trying to achieve</b>
+                        <video width="100%" height="330" controls>
+                            <source src="../../videos/datepicker/demo1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <b>Solution:</b><br>
+                        <a href="https://github.com/manjusa/datecomparisonusingJS.git">Source Code-Link to github</a>.
+                        <br>                        
+                        <b>Lets quickly go through some requirements</b>
+                         <ul style="padding-left:0px">
+                            <li style="margin-left:30px">If Vacation Start Date is entered and valid, enable Vacation Start Time,Vacation End Date and Vacation End Time</li>
+                             <li style="margin-left:30px">If Vacation Start Date and Vacation Start Time is entered and valid, enable Vacation End Date and Vacation End Time</li>
+                              <li style="margin-left:30px"> If Vacation Start Date,Vacation Start Time and Vacation End Date is entered and valid, enable Vacation End Time</li>
+                              <li style="margin-left:30px">Enable "Get Availablity" only if everything entered and valid</li>
+                        </ul>
+                        <ul style="padding-left:0px"><b>Dependencies checklist</b>
+                            <li style="margin-left:30px">jQuery  <a style="font-weight:bold" href="https://jquery.com/download/"> Link to download</a></li>
+                            <li style="margin-left:30px">jQuery UI  <a style="font-weight:bold" href="https://jqueryui.com/download/"> Link to download</a></li>
+                             <li style="margin-left:30px">Bootstrap Datepicker<a style="font-weight:bold" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"> Link to download</a></li>
+                             <li style="margin-left:30px">Bootstrap datepicker CSS<a style="font-weight:bold" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker.css"> Link to download</a></li>
+                             <li style="margin-left:30px">Bootstrap 3.3.4 js<a style="font-weight:bold" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">Link to download</a></li>
+                             <li style="margin-left:30px">Bootstrap 3.3.4 css<a style="font-weight:bold" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">Link to download</a></li>                            
+                        </ul>                         
+                    </div>
+                </div>                
+            </div>
+        </section>
+         
+        <section style="padding:20px !important">
+            <div class="container">               
+                <h4>Did you like the blog or have questions, please add your comments</h4>
+                <div class="fb-comments" data-href="http://manjustechblog.com/blogs/JS/jsdatecomparison.html" data-width="400" data-numposts="10"></div>
+            </div>
+        </section>
+        <!-- /#navbar -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-lg-left">
+                        <p class="social"><a href="http://www.facebook.com/shenoyvnm
+                            " class="external facebook wow fadeInUp"><i class="fa fa-facebook"></i></a>
+                            <a style="background-color:grey;" href="http://www.linkedin.com/in/manjunathshenoywebdev" class="external linkedin wow fadeInUp"><i class="fa fa-linkedin"></i></a>
+
+                    </div>
+                    <!-- /.6-->
+                    <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+                        <p>© 2018 SManju. All rights reserved.</p>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <p class="template-bootstrapious">Designed by <a href="https://www.bootstrapious.com">Bootstrapious</a>
+                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- JavaScript files-->
+        <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-2264462236439566",
+                enable_page_level_ads: true
+            });
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-131742548-1');
+        </script>
+
+        <meta charset="utf-8">
+        <meta name="robots" content="all,follow">
+        <meta name="googlebot" content="index,follow,snippet,archive">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>SManju</title>
+
+        <meta name="keywords" content="">
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap and Font Awesome css -->
+        <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome CSS-->
+        <link rel="stylesheet" href="../../vendor/font-awesome/css/font-awesome.min.css">   
+        <link rel="stylesheet" href="../../css/style.default.css">
+        <script src="../../vendor/jquery/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#headermenu').load("../../header.html #menu",function(){
+                });
+
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="fb-root"></div>
+        <script async defer src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
+
+        <!-- *** NAVBAR ***
+_________________________________________________________ -->
+        <header class="header">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container" ><a href="../../index.html" class="navbar-brand scrollTo headerHref">SManju</a>
+                    <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
+                    <div id="navbarcollapse" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blogs</a>
+                                <div id="headermenu" class="dropdown-menu">
+
+                                </div>
+                            </li>             
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- /#navbar -->
+
+        <br>       
+        <section class="about-section">
+            <div class="container">
+                <h3>Drag And Drop Elements</h3>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <p class=" text-left">In this blog you will see how we can drag and drop elements using jQuery’s draggable script. I will show how you can extend it to reorder elements.You can reoder the elements as per your choice.</p>                       
+                        <b> What we will achieve at the end of this blog</b>
+                        <p>
+                            At the end of this tutorial, we will have better understanding of how to perform drag and drop functionality and also will have Javascript code to do the same
+                        </p>
+                        <p><b>Source code</b> of the functionality <a style="font-weight:bold" href="https://github.com/manjusa/draganddropdemo.git">Github Link</a></p>
+                        <p>A quick <b>demo</b> to what you will achieve will help you visualise it even more.I have addes a video for your reference <a style="font-weight:bold" href="https://www.youtube.com/watch?v=1OMBnTPKBfI&feature=youtu.be">Link to demo</a></p>
+                        <ul style="padding-left:0px"><b>JS to be downloaded</b>
+                            <li style="margin-left:30px">jQuery  <a style="font-weight:bold" href="https://jquery.com/download/"> Link to download</a></li>
+                            <li style="margin-left:30px">jQuery UI  <a style="font-weight:bold" href="https://jqueryui.com/download/"> Link to download</a></li>
+                            <li style="margin-left:30px">jQuery Tmpl (Though jQuery template has nothing to do with draggable elements in particular I am using it that I can add script as a template and  we will need it in our eg)  <a style="font-weight:bold" href="https://plugins.jquery.com/jquery-tmpl/"> Link to download</a></li>
+                        </ul>
+                        <p>
+                            Now lets look at the steps to achieve this functionality</p>
+                        <ul>
+                            <li>Create a custom folder and create an Index.html file</li>
+                            <li>Create a JS file called <b>"dragelements.js”</b> and add reference to that file in our index.html file</li>
+                            <li>
+                                dragelements.js is the file i created where all the action related to drag and drop happens.
+                            </li>
+                            <li>
+                                Also, add references to all jQuery, jQueryUI, jQueryTmpl javascripts in the index.html page
+                            </li>
+                        </ul>
+                        <p>Now,lets take a step back and look what jQuery's draggable functionality gives us in general
+                        </p>
+                        <h3>jQuery's Draggable functionality</h3>
+                        <p>Suppose you have a div named "draggable" (or any other name for that matter). You can
+                            give it draggable functionality by attaching "draggable()" to it like shown below
+                        </p>
+                        <xmp style="align:left;background:lightgrey">
+                            <script>
+                                $( function() {
+                                    $( "#draggable" ).draggable();
+                                } );
+                            </script>
+                            <body>
+                                <div id="draggable" class="ui-widget-content">
+                                    <p>Drag me around</p>
+                                </div>
+                            </body>
+                        </xmp>
+                        <p>For whole documentation please refer jQuery website.<a style="font-weight:bold" href="https://jqueryui.com/draggable/">
+                            Link to jQuery Dragggable Documentation</a></p>
+                        <p>In real time you may need a little bit more flexibility than what we saw above.You may get a set of data from backend which is displayed to the User and then the User may want to order it based on his choice.The simplest and most intuitive way for the User to reorder is by dragging elements and placing it over where they want it to be.</p>
+                        <p>Lets see how we can achieve this.Doing hands on is the best way to understand it.Lets consider a scenario, where user gets a list of animals from backend/database which is displayed on the front end and then the user can reorder the animals based on his or her likings</p>
+                        <p>In our eg, there are 2 major chunks. <b>First</b>, though not exactly related to drag and drop,
+                            we still need to generate the div's dynamically from the JSON response we get from backend.<b>Second</b>, is where action happens.We call makeMeDraggable() and makeMeDroppable() function of dragelements.js function.Below,lets see both of these steps in more detail
+                        </p>
+                        <p><b>Part one:</b>
+                            I dont want to setup a database and all for this eg.So to simulate backend, I created a simple JSON file sampleJson.js. It is a simple JSON object containing list of animals in an order.Below is the screenshot of the JSON file
+                        </p>
+                        <img  src="../../img/js/DragnDrop/1Json.PNG" alt="json sample"/>
+
+                        <p>
+                            So trigger the read, click on "click me" button.That calls "getData()" which makes an Ajax call and retrieves data from "sampleJson.js".We will just assume that our backend returns this JSON to us.The front end javascript will make an ajax call to the samplejson.js and get JSON as response. When running the index.html file, ensure that you run it on the server,otherwise you may get an <b>Cross-Origin Resource Sharing (CORS)</b>.Incase you want to quickly test it out,without hassles of setting up Server, you can use IDE's like "Brackets" which has a "Live Preview" functionality.Clicking on "Live Preview" spins a built in server to show just the content statically(no back end logic)
+                        </p> 
+                        <p>
+                            Now in the html file, after we make the call and get the JSON back, we need to iterate through the response and display the results on front end. One thing to note is that we will be creating the div id's and name's  dynamically.Other point worth mentioning is that 
+                            "dragelements.js" is designed to look at any elements which has name starting with "draggable".Thats gives us flexibility to make any element draggable. 
+                            <b>PS:</b> If you want you can download the "dragelements.js",tweak it according to your need.
+                        </p>      
+                        <p><b>Part two:</b>
+                            Once you see the list of elements and the order, click on "Make Elements draggable and droppable" button, which in turn calls  <b>dragelements.js's</b>makeMeDraggable() and makeMeDroppable() functions.
+                        </p>
+
+                        <ul style="padding-left:0px"><b>makeMeDraggable()</b> function:
+                            <li style="margin-left:4%">makes the element draggable</li>
+                            <li style="margin-left:4%">jQuery's draggable provides us with various events
+                                Eg
+                                <ul>
+                                    <li>containment</li>
+                                    <li>appendTo</li>
+                                    <li>clone</li>
+                                    <li>revert</li>
+                                    <li>helper</li>
+                                    <li>containment</li>
+                                </ul>
+                            </li>
+                            <li>For all events please refer jQuery's documentation</li>
+                        </ul>
+                        <ul style="padding-left:0px"><b>makeMeDroppable()</b> function:                        
+                            <li style="margin-left:4%">We use "drop" event when an element is dropped over.</li>
+                            <li style="margin-left:4%">Drop() internally calls "stickElement" function which updates the dom.So the user sees the dragged element is sticked above the dropped over element
+                                <ul style="padding-left:0px"><b>For eg</b>, if you had  4 animals in below order
+                                    <li>Cat</li>
+                                    <li>Dog</li>
+                                    <li>Elephant</li>
+                                    <li>Lion</li>
+                                </ul>
+                                <br>
+                                <ul style="padding-left:0px">
+                                    and you dragged "Lion" and dropped it  on top of "Dog" elem, then the new order becomes
+                                    <li>Cat</li>
+                                    <li>Lion</li>
+                                    <li>Dog</li>
+                                    <li>Elephant</li>                                   
+                                </ul>
+                        </ul>
+                        <p>So this ends this drag and drop tutorial. Am sure with this you can make changes and achieve much more.Hope it was helpful.Please feel free to leave comments or questions below</p>
+                    </div>
+                </div>                
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h4>Did you like the blog or have questions, please add your comments</h4>
+                <div class="fb-comments" data-href="http://manjustechblog.com/blogs/Net/signalr.html" data-width="400" data-numposts="10"></div>
+            </div>
+        </section>
+        <!-- /#navbar -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-lg-left">
+                        <p class="social"><a href="http://www.facebook.com/shenoyvnm
+                            " class="external facebook wow fadeInUp"><i class="fa fa-facebook"></i></a>
+                            <a style="background-color:grey;" href="http://www.linkedin.com/in/manjunathshenoywebdev" class="external linkedin wow fadeInUp"><i class="fa fa-linkedin"></i></a>
+
+                    </div>
+                    <!-- /.6-->
+                    <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+                        <p>© 2018 SManju. All rights reserved.</p>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <p class="template-bootstrapious">Designed by <a href="https://www.bootstrapious.com">Bootstrapious</a>
+                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- JavaScript files-->
+        <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
+
+</html>

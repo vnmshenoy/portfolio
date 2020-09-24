@@ -1,0 +1,2090 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\dev\portfolio</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ads.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>09/05/2018 16:10:50</publishTime>
+    </File>
+    <File Include="bin/MyPort.dll">
+      <publishTime>09/19/2020 17:45:58</publishTime>
+    </File>
+    <File Include="bin/MyPort.pdb">
+      <publishTime>09/19/2020 17:45:58</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>08/08/2018 12:18:12</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>08/08/2018 12:18:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>08/08/2018 12:09:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>12/05/2017 10:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>12/05/2017 10:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>08/08/2018 12:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>11/05/2016 19:55:32</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>11/05/2016 19:55:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/16/2018 03:29:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>11/05/2016 19:55:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>11/05/2016 19:55:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>11/05/2016 19:55:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>11/05/2016 19:55:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Globalization.Calendars.dll">
+      <publishTime>11/05/2016 19:56:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>11/05/2016 19:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
+      <publishTime>11/05/2016 19:56:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>11/05/2016 19:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>11/05/2016 19:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Http.dll">
+      <publishTime>11/05/2016 19:56:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Sockets.dll">
+      <publishTime>11/05/2016 19:56:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/16/2018 03:29:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>11/05/2016 19:57:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>11/05/2016 19:57:14</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>11/05/2016 19:57:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>11/05/2016 19:57:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>11/05/2016 19:57:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>11/05/2016 19:57:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>11/05/2016 19:57:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>11/05/2016 19:57:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>11/05/2016 19:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>11/05/2016 19:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>11/05/2016 19:57:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>11/05/2016 19:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>08/08/2018 12:18:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>08/08/2018 12:09:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>08/08/2018 05:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>08/08/2018 12:18:16</publishTime>
+    </File>
+    <File Include="blogs/blogs.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/JS/datecreatingoptions.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/JS/dradndrop.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/JS/JavascriptFunctionVariations.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/JS/jsdatecomparison.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/JS/multilevel.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/JS/qrcodes.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/JS/qrcodeTechnicalSide.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/JS/quickbudgetingtool.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/JS/setupvpn.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/jsblogs.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/misc.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/Net/gitvsintegration.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/Net/signalr.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/Sql/sqlblogsBeginner.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/sqlblogs.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/sqltxt/createbackupcontent.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/sqltxt/databasesetupcontent.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/sqltxt/dbdcontent.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/sqltxt/restoredatabasecontent.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="blogs/sqltxt/ssmscontent.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="css/custom.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.eot">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.svg">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.ttf">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.woff">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="css/fonts/FontAwesome.otf">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="css/osmplayer_default.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="css/simple-sidebar.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="css/style.default.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="favicon.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="fun/justforfun.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="header.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/centerimg.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/favicon.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/fun/smiley.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/10remoteRepoSettings.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/11IgnoreLocalChanges.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/12Push.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/1createNewRepo.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/2urlOfRepo.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/3clickOnTeamExplorer.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/4homeOfflineSettings.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/5manageConnections.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/6NotAGitRepo.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/7CloneRepo.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/8ClonedRepo.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/9GitStatusAfterTest.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/registryEntry.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/run.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/StageChanges.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/StagedChangesSection.JPG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/gitvsintegration/useridnpwd.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/home.jpg">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/js/DragnDrop/1Json - Copy - Copy.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/js/DragnDrop/1Json.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/jsfunctionvariation/variations.jpg">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/logo.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/multilevel/videos/sample.mp4">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/openVPN/1img.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/openVPN/2img.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/openVPN/3img.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/openVPN/4img.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/qrcode/resultofscanimg.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/qrcode/sample.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/qrcode/scanimg.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/img1.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/img2.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/Issue1.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/issue2.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/signalR1.jpg">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/sol1.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/step1.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/step2.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/step2a.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/step4.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/step4a.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/step4b.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/step4c.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/step6.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/step8.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/signalr/step9.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/10FirstTime.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/11anodboSPs.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/11bafterok.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/12AddTable.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/13DbDiagramStoreLoc.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/14DBTableDiagram.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/15AutoSize.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/16MoreCompact.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/17AddRelatedTable.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/17NewTableThru.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/19PromptSave.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/1connectToDbEngine.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/1generatescripts.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/20SetPrimaryKey.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/21Annotation.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/22TableView.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/23ExportDiagram.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/24error.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/25solution.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/26Files.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/2aNameOfDB.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/2CreateAnewDB.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/2Intro.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/3aSelectOnNewQueryWithDBSelected.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/3ChooseTables.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/4backup.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/4SetscriptOptionsSaveFile.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/5backupTo.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/6AdvancedScriptingOpotions.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/6Restore.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/7device.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/8backuprestored.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/9databaseDiag.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/sqlforBeginners/startSSMS.PNG">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="Index.aspx">
+      <publishTime>09/18/2020 17:02:25</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="js/front.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="js/modernizr-2.8.3.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="js/osmplayer.compressed.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="js/osmplayer.default.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/email.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/.gitattributes">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/.gitignore">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/.php_cs.dist">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/.travis.yml">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/CHANGES">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/composer.json">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/headers.rst">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/help-resources.rst">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/including-the-files.rst">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/index.rst">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/installing.rst">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/introduction.rst">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/japanese.rst">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/messages.rst">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/overview.rst">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/plugins.rst">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/sending.rst">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/uml/Encoders.graffle">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/uml/Mime.graffle">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/doc/uml/Transports.graffle">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Attachment.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/ByteStream/AbstractFilterableInputStream.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/ByteStream/ArrayByteStream.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/ByteStream/FileByteStream.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/ByteStream/TemporaryFileByteStream.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/CharacterReader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/CharacterReader/GenericFixedWidthReader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/CharacterReader/UsAsciiReader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/CharacterReader/Utf8Reader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/CharacterReaderFactory.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/CharacterReaderFactory/SimpleCharacterReaderFactory.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/CharacterStream.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/CharacterStream/ArrayCharacterStream.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/CharacterStream/NgCharacterStream.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/ConfigurableSpool.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/DependencyContainer.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/DependencyException.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/EmbeddedFile.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Encoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Encoder/Base64Encoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Encoder/QpEncoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Encoder/Rfc2231Encoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Encoding.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/CommandEvent.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/CommandListener.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/Event.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/EventDispatcher.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/EventListener.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/EventObject.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/ResponseEvent.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/ResponseListener.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/SendEvent.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/SendListener.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/SimpleEventDispatcher.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/TransportChangeEvent.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/TransportChangeListener.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/TransportExceptionEvent.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Events/TransportExceptionListener.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/FailoverTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/FileSpool.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/FileStream.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Filterable.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Image.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/InputByteStream.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/IoException.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/KeyCache.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/KeyCache/ArrayKeyCache.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/KeyCache/DiskKeyCache.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/KeyCache/KeyCacheInputStream.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/KeyCache/NullKeyCache.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/KeyCache/SimpleKeyCacheInputStream.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/LoadBalancedTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mailer.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mailer/ArrayRecipientIterator.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mailer/RecipientIterator.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/MailTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/MemorySpool.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Message.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/Attachment.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/CharsetObserver.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/ContentEncoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/Base64ContentEncoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/NativeQpContentEncoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/PlainContentEncoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoderProxy.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/RawContentEncoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/EmbeddedFile.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/EncodingObserver.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/Grammar.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/Header.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/Base64HeaderEncoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/QpHeaderEncoder.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/HeaderFactory.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/Headers/AbstractHeader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/Headers/DateHeader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/Headers/IdentificationHeader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/Headers/MailboxHeader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/Headers/OpenDKIMHeader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/Headers/ParameterizedHeader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/Headers/PathHeader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/Headers/UnstructuredHeader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/HeaderSet.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/Message.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/MimeEntity.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/MimePart.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/ParameterizedHeader.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/SimpleHeaderFactory.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/SimpleHeaderSet.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/SimpleMessage.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Mime/SimpleMimeEntity.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/MimePart.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/NullTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/OutputByteStream.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/AntiFloodPlugin.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/BandwidthMonitorPlugin.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/Decorator/Replacements.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/DecoratorPlugin.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/ImpersonatePlugin.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/Logger.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/LoggerPlugin.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/Loggers/ArrayLogger.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/Loggers/EchoLogger.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/MessageLogger.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/Pop/Pop3Connection.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/Pop/Pop3Exception.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/PopBeforeSmtpPlugin.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/RedirectingPlugin.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/Reporter.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/ReporterPlugin.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/Reporters/HitReporter.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/Reporters/HtmlReporter.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/Sleeper.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/ThrottlerPlugin.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Plugins/Timer.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Preferences.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/ReplacementFilterFactory.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/RfcComplianceException.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/SendmailTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/SignedMessage.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Signer.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Signers/BodySigner.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Signers/DKIMSigner.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Signers/DomainKeySigner.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Signers/HeaderSigner.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Signers/OpenDKIMSigner.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Signers/SMimeSigner.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/SmtpTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Spool.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/SpoolTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/StreamFilter.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/StreamFilters/ByteArrayReplacementFilter.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/StreamFilters/StringReplacementFilter.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/StreamFilters/StringReplacementFilterFactory.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/SwiftException.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/CramMd5Authenticator.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/LoginAuthenticator.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/NTLMAuthenticator.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/PlainAuthenticator.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/Esmtp/Authenticator.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/EsmtpHandler.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/FailoverTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/IoBuffer.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/LoadBalancedTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/MailInvoker.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/MailTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/NullTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/SendmailTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/SimpleMailInvoker.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/SmtpAgent.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/SpoolTransport.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/TransportException.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/classes/Swift/Validate.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/dependency_maps/cache_deps.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/dependency_maps/message_deps.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/dependency_maps/mime_deps.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/dependency_maps/transport_deps.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/mime_types.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/preferences.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/swiftmailer_generate_mimes_config.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/swift_init.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/swift_required.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/lib/swift_required_pear.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/LICENSE">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/phpunit.xml.dist">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/README">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance.conf.php.default">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/AttachmentAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/ByteStream/FileByteStreamAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/CharacterReaderFactory/SimpleCharacterReaderFactoryAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/DependencyContainerAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/EmbeddedFileAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Encoder/Base64EncoderAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Encoder/QpEncoderAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Encoder/Rfc2231EncoderAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/EncodingAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/KeyCache/ArrayKeyCacheAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/KeyCache/DiskKeyCacheAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/MessageAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Mime/AttachmentAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Mime/ContentEncoder/Base64ContentEncoderAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Mime/ContentEncoder/NativeQpContentEncoderAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Mime/ContentEncoder/PlainContentEncoderAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Mime/ContentEncoder/QpContentEncoderAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Mime/EmbeddedFileAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Mime/HeaderEncoder/Base64HeaderEncoderAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Mime/MimePartAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Mime/SimpleMessageAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/MimePartAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/AbstractStreamBufferAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/BasicSocketAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/ProcessAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/SocketTimeoutTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/SslSocketAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/TlsSocketAcceptanceTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bootstrap.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug111Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug118Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug206Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug274Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug34Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug35Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug38Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug518Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug51Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug534Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug650Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug71Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/Bug76Test.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/bug/Swift/BugFileByteStreamConsecutiveReadCallsTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/fixtures/MimeEntityFixture.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/IdenticalBinaryConstraint.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/smoke.conf.php.default">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/smoke/Swift/Smoke/AttachmentSmokeTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/smoke/Swift/Smoke/BasicSmokeTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/smoke/Swift/Smoke/HtmlWithAttachmentSmokeTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/smoke/Swift/Smoke/InternationalSmokeTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/StreamCollector.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/SwiftMailerSmokeTestCase.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/SwiftMailerTestCase.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/ByteStream/ArrayByteStreamTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/CharacterReader/GenericFixedWidthReaderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/CharacterReader/UsAsciiReaderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/CharacterReader/Utf8ReaderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/CharacterStream/ArrayCharacterStreamTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/DependencyContainerTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Encoder/Base64EncoderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Encoder/QpEncoderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Encoder/Rfc2231EncoderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Events/CommandEventTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Events/EventObjectTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Events/ResponseEventTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Events/SendEventTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Events/SimpleEventDispatcherTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Events/TransportChangeEventTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Events/TransportExceptionEventTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/KeyCache/ArrayKeyCacheTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/KeyCache/SimpleKeyCacheInputStreamTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mailer/ArrayRecipientIteratorTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/MailerTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/MessageTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/AbstractMimeEntityTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/AttachmentTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/ContentEncoder/Base64ContentEncoderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/ContentEncoder/PlainContentEncoderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/ContentEncoder/QpContentEncoderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/EmbeddedFileTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/HeaderEncoder/Base64HeaderEncoderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/HeaderEncoder/QpHeaderEncoderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/Headers/DateHeaderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/Headers/IdentificationHeaderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/Headers/MailboxHeaderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/Headers/ParameterizedHeaderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/Headers/PathHeaderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/Headers/UnstructuredHeaderTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/MimePartTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/SimpleHeaderFactoryTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/SimpleHeaderSetTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/SimpleMessageTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Mime/SimpleMimeEntityTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Plugins/AntiFloodPluginTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Plugins/BandwidthMonitorPluginTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Plugins/DecoratorPluginTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Plugins/LoggerPluginTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Plugins/Loggers/ArrayLoggerTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Plugins/Loggers/EchoLoggerTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Plugins/PopBeforeSmtpPluginTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Plugins/RedirectingPluginTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Plugins/ReporterPluginTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Plugins/Reporters/HitReporterTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Plugins/Reporters/HtmlReporterTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Plugins/ThrottlerPluginTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Signers/DKIMSignerTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Signers/OpenDKIMSignerTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Signers/SMimeSignerTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/StreamFilters/ByteArrayReplacementFilterTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/StreamFilters/StringReplacementFilterFactoryTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/StreamFilters/StringReplacementFilterTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/AbstractSmtpEventSupportTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/AbstractSmtpTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/CramMd5AuthenticatorTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/LoginAuthenticatorTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/NTLMAuthenticatorTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/PlainAuthenticatorTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/Esmtp/AuthHandlerTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/EsmtpTransport/ExtensionSupportTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/EsmtpTransportTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/FailoverTransportTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/LoadBalancedTransportTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/MailTransportTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/SendmailTransportTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/unit/Swift/Transport/StreamBufferTest.php">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/charsets/iso-2022-jp/one.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/charsets/iso-8859-1/one.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/charsets/utf-8/one.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/charsets/utf-8/three.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/charsets/utf-8/two.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/dkim/dkim.test.priv">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/dkim/dkim.test.pub">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/files/data.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/files/swiftmailer.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/files/textfile.zip">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/ca.crt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/ca.key">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/CA.srl">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/create-cert.sh">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/encrypt.crt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/encrypt.key">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/encrypt2.crt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/encrypt2.key">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/intermediate.crt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/intermediate.key">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/sign.crt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/sign.key">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/sign2.crt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/tests/_samples/smime/sign2.key">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="misc/swiftmailer/VERSION">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>09/19/2020 17:45:59</publishTime>
+    </File>
+    <File Include="readme.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/animate-config.json">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/animate.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/animate.min.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/attention_seekers/bounce.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/attention_seekers/flash.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/attention_seekers/headShake.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/attention_seekers/jello.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/attention_seekers/pulse.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/attention_seekers/rubberBand.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/attention_seekers/shake.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/attention_seekers/swing.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/attention_seekers/tada.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/attention_seekers/wobble.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/bouncing_entrances/bounceIn.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/bouncing_entrances/bounceInDown.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/bouncing_entrances/bounceInLeft.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/bouncing_entrances/bounceInRight.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/bouncing_entrances/bounceInUp.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/bouncing_exits/bounceOut.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/bouncing_exits/bounceOutDown.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/bouncing_exits/bounceOutLeft.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/bouncing_exits/bounceOutRight.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/bouncing_exits/bounceOutUp.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_entrances/fadeIn.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_entrances/fadeInDown.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_entrances/fadeInDownBig.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_entrances/fadeInLeft.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_entrances/fadeInLeftBig.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_entrances/fadeInRight.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_entrances/fadeInRightBig.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_entrances/fadeInUp.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_entrances/fadeInUpBig.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_exits/fadeOut.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_exits/fadeOutDown.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_exits/fadeOutDownBig.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_exits/fadeOutLeft.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_exits/fadeOutLeftBig.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_exits/fadeOutRight.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_exits/fadeOutRightBig.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_exits/fadeOutUp.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/fading_exits/fadeOutUpBig.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/flippers/flip.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/flippers/flipInX.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/flippers/flipInY.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/flippers/flipOutX.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/flippers/flipOutY.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/lightspeed/lightSpeedIn.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/lightspeed/lightSpeedOut.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/rotating_entrances/rotateIn.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/rotating_entrances/rotateInDownLeft.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/rotating_entrances/rotateInDownRight.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/rotating_entrances/rotateInUpLeft.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/rotating_entrances/rotateInUpRight.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/rotating_exits/rotateOut.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/rotating_exits/rotateOutDownLeft.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/rotating_exits/rotateOutDownRight.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/rotating_exits/rotateOutUpLeft.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/rotating_exits/rotateOutUpRight.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/sliding_entrances/slideInDown.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/sliding_entrances/slideInLeft.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/sliding_entrances/slideInRight.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/sliding_entrances/slideInUp.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/sliding_exits/slideOutDown.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/sliding_exits/slideOutLeft.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/sliding_exits/slideOutRight.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/sliding_exits/slideOutUp.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/specials/hinge.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/specials/jackInTheBox.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/specials/rollIn.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/specials/rollOut.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/zooming_entrances/zoomIn.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/zooming_entrances/zoomInDown.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/zooming_entrances/zoomInLeft.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/zooming_entrances/zoomInRight.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/zooming_entrances/zoomInUp.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/zooming_exits/zoomOut.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/zooming_exits/zoomOutDown.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/zooming_exits/zoomOutLeft.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/zooming_exits/zoomOutRight.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/zooming_exits/zoomOutUp.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/animate.css/source/_base.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/bootstrap/css/bootstrap-grid.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/bootstrap/css/bootstrap-grid.min.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/bootstrap/css/bootstrap-reboot.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/bootstrap/css/bootstrap-reboot.min.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/bootstrap/css/bootstrap.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/bootstrap/css/bootstrap.min.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/bootstrap/js/bootstrap.bundle.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/bootstrap/js/bootstrap.bundle.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/bootstrap/js/bootstrap.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/bootstrap/js/bootstrap.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/font-awesome/css/font-awesome.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/font-awesome/css/font-awesome.min.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/font-awesome/fonts/fontawesome-webfont.woff2">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/font-awesome/fonts/FontAwesome.otf">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/font-awesome/HELP-US-OUT.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery-parallax.js/parallax.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery-parallax.js/parallax.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery-waypoints/Makefile">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery-waypoints/shortcuts/infinite-scroll/index.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery-waypoints/shortcuts/infinite-scroll/waypoints-infinite.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery-waypoints/shortcuts/infinite-scroll/waypoints-infinite.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery-waypoints/shortcuts/sticky-elements/index.html">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery-waypoints/waypoints.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery-waypoints/waypoints.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery.cookie/component.json">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery.cookie/cookie.jquery.json">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery.cookie/jquery.cookie.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery.cookie/MIT-LICENSE.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery.counterup/counterup.jquery.json">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery.counterup/jquery.counterup.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery.counterup/jquery.counterup.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery/core.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery/jquery.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery/jquery.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery/jquery.slim.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/jquery/jquery.slim.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/owl.carousel/assets/ajax-loader.gif">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/owl.carousel/assets/owl.carousel.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/owl.carousel/assets/owl.carousel.min.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/owl.carousel/assets/owl.theme.default.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/owl.carousel/assets/owl.theme.default.min.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/owl.carousel/assets/owl.theme.green.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/owl.carousel/assets/owl.theme.green.min.css">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/owl.carousel/assets/owl.video.play.png">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/owl.carousel/owl.carousel.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/owl.carousel/owl.carousel.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/popper.js/esm/popper-utils.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/popper.js/esm/popper-utils.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/popper.js/esm/popper.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/popper.js/esm/popper.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/popper.js/popper-utils.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/popper.js/popper-utils.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/popper.js/popper.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/popper.js/popper.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/popper.js/umd/popper-utils.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/popper.js/umd/popper-utils.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/popper.js/umd/popper.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/popper.js/umd/popper.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/jquery.waypoints.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/jquery.waypoints.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/noframework.waypoints.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/noframework.waypoints.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/shortcuts/infinite.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/shortcuts/infinite.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/shortcuts/inview.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/shortcuts/inview.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/shortcuts/sticky.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/shortcuts/sticky.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/waypoints.debug.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/zepto.waypoints.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/lib/zepto.waypoints.min.js">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/licenses.txt">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="vendor/waypoints/testem.json">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="videos/budgettracker/quickbudgetmanagmenttool.avi">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="videos/creatingdate/datecreatingoptions.mp4">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="videos/datepicker/demo1.mp4">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="videos/multilevel/index.mp4">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="videos/multilevel/multilevelapproach2.mp4">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="videos/qrcode/QRCodegerenationandread.mp4">
+      <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/19/2020 17:45:58</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

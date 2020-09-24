@@ -1,0 +1,421 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{285B1559-826E-4D22-AF95-AC38F5AF9FD7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyPort</RootNamespace>
+    <AssemblyName>MyPort</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44320</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ads.txt" />
+    <Content Include="blogs\blogs.html" />
+    <Content Include="blogs\jsblogs.html" />
+    <Content Include="blogs\JS\datecreatingoptions.html" />
+    <Content Include="blogs\JS\dradndrop.html" />
+    <Content Include="blogs\JS\JavascriptFunctionVariations.html" />
+    <Content Include="blogs\JS\jsdatecomparison.html" />
+    <Content Include="blogs\JS\multilevel.html" />
+    <Content Include="blogs\JS\qrcodes.html" />
+    <Content Include="blogs\JS\qrcodeTechnicalSide.html" />
+    <Content Include="blogs\JS\quickbudgetingtool.html" />
+    <Content Include="blogs\JS\setupvpn.html" />
+    <Content Include="blogs\misc.html" />
+    <Content Include="blogs\Net\gitvsintegration.html" />
+    <Content Include="blogs\Net\signalr.html" />
+    <Content Include="blogs\sqlblogs.html" />
+    <Content Include="blogs\sqltxt\createbackupcontent.txt" />
+    <Content Include="blogs\sqltxt\databasesetupcontent.txt" />
+    <Content Include="blogs\sqltxt\dbdcontent.txt" />
+    <Content Include="blogs\sqltxt\restoredatabasecontent.txt" />
+    <Content Include="blogs\sqltxt\ssmscontent.txt" />
+    <Content Include="blogs\Sql\sqlblogsBeginner.html" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\fonts\fontawesome-webfont.svg" />
+    <Content Include="css\osmplayer_default.css" />
+    <Content Include="css\simple-sidebar.css" />
+    <Content Include="css\style.default.css" />
+    <Content Include="favicon.png" />
+    <Content Include="fun\justforfun.html" />
+    <Content Include="header.html" />
+    <Content Include="img\centerimg.png" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\fun\smiley.png" />
+    <Content Include="img\gitvsintegration\10remoteRepoSettings.png" />
+    <Content Include="img\gitvsintegration\11IgnoreLocalChanges.png" />
+    <Content Include="img\gitvsintegration\12Push.png" />
+    <Content Include="img\gitvsintegration\1createNewRepo.png" />
+    <Content Include="img\gitvsintegration\2urlOfRepo.png" />
+    <Content Include="img\gitvsintegration\3clickOnTeamExplorer.png" />
+    <Content Include="img\gitvsintegration\4homeOfflineSettings.png" />
+    <Content Include="img\gitvsintegration\5manageConnections.png" />
+    <Content Include="img\gitvsintegration\6NotAGitRepo.png" />
+    <Content Include="img\gitvsintegration\7CloneRepo.png" />
+    <Content Include="img\gitvsintegration\8ClonedRepo.png" />
+    <Content Include="img\gitvsintegration\9GitStatusAfterTest.png" />
+    <Content Include="img\gitvsintegration\registryEntry.png" />
+    <Content Include="img\gitvsintegration\run.png" />
+    <Content Include="img\gitvsintegration\StageChanges.png" />
+    <Content Include="img\gitvsintegration\StagedChangesSection.JPG" />
+    <Content Include="img\gitvsintegration\useridnpwd.png" />
+    <Content Include="img\home.jpg" />
+    <Content Include="img\jsfunctionvariation\variations.jpg" />
+    <Content Include="img\js\DragnDrop\1Json - Copy - Copy.PNG" />
+    <Content Include="img\js\DragnDrop\1Json.PNG" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\multilevel\videos\sample.mp4" />
+    <Content Include="img\openVPN\1img.PNG" />
+    <Content Include="img\openVPN\2img.PNG" />
+    <Content Include="img\openVPN\3img.png" />
+    <Content Include="img\openVPN\4img.png" />
+    <Content Include="img\qrcode\resultofscanimg.png" />
+    <Content Include="img\qrcode\sample.png" />
+    <Content Include="img\qrcode\scanimg.png" />
+    <Content Include="img\signalr\img1.PNG" />
+    <Content Include="img\signalr\img2.PNG" />
+    <Content Include="img\signalr\Issue1.png" />
+    <Content Include="img\signalr\issue2.png" />
+    <Content Include="img\signalr\signalR1.jpg" />
+    <Content Include="img\signalr\sol1.PNG" />
+    <Content Include="img\signalr\step1.png" />
+    <Content Include="img\signalr\step2.png" />
+    <Content Include="img\signalr\step2a.png" />
+    <Content Include="img\signalr\step4.png" />
+    <Content Include="img\signalr\step4a.png" />
+    <Content Include="img\signalr\step4b.png" />
+    <Content Include="img\signalr\step4c.png" />
+    <Content Include="img\signalr\step6.png" />
+    <Content Include="img\signalr\step8.PNG" />
+    <Content Include="img\signalr\step9.PNG" />
+    <Content Include="img\sqlforBeginners\10FirstTime.PNG" />
+    <Content Include="img\sqlforBeginners\11anodboSPs.PNG" />
+    <Content Include="img\sqlforBeginners\11bafterok.PNG" />
+    <Content Include="img\sqlforBeginners\12AddTable.PNG" />
+    <Content Include="img\sqlforBeginners\13DbDiagramStoreLoc.PNG" />
+    <Content Include="img\sqlforBeginners\14DBTableDiagram.PNG" />
+    <Content Include="img\sqlforBeginners\15AutoSize.PNG" />
+    <Content Include="img\sqlforBeginners\16MoreCompact.PNG" />
+    <Content Include="img\sqlforBeginners\17AddRelatedTable.PNG" />
+    <Content Include="img\sqlforBeginners\17NewTableThru.PNG" />
+    <Content Include="img\sqlforBeginners\19PromptSave.PNG" />
+    <Content Include="img\sqlforBeginners\1connectToDbEngine.PNG" />
+    <Content Include="img\sqlforBeginners\1generatescripts.PNG" />
+    <Content Include="img\sqlforBeginners\20SetPrimaryKey.PNG" />
+    <Content Include="img\sqlforBeginners\21Annotation.PNG" />
+    <Content Include="img\sqlforBeginners\22TableView.PNG" />
+    <Content Include="img\sqlforBeginners\23ExportDiagram.PNG" />
+    <Content Include="img\sqlforBeginners\24error.PNG" />
+    <Content Include="img\sqlforBeginners\25solution.png" />
+    <Content Include="img\sqlforBeginners\26Files.png" />
+    <Content Include="img\sqlforBeginners\2aNameOfDB.PNG" />
+    <Content Include="img\sqlforBeginners\2CreateAnewDB.PNG" />
+    <Content Include="img\sqlforBeginners\2Intro.PNG" />
+    <Content Include="img\sqlforBeginners\3aSelectOnNewQueryWithDBSelected.PNG" />
+    <Content Include="img\sqlforBeginners\3ChooseTables.PNG" />
+    <Content Include="img\sqlforBeginners\4backup.PNG" />
+    <Content Include="img\sqlforBeginners\4SetscriptOptionsSaveFile.PNG" />
+    <Content Include="img\sqlforBeginners\5backupTo.PNG" />
+    <Content Include="img\sqlforBeginners\6AdvancedScriptingOpotions.PNG" />
+    <Content Include="img\sqlforBeginners\6Restore.PNG" />
+    <Content Include="img\sqlforBeginners\7device.PNG" />
+    <Content Include="img\sqlforBeginners\8backuprestored.PNG" />
+    <Content Include="img\sqlforBeginners\9databaseDiag.PNG" />
+    <Content Include="img\sqlforBeginners\startSSMS.PNG" />
+    <Content Include="Index.aspx" />
+    <Content Include="index.html" />
+    <Content Include="js\front.js" />
+    <Content Include="js\modernizr-2.8.3.js" />
+    <Content Include="js\osmplayer.compressed.js" />
+    <Content Include="js\osmplayer.default.js" />
+    <Content Include="readme.txt" />
+    <Content Include="vendor\animate.css\animate.css" />
+    <Content Include="vendor\animate.css\animate.min.css" />
+    <Content Include="vendor\animate.css\source\attention_seekers\bounce.css" />
+    <Content Include="vendor\animate.css\source\attention_seekers\flash.css" />
+    <Content Include="vendor\animate.css\source\attention_seekers\headShake.css" />
+    <Content Include="vendor\animate.css\source\attention_seekers\jello.css" />
+    <Content Include="vendor\animate.css\source\attention_seekers\pulse.css" />
+    <Content Include="vendor\animate.css\source\attention_seekers\rubberBand.css" />
+    <Content Include="vendor\animate.css\source\attention_seekers\shake.css" />
+    <Content Include="vendor\animate.css\source\attention_seekers\swing.css" />
+    <Content Include="vendor\animate.css\source\attention_seekers\tada.css" />
+    <Content Include="vendor\animate.css\source\attention_seekers\wobble.css" />
+    <Content Include="vendor\animate.css\source\bouncing_entrances\bounceIn.css" />
+    <Content Include="vendor\animate.css\source\bouncing_entrances\bounceInDown.css" />
+    <Content Include="vendor\animate.css\source\bouncing_entrances\bounceInLeft.css" />
+    <Content Include="vendor\animate.css\source\bouncing_entrances\bounceInRight.css" />
+    <Content Include="vendor\animate.css\source\bouncing_entrances\bounceInUp.css" />
+    <Content Include="vendor\animate.css\source\bouncing_exits\bounceOut.css" />
+    <Content Include="vendor\animate.css\source\bouncing_exits\bounceOutDown.css" />
+    <Content Include="vendor\animate.css\source\bouncing_exits\bounceOutLeft.css" />
+    <Content Include="vendor\animate.css\source\bouncing_exits\bounceOutRight.css" />
+    <Content Include="vendor\animate.css\source\bouncing_exits\bounceOutUp.css" />
+    <Content Include="vendor\animate.css\source\fading_entrances\fadeIn.css" />
+    <Content Include="vendor\animate.css\source\fading_entrances\fadeInDown.css" />
+    <Content Include="vendor\animate.css\source\fading_entrances\fadeInDownBig.css" />
+    <Content Include="vendor\animate.css\source\fading_entrances\fadeInLeft.css" />
+    <Content Include="vendor\animate.css\source\fading_entrances\fadeInLeftBig.css" />
+    <Content Include="vendor\animate.css\source\fading_entrances\fadeInRight.css" />
+    <Content Include="vendor\animate.css\source\fading_entrances\fadeInRightBig.css" />
+    <Content Include="vendor\animate.css\source\fading_entrances\fadeInUp.css" />
+    <Content Include="vendor\animate.css\source\fading_entrances\fadeInUpBig.css" />
+    <Content Include="vendor\animate.css\source\fading_exits\fadeOut.css" />
+    <Content Include="vendor\animate.css\source\fading_exits\fadeOutDown.css" />
+    <Content Include="vendor\animate.css\source\fading_exits\fadeOutDownBig.css" />
+    <Content Include="vendor\animate.css\source\fading_exits\fadeOutLeft.css" />
+    <Content Include="vendor\animate.css\source\fading_exits\fadeOutLeftBig.css" />
+    <Content Include="vendor\animate.css\source\fading_exits\fadeOutRight.css" />
+    <Content Include="vendor\animate.css\source\fading_exits\fadeOutRightBig.css" />
+    <Content Include="vendor\animate.css\source\fading_exits\fadeOutUp.css" />
+    <Content Include="vendor\animate.css\source\fading_exits\fadeOutUpBig.css" />
+    <Content Include="vendor\animate.css\source\flippers\flip.css" />
+    <Content Include="vendor\animate.css\source\flippers\flipInX.css" />
+    <Content Include="vendor\animate.css\source\flippers\flipInY.css" />
+    <Content Include="vendor\animate.css\source\flippers\flipOutX.css" />
+    <Content Include="vendor\animate.css\source\flippers\flipOutY.css" />
+    <Content Include="vendor\animate.css\source\lightspeed\lightSpeedIn.css" />
+    <Content Include="vendor\animate.css\source\lightspeed\lightSpeedOut.css" />
+    <Content Include="vendor\animate.css\source\rotating_entrances\rotateIn.css" />
+    <Content Include="vendor\animate.css\source\rotating_entrances\rotateInDownLeft.css" />
+    <Content Include="vendor\animate.css\source\rotating_entrances\rotateInDownRight.css" />
+    <Content Include="vendor\animate.css\source\rotating_entrances\rotateInUpLeft.css" />
+    <Content Include="vendor\animate.css\source\rotating_entrances\rotateInUpRight.css" />
+    <Content Include="vendor\animate.css\source\rotating_exits\rotateOut.css" />
+    <Content Include="vendor\animate.css\source\rotating_exits\rotateOutDownLeft.css" />
+    <Content Include="vendor\animate.css\source\rotating_exits\rotateOutDownRight.css" />
+    <Content Include="vendor\animate.css\source\rotating_exits\rotateOutUpLeft.css" />
+    <Content Include="vendor\animate.css\source\rotating_exits\rotateOutUpRight.css" />
+    <Content Include="vendor\animate.css\source\sliding_entrances\slideInDown.css" />
+    <Content Include="vendor\animate.css\source\sliding_entrances\slideInLeft.css" />
+    <Content Include="vendor\animate.css\source\sliding_entrances\slideInRight.css" />
+    <Content Include="vendor\animate.css\source\sliding_entrances\slideInUp.css" />
+    <Content Include="vendor\animate.css\source\sliding_exits\slideOutDown.css" />
+    <Content Include="vendor\animate.css\source\sliding_exits\slideOutLeft.css" />
+    <Content Include="vendor\animate.css\source\sliding_exits\slideOutRight.css" />
+    <Content Include="vendor\animate.css\source\sliding_exits\slideOutUp.css" />
+    <Content Include="vendor\animate.css\source\specials\hinge.css" />
+    <Content Include="vendor\animate.css\source\specials\jackInTheBox.css" />
+    <Content Include="vendor\animate.css\source\specials\rollIn.css" />
+    <Content Include="vendor\animate.css\source\specials\rollOut.css" />
+    <Content Include="vendor\animate.css\source\zooming_entrances\zoomIn.css" />
+    <Content Include="vendor\animate.css\source\zooming_entrances\zoomInDown.css" />
+    <Content Include="vendor\animate.css\source\zooming_entrances\zoomInLeft.css" />
+    <Content Include="vendor\animate.css\source\zooming_entrances\zoomInRight.css" />
+    <Content Include="vendor\animate.css\source\zooming_entrances\zoomInUp.css" />
+    <Content Include="vendor\animate.css\source\zooming_exits\zoomOut.css" />
+    <Content Include="vendor\animate.css\source\zooming_exits\zoomOutDown.css" />
+    <Content Include="vendor\animate.css\source\zooming_exits\zoomOutLeft.css" />
+    <Content Include="vendor\animate.css\source\zooming_exits\zoomOutRight.css" />
+    <Content Include="vendor\animate.css\source\zooming_exits\zoomOutUp.css" />
+    <Content Include="vendor\animate.css\source\_base.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="vendor\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="vendor\jquery-parallax.js\parallax.js" />
+    <Content Include="vendor\jquery-parallax.js\parallax.min.js" />
+    <Content Include="vendor\jquery-waypoints\shortcuts\infinite-scroll\index.html" />
+    <Content Include="vendor\jquery-waypoints\shortcuts\infinite-scroll\waypoints-infinite.js" />
+    <Content Include="vendor\jquery-waypoints\shortcuts\infinite-scroll\waypoints-infinite.min.js" />
+    <Content Include="vendor\jquery-waypoints\shortcuts\sticky-elements\index.html" />
+    <Content Include="vendor\jquery-waypoints\shortcuts\sticky-elements\waypoints-sticky.js" />
+    <Content Include="vendor\jquery-waypoints\shortcuts\sticky-elements\waypoints-sticky.min.js" />
+    <Content Include="vendor\jquery-waypoints\waypoints.js" />
+    <Content Include="vendor\jquery-waypoints\waypoints.min.js" />
+    <Content Include="vendor\jquery.cookie\jquery.cookie.js" />
+    <Content Include="vendor\jquery.cookie\MIT-LICENSE.txt" />
+    <Content Include="vendor\jquery.counterup\jquery.counterup.js" />
+    <Content Include="vendor\jquery.counterup\jquery.counterup.min.js" />
+    <Content Include="vendor\jquery\core.js" />
+    <Content Include="vendor\jquery\jquery.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\jquery\jquery.slim.js" />
+    <Content Include="vendor\jquery\jquery.slim.min.js" />
+    <Content Include="vendor\owl.carousel\assets\ajax-loader.gif" />
+    <Content Include="vendor\owl.carousel\assets\owl.carousel.css" />
+    <Content Include="vendor\owl.carousel\assets\owl.carousel.min.css" />
+    <Content Include="vendor\owl.carousel\assets\owl.theme.default.css" />
+    <Content Include="vendor\owl.carousel\assets\owl.theme.default.min.css" />
+    <Content Include="vendor\owl.carousel\assets\owl.theme.green.css" />
+    <Content Include="vendor\owl.carousel\assets\owl.theme.green.min.css" />
+    <Content Include="vendor\owl.carousel\assets\owl.video.play.png" />
+    <Content Include="vendor\owl.carousel\owl.carousel.js" />
+    <Content Include="vendor\owl.carousel\owl.carousel.min.js" />
+    <Content Include="vendor\popper.js\esm\popper-utils.js" />
+    <Content Include="vendor\popper.js\esm\popper-utils.min.js" />
+    <Content Include="vendor\popper.js\esm\popper.js" />
+    <Content Include="vendor\popper.js\esm\popper.min.js" />
+    <Content Include="vendor\popper.js\popper-utils.js" />
+    <Content Include="vendor\popper.js\popper-utils.min.js" />
+    <Content Include="vendor\popper.js\popper.js" />
+    <Content Include="vendor\popper.js\popper.min.js" />
+    <Content Include="vendor\popper.js\umd\popper-utils.js" />
+    <Content Include="vendor\popper.js\umd\popper-utils.min.js" />
+    <Content Include="vendor\popper.js\umd\popper.js" />
+    <Content Include="vendor\popper.js\umd\popper.min.js" />
+    <Content Include="vendor\waypoints\lib\jquery.waypoints.js" />
+    <Content Include="vendor\waypoints\lib\jquery.waypoints.min.js" />
+    <Content Include="vendor\waypoints\lib\noframework.waypoints.js" />
+    <Content Include="vendor\waypoints\lib\noframework.waypoints.min.js" />
+    <Content Include="vendor\waypoints\lib\shortcuts\infinite.js" />
+    <Content Include="vendor\waypoints\lib\shortcuts\infinite.min.js" />
+    <Content Include="vendor\waypoints\lib\shortcuts\inview.js" />
+    <Content Include="vendor\waypoints\lib\shortcuts\inview.min.js" />
+    <Content Include="vendor\waypoints\lib\shortcuts\sticky.js" />
+    <Content Include="vendor\waypoints\lib\shortcuts\sticky.min.js" />
+    <Content Include="vendor\waypoints\lib\waypoints.debug.js" />
+    <Content Include="vendor\waypoints\lib\zepto.waypoints.js" />
+    <Content Include="vendor\waypoints\lib\zepto.waypoints.min.js" />
+    <Content Include="vendor\waypoints\licenses.txt" />
+    <Content Include="videos\budgettracker\quickbudgetmanagmenttool.avi" />
+    <Content Include="videos\creatingdate\datecreatingoptions.mp4" />
+    <Content Include="videos\datepicker\demo1.mp4" />
+    <Content Include="videos\multilevel\index.mp4" />
+    <Content Include="videos\multilevel\multilevelapproach2.mp4" />
+    <Content Include="videos\qrcode\QRCodegerenationandread.mp4" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\fonts\fontawesome-webfont.eot" />
+    <Content Include="css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="css\fonts\fontawesome-webfont.woff" />
+    <Content Include="css\fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="vendor\animate.css\animate-config.json" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="vendor\jquery-waypoints\Makefile" />
+    <Content Include="vendor\jquery.cookie\component.json" />
+    <Content Include="vendor\jquery.cookie\cookie.jquery.json" />
+    <Content Include="vendor\jquery.counterup\counterup.jquery.json" />
+    <Content Include="vendor\waypoints\testem.json" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62163</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44320/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

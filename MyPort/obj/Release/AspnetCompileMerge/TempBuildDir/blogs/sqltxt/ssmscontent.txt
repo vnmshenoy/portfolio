@@ -1,0 +1,25 @@
+		                            <h4><span class="myheader">SQL  Server Management Stusdio</span></h4><div>
+
+                         <p class="pstyle">You can download SQL Server Manamgent Studio(SSMS) from the official Microsoft Website. 
+				<a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017">
+				Download SSMS</a></p>
+                           <p class="pstyle">I have downloaded SSMS 2017 version</p>
+                            <br>
+ 			<p class="pstyle"> SSMS is a powerful tool and below are its benefits:</p>
+                        <ul>
+                            <li>First and foremost,most people dont like to remember commands,and this tool  provides a graphical interface to manage Sql Server</li>
+                            <li>Used for ~configuring~, managing, and administering all components within Microsoft SQL Server</li>
+                            <li>Apart from connecting to database engine, it also connects to analysis services, integration services and reporting services.With <b>SSMS 17.2 onwards</b>, the Performance Dashboard now comes as part of the Standard Reports. We do not need to download and install it separately.With this dashboard, its helps in troubleshooting performance issues</li>
+                            <li>It also supports managing Azure components such as Azure SQL Database and Data Warehouse, as well as hybrid cloud features such as StretchDB</li>
+                            <li>It's a gateway to SQL Profiler</li>
+                            <li>Can ~develop~ T-SQL code</li>                            
+                        </ul>
+                        <p class="pstyle">In order to <b>open</b> SSMS in Windows, you can click on "Search" and start typing in "Sql...",it should show the SSMS if its installed as shown in the image below
+                            <br>
+                            <img style="width:60%;height:40%" src="../../img/sqlforBeginners/startSSMS.PNG" alt="open ssms" /> 
+                            <br>
+                            <br>
+                        <p class="pstyle"> <b>Please See </b> : If you want to read more,then check the following link 
+                        
+                            <a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-changelog-ssms?view=sql-server-2017#previous-ssms-releases">Release Notes</a> </p>                       
+                        <br>
