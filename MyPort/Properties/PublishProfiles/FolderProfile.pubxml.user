@@ -14,10 +14,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/05/2018 16:10:50</publishTime>
     </File>
     <File Include="bin/MyPort.dll">
-      <publishTime>09/19/2020 17:45:58</publishTime>
+      <publishTime>09/24/2020 14:31:26</publishTime>
     </File>
     <File Include="bin/MyPort.pdb">
-      <publishTime>09/19/2020 17:45:58</publishTime>
+      <publishTime>09/24/2020 14:31:26</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -167,52 +167,52 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/08/2018 12:18:16</publishTime>
     </File>
     <File Include="blogs/blogs.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/20/2020 14:42:12</publishTime>
     </File>
     <File Include="blogs/JS/datecreatingoptions.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/20/2020 14:43:35</publishTime>
     </File>
     <File Include="blogs/JS/dradndrop.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/20/2020 14:43:47</publishTime>
     </File>
     <File Include="blogs/JS/JavascriptFunctionVariations.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/20/2020 14:44:39</publishTime>
     </File>
     <File Include="blogs/JS/jsdatecomparison.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/20/2020 14:44:20</publishTime>
     </File>
     <File Include="blogs/JS/multilevel.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/24/2020 11:42:07</publishTime>
     </File>
     <File Include="blogs/JS/qrcodes.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/24/2020 11:42:16</publishTime>
     </File>
     <File Include="blogs/JS/qrcodeTechnicalSide.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/24/2020 11:42:21</publishTime>
     </File>
     <File Include="blogs/JS/quickbudgetingtool.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/24/2020 11:42:34</publishTime>
     </File>
     <File Include="blogs/JS/setupvpn.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/24/2020 11:44:10</publishTime>
     </File>
     <File Include="blogs/jsblogs.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/20/2020 14:43:12</publishTime>
     </File>
     <File Include="blogs/misc.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/24/2020 11:45:15</publishTime>
     </File>
     <File Include="blogs/Net/gitvsintegration.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/24/2020 12:35:17</publishTime>
     </File>
     <File Include="blogs/Net/signalr.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/24/2020 11:44:10</publishTime>
     </File>
     <File Include="blogs/Sql/sqlblogsBeginner.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/24/2020 11:43:11</publishTime>
     </File>
     <File Include="blogs/sqlblogs.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/24/2020 12:35:56</publishTime>
     </File>
     <File Include="blogs/sqltxt/createbackupcontent.txt">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -255,6 +255,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="css/style.default.css">
       <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>09/24/2020 12:33:54</publishTime>
     </File>
     <File Include="favicon.png">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -1580,10 +1583,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>09/19/2020 17:45:59</publishTime>
+      <publishTime>09/24/2020 14:31:27</publishTime>
     </File>
     <File Include="readme.txt">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/24/2020 13:38:51</publishTime>
     </File>
     <File Include="vendor/animate.css/animate-config.json">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -1931,7 +1934,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="vendor/jquery.counterup/counterup.jquery.json">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>09/24/2020 11:43:21</publishTime>
     </File>
     <File Include="vendor/jquery.counterup/jquery.counterup.js">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -2084,7 +2087,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/19/2020 17:45:58</publishTime>
+      <publishTime>09/24/2020 13:58:57</publishTime>
     </File>
   </ItemGroup>
 </Project>
