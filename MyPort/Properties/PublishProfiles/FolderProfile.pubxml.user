@@ -10,14 +10,17 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="ads.txt">
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
+    <File Include="baseheader.html">
+      <publishTime>10/22/2020 11:51:25</publishTime>
+    </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>
     </File>
     <File Include="bin/MyPort.dll">
-      <publishTime>09/24/2020 14:31:26</publishTime>
+      <publishTime>10/22/2020 13:14:20</publishTime>
     </File>
     <File Include="bin/MyPort.pdb">
-      <publishTime>09/24/2020 14:31:26</publishTime>
+      <publishTime>10/22/2020 13:14:20</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -167,52 +170,55 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/08/2018 12:18:16</publishTime>
     </File>
     <File Include="blogs/blogs.html">
-      <publishTime>09/20/2020 14:42:12</publishTime>
+      <publishTime>10/22/2020 12:27:23</publishTime>
     </File>
     <File Include="blogs/JS/datecreatingoptions.html">
-      <publishTime>09/20/2020 14:43:35</publishTime>
+      <publishTime>10/22/2020 12:52:13</publishTime>
     </File>
     <File Include="blogs/JS/dradndrop.html">
-      <publishTime>09/20/2020 14:43:47</publishTime>
+      <publishTime>10/22/2020 12:52:08</publishTime>
     </File>
     <File Include="blogs/JS/JavascriptFunctionVariations.html">
-      <publishTime>09/20/2020 14:44:39</publishTime>
+      <publishTime>10/22/2020 12:52:02</publishTime>
     </File>
     <File Include="blogs/JS/jsdatecomparison.html">
-      <publishTime>09/20/2020 14:44:20</publishTime>
+      <publishTime>10/22/2020 12:51:56</publishTime>
     </File>
     <File Include="blogs/JS/multilevel.html">
-      <publishTime>09/24/2020 11:42:07</publishTime>
+      <publishTime>10/22/2020 12:51:46</publishTime>
     </File>
     <File Include="blogs/JS/qrcodes.html">
-      <publishTime>09/24/2020 11:42:16</publishTime>
+      <publishTime>10/22/2020 12:51:33</publishTime>
     </File>
     <File Include="blogs/JS/qrcodeTechnicalSide.html">
-      <publishTime>09/24/2020 11:42:21</publishTime>
+      <publishTime>10/22/2020 12:48:47</publishTime>
     </File>
     <File Include="blogs/JS/quickbudgetingtool.html">
-      <publishTime>09/24/2020 11:42:34</publishTime>
+      <publishTime>10/22/2020 12:39:33</publishTime>
     </File>
     <File Include="blogs/JS/setupvpn.html">
       <publishTime>09/24/2020 11:44:10</publishTime>
     </File>
     <File Include="blogs/jsblogs.html">
-      <publishTime>09/20/2020 14:43:12</publishTime>
+      <publishTime>10/22/2020 11:43:50</publishTime>
     </File>
     <File Include="blogs/misc.html">
-      <publishTime>09/24/2020 11:45:15</publishTime>
+      <publishTime>10/22/2020 12:32:00</publishTime>
+    </File>
+    <File Include="blogs/Misc/setupvpn.html">
+      <publishTime>10/22/2020 12:29:52</publishTime>
     </File>
     <File Include="blogs/Net/gitvsintegration.html">
-      <publishTime>09/24/2020 12:35:17</publishTime>
+      <publishTime>10/22/2020 12:35:08</publishTime>
     </File>
     <File Include="blogs/Net/signalr.html">
-      <publishTime>09/24/2020 11:44:10</publishTime>
+      <publishTime>10/22/2020 12:04:34</publishTime>
     </File>
     <File Include="blogs/Sql/sqlblogsBeginner.html">
-      <publishTime>09/24/2020 11:43:11</publishTime>
+      <publishTime>10/22/2020 11:46:39</publishTime>
     </File>
     <File Include="blogs/sqlblogs.html">
-      <publishTime>09/24/2020 12:35:56</publishTime>
+      <publishTime>10/22/2020 12:02:59</publishTime>
     </File>
     <File Include="blogs/sqltxt/createbackupcontent.txt">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -230,7 +236,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="css/custom.css">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>10/22/2020 11:25:10</publishTime>
     </File>
     <File Include="css/fonts/fontawesome-webfont.eot">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -254,10 +260,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="css/style.default.css">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>10/22/2020 12:34:41</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>09/24/2020 12:33:54</publishTime>
+      <publishTime>10/22/2020 15:59:17</publishTime>
     </File>
     <File Include="favicon.png">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -275,7 +281,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="header.html">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>10/22/2020 12:27:25</publishTime>
     </File>
     <File Include="img/centerimg.png">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -525,6 +531,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="img/sqlforBeginners/startSSMS.PNG">
       <publishTime>08/26/2020 18:08:13</publishTime>
+    </File>
+    <File Include="img/techspacedeck.png">
+      <publishTime>10/22/2020 09:18:17</publishTime>
     </File>
     <File Include="Index.aspx">
       <publishTime>09/18/2020 17:02:25</publishTime>
@@ -1583,7 +1592,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>09/24/2020 14:31:27</publishTime>
+      <publishTime>10/22/2020 15:59:34</publishTime>
     </File>
     <File Include="readme.txt">
       <publishTime>09/24/2020 13:38:51</publishTime>
@@ -2087,7 +2096,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/24/2020 13:58:57</publishTime>
+      <publishTime>10/22/2020 13:14:34</publishTime>
     </File>
   </ItemGroup>
 </Project>

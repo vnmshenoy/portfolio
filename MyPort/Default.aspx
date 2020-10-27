@@ -1,354 +1,521 @@
-﻿<%@Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MyPort.Default" %>
+﻿<%@Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs"
+Inherits="MyPort.Default" %>
 
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="John Doe">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="all,follow">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Free Web tutorials" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="John Doe" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="all,follow" />
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-2264462236439566",
-            enable_page_level_ads: true
-        });
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2264462236439566",
+        enable_page_level_ads: true,
+      });
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"
+    ></script>
     <script src="vendor/jquery/jquery.min.js"></script>
 
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-131742548-1');
+      gtag("config", "UA-131742548-1");
     </script>
     <script>
-        $(document).ready(function () {
-            $("#success-alert").hide();
+      $(document).ready(function () {
+        $("#success-alert").hide();
 
-
-            $('#headermenu').load("header.html #menu", function () {
+        $("#headermenu").load("header.html #menu", function () {});
+        $("#aboutUSSubmit").click(function (e) {
+          if (true == true) {
+            $.ajax({
+              type: "POST",
+              url: "Default.aspx/Subscribe",
+              contentType: "application/json; charset=utf-8",
+              data:
+                '{"name":"' +
+                $("#fname").val() +
+                '","email":"' +
+                $("#email").val() +
+                '","comment":"' +
+                $("#comment").val() +
+                '","phone":"' +
+                $("#phone").val() +
+                '"}',
+              dataType: "json",
+              success: function (msg) {
+                $("#success-alert")
+                  .fadeTo(2000, 500)
+                  .slideUp(500, function () {
+                    $("#success-alert").slideUp(500);
+                  });
+              },
+              error: function (req, status, error) {
+                alert("Error try again" + error);
+              },
             });
-            $("#aboutUSSubmit").click(function (e) {
-                if (true == true) {
-                    $.ajax({
-                        type: "POST",
-                        url: "Default.aspx/Subscribe",
-                        contentType: "application/json; charset=utf-8",
-                        data: '{"name":"' + $("#fname").val() + '","email":"' + $("#email").val() + '","comment":"' + $("#comment").val() + '","phone":"' + $("#phone").val() + '"}',
-                        dataType: "json",
-                        success: function (msg) {
-                            $("#success-alert").fadeTo(2000, 500).slideUp(500, function () {
-                                $("#success-alert").slideUp(500);
-                            });
-
-                        },
-                        error: function (req, status, error) {
-                            alert("Error try again" + error);
-                        }
-                    });
-                }
-                return false;
-            });
+          }
+          return false;
         });
-
+      });
     </script>
     <title>Manju's blog- My Interest, My Hobby</title>
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="vendor/font-awesome/css/font-awesome.min.css"
+    />
     <!-- Google fonts - Roboto + Roboto Slab-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,300">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,300"
+    />
     <!-- owl carousel-->
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css">
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css" />
+    <link
+      rel="stylesheet"
+      href="vendor/owl.carousel/assets/owl.theme.default.css"
+    />
     <!-- animate.css-->
-    <link rel="stylesheet" href="vendor/animate.css/animate.css">
+    <link rel="stylesheet" href="vendor/animate.css/animate.css" />
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet" />
 
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="img/favicon.png" />
 
     <!-- Tweaks for older IEs-->
-    <!--[if lt IE 9]>https://developer.wordnik.com/
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-</head>
-<body>
+    <!--[if lt IE 9
+      ]>https://developer.wordnik.com/
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script
+    ><![endif]-->
+  </head>
+  <body>
     <!-- Reference item-->
     <!-- navbar-->
     <header class="header">
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container">
-                <a href="#intro" class="navbar-brand scrollTo headerHref"><img src="img/TechSpaceDeck.png" alt="logo"/>SManju</a>
-                <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
-                <div id="navbarcollapse" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a href="#intro" class="nav-link link-scroll">Intro</a></li>
-                        <li class="nav-item"><a href="#about" class="nav-link link-scroll">About Me</a></li>
-                        <!-- <li class="nav-item"><a href="blogs/blogs.html" class="nav-link link-scroll">C# Blogs</a></li>-->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blogs</a>
-                            <div id="headermenu" class="dropdown-menu">
-                            </div>
-                        </li>
-                        <li class="nav-item"><a href="#contact" class="nav-link link-scroll">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a href="#intro" class="navbar-brand scrollTo headerHref"
+            ><img
+              height="auto"
+              width="40%"
+              src="img/techspacedeck.png"
+              alt="logo"
+            />SManju</a
+          >
+          <button
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarcollapse"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler navbar-toggler-right"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <div id="navbarcollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="#intro" class="nav-link link-scroll">Intro</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link link-scroll">About Me</a>
+              </li>
+              <!-- <li class="nav-item"><a href="blogs/blogs.html" class="nav-link link-scroll">C# Blogs</a></li>-->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  href="#"
+                  >Blogs</a
+                >
+                <div id="headermenu" class="dropdown-menu"></div>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link link-scroll">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <!-- Intro Image-->
-    <section id="intro" style="background: url(img/home.jpg) center center no-repeat; background-size: cover;" class="intro-section pb-2">
-        <div class="container text-center">
-            <div data-animate="fadeInDown" class="logo">
-                <img src="img/logo.png" alt="logo" height="auto" width="60%"></div>
-            <h1 data-animate="fadeInDown" class="text-shadow mb-5">Hello!</h1>
-            <p data-animate="slideInUp" class="h3 text-shadow text-400">I build unique wesbites that convert visitors into customers and help your business grow. I can also train you in various programming languages online</p>
+    <section
+      id="intro"
+      style="
+        background: url(img/home.jpg) center center no-repeat;
+        background-size: cover;
+      "
+      class="intro-section pb-2"
+    >
+      <div class="container text-center">
+        <div data-animate="fadeInDown" class="logo">
+          <img src="img/logo.png" alt="logo" height="auto" width="60%" />
         </div>
+        <h1 data-animate="fadeInDown" class="text-shadow mb-5">Hello!</h1>
+        <p data-animate="slideInUp" class="h3 text-shadow text-400">
+          I build unique wesbites that convert visitors into customers and help
+          your business grow. I can also train you in various programming
+          languages online
+        </p>
+      </div>
     </section>
     <!-- About-->
     <section id="about" class="about-section">
-        <div class="container">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="title" data-animate="fadeInDown">About me</h2>
+          </div>
+
+          <div class="col-sm-12">
             <div class="row">
+              <div class="col-sm-6 text-left" data-animate="fadeInUp">
+                <p class="pfont">
+                  My name is <b>Manju</b> and I'm a Web developer, Mobile
+                  Developer,Freelancer and a partime Programming Trainer. I am
+                  based in Australia and I have over 10 years of Web Development
+                  experience. I love working with modern technologies, building
+                  and designing awesome projects and pushing boundaries.I also
+                  possess a large array of experience and skills in everything
+                  from web development to web design to even software
+                  development. Passionate and serious about my work, I always
+                  give 100%. I like sharing my knowledge and learning from
+                  others.Apart from the technical front, am keen on music,sports
+                  and travelling .
+                </p>
+              </div>
 
-                <div class="col-sm-12">
-                    <h2 class="title" data-animate="fadeInDown">About me</h2>
-                </div>
-
-                <div class="col-sm-12">
-
-                    <div class="row">
-
-                        <div class="col-sm-6 text-left" data-animate="fadeInUp">
-
-                            <p class="pfont">
-                                My name is <b>Manju</b> and I'm a Web developer, Mobile Developer,Freelancer and a partime Programming Trainer. I am based in Australia and I have over 10 years of Web Development experience. I love working with modern technologies, building and designing awesome projects and pushing boundaries.I also possess a large array of experience and skills in everything from web development to web design to even software development. Passionate and serious about my work, I always give 100%. I like sharing my knowledge and learning from others.Apart from the technical front, am keen on music,sports and travelling .
-                            </p>
-
-                        </div>
-
-                        <div class="col-sm-6" data-animate="fadeInUp">
-                            <div class="skill-item">
-                                <div class="progress-title">
-                                    C#
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-skill1" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                        <span class="sr-only">90</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="progress-title">
-                                    Javascript
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-skill2" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                        <span class="sr-only">80</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="progress-title">
-                                    HTML
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-skill3" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                                        <span class="sr-only">90</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="progress-title">
-                                    SEO
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-skill4" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-                                        <span class="sr-only">60</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-sm-6" data-animate="fadeInUp">
-
-                            <div class="skill-item">
-                                <div class="progress-title">
-                                    C#
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-skill1" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                        <span class="sr-only">90</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="progress-title">
-                                    Javascript
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-skill2" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                        <span class="sr-only">80</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-sm-6" data-animate="fadeInUp">
-
-                            <div class="skill-item">
-                                <div class="progress-title">
-                                    BOOTSTRAP
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-skill2" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                        <span class="sr-only">80</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="progress-title">
-                                    AUTOMATION TESTING
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-skill3" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                                        <span class="sr-only">90</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="progress-title">
-                                    SELENIUM
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-skill4" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-                                        <span class="sr-only">60</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="progress-title">
-                                    RESPONSIVE WEBSITES
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-skill2" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                        <span class="sr-only">80</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+              <div class="col-sm-6" data-animate="fadeInUp">
+                <div class="skill-item">
+                  <div class="progress-title">C#</div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-skill1"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 60%"
+                    >
+                      <span class="sr-only">90</span>
                     </div>
+                  </div>
+                </div>
 
+                <div class="skill-item">
+                  <div class="progress-title">Javascript</div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-skill2"
+                      role="progressbar"
+                      aria-valuenow="70"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 70%"
+                    >
+                      <span class="sr-only">80</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-sm-3 col-sm-offset-3 col-md-4 col-md-offset-4 mt-big"
-                    data-animate="bounceIn">
+
+                <div class="skill-item">
+                  <div class="progress-title">HTML</div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-skill3"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 80%"
+                    >
+                      <span class="sr-only">90</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 mt-big"
-                    data-animate="bounceIn">
-                    <img src="img/centerimg.png" class="image rounded-circle img-fluid" alt="This is Me">
+
+                <div class="skill-item">
+                  <div class="progress-title">SEO</div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-skill4"
+                      role="progressbar"
+                      aria-valuenow="90"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 90%"
+                    >
+                      <span class="sr-only">60</span>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="col-sm-6" data-animate="fadeInUp">
+                <div class="skill-item">
+                  <div class="progress-title">C#</div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-skill1"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 60%"
+                    >
+                      <span class="sr-only">90</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="progress-title">Javascript</div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-skill2"
+                      role="progressbar"
+                      aria-valuenow="70"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 70%"
+                    >
+                      <span class="sr-only">80</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6" data-animate="fadeInUp">
+                <div class="skill-item">
+                  <div class="progress-title">BOOTSTRAP</div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-skill2"
+                      role="progressbar"
+                      aria-valuenow="70"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 70%"
+                    >
+                      <span class="sr-only">80</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="progress-title">AUTOMATION TESTING</div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-skill3"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 80%"
+                    >
+                      <span class="sr-only">90</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="progress-title">SELENIUM</div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-skill4"
+                      role="progressbar"
+                      aria-valuenow="90"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 90%"
+                    >
+                      <span class="sr-only">60</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="progress-title">RESPONSIVE WEBSITES</div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-skill2"
+                      role="progressbar"
+                      aria-valuenow="70"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 70%"
+                    >
+                      <span class="sr-only">80</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          <div
+            class="col-sm-3 col-sm-offset-3 col-md-4 col-md-offset-4 mt-big"
+            data-animate="bounceIn"
+          ></div>
+          <div
+            class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 mt-big"
+            data-animate="bounceIn"
+          >
+            <img
+              src="img/centerimg.png"
+              class="image rounded-circle img-fluid"
+              alt="This is Me"
+            />
+          </div>
         </div>
+      </div>
     </section>
     <!-- About-->
 
-
     <!-- Contact-->
-    <section id="contact" data-animate="bounceIn" class="contact-section contact">
-        <div class="container">
-            <div class="col-md-12">
+    <section
+      id="contact"
+      data-animate="bounceIn"
+      class="contact-section contact"
+    >
+      <div class="container">
+        <div class="col-md-12">
+          <h2
+            style="margin-top: 0px; margin-bottom: 0px; padding: 0px"
+            class="title"
+          >
+            Contact me
+          </h2>
 
-
-                <h2 style="margin-top: 0px; margin-bottom: 0px; padding: 0px" class="title">Contact me</h2>
-
-                <div class="row">
-
-                    <div class="col-md-8 col-md-offset-2">
-                        <form id="contactform" method="post" runat="server">
-
-                            <div class="alert alert-success" id="success-alert">
-                                <button type="button" class="close" data-dismiss="alert">x</button>
-                                <strong>Success! </strong>Message is sent.I will get back to you.
-                            </div>
-
-
-                            <div class="controls">
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input type="text" id="fname" name="name" class="form-control" placeholder="Your firstname *" required="required">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" id="email" name="email" class="form-control" placeholder="Your email *" required="required">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Your phone">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <textarea name="comment" id="comment" class="form-control" placeholder="Message for me *" rows="4" required="required"></textarea>
-                                    </div>
-                                    <div class="col-md-12 text-center">
-
-                                        <button id="aboutUSSubmit" style="border: 0px" value="next" class="button next-back">Contact Me <i class="fa fa-caret-right"></i></button>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
-
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <form id="contactform" method="post" runat="server">
+                <div class="alert alert-success" id="success-alert">
+                  <button type="button" class="close" data-dismiss="alert">
+                    x
+                  </button>
+                  <strong>Success! </strong>Message is sent.I will get back to
+                  you.
                 </div>
-            </div>
 
+                <div class="controls">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        id="fname"
+                        name="name"
+                        class="form-control"
+                        placeholder="Your firstname *"
+                        required="required"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Your email *"
+                        required="required"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        class="form-control"
+                        placeholder="Your phone"
+                      />
+                    </div>
+                    <div class="col-md-12">
+                      <textarea
+                        name="comment"
+                        id="comment"
+                        class="form-control"
+                        placeholder="Message for me *"
+                        rows="4"
+                        required="required"
+                      ></textarea>
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <button
+                        id="aboutUSSubmit"
+                        style="border: 0px"
+                        value="next"
+                        class="button next-back"
+                      >
+                        Contact Me <i class="fa fa-caret-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <footer class="main-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-lg-left">
-                    <p class="social">
-                        <a href="http://www.facebook.com/shenoyvnm
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-left">
+            <p class="social">
+              <a
+                href="http://www.facebook.com/shenoyvnm
                             "
-                            class="external facebook wow fadeInUp"><i class="fa fa-facebook"></i></a>
-                        <a style="background-color: grey;" href="http://www.linkedin.com/in/manjunathshenoywebdev" class="external facebook wow fadeInUp"><i class="fa fa-linkedin"></i></a>
-                </div>
-                <!-- /.6-->
-                <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
-                    <p>© 2018 Manjunath Shenoy. All rights reserved.</p>
-                </div>
-                <div class="col-12 mt-4">
-                    <p class="template-bootstrapious">
-                        Designed by <a href="https://www.bootstrapious.com">Bootstrapious</a>
-                        <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                    </p>
-                </div>
-            </div>
+                class="external facebook wow fadeInUp"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a
+                style="background-color: grey"
+                href="http://www.linkedin.com/in/manjunathshenoywebdev"
+                class="external facebook wow fadeInUp"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </p>
+          </div>
+
+          <!-- /.6-->
+          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+            <p>© 2018 Manjunath Shenoy. All rights reserved.</p>
+          </div>
+          <div class="col-12 mt-4">
+            <p class="template-bootstrapious">
+              Designed by
+              <a href="https://www.bootstrapious.com">Bootstrapious</a>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- JavaScript files-->
-    <script src="vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="vendor/popper.js/umd/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"></script>
     <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
     <script src="vendor/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="vendor/jquery.counterup/jquery.counterup.js"></script>
     <script src="js/front.js"></script>
-</body>
+  </body>
 </html>

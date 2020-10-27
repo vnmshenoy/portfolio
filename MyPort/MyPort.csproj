@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ads.txt" />
+    <Content Include="baseheader.html" />
     <Content Include="blogs\blogs.html" />
     <Content Include="blogs\jsblogs.html" />
     <Content Include="blogs\JS\datecreatingoptions.html" />
@@ -80,8 +81,8 @@
     <Content Include="blogs\JS\qrcodes.html" />
     <Content Include="blogs\JS\qrcodeTechnicalSide.html" />
     <Content Include="blogs\JS\quickbudgetingtool.html" />
-    <Content Include="blogs\JS\setupvpn.html" />
     <Content Include="blogs\misc.html" />
+    <Content Include="blogs\Misc\setupvpn.html" />
     <Content Include="blogs\Net\gitvsintegration.html" />
     <Content Include="blogs\Net\signalr.html" />
     <Content Include="blogs\sqlblogs.html" />
@@ -182,6 +183,7 @@
     <Content Include="img\sqlforBeginners\9databaseDiag.PNG" />
     <Content Include="img\sqlforBeginners\startSSMS.PNG" />
     <Content Include="Default.aspx" />
+    <Content Include="img\techspacedeck.png" />
     <Content Include="js\front.js" />
     <Content Include="js\modernizr-2.8.3.js" />
     <Content Include="js\osmplayer.compressed.js" />

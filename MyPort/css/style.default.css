@@ -31,10 +31,15 @@ p {
   color: #555;
 }
 
-section {
+.about-section {
   padding: 60px 0;
   position: relative;
-  margin-top: 80px;
+  margin-top: 50px;
+}
+section {
+  padding: 30px 0;
+  position: relative;
+  margin-top: 10px;
 }
 
 .text-bold {
@@ -2192,10 +2197,9 @@ code {
   color: #4fbfa8 !important;
 }
 pre {
-  background: white;
+  background-color: honeydew;
   text-align: left;
   white-space: pre-line;
-  padding: inherit;
 }
 .custommark {
   background: chocolate;

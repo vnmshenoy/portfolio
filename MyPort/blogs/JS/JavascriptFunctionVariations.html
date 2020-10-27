@@ -26,7 +26,6 @@
       gtag("config", "UA-131742548-1");
     </script>
     <script src="../../vendor/jquery/jquery.min.js"></script>
-
     <script>
       $(document).ready(function () {
         $(".header").load("../../baseheader.html", function () {
@@ -85,17 +84,15 @@ _________________________________________________________ -->
           approach
         </h3>
         <div class="row">
-          <div class="col-sm-9">
-            <p class="text-left">
-              In this blog we will see various
-              <b>function definitions </b> possible in Javascript.
-              <b
-                >I recommend this blog to be read on desktop as i have included
-                comparisons of the approaches using Javascript code</b
-              >
-            </p>
-          </div>
-
+          <p>
+            In this blog we will see various
+            <b>function definitions </b> possible in Javascript.
+            <b
+              >I recommend this blog to be read on desktop (or a laptop) as i
+              have included comparisons of the approaches using a table
+              format</b
+            >
+          </p>
           <p>
             Let me jump right into it.Like you be aware there are few ways you
             can write functions in Javascript.Initially,I used to get confused
@@ -113,7 +110,7 @@ _________________________________________________________ -->
           </p>
         </div>
         <div class="row mb-3">
-          <div class="col-4 themed-grid-col">
+          <div class="col-md-4 themed-grid-col">
             <h6>Using Function keyword</h6>
             <p>
               The most traditional way to declare a function. If you have coded
@@ -121,15 +118,15 @@ _________________________________________________________ -->
               scenario where we are trying to add two numbers.I have written a
               function called <b>addSum</b>
             </p>
-            <pre>
-                    function addSum(a, b) {
-                                    return a + b
-                        }
-                    var z = addSum(2, 3);
-                    console.log(x);<b>//prints 5 ofcourse</b>
+            <pre>           
+              function addSum(a, b) {
+                              return a + b
+                  }
+              var z = addSum(2, 3);
+              console.log(x);<b>//prints 5 ofcourse</b>
                 </pre>
           </div>
-          <div class="col-4 themed-grid-col">
+          <div class="col-md-4 themed-grid-col">
             <h6>Using Function with a variable</h6>
             <p>
               Declare a <b>variable</b> and assign the function to this
@@ -151,7 +148,7 @@ _________________________________________________________ -->
               <b>anonymous function</b>
             </p>
           </div>
-          <div class="col-4 themed-grid-col">
+          <div class="col-md-4 themed-grid-col">
             <h6>Using Arrow functions</h6>
             <p>
               These functions were introduced in <b>ES6</b>.Helps us to write
@@ -176,12 +173,27 @@ _________________________________________________________ -->
           <p>
             I would dwell little more into <b>arrow functions</b> because they
             are kind of new and somewhat confusing for new comers.When I started
-            I was not sure how to write an arrow function.So I followed 3 steps
-            and it helped me to get going.Hope it helps you too.
+            I was not sure how to write an arrow function. If you are familiar
+            with C#, then its similar to what's lambda expressions there.So if
+            you a C# guy,you must be familiar with below code.
+          </p>
+          <img src="arrow/img1.png" alt="c#linq" />
+          <p>
+            Above is exactly what we are achieving through Arrow functions in
+            JavaScript world.Just for the benefits of those who don't understand
+            C#, what is happening above is that we have a addNum function which
+            is supposed to take two Int parameters,sum them and return an
+            Integer. The returned integer is printed on the console..Easyyy :-)
           </p>
           <p>
-            Given a normal function expression,<b>follow below steps</b> to
-            convert it into an arrow function
+            If you are unable to remember the syntax of arrow functions(ofcourse
+            you can Google but I personally don't prefer googling for syntax
+            everytime.Why not remember,saves time) ,followed 3 steps and it
+            should help you get going the way it helped me.(Just print it and
+            put it on your wall). Given a normal function expression,<b
+              >follow below steps</b
+            >
+            to convert it into an arrow function
           </p>
           <ul>
             <li>
@@ -216,7 +228,7 @@ _________________________________________________________ -->
 
           <p>
             <img
-              style="width: 80%; height: auto"
+              style="width: 97%; height: auto"
               src="../../img/jsfunctionvariation/variations.jpg"
               alt="sample"
             />
@@ -227,17 +239,19 @@ _________________________________________________________ -->
             that you can quickly compare the result set
           </p>
         </div>
-        <div class="row mb-3">
-          <div class="col-12 themed-grid-col">
-            <h6 style="margin-left: 40%">
+        <div class="row mb-3" style="margin-top: -5px">
+          <div class="col-sm-4 themed-grid-col"></div>
+          <div class="col-sm-4 themed-grid-col">
+            <h6>
               <ul class="headtablebgcolor">
-                <p>No Parameters</p>
+                <p>When function takes No Parameters</p>
               </ul>
             </h6>
           </div>
+          <div class="col-sm-4 themed-grid-col"></div>
         </div>
-        <div class="row mb-3" style="margin-top: -15px">
-          <div class="col-4 themed-grid-col">
+        <div class="row mb-3" style="margin-top: -5px">
+          <div class="col-sm-4 themed-grid-col">
             <h6>Traditional Approach</h6>
             <pre>
                         function display()
@@ -247,7 +261,7 @@ _________________________________________________________ -->
                             console.log(display()); <b>//prints 42</b>
                         </pre>
           </div>
-          <div class="col-4 themed-grid-col">
+          <div class="col-sm-4 themed-grid-col">
             <h6>Arrow Approach</h6>
             <pre>
                         var  display2 = <mark>()</mark>=> 44
@@ -266,7 +280,7 @@ _________________________________________________________ -->
                         console.log(display2()); <b>//prints 44</b>
                         </pre>
           </div>
-          <div class="col-4 themed-grid-col">
+          <div class="col-sm-4 themed-grid-col">
             <h6>Point to Note</h6>
             <p>
               Remember the three steps i mentioned earlier to convert
@@ -282,17 +296,19 @@ _________________________________________________________ -->
             </p>
           </div>
         </div>
-        <div class="row mb-3" style="margin-top: -15px">
-          <div class="col-12 themed-grid-col">
-            <h6 style="margin-left: 40%">
+        <div class="row mb-3" style="margin-top: -5px">
+          <div class="col-sm-4 themed-grid-col"></div>
+          <div class="col-sm-4 themed-grid-col">
+            <h6>
               <ul class="headtablebgcolor">
-                Single Parameter
+                When function takes Single Parameter
               </ul>
             </h6>
           </div>
+          <div class="col-sm-4 themed-grid-col"></div>
         </div>
-        <div class="row mb-3" style="margin-top: -15px">
-          <div class="col-4 themed-grid-col">
+        <div class="row mb-3" style="margin-top: -5px">
+          <div class="col-sm-4 themed-grid-col">
             <h6>Traditional Approach</h6>
             <pre>
                          function display(x) 
@@ -302,7 +318,7 @@ _________________________________________________________ -->
                          console.log(display("manju"));<b>//prints hellomanju </b>
                         </pre>
           </div>
-          <div class="col-4 themed-grid-col">
+          <div class="col-sm-4 themed-grid-col">
             <h6>Arrow Approach</h6>
             <pre>
                           var display2 = <mark>(x)</mark> => "hello"+ x
@@ -314,7 +330,7 @@ _________________________________________________________ -->
                            console.log(display("manju"));<b>//prints hellomanju </b>
                         </pre>
           </div>
-          <div class="col-4 themed-grid-col">
+          <div class="col-sm-4 themed-grid-col">
             <h6>Point to Note</h6>
             <p>
               If there is a single parameter no need to have
@@ -323,17 +339,19 @@ _________________________________________________________ -->
             </p>
           </div>
         </div>
-        <div class="row mb-3" style="margin-top: -15px">
-          <div class="col-12 themed-grid-col">
-            <h6 style="margin-left: 40%">
+        <div class="row mb-3" style="margin-top: -5px">
+          <div class="col-sm-4 themed-grid-col"></div>
+          <div class="col-sm-4 themed-grid-col">
+            <h6>
               <ul class="headtablebgcolor">
-                Multiple Parameters
+                <h6>When function takes Multiple Parameters</h6>
               </ul>
             </h6>
           </div>
+          <div class="col-sm-4 themed-grid-col"></div>
         </div>
-        <div class="row mb-3" style="margin-top: -15px">
-          <div class="col-4 themed-grid-col">
+        <div class="row mb-3" style="margin-top: -5px">
+          <div class="col-sm-4 themed-grid-col">
             <h6>Traditional Approach</h6>
             <pre>
                          function display(x,y) 
@@ -344,7 +362,7 @@ _________________________________________________________ -->
                          <b> //prints hello manju and s </b>
                         </pre>
           </div>
-          <div class="col-4 themed-grid-col">
+          <div class="col-sm-4 themed-grid-col">
             <h6>Arrow Approach</h6>
             <pre>
                            var display2 = <mark>(x,y)</mark> => "hello " + x + " and " + y;
@@ -352,7 +370,7 @@ _________________________________________________________ -->
                            <b>//prints hello manju and s </b>
                         </pre>
           </div>
-          <div class="col-4 themed-grid-col">
+          <div class="col-sm-4 themed-grid-col">
             <h6>Point to Note</h6>
             <p>
               Parenthesis are <b>mandatory</b> since we have two parameters here
@@ -360,17 +378,18 @@ _________________________________________________________ -->
             </p>
           </div>
         </div>
-        <div class="row mb-3" style="margin-top: -15px">
-          <div class="col-12 themed-grid-col">
-            <h6 style="margin-left: 40%">
+        <div class="row mb-3" style="margin-top: -5px">
+          <div class="col-sm-4 themed-grid-col"></div>
+          <div class="col-sm-4 themed-grid-col">
+            <h6>
               <ul class="headtablebgcolor">
-                Returning object literals
+                When function is Returning object literals
               </ul>
             </h6>
           </div>
         </div>
-        <div class="row mb-3" style="margin-top: -15px">
-          <div class="col-4 themed-grid-col">
+        <div class="row mb-3" style="margin-top: -5px">
+          <div class="col-sm-4 themed-grid-col">
             <h6>Traditional Approach</h6>
             <pre>
                         function returnObjLiterals(x, y)
@@ -381,7 +400,7 @@ _________________________________________________________ -->
                         console.log(obj.key);<b>//prints value5</b>
                         </pre>
           </div>
-          <div class="col-4 themed-grid-col">
+          <div class="col-sm-4 themed-grid-col">
             <h6>Arrow Approach</h6>
             <pre>                        
                          var returnObjLiteralsArrow2 = (x, y) => <mark>({ [x]: y })</mark>           
@@ -389,7 +408,7 @@ _________________________________________________________ -->
                          console.log(objArrow.key);<b>//prints value4</b>
                         </pre>
           </div>
-          <div class="col-4 themed-grid-col">
+          <div class="col-sm-4 themed-grid-col">
             <h6>Point to Note</h6>
             <p>
               If you want the <b>body to fit in one line</b> then a parenthesis
@@ -432,7 +451,7 @@ _________________________________________________________ -->
           </div>
         </div>
         <div class="row mb-3">
-          <div class="col-6 themed-grid-col">
+          <div class="col-sm-6 themed-grid-col">
             <pre>                      
                               var key = "Outside";
                               let obj = {
@@ -448,7 +467,7 @@ _________________________________________________________ -->
                             obj.printkey1(); <b>//where am i declared?? answer is**** <mark>Inside</mark></b>
                             </pre>
           </div>
-          <div class="col-6 themed-grid-col">
+          <div class="col-sm-6 themed-grid-col">
             <p>
               In the eg you see on left, we have an arrowfuncton called
               <b>"printkey()"</b> and a normal traditional function with
@@ -477,7 +496,7 @@ _________________________________________________________ -->
         </div>
         <h6>Eg 2:</h6>
         <div class="row mb-3">
-          <div class="col-6 themed-grid-col">
+          <div class="col-sm-6 themed-grid-col">
             <pre>                      
                          const obj2 = {
                                     key: 'test object',
@@ -503,7 +522,7 @@ _________________________________________________________ -->
                                 newArrowWay();
                             </pre>
           </div>
-          <div class="col-6 themed-grid-col">
+          <div class="col-sm-6 themed-grid-col">
             <p>
               In the eg you see on left,we see that there is an object called
               obj2. It has a property called <b>key</b>, and it has two
@@ -587,6 +606,15 @@ _________________________________________________________ -->
               </li>
             </ul>
           </div>
+        </div>
+        <div class="row">
+          <p>
+            <b
+              >And that's it. Hope you undertood the ways to define Javascript
+              Functions now.Feel free to reach out to me incase you have
+              queries</b
+            >
+          </p>
         </div>
       </div>
     </section>
