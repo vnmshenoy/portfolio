@@ -73,6 +73,7 @@
     <Content Include="baseheader.html" />
     <Content Include="blogs\blogs.html" />
     <Content Include="blogs\jsblogs.html" />
+    <Content Include="blogs\JS\arrow\img1.png" />
     <Content Include="blogs\JS\datecreatingoptions.html" />
     <Content Include="blogs\JS\dradndrop.html" />
     <Content Include="blogs\JS\JavascriptFunctionVariations.html" />
@@ -95,6 +96,7 @@
     <Content Include="css\custom.css" />
     <Content Include="css\fonts\fontawesome-webfont.svg" />
     <Content Include="css\osmplayer_default.css" />
+    <Content Include="css\prism.css" />
     <Content Include="css\simple-sidebar.css" />
     <Content Include="css\style.default.css" />
     <Content Include="favicon.png" />
@@ -188,6 +190,7 @@
     <Content Include="js\modernizr-2.8.3.js" />
     <Content Include="js\osmplayer.compressed.js" />
     <Content Include="js\osmplayer.default.js" />
+    <Content Include="js\prism.js" />
     <Content Include="readme.txt" />
     <Content Include="vendor\animate.css\animate.css" />
     <Content Include="vendor\animate.css\animate.min.css" />
