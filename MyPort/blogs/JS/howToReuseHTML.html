@@ -130,17 +130,18 @@ _________________________________________________________ -->
             </p>
           </div>
         </div>
-        <h4>Step 1:</h4>
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-sm-9 themed-grid-col">
+            <h4>Step 1:</h4>
             <p>
-              Identifsy the code which can be extracted out into it's own file.
-              Here we have header of index.html which is nothing but nav
+              Identify the code which can be extracted out into it's own html
+              file. Here we have header of index.html which is nothing but nav
               bar.Code for navbar is below. this is the section of code which
-              forms the header of inde.thml(as shown in above image)
+              forms the header of index.thml(as shown in above image)
             </p>
             https://www.codereadability.com/constructing-html-with-templates/
             <pre><code class="language-html">
+              &lt;div id="menu" class="container">
               &lt;div class="navbar-header">
                 &lt;button type="button" class="navbar-toggle collapsed" 
                 data-toggle="collapse" data-target="#navbar">
@@ -161,27 +162,91 @@ _________________________________________________________ -->
       </code></pre>
           </div>
         </div>
-        <h4>Step2:</h4>
         <div class="row">
-          <p>
-            Ensure that you have jquery referenced. you can download jquery here
-          </p>
+          <div class="col-sm-9 themed-grid-col">
+            <h4>Step2:</h4>
+            <p>
+              Ensure that you have jquery referenced. You can download jQuery
+              from offical jQuery website
+              <a style="font-weight: bold" href="https://jquery.com/download/">
+                Link to download</a
+              >
+            </p>
+          </div>
         </div>
         <div class="row">
-          <p>
-            Below is the index.html and the one in red circle is what is generic
-            header.We want to move the header in it's own file so that it can be
-            reused
-          </p>
-          <img
-            style="width: 97%; height: auto"
-            src="arrow/img1.png"
-            alt="c#linq"
-          />
-          <p>
-            The header is basically a standard nav bar and code for wich is
-            below
-          </p>
+          <div class="col-sm-9 themed-grid-col">
+            <h4>Step3:</h4>
+            <p>
+              On the load of the html,inject the generic header into the id
+              where we want.Basically, in the below snapshot code we are saying
+              load "commonStaticHeader's" element which has an id of "menu" into
+              "myHeader" id
+            </p>
+            <pre><code class="language-javascript">
+              $(document).ready(function () {
+                $("#myHeader").load(
+                  "common/commonStaticHeader.html 
+                  #menu",
+                  function () {}
+                );
+              });
+            </code></pre>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <h4>Step4:</h4>
+            <p>
+            Below notice we have a nav element with an id of "myHeader". Basically what we are doing is inserting the 
+            generic header into the myHeader id
+            </p>
+            <pre><code class="language-javascript">
+              <body>
+               &lt;nav id="myHeader" 
+               class="navbar navbar-default 
+               navbar-fixed-top"></nav>
+               &lt;div class="container">
+                   &lt;h2>Page specific content here</h2>
+               &lt;/div>
+            </code></pre>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <h4>Expected:</h4>
+            <p>
+            After HTML loads,if you go to dev tools and inspect source (F12 or rt click and view source) you will have something like below 
+            <INSERTED GENERIC CONTENT HERE> is where you will see that your generic header content inserted
+            </p>
+            <pre><code class="language-javascript">
+             &lt;body>
+               &lt;nav id="myHeader" class="navbar navbar-default navbar-fixed-top">
+                 &lt;INSERTED GENERIC CONTENT HERE>
+               &lt;/nav>
+               &lt;div class="container">
+                   ....
+               &lt;/div>
+            </code></pre>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <p>
+              Below is the index.html and the one in red circle is what is
+              generic header.We want to move the header in it's own file so that
+              it can be reused
+            </p>
+            <img
+              style="width: 97%; height: auto"
+              src="arrow/img1.png"
+              alt="c#linq"
+            />
+            <p>
+              The header is basically a standard nav bar and code for wich is
+              below
+            </p>
+          </div>
         </div>
       </div>
     </section>
