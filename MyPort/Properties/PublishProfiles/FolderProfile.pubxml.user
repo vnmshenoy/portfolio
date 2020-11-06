@@ -17,10 +17,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/05/2018 16:10:50</publishTime>
     </File>
     <File Include="bin/MyPort.dll">
-      <publishTime>10/27/2020 18:42:40</publishTime>
+      <publishTime>10/28/2020 18:44:12</publishTime>
     </File>
     <File Include="bin/MyPort.pdb">
-      <publishTime>10/27/2020 18:42:40</publishTime>
+      <publishTime>10/28/2020 18:44:12</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -182,7 +182,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/22/2020 12:52:08</publishTime>
     </File>
     <File Include="blogs/JS/JavascriptFunctionVariations.html">
-      <publishTime>10/27/2020 18:26:20</publishTime>
+      <publishTime>10/28/2020 18:31:38</publishTime>
     </File>
     <File Include="blogs/JS/jsdatecomparison.html">
       <publishTime>10/22/2020 12:51:56</publishTime>
@@ -218,7 +218,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/22/2020 12:04:34</publishTime>
     </File>
     <File Include="blogs/Sql/sqlblogsBeginner.html">
-      <publishTime>10/22/2020 11:46:39</publishTime>
+      <publishTime>10/28/2020 18:39:49</publishTime>
     </File>
     <File Include="blogs/sqlblogs.html">
       <publishTime>10/22/2020 12:02:59</publishTime>
@@ -239,7 +239,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="css/custom.css">
-      <publishTime>10/22/2020 11:25:10</publishTime>
+      <publishTime>10/28/2020 18:27:22</publishTime>
     </File>
     <File Include="css/fonts/fontawesome-webfont.eot">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -266,7 +266,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="css/style.default.css">
-      <publishTime>10/27/2020 18:29:24</publishTime>
+      <publishTime>10/28/2020 18:32:57</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>10/22/2020 15:59:17</publishTime>
@@ -1601,7 +1601,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>10/27/2020 18:42:41</publishTime>
+      <publishTime>10/28/2020 18:44:22</publishTime>
     </File>
     <File Include="readme.txt">
       <publishTime>09/24/2020 13:38:51</publishTime>
@@ -2105,7 +2105,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/27/2020 18:40:43</publishTime>
+      <publishTime>10/28/2020 18:44:22</publishTime>
     </File>
   </ItemGroup>
 </Project>
