@@ -82,15 +82,16 @@ _________________________________________________________ -->
     <br />
     <section class="about-section">
       <div class="container">
-        <h3>How to Reuse HTML Code</h3>
         <div class="row">
-          <p>
-            In this blog we will address 2 issues. 1) How to reuse HTML code so
-            that we comply with <b>DRY</b> coding standard. BTW if you are
-            wondering what DRY is then it means - <b>Don't Repeat Yourself</b>.
-            2) How to use jQuery templating engine to generate HTML Code
-            dynamically
-            <!--
+          <div class="col-sm-9 themed-grid-col">
+            <h3>How to Reuse HTML Code</h3>
+            <p>
+              In this blog we will address 2 issues. 1) How to reuse HTML code
+              so that we comply with <b>DRY</b> coding standard. BTW if you are
+              wondering what DRY is then it means -
+              <b>Don't Repeat Yourself</b>. 2) How to use jQuery templating
+              engine to generate HTML Code dynamically
+              <!--
               /*
                **1)jQuery templates are a cool way to tie a datasource (often json, but at least arrays of maps/structurscriptput. 
                First we define a template which are placed within script tags so that the browser ignores the html inside it:
@@ -101,31 +102,33 @@ _________________________________________________________ -->
               jQuery templates will loop over the array of maps/structures and for each ${xxx} replace the it with the value of a key of the same name (xxx). Quick sample of the first two records of data:
               [
                 2) call some function to show count*/-->
-          </p>
-          <h4>Lets look at issue 1 - Reusing HTML code</h4>
+            </p>
+            <h4>Lets look at issue 1 - Reusing HTML code</h4>
 
-          <p>
-            Like mentioned about, if we reuse HTML code we will comply with
-            <b>DRY</b>. In the process of compyling with DRY we are also making
-            sure that our HTML code becomes more manageable and readable.Over a
-            period of time you might have noticed that your HTML code becomes
-            big enough and tough to manage.That is where you can start thinking
-            about how you can reuse HTML code. What better than an eg. Consider
-            there is a web application with one html page(index.html). It has a
-            standard Header, Body and a Footer. Now the boss comes and says that
-            everything looks good but the background-colorfooter has changed? Or
-            maybe you no longer like the navigation hover color of #BADA55 and
-            you find yourself having to go into every single file to change it
-            to a more delicate color of developer to update part of a
-            header.Easy can be quickyl done.Now assume we had 10 other pages
-            with same header and footer. Now if there is a change in
-            header/footer then we are talking about 10 different pages. More
-            work and also more prone to error. Imagine as the app grows there
-            woule be more html files and that also means lot of files to change.
-            That is where it is handy to make header/footer generic code.Create
-            header and footer in its own HTML file
-            /*https://medium.com/@AmyScript/how-to-reduce-reuse-and-recycle-your-code-389e6742e4ac*/
-          </p>
+            <p>
+              Like mentioned about, if we reuse HTML code we will comply with
+              <b>DRY</b>. In the process of compyling with DRY we are also
+              making sure that our HTML code becomes more manageable and
+              readable.Over a period of time you might have noticed that your
+              HTML code becomes big enough and tough to manage.That is where you
+              can start thinking about how you can reuse HTML code. What better
+              than an eg. Consider there is a web application with one html
+              page(index.html). It has a standard Header, Body and a Footer. Now
+              the boss comes and says that everything looks good but the
+              background-colorfooter has changed? Or maybe you no longer like
+              the navigation hover color of #BADA55 and you find yourself having
+              to go into every single file to change it to a more delicate color
+              of developer to update part of a header.Easy can be quickyl
+              done.Now assume we had 10 other pages with same header and footer.
+              Now if there is a change in header/footer then we are talking
+              about 10 different pages. More work and also more prone to error.
+              Imagine as the app grows there woule be more html files and that
+              also means lot of files to change. That is where it is handy to
+              make header/footer generic code.Create header and footer in its
+              own HTML file
+              /*https://medium.com/@AmyScript/how-to-reduce-reuse-and-recycle-your-code-389e6742e4ac*/
+            </p>
+          </div>
         </div>
         <h4>Step 1:</h4>
         <div class="row">
