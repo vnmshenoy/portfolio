@@ -86,48 +86,61 @@ _________________________________________________________ -->
           <div class="col-sm-9 themed-grid-col">
             <h3>How to Reuse HTML Code</h3>
             <p>
-              In this blog we will address 2 issues. 1) How to reuse HTML code
-              so that we comply with <b>DRY</b> coding standard. BTW if you are
-              wondering what DRY is then it means -
-              <b>Don't Repeat Yourself</b>. 2) How to use jQuery templating
-              engine to generate HTML Code dynamically
-              <!--
-              /*
-               **1)jQuery templates are a cool way to tie a datasource (often json, but at least arrays of maps/structurscriptput. 
-               First we define a template which are placed within script tags so that the browser ignores the html inside it:
-              
-              <script id="artistsTemplate" type="text/x-jquery-tmpl">
-                <div><h4>#${artistid} ${firstname} ${lastname}</h4>${city} ${state}</div>
-              </script>
-              jQuery templates will loop over the array of maps/structures and for each ${xxx} replace the it with the value of a key of the same name (xxx). Quick sample of the first two records of data:
-              [
-                2) call some function to show count*/-->
+              In this blog we will see how to reuse HTML code so that we comply
+              with <b>DRY</b> coding standard. BTW if you are wondering what DRY
+              is then it means - <b>Don't Repeat Yourself</b>.
             </p>
-            <h4>Lets look at issue 1 - Reusing HTML code</h4>
-
+            <h4>Reusing HTML code</h4>
             <p>
-              Like mentioned about, if we reuse HTML code we will comply with
-              <b>DRY</b>. In the process of compyling with DRY we are also
-              making sure that our HTML code becomes more manageable and
-              readable.Over a period of time you might have noticed that your
-              HTML code becomes big enough and tough to manage.That is where you
-              can start thinking about how you can reuse HTML code. What better
-              than an eg. Consider there is a web application with one html
-              page(index.html). It has a standard Header, Body and a Footer. Now
-              the boss comes and says that everything looks good but the
-              background-colorfooter has changed? Or maybe you no longer like
-              the navigation hover color of #BADA55 and you find yourself having
-              to go into every single file to change it to a more delicate color
-              of developer to update part of a header.Easy can be quickyl
-              done.Now assume we had 10 other pages with same header and footer.
-              Now if there is a change in header/footer then we are talking
-              about 10 different pages. More work and also more prone to error.
-              Imagine as the app grows there woule be more html files and that
-              also means lot of files to change. That is where it is handy to
-              make header/footer generic code.Create header and footer in its
-              own HTML file
-              /*https://medium.com/@AmyScript/how-to-reduce-reuse-and-recycle-your-code-389e6742e4ac*/
+              Like mentioned above, if we reuse HTML code, we will comply with
+              <b>DRY</b> naturally. In the process of complying with DRY we are
+              also making sure that our HTML code becomes more manageable and
+              readable.Over a period of time, you might have noticed that your
+              HTML code becomes big enough and tough to manage.That is why you
+              should consider reusing HTML code when and wherever possible. What
+              better than an eg scenario. For starters,consider you are working
+              on a Web Application with <b> a single html page </b>(eg
+              Index.html). It has a <b>standard Header, Body and a Footer</b>.
+              Now say your Boss comes and tells you that everything looks good
+              but the background-color of the header needs to be changed. Or
+              maybe your boss no longer likes the navigation hover color and
+              wants you to change it to some other color. If your web app is
+              small enough,like in this case, then you need to change only in
+              index.html(the only html file in your web
+              application).Easyy..isn't it...? However,imagine if there were 10
+              HTML files in your web app.Now you will find yourself having to
+              makes the changes in every single file. So the simple task of
+              changing background color and navigation hover color in the header
+              section, becomes time consuming and even error prone.And it's not
+              just the color but also may be text,new header tab etc etc. Hope
+              you get the point That is when it is handy to move header code
+              into it's own html file and inject the header on each of the 10
+              html file's load.
             </p>
+            <p>
+              Now there are many ways to accomplish this but I’m going to take
+              you through a way that seems the most easy and has decent
+              browsers’ support. The magic happens with jQuery.
+            </p>
+            <p>
+              Here is a <b> step by step example </b> of how to reuse header
+              code in your html pages.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <h4>First, let's have a look how our header looks on index.html</h4>
+            <p>
+              Below is the index.html and the one in red circle forms the
+              header. We want to move the header in it's own file so that it can
+              be reused across multiple pages
+            </p>
+            <img
+              style="width: 97%; height: auto"
+              src="reuseHtmlCode/headerEg.PNG"
+              alt="headerEg"
+            />
           </div>
         </div>
         <div class="row">
@@ -135,11 +148,11 @@ _________________________________________________________ -->
             <h4>Step 1:</h4>
             <p>
               Identify the code which can be extracted out into it's own html
-              file. Here we have header of index.html which is nothing but nav
-              bar.Code for navbar is below. this is the section of code which
-              forms the header of index.thml(as shown in above image)
+              file. Here, we have the header of index.html which is nothing but
+              nav bar.Code for navbar is below. This is the section of code
+              which forms the header of index.thml and should reside in a
+              separate html file
             </p>
-            https://www.codereadability.com/constructing-html-with-templates/
             <pre><code class="language-html">
               &lt;div id="menu" class="container">
               &lt;div class="navbar-header">
@@ -178,15 +191,16 @@ _________________________________________________________ -->
           <div class="col-sm-9 themed-grid-col">
             <h4>Step3:</h4>
             <p>
-              On the load of the html,inject the generic header into the id
-              where we want.Basically, in the below snapshot code we are saying
-              load "commonStaticHeader's" element which has an id of "menu" into
-              "myHeader" id
+              On the load of the index html(or in that matter any other page
+              that has an header), inject the generic header into the id where
+              we want.For eg, in the below snapshot code we are saying load
+              "CommonStaticHeader's" element which has an id of "menu" into
+              "myHeader" id. Id "myHeader" exists on Index.html
             </p>
             <pre><code class="language-javascript">
               $(document).ready(function () {
                 $("#myHeader").load(
-                  "common/commonStaticHeader.html 
+                  "common/CommonStaticHeader.html 
                   #menu",
                   function () {}
                 );
@@ -198,16 +212,15 @@ _________________________________________________________ -->
           <div class="col-sm-9 themed-grid-col">
             <h4>Step4:</h4>
             <p>
-            Below notice we have a nav element with an id of "myHeader". Basically what we are doing is inserting the 
-            generic header into the myHeader id
+              Below, notice we have a nav element with an id of "myHeader",
+              which is the placeholder on Index.html for our header code
             </p>
             <pre><code class="language-javascript">
-              <body>
                &lt;nav id="myHeader" 
                class="navbar navbar-default 
-               navbar-fixed-top"></nav>
+               navbar-fixed-top"> &lt;/nav>
                &lt;div class="container">
-                   &lt;h2>Page specific content here</h2>
+                   &lt;h2>Page specific content here &lt;/h2>
                &lt;/div>
             </code></pre>
           </div>
@@ -216,13 +229,15 @@ _________________________________________________________ -->
           <div class="col-sm-9 themed-grid-col">
             <h4>Expected:</h4>
             <p>
-            After HTML loads,if you go to dev tools and inspect source (F12 or rt click and view source) you will have something like below 
-            <INSERTED GENERIC CONTENT HERE> is where you will see that your generic header content inserted
+              After HTML loads,if you go to dev tools and inspect source (F12 or
+              rt click and view source) you will have something like below
+              "INSERTED GENERIC-REUSABLE CONTENT HERE" is where you will see
+              that your generic header content inserted
             </p>
             <pre><code class="language-javascript">
              &lt;body>
                &lt;nav id="myHeader" class="navbar navbar-default navbar-fixed-top">
-                 &lt;INSERTED GENERIC CONTENT HERE>
+                    INSERTED GENERIC-REUSABLE CONTENT HERE
                &lt;/nav>
                &lt;div class="container">
                    ....
@@ -232,21 +247,36 @@ _________________________________________________________ -->
         </div>
         <div class="row">
           <div class="col-sm-9 themed-grid-col">
+            <h4>Want to download the code??:</h4>
             <p>
-              Below is the index.html and the one in red circle is what is
-              generic header.We want to move the header in it's own file so that
-              it can be reused
+              I have shared the codebase on Github for you to download. Link to
+              github repo is
+              <a
+                style="font-weight: bold"
+                href="https://github.com/manjusa/ReuseHTMLCode.git"
+              >
+                Code download link</a
+              >
             </p>
-            <img
-              style="width: 97%; height: auto"
-              src="arrow/img1.png"
-              alt="c#linq"
-            />
             <p>
-              The header is basically a standard nav bar and code for wich is
-              below
+              In the code, I have an <b>Index.html</b> which has a header and a
+              body. Then I move the header code into it's own file called
+              <b>CommonStaticHeader.html</b> (in the common folder) Also,I
+              refactored Index.html and created
+              <b>RefactoredIndex.html.</b> RefactoredIndex.html uses
+              CommonStaticHeader.html and injects the header part dynamically
             </p>
           </div>
+        </div>
+        <div class="row">
+          <p>
+            <b>
+              And that's it. Hope you undertood how to reuse HTML code easily
+              and also the benefits of it.Email me @ thizismanju@gmail.com
+              incase you have queries. Alternatively, you can fill the "CONTACT"
+              form below</b
+            >
+          </p>
         </div>
       </div>
     </section>
