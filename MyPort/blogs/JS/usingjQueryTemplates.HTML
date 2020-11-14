@@ -128,15 +128,15 @@ jQuery templates will loop over the array of maps/structures
               occurcence like click),you make a DB/REST call using AJAX and get
               a JSON response. You need to iterate over the JSON and display the
               result set on the UI. This is where templates come handy wherein
-              you can just create html dynamcially
+              you can just create HTML dynamcially
             </p>
             <p>
               jQuery templating is a fast and efficient technique to render
               <b>client-side templates</b> using a <b>JSON data source</b>.
               Templates allow you to decouple Javascript and HTML code by
-              allowing you to use "placeholders" inside your HTML string. Let's
-              <b>take an EG and understand</b>
+              allowing you to use "placeholders" inside your HTML string.
             </p>
+            <h4>Let's take an EG and understand</h4>
           </div>
         </div>
         <div class="row">
@@ -144,8 +144,8 @@ jQuery templates will loop over the array of maps/structures
             <h4>JSON data</h4>
             <p>
               Assume, we make an AJAX call in our Index.html(can be any HTML)
-              and get "peopleResults" for our website.This is the result set we
-              need to iterate and display in the front end
+              and get "peopleResults" data.This is the result set we need to
+              iterate and display in the front end
             </p>
             <img
               src="jQueryTemplates/1JSON.png"
@@ -159,7 +159,7 @@ jQuery templates will loop over the array of maps/structures
           <div class="col-sm-9 themed-grid-col">
             <h4>Placeholder in our Index.html</h4>
             <p>
-              We want to stick our result set (above peopleResults" JSON into
+              We want to stick our result set (above peopleResults" JSON) into
               <b>"peopleTable" table</b>.
             </p>
             <img
@@ -176,7 +176,8 @@ jQuery templates will loop over the array of maps/structures
             <p>
               Create a template. It can be in a separate file or the same
               Index.html. Upto you. I prefer to keep the template in a separate
-              file so it's easier to read(but then it's me)
+              file (created <b>commonDynamicTemplate.html</b>) so it's easier to
+              read(but then it's me)
             </p>
             <img
               src="jQueryTemplates/3Template.PNG"
@@ -191,7 +192,8 @@ jQuery templates will loop over the array of maps/structures
             <h4>Back to HTML</h4>
             <p>
               Back in Index.html, get the template using jQuery's get. In the
-              below image I have marked 3 points for your understanding
+              below image, I have
+              <b> marked 3 points in red for your understanding </b>
             </p>
             <p>
               1. Load the script using jQuery "get" and store template data in a
@@ -199,8 +201,8 @@ jQuery templates will loop over the array of maps/structures
             </p>
             <p>2. Compile markup string as a named template</p>
             <p>
-              3. Render the named template and append to the placeholder in
-              html(index.html)
+              3. Render the named template and append to the
+              placeholder(#peopleTable) in html(index.html)
             </p>
             <img
               src="jQueryTemplates/4bindingTemplate.PNG"
@@ -244,8 +246,8 @@ jQuery templates will loop over the array of maps/structures
           <div class="col-sm-9 themed-grid-col">
             <h4>JSON Data</h4>
             <p>
-              Again, in this case we get JSON data "peopleResults" and
-              "orderResults" as shown below
+              Again, in this case we get JSON data <b>"peopleResults"</b> and
+              <b>"orderResults" </b> as shown below
             </p>
             <img
               src="jQueryTemplates/Eg21JSON.PNG"
@@ -257,15 +259,46 @@ jQuery templates will loop over the array of maps/structures
         <br />
         <div class="row">
           <div class="col-sm-9 themed-grid-col">
-            <h4>Retrieve template and stick it in our HTML</h4>
+            <h4>Placeholder in our html</h4>
             <p>
-              Like we did earlier, on load of our HTML we get templates for both
-              "PeopleData" (PEOPLEDATATEMPLATE) and "OrderData"
-              (ORDERDATATEMPLATE)
+              HTML code where above data will stick in
+              <b>(IndexMultiTemplates.html)</b>
+            </p>
+            <img
+              src="jQueryTemplates/Eg23Placeholder.PNG"
+              alt="placeholder"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <h4>Templates</h4>
+            <p>
+              File that holds multiple templates (We have two templates
+              <b>PEOPLEDATATEMPLATE</b> and <b>ORDERDATATEMPLATE</b>
+            </p>
+
+            <img
+              src="jQueryTemplates/Eg24Templates.PNG"
+              alt="placeholder"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <h4>Back to HTML</h4>
+            <p>
+              Like we did earlier, on load of our HTML(IndexMultiTemplates.html)
+              we get templates for both "PeopleData" (PEOPLEDATATEMPLATE) and
+              "OrderData" (ORDERDATATEMPLATE)
             </p>
             <p>
               In img below,marked 1 in red is the logic to see which template am
-              retrieving
+              retrieving and then stick the JSON result set we want
             </p>
             <p>2. The "id" where data will be sticked in</p>
             <img
@@ -276,34 +309,6 @@ jQuery templates will loop over the array of maps/structures
           </div>
         </div>
         <br />
-        <div class="row">
-          <div class="col-sm-9 themed-grid-col">
-            <h4>Placeholder</h4>
-            <p>HTML code where above data will stick in</p>
-            <img
-              src="jQueryTemplates/Eg23Placeholder.PNG"
-              alt="placeholder"
-              class="img-fluid"
-            />
-          </div>
-        </div>
-        <br />
-
-        <div class="row">
-          <div class="col-sm-9 themed-grid-col">
-            <h4>Templates</h4>
-            <p>
-              File that holds multiple templates (We have two templates
-              PEOPLEDATATEMPLATE and ORDERDATATEMPLATE
-            </p>
-
-            <img
-              src="jQueryTemplates/Eg24Templates.PNG"
-              alt="placeholder"
-              class="img-fluid"
-            />
-          </div>
-        </div>
         <div class="row">
           <div class="col-sm-9 themed-grid-col">
             <h4>Result</h4>
