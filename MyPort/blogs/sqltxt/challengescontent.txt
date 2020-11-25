@@ -1,0 +1,28 @@
+ <h4><span class="myheader">Challenges in learning </span></h4>
+                        <p class="pstyle">As a beginner, the biggest challenge I ever had in learning SQL was actually setting up DB, creating tables and relating them,
+                        and finding data for those tables. Every time I motivated myself to learn SQL, I hit a roadblock because I was not sure where to start</p>
+                        <p class="pstyle">So,I've collected a list of sample databases for SQL Server. With the help of these sample databases,
+                        you can test out your SQL  query and your understanding of various concepts inno time</p>
+                        <ol class="sqllearningol">
+                            <li><a class="sqllearningliitem" href="https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs">
+				            AdventureWorks</a></li>
+                            <li><a class="sqllearningliitem" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs">
+				            Northwind</a></li>
+                            <li><a class="sqllearningliitem" href="https://github.com/cwoodruff/ChinookDatabase">
+				            Chinook Database</a></li>                                                                                      
+                        </ol>    
+                        <p class="pstyle"><b>Northwind database</b> is something to start with ( I will expand it based on my needs and will Insert/Update more records into tables.
+                         I will also introduce new tables if required). Below are the steps to create <b>Northwind database</b> on your machine.                
+                       </p> 
+                        <ul>                        
+                            <li>From the link provided above(Northwind), download <b>instnwnd.sql</b>. Click on "View raw"  <br> <br>
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/30gettintonorthwinddbscript.png" alt="getting nrthwind script" />  <br> <br>
+                            </li>
+                            <li>Copy paste the script into your SSMS. <br> <br>
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/32pastingthequery.PNG" alt="nrthwind db created" />  <br> <br>
+                            </li>                       
+                            <li>Execute the Query using f5. Once query is run, refresh databases and you will see new Northwind database created<br> <br>
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/31Northwinddbcreated.PNG" alt="pasting query" />  <br> <br>
+                            </li>           
+                         </ul>             
+            </br>

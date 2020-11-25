@@ -1,0 +1,22 @@
+ <h4><span class="myheader">SQL Express Serve Installaion and Setup</span></h4>
+                        <p class="pstyle">You need SQL  server to run on the machine for your Database Engine to connect to. </p>
+                        <ul>
+                            <li>Download Express Server from official website <a class="sqllearningliitem" href="https://www.microsoft.com/en-au/sql-server/sql-server-downloads">SQL Server Express </a></li>
+                            <li>There are <b>2 options to download</b> 1)Developer and Express. I downloaded the <b>Express Version</b></li>
+                            <li>After downloading,just execute the file and follow the in screen instructions.</li>
+                            <li>I installed the <b>"Basic Installation Type"</b> as shown in image below. This would suffice for most of our cases here
+                            <br/><br/>
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/27SqlExpressInstalType.PNG" alt="installation type" /> <br/><br/>
+                            </li>
+                            <li>Once Installation is <b>successful</b>, copy the <b>connection string</b> and save it somewhere. Would be handy
+                            <br/><br/>
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/28SQLExpressSucessInstal.PNG" alt="SQLExpressSucessInstall" /> <br/><br/>
+                            </li>
+                            <li>Now to cross verify if SQLExpress server is running, go to your Control Panel--> Services --> And you should see your SQL Server running
+                             <br/><br/>
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/29SQLExpressRunning.PNG" alt="SQLExpressRunning" /> <br/><br/>
+                            </li>
+                            <li><b>And that's it. You have your locally running SQL Server ready to connect to</b> </li>                                            
+                        </ul>                        
+                     
+                        <br>

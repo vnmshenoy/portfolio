@@ -2204,3 +2204,10 @@ pre {
 .custommark {
   background: chocolate;
 }
+
+.sqllearningliitem {
+  font-size: 25px;
+}
+.sqllearningol {
+  list-style-type: upper-roman;
+}

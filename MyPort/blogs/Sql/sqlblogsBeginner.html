@@ -85,14 +85,11 @@
         $.get("../sqltxt/" + fileName, function (data) {
           var re = /([^~]*~[^~]*)~/gm;
           var subst = "$1</b>";
-          //https://.com/questions/32370777/replace-odd-occurrences-of-a-character-using-regex-in-javascript
           var result = data.replace(re, subst);
           result = result.replace("~", "<b>");
           html = $.parseHTML(result);
           $("#current").html(html);
           $("#toggleLeft").click();
-
-          // alert(result);
         });
       }
     </script>
@@ -425,7 +422,7 @@
                 <div class="panel-heading">
                   <h4 class="panel-title">
                     <a
-                      id="databasesetup"
+                      id="sqlexpress"
                       class="customLeftPane"
                       data-toggle="collapse"
                       data-parent="#accordion"
@@ -433,7 +430,41 @@
                       onclick="showDiv(this)"
                     >
                       <span class="glyphicon glyphicon-folder-close"> </span
-                      >DBSetup
+                      >SQLExpress Setup
+                    </a>
+                  </h4>
+                </div>
+              </div>
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a
+                      id="createdatabase"
+                      class="customLeftPane"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseOne"
+                      onclick="showDiv(this)"
+                    >
+                      <span class="glyphicon glyphicon-folder-close"> </span
+                      >Create Database
+                    </a>
+                  </h4>
+                </div>
+              </div>
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a
+                      id="challenges"
+                      class="customLeftPane"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapseOne"
+                      onclick="showDiv(this)"
+                    >
+                      <span class="glyphicon glyphicon-folder-close"> </span
+                      >Challenges
                     </a>
                   </h4>
                 </div>
