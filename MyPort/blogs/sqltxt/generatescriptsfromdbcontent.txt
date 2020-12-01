@@ -1,0 +1,44 @@
+  
+   <h4><span class="myheader">Generating scripts</span></h4>
+<p class="pstyle">Say, you want to generate the database schema scripts (create/alter table etc) or in that matter even the scripts used to 
+                        insert the data into the tables from an existing database.You need to follow below steps:
+                        </p>
+                        <ul>
+                            <li>Right click on database go to <b>"Tasks ->Generate Scripts"</b> as shown in image below
+							<br/><br/>
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/1generatescripts.PNG" alt="generate scripts" /> <br/><br/>
+                            </li>
+                            <li>You will see <b>"Introduction"</b> page.Click on "Next" as shown in image below<br/><br/>
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/2Intro.PNG" alt="intro" /> 
+                            </li><br/><br/>
+                            <li>Clicking on "Next" opens up <b>"Choose Objects"</b> page.This is where you can select the tables you want to generate scripts for.
+                            Or ,You can even script the <b>"entire database and all its objects"</b> if you want to.</li>
+                            <li>I will only select certain tables for this tutorial.You can just play around with these options if you wish to</li>
+                            <li>Select the tables or objects you want to generate script for as shown in image below<br/><br/>
+                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/3ChooseTables.PNG" alt="choose tables" />
+                            </li><br/><br/>
+                            <li>In the left panel,click on <b>"Set Scripting Options"</b> which should open up a new window.Here you have various options to decide where 
+                            you want to save these scripts.You can select <b>"Save scripts to a specific location"</b> and then click on <b>"Save to File"</b> option. 
+                            You can give the location of where you want to save the file. Image for your reference below<br/><br/>
+                            
+							<img style="width:60%;height:40%" src="../../img/sqlforBeginners/4SetscriptOptionsSaveFile.PNG" alt="save script loc" /> <br/><br/>
+
+							<b>NOTE :</b> Instead of saving to file, you also have option to "Save to Clipboard" or "Save  to a new query window" options.
+                            </li>  
+
+                            <li>Before clicking on "Next", you should click on "Advanced" tab and then you will see <b>"Advanced Scripting Options"</b>. In <b>"General"</b> section, scroll down until you find <b>"Types of data to script"</b> option.<br>
+							There are 3 options avalaible
+							 <ul>
+                                <ol>Schema only</ol>
+                                 <ol>Data only </ol> 
+                                 <ol>Schema and Data</ol>
+							</ul>	
+                            See the image for your reference   
+							<br/><br/>							
+                            <img style="width:60%;height:40%" src="../../img/sqlforBeginners/6AdvancedScriptingOpotions.PNG" alt="advanced scripting options" /> <br/><br/>
+                            Click on any of the above options based on your need and then click on "Ok" and then click "Next" on the set scripting option page.
+                            </li>
+                            <li>Click on "Next" again will open "Summary" page. Click on "Next" again and ta-da scripts are generated </li>
+                            <li>Click on "Finish" </li>
+                        </ul><br>
+						<p class="pstyle"><b>You will see the insert statements used to create the data in the tables</b></p>

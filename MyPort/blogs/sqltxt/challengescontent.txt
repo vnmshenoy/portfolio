@@ -25,4 +25,5 @@
                                 <img style="width:60%;height:40%" src="../../img/sqlforBeginners/31Northwinddbcreated.PNG" alt="pasting query" />  <br> <br>
                             </li>           
                          </ul>             
+                         <!--https://github.com/mrin9/northwind-->
             </br>

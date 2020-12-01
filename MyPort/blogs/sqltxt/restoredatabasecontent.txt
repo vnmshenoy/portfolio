@@ -1,61 +1,32 @@
 <h4><span class="myheader">Restore the Database</span></h4>
-                        <p class="pstyle">We created a backup file in the previous section. Using that file,we will try to restore the database. In real time, someone else can share the backup file with you and you can restore it in your SQL server.In order to restore the database,do the following</p>
+                        <p class="pstyle">We created a backup file in the previous section. Using that file,we will try to restore the database. In real time, 
+                        someone else can share the backup file with you and you can restore it in your SQL server.In order to restore the database,do the following</p>
                         <ul>
                             <li>Login to the Server using steps we saw earlier(Use Windows authentication)</li>
+                            <li>Delete your <b>testingdb</b> so that you can restore the database from your backup file.To delete the database, right click and delete.</li>
                             <li>Expand the server,and right click on the "Databases" and select Restore Database
                                 as shown in image below <br/><br/>
                                 <img style="width:60%;height:40%" src="../../img/sqlforBeginners/6Restore.PNG" alt="db restore" /> 
                             </li><br/><br/>
-                            <li>The Restore Database screen is very much similar to the Back Up Database screen.In <b>"Source"</b>, you should select <b>"Device"</b>. Selecting Device allows you to restore directly from a file                           
+                            <li>The Restore Database screen is very much similar to the Back Up Database screen.In <b>"Source"</b>, you should select <b>"Device"</b>.
+                             Selecting Device allows you to restore directly from a file                           
                             </li>
                             <li>Click on Device and click on the <b>three dots</b> to the right as shown in  image<br/><br/>
                                 <img style="width:60%;height:40%" src="../../img/sqlforBeginners/7device.PNG" alt="db restore device" /> 
                             </li><br/><br/>
-                            <li>This will open up <b>"Select Backup Devices" </b>, click on "Add" and navigate to the backup file. In the last "Backup database" section, i saved my "backup.bak" in C$.
+                            <li>This will open up <b>"Select Backup Devices" </b>, click on "Add" and navigate to the backup file. In the last "Backup database" section, 
+                             I saved my "testingdb.bak" in C$.
                             </li>
-                            <li>Once you have successfully given the back up file location,Click on OK. and then again Click on OK on "Select Backup devices".If all is good you will see as shown in image below<br/><br/> 
+                            <li>Once you have successfully given the back up file location,Click on OK. and then again Click on OK on "Select Backup devices".If all is good you will 
+                            see as shown in image below <br/><br/> 
                                 <img style="width:60%;height:40%" src="../../img/sqlforBeginners/8backuprestored.PNG" alt="db restored" /> </li><br/><br/>
-                            <li>Before Importing,you can go and have a look at the <b>"Options"</b> pane on the left. Under options,you will see configurations for restoring database such as <b>"Overwrite the Existing Database"</b> etc.You can select these options based on your need. In my case i will leave them unchecked and click on OK </li>
+                            <li>Before Importing,you can go and have a look at the <b>"Options"</b> pane on the left. Under options,you will see configurations for 
+                            restoring database such as <b>"Overwrite the Existing Database"</b> etc.You can select these options based on your need.
+                             In my case i will leave them unchecked and click on OK </li>
                             <li>Once Restoration is done, SSMS will notify you through a prompt <b>"Database [YourName] restored successfully"</b> </li>
+                            <li>Now you will see that <b>TestingDB </b> is created with <b>both the tables and data in it</b> <br/><br/> 
+                             <img style="width:60%;height:40%" src="../../img/sqlforBeginners/8adbrestoredwithtableanddata.PNG" alt="brestoredwithtableanddata" /> </li><br/><br/>
 
                         </ul>
                         <p class="pstyle">Congratulations... :-) you have restored the database using a backup file </p>
-
-                        <p class="pstyle">Now <b>lets consider another scenario</b> where someone gave you the backup file and you have restored the database successfully as well.When you restored the database, tables and the data in them would have been created for you already...all good..:-) . But imagine that you want to generate the database schema scripts (create table etc) or in that matter even the scripts used to insert the data into the tables from an existing database.You need to follow below steps:
-                        </p>
-                        <ul>
-                            <li>Right click on database go to <b>"Tasks ->Generate Scripts"</b> as shown in image below
-							<br/><br/>
-                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/1generatescripts.PNG" alt="generate scripts" /> <br/><br/>
-                            </li>
-                            <li>You will see <b>"Introduction"</b> page.Click on "Next" as shown in image below<br/><br/>
-                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/2Intro.PNG" alt="intro" /> 
-                            </li><br/><br/>
-                            <li>Clicking on "Next" opens up <b>"Choose Objects"</b> page.This is where you can select the tables you want to generate scripts for.Or ,You can even script the <b>"entire database and all its objects"</b> if you want to.</li>
-                            <li>I will only select certain tables for this tutorial.You can just play around with these options if you wish to</li>
-                            <li>Select the tables or objects you want to generate script for as shown in image below<br/><br/>
-                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/3ChooseTables.PNG" alt="choose tables" />
-                            </li><br/><br/>
-                            <li>In the left panel,click on <b>"Set Scripting Options"</b> which should open up a new window.Here you have various options to decide where you want to save these scripts.
-                            You can select <b>"Save scripts to a specific location"</b> and then click on <b>"Save to File"</b> option. You can give the location of where you want to save the file. Image for your reference below<br/><br/>
-                            
-							<img style="width:60%;height:40%" src="../../img/sqlforBeginners/4SetscriptOptionsSaveFile.PNG" alt="save script loc" /> <br/><br/>
-							Instead of saving to file, you also have option to "Save to Clipboard" or "Save  to a new query window" options.
-                            </li>  
-
-                            <li>Before clicking on "Next", you should click on "Advanced" tab and then you will see <b>"Advanced Scripting Options"</b>. In <b>"General"</b> section, scroll down until you find <b>"Types of data to script"</b> option.<br>
-							There are 3 options avalaible
-							 <ul>
-                                <ol>Schema only</ol>
-                                 <ol>Data only </ol> 
-                                 <ol>Schema and Data</ol>
-							</ul>	
-                            See the image for your reference   
-							<br/><br/>							
-                            <img style="width:60%;height:40%" src="../../img/sqlforBeginners/6AdvancedScriptingOpotions.PNG" alt="advanced scripting options" /> <br/><br/>
-                            Click on any of the above options based on your need and then click on "Ok" and then click "Next" on the set scripting option page.
-                            </li>
-                            <li>Click on "Next" again will open "Summary" page. Click on "Next" again and ta-da scripts are generated </li>
-                            <li>Click on "Finish" </li>
-                        </ul><br>
-						<p class="pstyle"><b>You will see the insert statements used to create the data in the tables</b></p>
+                      
