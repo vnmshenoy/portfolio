@@ -26,12 +26,13 @@
 							<b>NOTE :</b> Instead of saving to file, you also have option to "Save to Clipboard" or "Save  to a new query window" options.
                             </li>  
 
-                            <li>Before clicking on "Next", you should click on "Advanced" tab and then you will see <b>"Advanced Scripting Options"</b>. In <b>"General"</b> section, scroll down until you find <b>"Types of data to script"</b> option.<br>
+                            <li>Before clicking on "Next", you should click on "Advanced" tab and then you will see <b>"Advanced Scripting Options"</b>. 
+                            In <b>"General"</b> section, scroll down until you find <b>"Types of data to script"</b> option.<br>
 							There are 3 options avalaible
 							 <ul>
                                 <ol>Schema only</ol>
-                                 <ol>Data only </ol> 
-                                 <ol>Schema and Data</ol>
+                                <ol>Data only </ol> 
+                                <ol>Schema and Data</ol>
 							</ul>	
                             See the image for your reference   
 							<br/><br/>							
