@@ -1,27 +1,6 @@
- <h4><span class="myheader">Database Diagrams</span></h4>
-                        <p class="pstyle">Database Diagrams are a way to visualise a database model .When the model is small its quite easy to understand the relationship between the tables, however as the complexity grows and in the real world applications it becomes tough to see the relationship between the tables. Therefore, it is imperative to generate database diagrams as it can graphically show the structure of the database.</p>
-                        <p class="pstyle">With SSMS you can easily create database diagrams.Below are the steps you should follow to create database diagrams</p>
-                        <ul>
-                            <li>Login to the Server using steps we saw earlier(Use Windows authentication)</li>
-                            <li>Expand the server and click on the database you want to generate diagrams for.
-                            </li>
-                            <li>Expand the selected database and click on Database Diagrams
-                            </li>
-                            <li>Rt click on the <b>Database Diagrams</b> and click on <b>"New Diagram"</b> as shown in image<br/><br/>
-                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/9databaseDiag.PNG" alt="new db diagram" /> <br/><br/>
-                            </li>
-                            <li>When you create the diagram for the first time, you may get popup screen asking to create support object required to create db diagrams as shown in the image <br/><br/>
-                                <img style="width:60%;height:40%" src="../../img/sqlforBeginners/10FirstTime.PNG" alt="first time db diagram error" /> 
-                            </li><br/><br/>
-                            <li>SSMS needs few system procedures and a table that are not created with the database. So just click on OK on the above popup and doing so will create following system procedures in your database.
-							This happens because,initially if you look into the database system stored procedure (SP), you will only see SP with <b>"sys"</b> and no system tables.Below is the image how it looks before clicking on OK  <br/><br/>                               
-							<img style="width:60%;height:40%" src="../../img/sqlforBeginners/11anodboSPs.PNG" alt="sys schema only" />
-							 <br/><br/>   
-							After you click OK on the error popup shown above(asking to create support objects), you will see one table is created in systables and few sps with <b>dbo</b> schema created as shown in image
-							<br/><br/>
-							<img style="width:60%;height:40%" src="../../img/sqlforBeginners/11bafterok.PNG" alt="dbo schema only" />
-							</li><br/><br/>
-                            <li>Again click on new database diagram. A new window will open and select all the tables (click <b>"Add"</b> button) you want to generate diagram for as shown in image<br/><br/>
+ <h4><span class="myheader">Custom Database Diagrams</span></h4>
+ <li>Now let's create diagrams for our exsiting Database Testing Database. it has 2 tables to start with. Ofcourse just 2 tables but it is something good to start with </li>
+<li>Again click on new database diagram. A new window will open and select all the tables (click <b>"Add"</b> button) you want to generate diagram for as shown in image<br/><br/>
                                 <img style="width:60%;height:40%" src="../../img/sqlforBeginners/12AddTable.PNG" alt="add tables" />                        </li><br/><br/>
                             <li>This will create a diagram with the tables columns, primary keys, and relationships that were read from the schema.Assume you selected only 2 tables then it will look like in the image <br/><br/>                            
                                 <img style="width:60%;height:40%" src="../../img/sqlforBeginners/14DBTableDiagram.PNG" alt="add tables" />
@@ -56,7 +35,7 @@
 
                             <li>You can also click on individual tables and decide how to display them.Follow below steps
                                 <ul>
-                                    <li>Right click on the table and select “Table View” and click on Standard which will display coulumns within DataType and Attr <br/><br/>
+                                    <li>Right click on the table and select ï¿½Table Viewï¿½ and click on Standard which will display coulumns within DataType and Attr <br/><br/>
                                     <img style="width:60%;height:40%" src="../../img/sqlforBeginners/22TableView.PNG" alt="table view" />
                                     </li><br/><br/>
                                     <li>Column Names will only show column names
@@ -101,5 +80,3 @@
                         </ol>
 						<p class="pstyle"><b>Doing above will fix the issue</b></p>
                         <br>
-						
-					
