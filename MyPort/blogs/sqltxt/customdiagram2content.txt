@@ -1,0 +1,83 @@
+ <h4><span class="myheader">Custom Database Diagrams - Contd</span></h4>
+ <li>In the previous pill <b>Custom Database Diagrams</b>, we saw how you can view and create relationship between tables</li>
+
+ <li>Now, lets go a step further and see what else we can do.
+ Imagine we had <b>another table</b> in our Database. We can include it now by simply right clicking and then selecting<b>Add Table </b>
+<br/><br/>
+ <img style="width:60%;height:40%" src="../../img/sqlforBeginners/17AddRelatedTable.PNG" alt="Add new tables" />
+</li><br/><br/>
+<li>We can also <b>create a NEW TABLE</b> all together through the diagram sections itself. Just follow below steps
+    <ul>
+        <li>Right click anywhere on the diagram editor</li>
+        <li>Click on <b>"New Table"</b>as shown in image<br/><br/>
+            <img style="width:60%;height:40%" src="../../img/sqlforBeginners/17NewTableThru.PNG" alt="new table" />
+        </li><br/><br/>
+        <li>You will get a popup window where in you can enter the table name. I will call this <b>"Test" table</b> and click OK</li>
+        <li>Doing so will allow you to enter column names etc and then click on save which will prompt you a confirmation as shown in image below
+        <br/><br/>
+        <img style="width:60%;height:40%" src="../../img/sqlforBeginners/19PromptSave.PNG" alt="save" />   <br/><br/>  
+        Click on yes and refresh the database and you will see the new table generated
+    </ul>                         
+</li>
+
+<li>You can also <b>create PRIMARY KEY (PK)</b> through the tools itself. Below, am making <b>id column</b> of the newly created <b>Test Table </b> as <b>PK</b>
+Right click on the column</b> which needs to be made primary key.
+Choose option <b>"Set Primary Key" </b> as shown in the diagram. 
+<br/><br/>
+    <img style="width:60%;height:40%" src="../../img/sqlforBeginners/20SetPrimaryKey.PNG" alt="set primary key" /> 
+</li><br/><br/>						  
+
+<li>You can also click on any table and decide how to display them.Follow below steps
+    <ul>
+     <li>Right click on the table and hover on <b>Table View </b> <br/><br/>
+        <img style="width:60%;height:40%" src="../../img/sqlforBeginners/22TableView.PNG" alt="table view" />
+    </li><br/><br/>
+    <li>Selecting <b>Standard</b> then it will display coulumns within DataType and Attributes 
+    </li>
+    <li>Selecting <b>Column Names</b> will only show column names
+    </li>
+    <li>Selecting <b> Keys </b> will only show the keys like Primary Key, Foreign Key etc
+    </li>
+    <li>Selecting <b> Name</b> will only display table names.
+    </li>	
+    </ul>
+</li>
+<li>Diagrams are stored in "Database Diagrams". Expand the "database" you created diagram for and then you will see 
+"Database Diagrams".Below is the image
+<br/><br/>
+    <img style="width:60%;height:40%" src="../../img/sqlforBeginners/13DbDiagramStoreLoc.PNG" alt="db diagrams" />                              
+Click on refresh incase diagram not reflecting even after you saved.
+</li><br/><br/>
+<li>
+    If you want your diagrams to be easily understood by others,then you can add comments/notes etc to it.
+    You can add comments and notes  by right clicking anyway on the pane(but not on the tables itself) and selecting <b>"New Text Annotation"</b>
+    as shown in image below
+    <br/><br/>
+        <img style="width:60%;height:40%" src="../../img/sqlforBeginners/21Annotation.PNG" alt="new text annotations" /><br/><br/>                               
+</li>
+<li>You can Export Diagrams ,right click on the diagram pane and choose Copy Diagram to Clipboard. 
+You can now paste it into graphic software or into a document.
+</li><br/><br/>
+</ul>
+
+<h3> Common Errors Faced and Solutions:</h3>
+                        <ol>
+                            <li>Issue 1: When I tried to generate the database diagrams, I got an error which said "Could not obtain information about Windows NT group/user".
+                            Complete error is shown in img below
+                                <br/><br/><img style="width:60%;height:40%" src="../../img/sqlforBeginners/24error.PNG" alt="error" /> <br/><br/>
+                                Solution to above problem is simple.Ensure that you follow these steps
+                                <ul>                                
+                                    <li>Right click on the db</li>
+                                    <li>Go to "<b>Properties</b>".See below image
+                                     <br/><br/><img style="width:60%;height:40%" src="../../img/sqlforBeginners/25solution.png" alt="properties" /> </li><br/><br/>
+                                     <li>Click on "Files".See below image
+                                     <br/><br/><img style="width:60%;height:40%" src="../../img/sqlforBeginners/26Files.png" alt="files" /> </li><br/><br/>
+                                    <li>Click on "Owner" and add the user you want to be the owner</li>
+                                    <li>Like mentioned earlier,I connect to sql server engine using "Windows authentication" so I just selected the user 
+                                    I logged in to my windows machine</li>                                    
+                                </ul>
+                            </li>
+                        </ol>
+						<p class="pstyle"><b>Doing above will fix the issue</b></p>
+                        <br>
+                        

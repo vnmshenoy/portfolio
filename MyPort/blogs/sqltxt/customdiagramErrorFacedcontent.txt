@@ -1,0 +1,20 @@
+ <h4><span class="myheader">Custom Database Diagrams - Errors</span></h4>
+
+<h3> Common Errors Faced and Solutions:</h3>
+            <ol>
+                <li>Issue 1: When I tried to generate the database diagrams, I got an error which said "Could not obtain information about Windows NT group/user".Complete error is shown in img below
+                    <br/><br/><img style="width:60%;height:40%" src="../../img/sqlforBeginners/24error.PNG" alt="error" /> <br/><br/>
+                    Solution to above problem is simple.Ensure that you follow these steps
+                    <ul>                                
+                        <li>Right click on the db</li>
+                        <li>Go to "properties".See below image
+                            <br/><br/><img style="width:60%;height:40%" src="../../img/sqlforBeginners/25solution.png" alt="properties" /> </li><br/><br/>
+                            <li>Click on "Files".See below image
+                            <br/><br/><img style="width:60%;height:40%" src="../../img/sqlforBeginners/26Files.png" alt="files" /> </li><br/><br/>
+                        <li>Click on "Owner" and add the user you want to be the owner</li>
+                        <li>Like mentioned earlier,I connect to sql server engine using "Windows authentication" so I just selected the user I logged in to my windows machine</li>                                    
+                    </ul>
+                </li>
+            </ol>
+<p class="pstyle"><b>Doing above will fix the issue</b></p>
+<br>

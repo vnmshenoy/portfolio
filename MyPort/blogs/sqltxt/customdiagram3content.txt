@@ -1,0 +1,21 @@
+ <h4><span class="myheader">Custom Database Diagrams - From existing Database</span></h4>
+ <li>Earlier, we learnt how to Add Tables, Create relationship between tables etc. Now, imagine a scenario where you join a company and the product you are working on
+ is already established. That means, database will be quite old and it will have many tables and relationship between tables. In order to understand
+ the relationship between tables, database diagrams will be very handy
+</li><br/><br/>
+ <li>Let's consider, <b>Microsoft's Northwind Database</b> as an eg. If you donot have this database, you can download it from Microsoft's link which i have shared in my pill <b>Challenges in learning
+</b>
+</li><br/><br/>
+ <li>Go to <b> Northwind Database</b>, select <b>Database Diagrams</b> and click on <b>New Database Diagram</b>. 
+ You will get a popup like we saw earlier(in pill <b>Custom Database Diagrams-1 </b>). Selectin "OK" will create necessary Stored Procedures and tables in the database
+</li><br/><br/>
+<li>You can select multiple tables at once.Eg, I selected "Categories","Orders","Order Details","Prodcuts" and then clicked "Add". Doing
+ so will automatically generate relationship between tables
+ <img style="width:60%;height:40%" src="../../img/sqlforBeginners/14cDBTablesRelationship.png" alt="DBTablesRelationship-Northwind" /> 
+</li><br/><br/>
+<li>The links you see above are the relationships between the tables. You can click every link and check the relationship
+</li><br/><br/>
+</ul>
+ <p class="pstyle">I reckon you will have <b>better understanding about database diagrams</b> now and will be able to use them more effectively in future</p>
+    <br>
+

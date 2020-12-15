@@ -1,0 +1,22 @@
+ <h4><span class="myheader">Custom Database Diagrams</span></h4>
+ <li>Now let's create diagrams for our exsiting <b>Testing Database</b>. it has 2 tables to start with. Yeah,just 2 tables I want to keep it simple so that you can wrap your 
+ head around it quickly.
+ </li>
+<li>Click on <b>new database diagram</b>. A new window will open and <b>Select the tables</b> (click <b>"Add"</b> button) you want to generate diagram for as shown in image<br/><br/>
+                                <img style="width:30%;height:25%" src="../../img/sqlforBeginners/12AddTable.PNG" alt="add tables" />                        </li><br/><br/>
+<li>This will create a diagram with the tables columns, primary keys and relationships that were read from the schema. 
+You selected both the tables,and since this is completely new database, there are no relationship between the tables so you will see below <br/><br/>                            
+    <img style="width:40%;height:35%" src="../../img/sqlforBeginners/14DBTableDiagram.PNG" alt="DBTableDiagram" />
+</li><br/><br/>
+<li>You can generate relationship between the tables. <b>Column "Id"</b> is the <b>Primary KEY</b> of both the tables.
+ For eg, you can depict a relationship between <b>Customer table's Order id column (Foreign Key)</b> to the <b>id column</b>
+ of the <b>Order table</b>. Simply drag line from Order id column to the ID column and doing so will popup a window like this. Press ok and relationship will be generated. The image on the
+ right shows the relationship between the tables<br/><br/>                            
+    <img style="width:40%;height:35%" src="../../img/sqlforBeginners/14aDBTableRelationshipDiagram.PNG" alt="BTableRelationshipDiagram" />
+
+    <img style="margin-left:10em;width:40%;height:35%" src="../../img/sqlforBeginners/14bDBTableDiagramrelationshipcreated.PNG" alt="DBTableDiagramrelationshipcreated" />
+</li><br/><br/>
+<li>You can <b> make it look smaller</b> by selecting all tables using control A and right click and then doing <b>"Autosize selected tables"</b> as shown in below image<br/><br/>
+    <img style="width:40%;height:40%" src="../../img/sqlforBeginners/15AutoSize.PNG" alt="before auto size tables" />
+<br/><br/> 
+</li>
