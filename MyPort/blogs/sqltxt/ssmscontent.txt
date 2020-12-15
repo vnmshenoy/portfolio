@@ -1,6 +1,6 @@
 		                            <h4><span class="myheader">SQL  Server Management Stusdio</span></h4><div>
 
-                         <p class="pstyle">You can download <b>SQL Server Manamgent Studio(SSMS)</b> from the official Microsoft Website. 
+                         <p class="pstyle">You can download <b>SQL Server Management Studio(SSMS)</b> from the official Microsoft Website. 
                             <a class="sqllearningliitem" href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017">
                             Download SSMS</a></p>
                            <p class="pstyle">I have downloaded SSMS 2018 version</p>
