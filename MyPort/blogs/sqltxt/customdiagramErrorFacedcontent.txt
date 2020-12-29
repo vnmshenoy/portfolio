@@ -2,7 +2,8 @@
 
 <h3> Common Errors Faced and Solutions:</h3>
             <ol>
-                <li>Issue 1: When I tried to generate the database diagrams, I got an error which said "Could not obtain information about Windows NT group/user".Complete error is shown in img below
+                <li>Issue 1: When I tried to generate the database diagrams, I got an error which said "Could not obtain information about Windows NT group/user".
+                Complete error is shown in img below
                     <br/><br/><img style="width:60%;height:40%" src="../../img/sqlforBeginners/24error.PNG" alt="error" /> <br/><br/>
                     Solution to above problem is simple.Ensure that you follow these steps
                     <ul>                                
