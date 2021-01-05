@@ -1,0 +1,53 @@
+<h4><span class="myheader">SQL SELECT Statement </span></h4>
+<p class="pstyle">The SQL SELECT Statement
+   The SELECT statement is used to select data from a database.
+   The data returned is stored in a result table, called the result-set.
+   <br>
+</p>
+</div>
+<div class="code-toolbar">
+   <pre><code class="language-html">
+             <b>SELECT * FROM table_name; </b>
+      </code></pre>
+</div>
+
+<p class="pstyle">
+   Doing so will return all records from the table you selected(table_name). Let's try the same on our sample database(NorthwindSmall). I will get all the records from the
+   <b>dbo.orders table</b>.
+   Now I know that it has 600 records because I inserted it earlier while setting up the database( if you don't trust me check the insert script :-) ) in setting up db tab
+</p>
+<pre><code class="language-html">
+             <b id="frstquery">SELECT * FROM dbo.orders </b></code></pre>
+<div class="toolbar">
+   <div class="toolbar-item pull-left"><button type="button" onclick="copyTextFromField('frstquery')">Copy</button></div>
+</div><br><br>
+<p class="pstyle">
+   The result set we will get is below
+</p>
+</br>
+<img
+   style="width: 90%; height: 90%"
+   src="../../img/sqlQueriesBasics/1selectallresultset.PNG"
+   alt="open ssms"
+   /></br></br>
+<p class="pstyle">
+   You can select only certain columns of the table at your will,like say you just want to see <b>customer_id</b> and say <b>ship_name</b> then you can do below
+</p>
+<pre><code class="language-html">
+             <b id="secndQuery">SELECT customer_id,ship_name  FROM  [dbo].[orders]</b>
+      </code></pre>
+<div class="toolbar">
+   <div class="toolbar-item pull-left"><button type="button" onclick="copyTextFromField('secndQuery')">Copy</button></div>
+</div></br></br>
+<p class="pstyle">
+   The result set we will get is like below(section of the actual result set). I have put 3 red dots just to depict that there are more records(actually 600 records) than shown here(shown only 10).But I hope you get the idea
+</p>
+</br>
+<img
+   style="width: 30%; height: 20%"
+   src="../../img/sqlQueriesBasics/1aselectcustomcolumnresultset.PNG"
+   alt="open ssms"
+   />
+<br><br>
+<button type="button" class="btn btn-primary pull-left" onclick="prev('sqlhome')">Previous</button><br><br>
+<button type="button" class="btn btn-primary pull-right" onclick="next('sqlwhere')">Next</button><br><br>

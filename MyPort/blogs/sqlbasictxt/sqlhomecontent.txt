@@ -1,0 +1,16 @@
+<h4><span class="myheader">SQL Home </span></h4>
+<p class="pstyle">In this section, we will learn about the basics queries of SQL language.I will create a smaller database
+   from well-known <b>Northwind sample database</b>. I have provided the schema,database diagram and the data in my gitub repository.
+   You can download it from here  
+    <a   href="https://github.com/manjusa/northwindsmall.git">  NorthwindSmall git hub link                     
+   </a>
+</p>
+
+<p class="pstyle"><b>Database tables:</b> A database is comprised of one of more tables.Each table is identified by a name (e.g. "employees","customers","orders" etc).
+   Tables contain records (rows) with data.
+</p>
+
+<p class="pstyle"><b>SQL Statements:</b> SQL statements/queries are the way you perform an action (CRUD operations) on a database
+   We will see such queries in following section.
+</p>
+<button type="button" class="btn btn-primary pull-right" onclick="next('selectall')">Next</button>

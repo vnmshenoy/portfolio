@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2264462236439566",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-131742548-1");
+    </script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../js/prism.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".header").load("../../baseheader.html", function () {
+          setTimeout(
+            $("#headermenu").load("../../header.html #menu", function () {}),
+            250
+          ); // try diff. values
+        });
+      });
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="robots" content="all,follow" />
+    <meta name="googlebot" content="index,follow,snippet,archive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SManju</title>
+
+    <meta name="keywords" content="" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Bootstrap and Font Awesome css -->
+    <link
+      rel="stylesheet"
+      href="../../vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS-->
+    <link
+      rel="stylesheet"
+      href="../../vendor/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../../css/style.default.css" />
+    <link rel="stylesheet" href="../../css/prism.css" />
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"
+    ></script>
+
+    <!-- *** NAVBAR ***
+_________________________________________________________ -->
+    <header class="header"></header>
+    <!-- /#navbar -->
+
+    <br />
+    <section class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <h3>
+              Customing JSON Server
+              <span style="font-size: 12px; color: blueviolet"
+                >04th Jan 2021</span
+              >
+            </h3>
+            <p>
+              In this blog we will learn more about JSON Server, particularly
+              how to customize it to our needs. If you want to learn the basics
+              of JSON Server like what it is,how to set up and it's basic usage,
+              then please refer to the JSON server basics blog
+              <a href="/blogs/Misc/jsonserversetupandbasics.html"
+                >JSON server basics</a
+              >
+            </p>
+            <p>
+              If you know about basics of JSON Server already, you know that it
+              is a great way to setup up a full fake REST API for front-end
+              development,may be even is less than "30 seconds" as their website
+              claims. However,real time scenarios are little more challenging
+              and it’s not always that you can use something straight out of the
+              box. You need to tweak certain things and this is where
+              customizing JSON server is required. I will try to cover quite a
+              few number of common scenarios so that you know what all can be
+              done. Actually even knowing that you can tweak JSON server in
+              itself is a learning :-)
+            </p>
+            <h6>Setting up JSON Server</h6>
+            <ul>
+              <li>
+                Create a folder in your <b>C drive</b>. I created
+                CustomJSONServer
+              </li>
+              <li>Inside the folder run <b>npm init -y</b></li>
+              <li>Then run <b>npm install json-server --save-dev</b></li>
+              <li>
+                Initial <b>db.json</b> looks like below. I removed the default
+                endpoints and created my own <b>employees</b> API.
+                <pre><code class="language-javascript">
+                  {
+                    "employees": [
+                      {
+                        "employeeid": 1,
+                        "fname": "manju",
+                        "lname": "s"
+                      },
+                      {
+                        "employeeid": 2,
+                        "fname": "albert",
+                        "lname": "dawson"
+                      }
+                    ]
+                  }
+                </code></pre>
+              </li>
+
+              <li>
+                If you want to configure and customize your JSON Server, you
+                need a <b>server.js</b> in your CustomJSONServer folder you
+                created above. Create <b>server.js</b> and copy below code. I
+                have added numbers as comments so that i can refer it below when
+                explaining
+
+                <pre><code class="language-javascript">
+                // server.js
+                  const jsonServer = require('json-server') //1
+                  const server = jsonServer.create()//2
+                  const router = jsonServer.router('db.json')//3
+                  router.db._.id = 'employeeid';//3a
+                  const middlewares = jsonServer.defaults()//4 
+                  server.use(middlewares) //5
+
+                  // To handle POST, PUT and PATCH 
+                  // you need to use a body-parser. Using JSON Server's bodyParser
+                  server.use(jsonServer.bodyParser);
+
+                  //6 Redirect URL's- 
+                  // Have all URLS with customurl redirected 
+                  server.use(
+                    jsonServer.rewriter({
+                      "/customurl/*": "/$1",
+                    })
+                  );
+                  //7 Ensure every POST has a createdAt date
+                  server.use((req, res, next) => {
+                    if (req.method === "POST") {
+                      req.body.createdAt = Date.now();
+                    }
+                    // Continue to JSON Server router
+                    next();
+                  });
+                  //8 Ensure every POST of an employee, it has lname for sure. Otherwise return 400 and a message
+                  server.post("/employees/", function(req, res, next) {
+                    const error = validateRequest(req.body);
+                    if (error) {
+                      res.status(400).send(error);
+                    } else {                    
+                      next();
+                    }
+                  });
+                  server.use(router) 
+                  server.listen(5000, () => {//10 using 5000 port
+                    console.log('JSON Server is running')
+                  })
+                  function validateRequest(employee){
+                  //9 validate function used by POST above
+                      if (!employee.lname) return "lname is required.";
+                  }
+                    
+              </code></pre>
+              </li>
+            </ul>
+            <h6>Point by point explanation of above server.js file</h6>
+            <p>
+              <b>Comments 1 through 5</b> are standard across all server.js
+              files.For the server.js, we need to create the server, set the
+              database as the router, and use the default middlewares.<br />
+              <b> Comment 3a </b> is the place where we customize the id
+              property.By default JSONserver uses "id" property/key in db.json
+              file. But in this eg I will show you how to even customise the id
+              key.I will rather use "employeeid" as id therefore in 3a comment I
+              am setting up <b>router.db._.id = 'employeeid';</b>
+            </p>
+            <p>
+              <b>Comment 6</b> Suppose your API sits behind
+              <b>'/customurl'</b> route . So a rewriter rule is written to
+              redirect all calls with ‘/customurl/*’ to the root ’/$1’. The ‘$1’
+              here captures whatever comes after /customurl/. For eg,
+              <b>http://localhost:5000/customurl/employees</b> will be
+              redirected to <b>http://localhost:5000/employees</b> where the
+              JSON server has all the data available through the db.json file
+            </p>
+            <p>
+              <b>Comment 7</b> When there is a
+              <b>POST request to any end point</b> ensure that there is a
+              "createdAt" property attached and attach today's date to it (using
+              Date.now()). We will see that in the<b> POST section below</b>
+            </p>
+            <p>
+              <b>Comment 8 and 9</b> You can ensure that when ever there is a
+              new employee added through POST,the employee will have a last
+              name.If we try to insert an employee with no last name(lname),then
+              API throws a 400 error and will return appropriate error message.
+              You can ofcourse validate many more scenarios. We will see this in
+              detail below <b>POST- request validation eg</b>
+
+              <b>Comment 9</b> is just the function which validates the request
+              for lname
+            </p>
+            <p>
+              <b
+                >Comment 10 actually says start the server at port 5000.You can
+                provide any other available port as well</b
+              >
+            </p>
+            <p>
+              Now you are done with the configured of the JSON server,lets try
+              out the API's
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h4>Starting the server and actually testing GET, POST,PUT</h4>
+            <p>
+              Start the server using command <b>node server</b>.This should
+              start the server on port 5000
+            </p>
+            <p>
+              Use any REST API client like <b>Postman</b> to test out the API's.
+              I will use the employees end point and will show you GET,POST and
+              PU. You can try other options like DELETE, PATCH etc on your own
+              (will be easy once you do GET,POST, and PUT).<br />
+              I have shared all the requests i explained below in my github
+              repository. You can download it here
+              <b
+                ><a href="https://github.com/manjusa/customjsonserver.git"
+                  >Git hub link to JSONServerDemo</a
+                ></b
+              >
+              You can download and import
+              <b>"Customjsonserverapieg.postman_collection"</b> into your
+              Postman client so that you can simply start using it and will save
+              you some typing. I have a separate blog to show how to use POSTMAN
+              show how to import/export collections and how to use
+              workspaces,swap between workspaces etc.All of this is beyond the
+              scope of the current article
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h6>GET</h6>
+            <p>GET Get all Employees.Currently we have <b>2 employees</b></p>
+            <img
+              src="customjsonserver/3Get.PNG"
+              alt="Get.json"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h6>GET-Check if redirect works</h6>
+            <p>
+              Above in server.js, we configured <b>rewrite</b>.Basically we said
+              all requests to
+              <b>http://localhost:5000/customurl/employees</b> will be
+              redirected to <b>http://localhost:5000/employees</b>
+              Let's try that out.
+            </p>
+            <img
+              src="customjsonserver/3GetCustomURL.PNG"
+              alt="GetCustomURL"
+              class="img-fluid"
+            /><br />
+            <p>As you can see rewrite works as well</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h6>POST</h6>
+            <p>
+              Above in server.js, we configured a <b>createdAt</b> property. So
+              every POST request we do from here we should see createdAt
+              property
+            </p>
+            <img
+              src="customjsonserver/1POSTBody.PNG"
+              alt="postbody"
+              class="img-fluid"
+            /><br /><br />
+            Ensure that you add <b>content-type</b> as
+            <b>application/json</b> to header of the request
+            <img
+              src="customjsonserver/1aPOSTHeader.PNG"
+              alt="postheader"
+              class="img-fluid"
+            /><br /><br />
+            In the response you will notice that "createdAt" property is
+            generated. If you do a GET now, you will see createdAt property for
+            3rd employeeid.<br />
+            <img
+              src="customjsonserver/1POSTRes.PNG"
+              alt="POSTRes"
+              class="img-fluid"
+            /><br /><br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h6>POST- request validation</h6>
+            <p>
+              Above in server.js, we configured a <b>createdAt</b> property. So
+              every POST request we do from here we should see createdAt
+              property
+            </p>
+            <img
+              src="customjsonserver/2POSTValidation.PNG"
+              alt="validatereq"
+              class="img-fluid"
+            /><br /><br />
+            Ensure that you add <b>content-type</b> as
+            <b>application/json</b> to header of the request. In the
+            <b>Response</b> you will notice that you get a <b>400 error</b> and
+            a message which says <b>lname is required</b> as we had not provided
+            lname for "raj".<br />
+            <img
+              src="customjsonserver/2ValidationError.PNG"
+              alt="validationError"
+              class="img-fluid"
+            /><br /><br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h6>PUT</h6>
+            <p>
+              You can update any employee,say you want to
+              <b>update fname of employeeid 2</b>.Let's update <b>fname</b> to
+              <b>new albert</b>
+            </p>
+            <img
+              src="customjsonserver/4PUT.PNG"
+              alt="put"
+              class="img-fluid"
+            /><br /><br />
+            <p>
+              Donot forget to make the changes(marked in red in the above image)
+              i.e copying the body as <b>raw</b>, type as <b>JSON</b> Also, like
+              we did in POST request, add <b>content-type</b> as
+              <b>application/json</b> to header of the request. Another thing to
+              notice is the end of 'URL'.We send <b>2</b> at the end which is
+              nothing but the employeeid we want to update
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <p>
+              <b>
+                And that's it. Hope you undertood how to customize JSON server.
+                .Email me at "thizismanju@gmail.com" incase you have queries.
+                Alternatively, you can fill the "CONTACT" form or drop a comment
+                below
+              </b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="padding: 20px !important">
+      <div class="container">
+        <h4>
+          Did you like the blog or have questions, please add your comments
+        </h4>
+        <div
+          class="fb-comments"
+          data-href="http://manjustechblog.com/blogs/JS/jsdatecomparison.html"
+          data-width="400"
+          data-numposts="10"
+        ></div>
+      </div>
+    </section>
+    <!-- /#navbar -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-left">
+            <p class="social">
+              <a
+                href="http://www.facebook.com/shenoyvnm
+                            "
+                class="external facebook wow fadeInUp"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a
+                style="background-color: grey"
+                href="http://www.linkedin.com/in/manjunathshenoywebdev"
+                class="external linkedin wow fadeInUp"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </p>
+          </div>
+
+          <!-- /.6-->
+          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+            <p>© 2018 SManju. All rights reserved.</p>
+          </div>
+          <div class="col-12 mt-4">
+            <p class="template-bootstrapious">
+              Designed by
+              <a href="https://www.bootstrapious.com">Bootstrapious</a>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
