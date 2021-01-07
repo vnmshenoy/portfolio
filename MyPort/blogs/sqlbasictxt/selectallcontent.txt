@@ -26,9 +26,8 @@
 </p>
 </br>
 <img
-   style="width: 90%; height: 90%"
    src="../../img/sqlQueriesBasics/1selectallresultset.PNG"
-   alt="open ssms"
+   alt="open ssms" class="img-fluid"
    /></br></br>
 <p class="pstyle">
    You can select only certain columns of the table at your will,like say you just want to see <b>customer_id</b> and say <b>ship_name</b> then you can do below
@@ -49,5 +48,11 @@
    alt="open ssms"
    />
 <br><br>
-<button type="button" class="btn btn-primary pull-left" onclick="prev('sqlhome')">Previous</button><br><br>
-<button type="button" class="btn btn-primary pull-right" onclick="next('sqlwhere')">Next</button><br><br>
+<div class="row">
+<div class="col-sm-6 pull-left">
+<button type="button" class="btn btn-primary " onclick="prev('sqlhome')">Previous</button><br><br>
+</div>
+<div class="col-sm-6 pull-right">
+<button type="button" class="btn btn-primary " onclick="next('selectdistinct')">Next</button><br><br>
+</div>
+</div>

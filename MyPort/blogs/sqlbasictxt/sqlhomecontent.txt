@@ -15,4 +15,11 @@
 <p class="pstyle"><b>SQL Statements:</b> SQL statements/queries are the way you perform an action (CRUD operations) on a database
    We will see such queries in following section.
 </p>
-<button type="button" class="btn btn-primary pull-right" onclick="next('selectall')">Next</button>
+<div class="row">
+<div class="col-sm-6 pull-right" style="visibility:hidden">
+<button type="button" class="btn btn-primary " onclick="next('selectall')">Next</button><br><br>
+</div>
+<div class="col-sm-6 pull-right">
+<button type="button" class="btn btn-primary " onclick="next('selectall')">Next</button><br><br>
+</div>
+</div>

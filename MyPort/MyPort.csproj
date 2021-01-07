@@ -88,8 +88,6 @@
     <Content Include="blogs\Net\signalr.html" />
     <Content Include="blogs\sqlblogs.html" />
     <Content Include="blogs\sqltxt\createbackupcontent.txt" />
-    <Content Include="blogs\sqltxt\databasesetupcontent.txt" />
-    <Content Include="blogs\sqltxt\dbdcontent.txt" />
     <Content Include="blogs\sqltxt\restoredatabasecontent.txt" />
     <Content Include="blogs\sqltxt\ssmscontent.txt" />
     <Content Include="blogs\Sql\sqlblogsBeginner.html" />

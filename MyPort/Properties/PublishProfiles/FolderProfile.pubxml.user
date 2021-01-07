@@ -11,16 +11,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="baseheader.html">
-      <publishTime>10/22/2020 11:51:25</publishTime>
+      <publishTime>01/08/2021 10:08:58</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>
     </File>
     <File Include="bin/MyPort.dll">
-      <publishTime>10/28/2020 18:44:12</publishTime>
+      <publishTime>01/08/2021 10:30:02</publishTime>
     </File>
     <File Include="bin/MyPort.pdb">
-      <publishTime>10/28/2020 18:44:12</publishTime>
+      <publishTime>01/08/2021 10:30:02</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -176,55 +176,55 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/22/2020 17:17:10</publishTime>
     </File>
     <File Include="blogs/JS/datecreatingoptions.html">
-      <publishTime>10/22/2020 12:52:13</publishTime>
+      <publishTime>01/05/2021 18:25:54</publishTime>
     </File>
     <File Include="blogs/JS/dradndrop.html">
-      <publishTime>10/22/2020 12:52:08</publishTime>
+      <publishTime>01/05/2021 18:26:09</publishTime>
     </File>
     <File Include="blogs/JS/JavascriptFunctionVariations.html">
-      <publishTime>10/28/2020 18:31:38</publishTime>
+      <publishTime>01/05/2021 18:27:19</publishTime>
     </File>
     <File Include="blogs/JS/jsdatecomparison.html">
-      <publishTime>10/22/2020 12:51:56</publishTime>
+      <publishTime>01/05/2021 18:27:41</publishTime>
     </File>
     <File Include="blogs/JS/multilevel.html">
-      <publishTime>10/22/2020 12:51:46</publishTime>
+      <publishTime>01/05/2021 18:27:59</publishTime>
     </File>
     <File Include="blogs/JS/qrcodes.html">
-      <publishTime>10/22/2020 12:51:33</publishTime>
+      <publishTime>01/05/2021 18:28:24</publishTime>
     </File>
     <File Include="blogs/JS/qrcodeTechnicalSide.html">
-      <publishTime>10/22/2020 12:48:47</publishTime>
+      <publishTime>01/05/2021 18:28:47</publishTime>
     </File>
     <File Include="blogs/JS/quickbudgetingtool.html">
-      <publishTime>10/22/2020 12:39:33</publishTime>
+      <publishTime>01/05/2021 18:29:20</publishTime>
     </File>
     <File Include="blogs/JS/setupvpn.html">
       <publishTime>09/24/2020 11:44:10</publishTime>
     </File>
     <File Include="blogs/jsblogs.html">
-      <publishTime>10/27/2020 17:01:30</publishTime>
+      <publishTime>11/14/2020 18:33:42</publishTime>
     </File>
     <File Include="blogs/misc.html">
-      <publishTime>10/22/2020 12:32:00</publishTime>
+      <publishTime>01/05/2021 17:55:58</publishTime>
     </File>
     <File Include="blogs/Misc/setupvpn.html">
-      <publishTime>10/22/2020 12:29:52</publishTime>
+      <publishTime>01/05/2021 18:30:06</publishTime>
     </File>
     <File Include="blogs/Net/gitvsintegration.html">
-      <publishTime>10/22/2020 12:35:08</publishTime>
+      <publishTime>01/05/2021 18:30:20</publishTime>
     </File>
     <File Include="blogs/Net/signalr.html">
-      <publishTime>10/22/2020 12:04:34</publishTime>
+      <publishTime>01/05/2021 18:30:32</publishTime>
     </File>
     <File Include="blogs/Sql/sqlblogsBeginner.html">
-      <publishTime>10/28/2020 18:39:49</publishTime>
+      <publishTime>01/05/2021 18:39:26</publishTime>
     </File>
     <File Include="blogs/sqlblogs.html">
-      <publishTime>10/22/2020 12:02:59</publishTime>
+      <publishTime>12/29/2020 14:14:27</publishTime>
     </File>
     <File Include="blogs/sqltxt/createbackupcontent.txt">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/01/2020 12:15:18</publishTime>
     </File>
     <File Include="blogs/sqltxt/databasesetupcontent.txt">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -233,10 +233,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="blogs/sqltxt/restoredatabasecontent.txt">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/01/2020 14:41:26</publishTime>
     </File>
     <File Include="blogs/sqltxt/ssmscontent.txt">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>01/05/2021 18:41:54</publishTime>
     </File>
     <File Include="css/custom.css">
       <publishTime>10/28/2020 18:27:22</publishTime>
@@ -260,16 +260,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="css/prism.css">
-      <publishTime>10/27/2020 12:23:23</publishTime>
+      <publishTime>11/06/2020 18:50:56</publishTime>
     </File>
     <File Include="css/simple-sidebar.css">
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="css/style.default.css">
-      <publishTime>10/28/2020 18:32:57</publishTime>
+      <publishTime>11/24/2020 17:17:44</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>10/22/2020 15:59:17</publishTime>
+      <publishTime>01/08/2021 10:09:21</publishTime>
     </File>
     <File Include="favicon.png">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -446,43 +446,43 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="img/sqlforBeginners/12AddTable.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/13/2020 22:02:11</publishTime>
     </File>
     <File Include="img/sqlforBeginners/13DbDiagramStoreLoc.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/15/2020 11:51:33</publishTime>
     </File>
     <File Include="img/sqlforBeginners/14DBTableDiagram.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/13/2020 22:07:02</publishTime>
     </File>
     <File Include="img/sqlforBeginners/15AutoSize.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/14/2020 18:51:00</publishTime>
     </File>
     <File Include="img/sqlforBeginners/16MoreCompact.PNG">
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="img/sqlforBeginners/17AddRelatedTable.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/15/2020 10:45:00</publishTime>
     </File>
     <File Include="img/sqlforBeginners/17NewTableThru.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/15/2020 10:46:07</publishTime>
     </File>
     <File Include="img/sqlforBeginners/19PromptSave.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/15/2020 10:50:06</publishTime>
     </File>
     <File Include="img/sqlforBeginners/1connectToDbEngine.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>11/20/2020 17:37:14</publishTime>
     </File>
     <File Include="img/sqlforBeginners/1generatescripts.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/01/2020 14:49:28</publishTime>
     </File>
     <File Include="img/sqlforBeginners/20SetPrimaryKey.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/15/2020 10:51:42</publishTime>
     </File>
     <File Include="img/sqlforBeginners/21Annotation.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/15/2020 11:52:54</publishTime>
     </File>
     <File Include="img/sqlforBeginners/22TableView.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/15/2020 10:54:13</publishTime>
     </File>
     <File Include="img/sqlforBeginners/23ExportDiagram.PNG">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -491,34 +491,34 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="img/sqlforBeginners/25solution.png">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/15/2020 11:56:52</publishTime>
     </File>
     <File Include="img/sqlforBeginners/26Files.png">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/15/2020 11:57:18</publishTime>
     </File>
     <File Include="img/sqlforBeginners/2aNameOfDB.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>11/23/2020 19:22:09</publishTime>
     </File>
     <File Include="img/sqlforBeginners/2CreateAnewDB.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>11/23/2020 19:21:31</publishTime>
     </File>
     <File Include="img/sqlforBeginners/2Intro.PNG">
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="img/sqlforBeginners/3aSelectOnNewQueryWithDBSelected.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>11/23/2020 19:42:20</publishTime>
     </File>
     <File Include="img/sqlforBeginners/3ChooseTables.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/01/2020 14:50:35</publishTime>
     </File>
     <File Include="img/sqlforBeginners/4backup.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>11/30/2020 20:15:20</publishTime>
     </File>
     <File Include="img/sqlforBeginners/4SetscriptOptionsSaveFile.PNG">
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="img/sqlforBeginners/5backupTo.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/01/2020 12:06:05</publishTime>
     </File>
     <File Include="img/sqlforBeginners/6AdvancedScriptingOpotions.PNG">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -530,13 +530,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="img/sqlforBeginners/8backuprestored.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/01/2020 14:32:54</publishTime>
     </File>
     <File Include="img/sqlforBeginners/9databaseDiag.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>12/05/2020 20:48:36</publishTime>
     </File>
     <File Include="img/sqlforBeginners/startSSMS.PNG">
-      <publishTime>08/26/2020 18:08:13</publishTime>
+      <publishTime>11/20/2020 17:40:30</publishTime>
     </File>
     <File Include="img/techspacedeck.png">
       <publishTime>10/22/2020 09:18:17</publishTime>
@@ -1601,7 +1601,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>10/28/2020 18:44:22</publishTime>
+      <publishTime>01/08/2021 10:30:04</publishTime>
     </File>
     <File Include="readme.txt">
       <publishTime>09/24/2020 13:38:51</publishTime>
@@ -2105,7 +2105,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/28/2020 18:44:22</publishTime>
+      <publishTime>01/08/2021 10:24:17</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -118,7 +118,7 @@ Inherits="MyPort.Default" %>
             ><img
               height="auto"
               width="40%"
-              src="img/techspacedeck.png"
+              src="img/forthegeeks.png"
               alt="logo"
             />SManju</a
           >
