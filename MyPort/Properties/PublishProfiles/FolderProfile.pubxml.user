@@ -11,16 +11,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="baseheader.html">
-      <publishTime>01/08/2021 10:08:58</publishTime>
+      <publishTime>01/08/2021 10:43:42</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>09/05/2018 16:10:50</publishTime>
+      <publishTime>05/09/2018 16:10:50</publishTime>
     </File>
     <File Include="bin/MyPort.dll">
-      <publishTime>01/08/2021 10:30:02</publishTime>
+      <publishTime>01/08/2021 11:09:14</publishTime>
     </File>
     <File Include="bin/MyPort.pdb">
-      <publishTime>01/08/2021 10:30:02</publishTime>
+      <publishTime>01/08/2021 11:09:14</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -62,10 +62,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/08/2018 12:09:42</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
-      <publishTime>12/05/2017 10:36:44</publishTime>
+      <publishTime>05/12/2017 10:36:44</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
-      <publishTime>12/05/2017 10:36:44</publishTime>
+      <publishTime>05/12/2017 10:36:44</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
       <publishTime>08/08/2018 12:09:42</publishTime>
@@ -74,85 +74,85 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/08/2018 12:09:42</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
-      <publishTime>11/05/2016 19:55:32</publishTime>
+      <publishTime>05/11/2016 19:55:32</publishTime>
     </File>
     <File Include="bin/roslyn/System.AppContext.dll">
-      <publishTime>11/05/2016 19:55:34</publishTime>
+      <publishTime>05/11/2016 19:55:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
       <publishTime>05/16/2018 03:29:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Console.dll">
-      <publishTime>11/05/2016 19:55:48</publishTime>
+      <publishTime>05/11/2016 19:55:48</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
-      <publishTime>11/05/2016 19:55:52</publishTime>
+      <publishTime>05/11/2016 19:55:52</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
-      <publishTime>11/05/2016 19:55:56</publishTime>
+      <publishTime>05/11/2016 19:55:56</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
-      <publishTime>11/05/2016 19:55:52</publishTime>
+      <publishTime>05/11/2016 19:55:52</publishTime>
     </File>
     <File Include="bin/roslyn/System.Globalization.Calendars.dll">
-      <publishTime>11/05/2016 19:56:02</publishTime>
+      <publishTime>05/11/2016 19:56:02</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.Compression.dll">
-      <publishTime>11/05/2016 19:56:08</publishTime>
+      <publishTime>05/11/2016 19:56:08</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
-      <publishTime>11/05/2016 19:56:04</publishTime>
+      <publishTime>05/11/2016 19:56:04</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.dll">
-      <publishTime>11/05/2016 19:56:08</publishTime>
+      <publishTime>05/11/2016 19:56:08</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
-      <publishTime>11/05/2016 19:56:08</publishTime>
+      <publishTime>05/11/2016 19:56:08</publishTime>
     </File>
     <File Include="bin/roslyn/System.Net.Http.dll">
-      <publishTime>11/05/2016 19:56:30</publishTime>
+      <publishTime>05/11/2016 19:56:30</publishTime>
     </File>
     <File Include="bin/roslyn/System.Net.Sockets.dll">
-      <publishTime>11/05/2016 19:56:34</publishTime>
+      <publishTime>05/11/2016 19:56:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
       <publishTime>05/16/2018 03:29:44</publishTime>
     </File>
     <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
-      <publishTime>11/05/2016 19:57:00</publishTime>
+      <publishTime>05/11/2016 19:57:00</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
-      <publishTime>11/05/2016 19:57:14</publishTime>
+      <publishTime>05/11/2016 19:57:14</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
-      <publishTime>11/05/2016 19:57:08</publishTime>
+      <publishTime>05/11/2016 19:57:08</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
-      <publishTime>11/05/2016 19:57:18</publishTime>
+      <publishTime>05/11/2016 19:57:18</publishTime>
     </File>
     <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
-      <publishTime>11/05/2016 19:57:18</publishTime>
+      <publishTime>05/11/2016 19:57:18</publishTime>
     </File>
     <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
-      <publishTime>11/05/2016 19:57:20</publishTime>
+      <publishTime>05/11/2016 19:57:20</publishTime>
     </File>
     <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
-      <publishTime>11/05/2016 19:57:24</publishTime>
+      <publishTime>05/11/2016 19:57:24</publishTime>
     </File>
     <File Include="bin/roslyn/System.ValueTuple.dll">
-      <publishTime>11/05/2016 19:57:30</publishTime>
+      <publishTime>05/11/2016 19:57:30</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
-      <publishTime>11/05/2016 19:57:36</publishTime>
+      <publishTime>05/11/2016 19:57:36</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
-      <publishTime>11/05/2016 19:57:34</publishTime>
+      <publishTime>05/11/2016 19:57:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.XPath.dll">
-      <publishTime>11/05/2016 19:57:40</publishTime>
+      <publishTime>05/11/2016 19:57:40</publishTime>
     </File>
     <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
-      <publishTime>11/05/2016 19:57:34</publishTime>
+      <publishTime>05/11/2016 19:57:34</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -224,7 +224,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/29/2020 14:14:27</publishTime>
     </File>
     <File Include="blogs/sqltxt/createbackupcontent.txt">
-      <publishTime>12/01/2020 12:15:18</publishTime>
+      <publishTime>01/12/2020 12:15:18</publishTime>
     </File>
     <File Include="blogs/sqltxt/databasesetupcontent.txt">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -233,7 +233,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="blogs/sqltxt/restoredatabasecontent.txt">
-      <publishTime>12/01/2020 14:41:26</publishTime>
+      <publishTime>01/12/2020 14:41:26</publishTime>
     </File>
     <File Include="blogs/sqltxt/ssmscontent.txt">
       <publishTime>01/05/2021 18:41:54</publishTime>
@@ -260,7 +260,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="css/prism.css">
-      <publishTime>11/06/2020 18:50:56</publishTime>
+      <publishTime>06/11/2020 18:50:56</publishTime>
     </File>
     <File Include="css/simple-sidebar.css">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -269,7 +269,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/24/2020 17:17:44</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>01/08/2021 10:09:21</publishTime>
+      <publishTime>01/08/2021 10:55:37</publishTime>
     </File>
     <File Include="favicon.png">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -455,13 +455,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/13/2020 22:07:02</publishTime>
     </File>
     <File Include="img/sqlforBeginners/15AutoSize.PNG">
-      <publishTime>12/14/2020 18:51:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="img/sqlforBeginners/16MoreCompact.PNG">
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="img/sqlforBeginners/17AddRelatedTable.PNG">
-      <publishTime>12/15/2020 10:45:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="img/sqlforBeginners/17NewTableThru.PNG">
       <publishTime>12/15/2020 10:46:07</publishTime>
@@ -473,7 +473,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/20/2020 17:37:14</publishTime>
     </File>
     <File Include="img/sqlforBeginners/1generatescripts.PNG">
-      <publishTime>12/01/2020 14:49:28</publishTime>
+      <publishTime>01/12/2020 14:49:28</publishTime>
     </File>
     <File Include="img/sqlforBeginners/20SetPrimaryKey.PNG">
       <publishTime>12/15/2020 10:51:42</publishTime>
@@ -509,7 +509,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/23/2020 19:42:20</publishTime>
     </File>
     <File Include="img/sqlforBeginners/3ChooseTables.PNG">
-      <publishTime>12/01/2020 14:50:35</publishTime>
+      <publishTime>01/12/2020 14:50:35</publishTime>
     </File>
     <File Include="img/sqlforBeginners/4backup.PNG">
       <publishTime>11/30/2020 20:15:20</publishTime>
@@ -518,7 +518,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="img/sqlforBeginners/5backupTo.PNG">
-      <publishTime>12/01/2020 12:06:05</publishTime>
+      <publishTime>01/12/2020 12:06:05</publishTime>
     </File>
     <File Include="img/sqlforBeginners/6AdvancedScriptingOpotions.PNG">
       <publishTime>08/26/2020 18:08:13</publishTime>
@@ -530,10 +530,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="img/sqlforBeginners/8backuprestored.PNG">
-      <publishTime>12/01/2020 14:32:54</publishTime>
+      <publishTime>01/12/2020 14:32:54</publishTime>
     </File>
     <File Include="img/sqlforBeginners/9databaseDiag.PNG">
-      <publishTime>12/05/2020 20:48:36</publishTime>
+      <publishTime>05/12/2020 20:48:36</publishTime>
     </File>
     <File Include="img/sqlforBeginners/startSSMS.PNG">
       <publishTime>11/20/2020 17:40:30</publishTime>
@@ -1601,7 +1601,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>01/08/2021 10:30:04</publishTime>
+      <publishTime>01/08/2021 11:09:16</publishTime>
     </File>
     <File Include="readme.txt">
       <publishTime>09/24/2020 13:38:51</publishTime>
@@ -2105,7 +2105,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/26/2020 18:08:13</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/08/2021 10:24:17</publishTime>
+      <publishTime>01/08/2021 11:09:15</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -116,8 +116,7 @@ Inherits="MyPort.Default" %>
         <div class="container">
           <a href="#intro" class="navbar-brand scrollTo headerHref"
             ><img
-              height="auto"
-              width="40%"
+              class="img-fluid"
               src="img/forthegeeks.png"
               alt="logo"
             />SManju</a
