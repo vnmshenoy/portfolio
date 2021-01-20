@@ -1,1 +1,26 @@
-this is sq where
+<h4><span class="myheader">SQL Where </span></h4>
+<p class="pstyle"><b>Where</b> clause helps us filter the results based on a condition.Let's imagine you want
+to get all employees who work in <b>"Toys" department</b>
+</p>
+<div class="code-toolbar">
+   <pre><code class="language-html">
+             <b>SELECT *
+F   ROM [NorthwindSmall].[dbo].[employees]
+WHERE department='Toys' </b>
+      </code></pre>
+</div>
+<p class="pstyle">Am attaching the result image where it shows the filtered results (2 records) based on the <b>department is Toys</b>
+</p>
+<div class="row" style="margin:10px">
+<img src="../../img/sqlQueriesBasics/4where.png" alt="with distinct" class="img-fluid"><br><br>
+</div>
+
+<br><br>
+<div class="row">
+<div class="col-sm-6 pull-left">
+<button type="button" class="btn btn-primary " onclick="prev('sqlcomment')">Previous</button><br><br>
+</div>
+<div class="col-sm-6 pull-right">
+<button type="button" class="btn btn-primary " onclick="next('sqlwhere')">Next</button><br><br>
+</div>
+</div>
