@@ -1132,3 +1132,4 @@ MyPort/obj/Release/TransformWebConfig/assist/Web.config
 MyPort/obj/Release/TransformWebConfig/original/Web.config
 MyPort/obj/Release/TransformWebConfig/transformed/Web.config
 MyPort/obj/Debug/MyPort.csproj.CopyComplete
+/MyPort/obj
