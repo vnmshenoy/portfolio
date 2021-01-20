@@ -10,6 +10,7 @@ Inherits="MyPort.Default" %>
     <meta name="author" content="John Doe" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="all,follow" />
+    <meta name="google-site-verification" content="dWG2a1z3RHLlXh1S7qiO5smyAjLgX_IyD7Bb1ErLfWQ" />
     <script
       async
       src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
