@@ -192,11 +192,10 @@ Inherits="MyPort.Default" %>
               <div class="col-sm-6 text-left" data-animate="fadeInUp">
                 <p class="pfont">
                   My name is <b>Manju</b> and I'm a Web developer, Mobile
-                  Developer,Freelancer and a partime Programming Trainer. I am
-                  based in Australia and I have over 10 years of Web Development
-                  experience. I love working with modern technologies, building
-                  and designing awesome projects and pushing boundaries.I also
-                  possess a large array of experience and skills in everything
+                  Developer,Freelancer and a partime Programming Trainer.I have 
+                  over 10 years of Web Development  experience. I love working 
+                  with modern technologies, building  and designing awesome projects 
+                  and pushing boundaries.I also possess a large array of experience and skills in everything
                   from web development to web design to even software
                   development. Passionate and serious about my work, I always
                   give 100%. I like sharing my knowledge and learning from
