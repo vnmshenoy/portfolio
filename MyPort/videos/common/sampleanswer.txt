@@ -1,0 +1,10 @@
+ok so i have first hand experience of having a unit test with no unit tests. Our projects initially didnt have any unit test and this is some 10 year old code . then we started implementing it slowly and have unit tests for atleast new functionalities and some unit test for old code. It’s kind of a journey. Now there are lot of advantages when you integrate it with build jenkins etc, but since your question is about disadvantages then let me point them down
+1. Steep learning curve. It’s not only about learning framework (like easymoq etc) but also about the mindset. When you introduce unitesting in the team ,mindset of the team is why unit testing (if they haven’t written it already). It’s takes time and experience with unit tests to actually see benefits of it
+2. Need to accommodate more time for unit tests. So how unit tests works is that  they take time upfront and show benefits only when you have a bunch of them and when you want to check your functionality at later point of time. What i mean is it going take time to write unit tests. So when you do an estimation about your requirement/user story you need to  consider the unit tests as well.  Not to say you need to let your manager know as well
+3. Blindly believing unit tests. In an ideal world, unit tests need to capture all scenarios and therefore will fix /most of bugs. But in real world few developers may take shortcut or miss unit tests may be because pressed against time. So we may be in a false hope that unit test cover all scenarios 
+
+
+Thats all i can think of as of now. hope it was helpful.
+I do write technical blogs and have a youtube channel..links below :-) 
+Manju's blog- My Interest, My Hobby (https://www.manjustechblog.com/)
+https://www.youtube.com/channel/UCTF4hq3h0ri4xEMOKniPlbA (https://www.youtube.com/channel/UCTF4hq3h0ri4xEMOKniPlbA)

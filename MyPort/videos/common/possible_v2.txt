@@ -1,0 +1,203 @@
+DB
+generating data - biggest challenge-spend time ..share data an schema
+    https://www.w3resource.com/sql/sql-table.php
+    http://filldb.info/
+sql concatemate with null
+pivot db-https://www.sqlservertutorial.net/sql-server-basics/sql-server-pivot/
+         https://www.databasejournal.com/features/mssql/converting-rows-to-columns-pivot-and-columns-to-rows-unpivot-in-sql-server.html
+sql concatentating issue when dob -Conversion failed when converting date and/or time from character string.
+   https://stackoverflow.com/questions/45052528/concatenate-string-date-in-sql-server
+   select DateOfBirth from qm.Event
+   select DateOfBirth from qm.Event
+    select CONVERT(VARCHAR(10), DateOfBirth, 112) from qm.event(my date was in 2008-02-03 00:00:00.000)
+   https://www.w3schools.com/sql/func_sqlserver_convert.asp
+https://dzone.com/articles/generate-database-scripts-with-data-in-sql-server
+search string in data sp
+executeScalar
+  best one row one cell
+
+calling one sp from another sp with out parameter
+   - eventcreate sp
+   -https://stackoverflow.com/questions/15802511/execute-a-stored-procedure-in-another-stored-procedure-in-sql-server
+   -https://www.c-sharpcorner.com/blogs/callingexecuting-sql-stored-procedure-from-another-stored-procedure1
+   -https://blog.sqlauthority.com/2013/04/07/sql-server-pass-one-stored-procedures-result-as-another-stored-procedures-parameter/
+
+https://blog.sqlauthority.com/2012/06/06/sql-server-tricks-to-replace-select-with-column-names-sql-in-sixty-seconds-017-video/
+
+dynamically running sp (eg schema has history or qm .eg sp QM.PatientActivityAuditDetails or QM.[GetAppointmentBillingData]
+query execution plan (there is a document in project learning)
+pivot
+ https://codingsight.com/understanding-pivot-unpivot-and-reverse-pivot-statements/
+ https://blog.devart.com/is-unpivot-the-best-way-for-converting-columns-into-rows.html
+
+----------------------------
+
+C#
+blacklist validation/regex pattern for validations
+sending email from your custom domain and your first C# project
+postman mock server vs .net mock server
+ How can I use optional parameters in a T-SQL stored procedure?
+	- https://stackoverflow.com/questions/1810638/optional-parameters-in-sql-server-stored-proc/1810663
+simple c# project creating steps
+setting up  IIS server local
+out variable to use-
+	- https://www.codeproject.com/articles/794765/sql-server-how-to-write-stored-procedures-with-out
+        - https://stackoverflow.com/questions/10905782/using-stored-procedure-output-parameters-in-c-sharp
+        - https://www.c-sharpcorner.com/blogs/example-on-how-to-use-output-parameter-in-stored-procedure-in-c-sharp
+size is important and should be equal to length of what we have in db sp without which i was getting this error
+String[1]: the Size property has an invalid size of 0.
+
+        IDbDataParameter o_id = command.CreateParameter(); 
+                        o_id.ParameterName = "?EventIdToBeReturned";
+                        o_id.DbType = DbType.String;
+                        o_id.Direction = ParameterDirection.Output;
+                        o_id.Size = 100;
+                        command.Parameters.Add(o_id); 
+how to pass string value pair as parameter and call from c#
+     https://www.c-sharpcorner.com/UploadFile/ff2f08/table-value-parameter-use-with-C-Sharp/
+      used in waitingroomDAL
+
+updating typebased on value
+ SET @internalType=
+	  CASE @Type
+	  WHEN  UPPER(@Type)  THEN  'CREATE_WALKIN_XRAY'
+	  ELSE 'WALKIN'
+	 END
+XML auto
+   
+
+       --inspired from https://www.mssqltips.com/sqlservertip/2899/importing-and-processing-data-from-xml-files-into-sql-server-tables/
+
+   	DECLARE @XML  AS nvarchar(max), @hDoc AS INT, @SQL NVARCHAR (MAX)
+
+	set  @XML ='<?xml version="1.0" encoding="UTF-16"?>
+	<ArrayOfKeyValueItem xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<KeyValueItem value="value1" key="key1"/>
+
+	<KeyValueItem value="value2" key="key2"/>
+
+	</ArrayOfKeyValueItem>'
+
+	EXEC sp_xml_preparedocument @hDoc OUTPUT, @XML
+
+	SELECT [Key], [value]
+	FROM OPENXML(@hDoc, '/ArrayOfKeyValueItem/KeyValueItem')
+	WITH 
+	(
+	[key] [varchar](50) '@key',
+	[value] [varchar](100) '@value'
+	)
+
+	EXEC sp_xml_removedocument @hDoc
+	GO
+Calling XML auto from C#
+  use XMLSerialize
+  using automapper
+           public class erica
+        {
+            public string fn { get; set; }
+            public string ln { get; set; }
+        }
+        public class manju
+        {
+            public string fn { get; set; }
+            public string ln { get; set; }
+            public string fullname { get; set; }
+        }
+        public KeyValueItemProfile()
+        {
+            CreateMap<erica, manju>().ForMember(dest => dest.fullname,
+                opt => opt.MapFrom(src => src.fn + " "+ src.ln))
+                ;
+}
+
+
+JS
+https://www.dashingd3js.com/lessons/javascript-callback-functions
+---
+
+
+    
+
+
+
+
+
+--------
+misc 
+ how to include prettier in notepad ++
+       plugin manager
+	xml tools
+ html 11 visual studio extensio -gives desktop mobile preview
+
+local history -VSHistory
+how to insert code snippets in html retaining code highlights (use prism.js and prism .css -https://www.taniarascia.com/adding-syntax-highlighting-to-code-snippets/
+----------
+  
+---------
+videos
+jquery templating-reusing code
+interestin quick - copy paste - https://stackoverflow.com/questions/22581345/click-button-copy-to-clipboard-using-jquery look at  answer by Aug 23 at 4:06
+			Ehsan88. I have used the sam logic i my portofloi's sqlBasicQueries.html
+json-mockserver
+    react and json server
+        https://spin.atomicobject.com/2018/10/08/mock-api-json-server/
+	faker-https://medium.com/codingthesmartway-com-blog/create-a-rest-api-with-json-server-36da8680136d
+        https://www.twilio.com/blog/react-app-with-node-js-server-proxy
+        https://www.section.io/engineering-education/guide-to-create-mock-server/
+
+	https://www.youtube.com/watch?v=xdxbbbm2aXU
+        https://codingthesmartway.com/create-a-rest-api-with-json-server/
+	https://java2blog.com/json-server/https://java2blog.com/json-server/
+	
+	https://www.rahulpnath.com/blog/setting-up-a-fake-rest-api-using-json-server/   - customizing and configuring JSON Server for som
+	https://shekhargulati.com/2019/07/10/how-to-setup-json-server-to-use-custom-id-and-route/
+	https://stackoverflow.com/questions/43278348/json-server-can-we-use-other-key-instead-of-id-for-post-and-put-request
+	https://developer.okta.com/blog/2018/09/13/build-and-understand-express-middleware-through-examples
+
+	
+
+		postman??how to use??
+		postman vs json-serve (can do put delete etc)
+		postman how to share and import (refer it in json server demo)
+                
+
+gitthrowing error which says git repo forbidden
+   1)create git repo on github website
+   2)pull
+   3)add
+   4)commit
+   5)push gives error forbidden 403
+   6_) to fix ,select folder, tortoise git-->settings -->git--> credential and simply enter username= manjusa
+                   
+pivot db
+c# mock server-https://medium.com/fabricgroup/using-mock-server-with-refit-to-test-restful-api-integration-802f377c4c6e
+unit tests
+automapper -device api (look for  ClinicDisplayProfile:Profile etc)
+DRY
+react
+emmet-https://docs.emmet.io/cheat-sheet/
+	https://docs.emmet.io/abbreviations/syntax/
+      https://code.visualstudio.com/docs/editor/emmet
+	https://www.freecodecamp.org/news/write-html-css-faster-with-emmet-cheat-codes/
+SQL SERVER – Tricks to Replace SELECT * with Column Names – SQL in Sixty Seconds #017 –
+
+how to pass list of objects to stored procedure using type( WaitingRoom)
+reseeding database
+
+-----------------------
+future
+ ldap queries
+RAISERROR vs THROW - SQL Tutorials -look at call qm-1304 and document attached with it
+  appinsights
+https://blog.hubspot.com/marketing/youtube-thumbnail (also add lucidpress)
+github pluralsight
+embed youtub video on your site
+	https://www.youtube.com/watch?v=9YffrCViTVk
+integrating your app with linkied api(eg my blogs itself share using linkedin)
+drone prgoramming using pythin
+youtube
+	creating watermark 
+              https://www.youtube.com/watch?v=XbLD17LAlNc&feature=emb_logo quick and easy
+        banner images
