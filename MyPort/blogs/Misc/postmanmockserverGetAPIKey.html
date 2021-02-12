@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2264462236439566",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-131742548-1");
+    </script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../js/prism.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".header").load("../../baseheader.html", function () {
+          setTimeout(
+            $("#headermenu").load("../../header.html #menu", function () {}),
+            250
+          ); // try diff. values
+        });
+      });
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="robots" content="all,follow" />
+    <meta name="googlebot" content="index,follow,snippet,archive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SManju</title>
+
+    <meta name="keywords" content="" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Bootstrap and Font Awesome css -->
+    <link
+      rel="stylesheet"
+      href="../../vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS-->
+    <link
+      rel="stylesheet"
+      href="../../vendor/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../../css/style.default.css" />
+    <link rel="stylesheet" href="../../css/prism.css" />
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"
+    ></script>
+
+    <!-- *** NAVBAR ***
+_________________________________________________________ -->
+    <header class="header"></header>
+    <!-- /#navbar -->
+
+    <br />
+    <section class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h3>
+              Postman - Generating API keys and making Postman API calls
+              <span style="font-size: 12px; color: blueviolet"
+                >28th Jan 2021</span
+              >
+            </h3>
+            <p>
+              In this blog we will learn how to use various Postman API's,
+              generate Postman API key inorder to call Postman endpoints and how
+              to retrieve all collections and their details associated with your
+              postman id.
+            </p>
+            <h6>Generating API key</h6>
+            <ul style="display: inline">
+              <li>
+                <b>Step 1)</b> Get an API key - First go to official Postman
+                website to generate a API key. Click on below link
+                <a
+                  href="https://planetary-capsule-990149.postman.co/settings/me/api-keys"
+                  >Postman Api key generation link</a
+                ><br />
+                Clicking on the link will prompt <b>you to login</b>. Once
+                succesfully logged in you can generate the key. After generating
+                the key you should see something like below. Ensure that you
+                save the API key somewhere safe because you can't get the full
+                key again.Even after you login to Postman,your API key would
+                have been masked,for security reasons. You can only view an
+                unmasked API key immediately after generating it.So remember to
+                keep your API key safe
+                <img
+                  src="postmanmockserver/10postmanapikey.PNG"
+                  alt="postmanapikey"
+                  class="img-fluid"
+                />
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Step 2).</b> Get all collections in the given workspace.Call
+                endpoint <b>https://api.getpostman.com/collections</b> and donot
+                forget to send api-key (the one you generated above) in the
+                header
+                <img
+                  src="postmanmockserver/11getallcolections.PNG"
+                  alt="getallcolections"
+                  class="img-fluid"
+                />
+                If you notice the response, you will see a bunch of
+                collections,all assoicated with your postman id. In this case
+                look for "librarymockserver" and grab the uid.This uid you will
+                need for your next request
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Step 3). Get details of a particular collection </b> i.e
+                "librarymockserver" in this case. If you are wondering where did
+                "librarymockserver" come from then please refer my blog
+                <a href="postmanmockserverbasicsetup.html"
+                  >Postman basic setup</a
+                >. <br />
+                We already grabbed the uid of that collection in above step, so
+                now we need to call
+                <b>https://api.getpostman.com/collections/{{collection_uid}}</b
+                >. Replace {{collection_uid}} with the value of uid we captured
+                in step 2. Donnot forget to send the <b>x-api-key</b> in the
+                header
+                <img
+                  src="postmanmockserver/12getacollection.PNG"
+                  alt="getacollection"
+                  class="img-fluid"
+                />
+                if you notice the response, you will see a detailed information
+                about the collection inclduing the egamples you have configured.
+                As we know we did configure 2 examples for our books endpoint
+                i.e books_200 and books_500.Search with the egample
+                name(books_200) in the result set and you should see <b>id</b>
+                associated with it.Keep id and name handy.
+              </li>
+            </ul>
+            <p>
+              To see how to use <b>x-mock-response-id</b> and
+              <b>x-mock-response-name </b> refer my blog
+              <a href="postmanmockserverbasicsetup.html">Postman basic setup</a
+              >. In that blog look for heading "How to use x-mock-response-name
+              or x-mock-response-id"
+            </p>
+            <h5>Official Documentation</h5>
+            <p>
+              For full documentation on generatin API keys refer Postman
+              Documenation below
+              <a
+                href="https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a#647806d5-492a-eded-1df6-6529b5dc685c"
+                >Official Postman website</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <p>
+              And that's it. Hope you undertood how to customize JSON server.
+              .Email me at "techspacedeck@gmail.com" incase you have queries.
+              Alternatively, you can fill the "CONTACT" form or drop a comment
+              below
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="padding: 10px !important">
+      <div class="container">
+        <h4>
+          Did you like the blog or have questions, please add your comments
+        </h4>
+        <div id="graphcomment"></div>
+        <script type="text/javascript">
+          /* - - - CONFIGURATION VARIABLES - - - */
+
+          // make sure the id is yours
+          window.gc_params = {
+            graphcomment_id: "www-manjustechblog-com",
+
+            // if your website has a fixed header, indicate it's height in pixels
+            fixed_header_height: 0,
+          };
+
+          /* - - - DON'T EDIT BELOW THIS LINE - - - */
+
+          (function () {
+            var gc = document.createElement("script");
+            gc.type = "text/javascript";
+            gc.async = true;
+            gc.src =
+              "https://graphcomment.com/js/integration.js?" +
+              Math.round(Math.random() * 1e8);
+            (
+              document.getElementsByTagName("head")[0] ||
+              document.getElementsByTagName("body")[0]
+            ).appendChild(gc);
+          })();
+        </script>
+      </div>
+    </section>
+    <!-- /#navbar -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-left">
+            <p class="social">
+              <a
+                href="http://www.facebook.com/shenoyvnm
+                            "
+                class="external facebook wow fadeInUp"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a
+                style="background-color: grey"
+                href="http://www.linkedin.com/in/manjunathshenoywebdev"
+                class="external linkedin wow fadeInUp"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </p>
+          </div>
+
+          <!-- /.6-->
+          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+            <p>© 2018 SManju. All rights reserved.</p>
+          </div>
+          <div class="col-12 mt-4">
+            <p class="template-bootstrapious">
+              Designed by
+              <a href="https://www.bootstrapious.com">Bootstrapious</a>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

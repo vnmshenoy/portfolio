@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2264462236439566",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-131742548-1");
+    </script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../js/prism.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".header").load("../../baseheader.html", function () {
+          setTimeout(
+            $("#headermenu").load("../../header.html #menu", function () {}),
+            250
+          ); // try diff. values
+        });
+      });
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="robots" content="all,follow" />
+    <meta name="googlebot" content="index,follow,snippet,archive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SManju</title>
+
+    <meta name="keywords" content="" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Bootstrap and Font Awesome css -->
+    <link
+      rel="stylesheet"
+      href="../../vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS-->
+    <link
+      rel="stylesheet"
+      href="../../vendor/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../../css/style.default.css" />
+    <link rel="stylesheet" href="../../css/prism.css" />
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"
+    ></script>
+
+    <!-- *** NAVBAR ***
+_________________________________________________________ -->
+    <header class="header"></header>
+    <!-- /#navbar -->
+
+    <br />
+    <section class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h3>
+              Postman- Setting Up Mock Server and creating API's
+              <span style="font-size: 12px; color: blueviolet"
+                >14th Jan 2021</span
+              >
+            </h3>
+            <p>
+              In this blog we will learn about Postman mock server. Postman have
+              this unique feature of mock servers that allow developers to
+              <b>simulate an endpoint</b> without the need of actually spinning
+              up a back-end server.Postman has now included a new feature to
+              help you even further.This new feature allows you to set mock
+              responses.This feature is called <b>Examples</b>. We will see how
+              to use them below.
+            </p>
+            <h6>Creating API's and Mock Server</h6>
+            <ul style="display: inline">
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                In most of the images I used below, I have marked
+                <span style="color: red"><b>items in red</b></span> so that you
+                can notice what am referring to more easily
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Step 1)</b> Open Postman App and <b> create a workspace</b>.I
+                created
+                <b>"mockserverdemo"</b>
+                <img
+                  src="postmanmockserver/0createWS.PNG"
+                  alt="createws"
+                  class="img-fluid"
+                /><br /><br />
+                Workspace is created
+                <img
+                  src="postmanmockserver/0WSCreated.PNG"
+                  alt="WSCreated"
+                  class="img-fluid"
+                /><br /><br />
+              </li>
+
+              <li class="liStyleWithoutDots">
+                <b>Step 2)</b> Now that worksace is created lets
+                <b>create a Mock Server </b>.Click on "New" on top left and then
+                click <b>New Mock Server</b> as shown on image below(marked in
+                red).
+                <img
+                  src="postmanmockserver/1CreateNewMockServer.PNG"
+                  alt="CreateNewMockServer"
+                  class="img-fluid"
+                />
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Step 3)</b> Imagine we are creating an Library Application
+                and say, we need two api's namely <b>books</b> and
+                <b>authors</b>. So lets create a 2 Endpoints for this
+                collection. Also, adding sample JSON response we are expecting
+                (assume api schema is already decided). Now, we have books and
+                authors , two endpoints configured with predefined responses.
+                Other thing to note is the response code configured for both the
+                requests(200 for both)
+                <img
+                  src="postmanmockserver/2twoendpoints.PNG"
+                  alt="twoendpoints"
+                  class="img-fluid"
+                /><br /><br />
+                You can download both sample responses from my github link
+                <a
+                  href="https://github.com/manjusa/postmansamplecollection.git"
+                >
+                  Github link to sample responses </a
+                >Files are named "<b>samplebooks"</b> and
+                <b>"sampleauthors"</b>.
+                <br />
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Step 4) </b>Name the mock server. I named it
+                <b>librarymockserver</b>
+                <img
+                  src="postmanmockserver/3namems.PNG"
+                  alt="mockservername"
+                  class="img-fluid"
+                />
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Step 5)</b> You will see collection is created with the same
+                name as well. In this case "librarymockserver".Now that
+                mockserver is setup,<b>copy the base url</b>. You will need it
+                for all subsequent requests you want to make
+                <img
+                  src="postmanmockserver/4copybaseurl.PNG"
+                  alt="mockservername"
+                  class="img-fluid"
+                />
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Info)</b> Before we move any further let's pause and
+                understand
+                <b>What are Examples and Why do we need them </b>.Like mentioned
+                above, Example is a new feature introduced by Postman. It helps
+                you bind a particular request with a response. i.e it creates
+                tightly coupled request and response pair.
+              </li>
+              <li class="liStyleWithoutDots">
+                <b> Now to answer why we need Examples</b>. In a real world
+                scenario a particular API will throw mutliple responses eg 200
+                for OK,404 not found,500 etc etc. It's pretty useful if you
+                create and save few example responses along side a request.This
+                makes API more understandable,so your colleagues can get a quick
+                overview of it by just looking at examples and they will
+                definitely appreciate it :-). To take a step further, imagine
+                you are going to build an api with an endpoint which doesnot yet
+                exist, or your server just isn't ready. With <b>Egamples</b> you
+                can mock raw responses and save them. Then you will be able to
+                generate a mock endpoint for each of them using Postman’s mock
+                service.With this setup, developers can makes requests to the
+                mock endpoint, and get started with their front-end development
+                work based on the mock response returned from the mock
+                endpoint.This way front end devs can work paralelly along with
+                backend devs,who in turn, may be actually writing the backend
+                code. The whole process becomes streamlined, and this setup
+                leads to get work done parallely and fast.
+              </li>
+              <li class="liStyleWithoutDots">
+                <b> If you look at Step 3 above</b>, while creating the mock
+                server, first step was to <b>create a collection</b> and then
+                give the <b>request path</b> , <b>response code</b> and a
+                <b>response</b>. If you entered those values you already have
+                created an Example(<b>named default</b>)
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Step 6) </b> Click on <b>books</b> on the left, and then
+                click <b>Examples</b> on the right and select first eg
+                <b> i.e default. </b>
+                <img
+                  src="postmanmockserver/6redobooksreq.PNG"
+                  alt="mockservername"
+                  class="img-fluid"
+                />
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Step 7)</b> Clicking on <b>default</b> should open below.
+                There are few points to consider in below image. As usual, I
+                have marked
+                <span style="color: red"><b>them in red</b></span> so that you
+                can notice it
+                <ul>
+                  <li>
+                    There is variable used for base url i.e named
+                    <b>url</b>. Variable is created for us automatically and
+                    setup in environment scope when we were creating mock
+                    server.Refer <b>step 4</b>. Remember, you need to have an
+                    environment setup otherwise this variable can't be used. If
+                    you need to understand various scope do watch my youtube
+                    video below to get better understanding.But please hold on
+                    watching until you finish this blog :-)
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/1xwADzEkFiA"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </li>
+                  <li>
+                    Name of eg is "Default". I will Rename <b> Default" </b> TO
+                    <b>"books_200"</b> as it makes more sense to me.
+                  </li>
+                  <li>
+                    In the <b>example response</b> select <b>body</b> and ensure
+                    that you have <b>JSON</b> selected as this API will return a
+                    JSON back to caller
+                  </li>
+                  <li>
+                    On the right, in example response, we have
+                    <b>status as 200</b>
+                  </li>
+                </ul>
+                <img
+                  src="postmanmockserver/6aclickingOnDefault.PNG"
+                  alt="6aclickingOnDefault"
+                  class="img-fluid"
+                />
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Info) </b> Also, assume that you also want to configure books
+                with a <b>500 response</b> .This is required if you want your
+                API throw an exception. This would mimic an unexpected exception
+                and the front end developers can write code to handle it
+                properly and gracefully.
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Step 8)</b> Let's create an Example for 500 error.I will call
+                this Example <b>books_500</b>. Again, click on "books" as you
+                did on step 6 and then click on <b>Add Exampl</b>e on the
+                right.Clicking that will open up a window.Enter the details
+                .Image for reference below. All important points
+                <span style="color: red"><b>marked in red</b></span
+                >. Save egample.
+                <img
+                  src="postmanmockserver/7books_500error.PNG"
+                  alt="books_500error"
+                  class="img-fluid"
+                />
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Step 9)</b> Now you have 2 Examples configured.books_200 and
+                books_500.I had no envorinment setup so I will have to copy the
+                base url to replace the variable {{url}} Incase you don't have
+                the mock url copied anywhere, you can get it by clicking your
+                mockserver. Image for reference below
+                <img
+                  src="postmanmockserver/8copymockurl.PNG"
+                  alt="copymockurl"
+                  class="img-fluid"
+                />
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Step 10) </b>Now let's actually create a mock request so that
+                we match one of the saved examples. Let's create the mock
+                request so that we get response set in <b>books_200 Example</b>.
+                Important part is setting <b>x-mock-response-code</b> as
+                <b>200 in the request header</b> as shown below.Click on "send"
+                and you will get response as expected which was set in books_200
+                example.
+                <img
+                  src="postmanmockserver/9books200req.PNG"
+                  alt="copymockurl"
+                  class="img-fluid"
+                /><br /><br />
+                Same way if you set <b>x-mock-response-code</b> as
+                <b>500 in the request header</b> then you will get
+                <b>error we configured</b>(book_500). Isn't this feature handy
+                :-)
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Info)</b> In above example mock request, we used
+                x-mock-response-code to retrieve the saved example
+                response.Similarly, other optional headers like
+                <b>x-mock-response-name</b> or <b>x-mock-response-id</b> can be
+                used
+              </li>
+            </ul>
+            <br />
+            <h6>
+              How to use <b>x-mock-response-name</b> or
+              <b>x-mock-response-id</b>
+            </h6>
+            <p>
+              To get the <b>x-mock-response-id</b> or in that matter even
+              <b>x-mock-response-name</b> you need to make certain Postman API
+              calls. The Postman API endpoints help you integrate Postman within
+              your development toolchain.You need a valid <b>api-key</b> to send
+              requests to those Postman API's. Please follow my blog to see step
+              by step process to register and get an API key.Also, in that blog
+              you will see how to grab <b>x-mock-response-name</b> and
+              <b>x-mock-response-id</b> which are used in request below
+              <a href="postmanmockserverGetAPIKey.html"
+                >Postman Get API key and retrieve collection details</a
+              >
+            </p>
+
+            <ul style="display: inline">
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                <b>x-mock-response-name - </b>. Send the request again with name
+                in the header .Call it <b>x-mock-response-name</b> and send the
+                request as shown below
+                <img
+                  src="postmanmockserver/13getbooksbyname.PNG"
+                  alt="getbooksbyname"
+                  class="img-fluid"
+                />
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>x-mock-response-id</b> You can send the request with
+                <b>x-mock-response-id</b> in the header as well.
+                <img
+                  src="postmanmockserver/14getbooksbyid.PNG"
+                  alt="getbooksbyid"
+                  class="img-fluid"
+                />
+              </li>
+            </ul>
+            <h6>
+              How the incoming mock request matches one of the saved Egample
+            </h6>
+            <p>
+              Postman uses it's own algorithm. I have put the link to their
+              official website in "Official Documenation" section below. But i
+              will explain the algorithm in simpler way but not in as detail as
+              Postman ofcourse.
+            </p>
+            <ul style="display: inline">
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                <b>Properly formatted responses</b>- Responses that are not in
+                matching format are removed from the matching process
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>HTTP method</b>- Pretty obvious. Any responses that are not
+                the same as HTTP method type are removed from the matching
+                process.For eg, if your mock request sent to , like say you do a
+                <b>POST</b> to http/{baseurl}/books then all saved egamples
+                whose method type is not POST will be removed. Therefore, as per
+                my saved Examples,nothing will be matched because I had no POST
+                for books at all.I only had <b>books_200</b> and
+                <b>books_500</b> configured both of which were only GETs
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Filter by URL</b> I will not dwelve into it but will
+                touchbase on it with an eg. I have created a separate blog for
+                the same. Afterall we just need to get our work done and not
+                masterize the algorithm in most cases. Link to the blog in
+                "Learn More" section below
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Wildcards</b> If you donot have the variable configured in
+                the mock server's associated environment,then those variables
+                are treated as <b>Wildcards</b>. Again, I will explain that in a
+                separate blog.Link to the blog in "Learn More" section below
+              </li>
+            </ul>
+            <br />
+            <h5>Learn more</h5>
+            <p>
+              If you want to learn how to configure multiple responses for same
+              response status code, how to use Wildcards etc refer my blog
+              <a href="postmanmockserverGetAPIKey">Postman-Advanced</a>
+            </p>
+
+            <h5>Official Documentation</h5>
+            <p>
+              For full documentation you can refer official Postman website
+              <a
+                href="https://learning.postman.com/docs/designing-and-developing-your-api/mocking-data/mock-with-api/"
+                >Official Postman website -mocking with API</a
+              >
+              <!--  <a
+                href="https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a#647806d5-492a-eded-1df6-6529b5dc685c"
+                >Official Postman website</a
+              > -->
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <p>
+              And that's it. Hope you undertood how to customize JSON server.
+              .Email me at "techspacedeck@gmail.com" incase you have queries.
+              Alternatively, you can fill the "CONTACT" form or drop a comment
+              below
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="padding: 10px !important">
+      <div class="container">
+        <h4>
+          Did you like the blog or have questions, please add your comments
+        </h4>
+        <div id="graphcomment"></div>
+        <script type="text/javascript">
+          /* - - - CONFIGURATION VARIABLES - - - */
+
+          // make sure the id is yours
+          window.gc_params = {
+            graphcomment_id: "www-manjustechblog-com",
+
+            // if your website has a fixed header, indicate it's height in pixels
+            fixed_header_height: 0,
+          };
+
+          /* - - - DON'T EDIT BELOW THIS LINE - - - */
+
+          (function () {
+            var gc = document.createElement("script");
+            gc.type = "text/javascript";
+            gc.async = true;
+            gc.src =
+              "https://graphcomment.com/js/integration.js?" +
+              Math.round(Math.random() * 1e8);
+            (
+              document.getElementsByTagName("head")[0] ||
+              document.getElementsByTagName("body")[0]
+            ).appendChild(gc);
+          })();
+        </script>
+      </div>
+    </section>
+    <!-- /#navbar -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-left">
+            <p class="social">
+              <a
+                href="http://www.facebook.com/shenoyvnm
+                            "
+                class="external facebook wow fadeInUp"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a
+                style="background-color: grey"
+                href="http://www.linkedin.com/in/manjunathshenoywebdev"
+                class="external linkedin wow fadeInUp"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </p>
+          </div>
+
+          <!-- /.6-->
+          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+            <p>© 2018 SManju. All rights reserved.</p>
+          </div>
+          <div class="col-12 mt-4">
+            <p class="template-bootstrapious">
+              Designed by
+              <a href="https://www.bootstrapious.com">Bootstrapious</a>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
