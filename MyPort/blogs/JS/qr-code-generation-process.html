@@ -43,8 +43,8 @@
     <meta name="googlebot" content="index,follow,snippet,archive" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SManju</title>
-
+    <title>Qr Code Generation Process & Reading Using Javascript | Manju’s Tech Blog</title>
+      <meta name="description" content="Know Qr Code Generation Process & Reading Using Javascript. In this blog we will see how to gerenate QR code on your website and read it as well. Read Latest Tutorials Now!">
     <meta name="keywords" content="" />
     <link
       href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100"
@@ -62,6 +62,7 @@
       href="../../vendor/font-awesome/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="../../css/style.default.css" />
+    <link rel="canonical" href="https://manjustechblog.com/blogs/JS/qr-code-generation-process.html" />
   </head>
 
   <body>
@@ -77,32 +78,31 @@ _________________________________________________________ -->
     <header class="header"></header>
     <!-- /#navbar -->
 
-    <br />
+    <br /><br />
     <section class="about-section">
       <div class="container">
         <div class="row">
-          <div class="col-sm-9">
+          <div class="col-sm-9 themed-grid-col">
             <h3>
-              Methods to create Date object in Javascript
+              QR code generation and reading using Javascript
               <span style="font-size: 12px; color: blueviolet"
-                >05th June 2020</span
+                >25th Sep 2020</span
               >
             </h3>
-            <p>
-              In this blog we will see how we can creates "Dates" using
-              Javascript's Date function.
+            <p class="text-left">
+              <b>In this blog</b> we will see how to gerenate QR code on your
+              website and read it as well.
             </p>
             <b> What we will achieve at the end of this blog</b>
             <p>
-              At the end of this tutorial, we will see various ways to create
-              Dates in Javascript. Idea is to get more familiar with the Date()
-              and its overloaded options provided to us by Javascript.
+              At the end of this tutorial, we will see how to generate and read
+              QRcodes using Javascript
             </p>
             <p>
               <b>Source code</b> of the functionality
               <a
                 style="font-weight: bold"
-                href="https://github.com/manjusa/datecreatingoptionsinjs.git"
+                href="https://github.com/manjusa/qrcodegeneration.git"
                 >Github Link</a
               >
             </p>
@@ -113,13 +113,29 @@ _________________________________________________________ -->
             <br />
             <video width="100%" height="330" controls>
               <source
-                src="../../videos/creatingdate/datecreatingoptions.mp4"
+                src="../../videos/qrcode/QRCodegerenationandread.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
             </video>
             <ul style="padding-left: 0px">
-              <b>JS to be downloaded</b>
+              <b> JS to be downloaded</b>
+              <li style="margin-left: 30px">
+                QRCode Generator<a
+                  style="font-weight: bold"
+                  href="https://github.com/davidshimjs/qrcodejs/blob/master/qrcode.js"
+                >
+                  Link to download</a
+                >
+              </li>
+              <li style="margin-left: 30px">
+                QRCode Decoder<a
+                  style="font-weight: bold"
+                  href="https://www.npmjs.com/package/qrcode-decoder"
+                >
+                  Link to download</a
+                >
+              </li>
               <li style="margin-left: 30px">
                 jQuery
                 <a
@@ -149,112 +165,30 @@ _________________________________________________________ -->
               </li>
             </ul>
             <p>
-              So what we are trying to achieve is quite clear from the
-              demo/video above.Basically, we are trying to explore various ways
-              with which we can create dates in Javascript.I used to find it
-              tricky when dealing with dates in Javascript and thought of
-              putting all together in one place.I assume this will help you guys
-              as well. There may be other ways to creating dates so feel free to
-              add them below in comments and I will accomodate
+              <b>P.S</b>I modified the original QRCodeGenerator script (QRCode
+              Generator) a bit since I found that "clear()" function was not
+              doing the intended thing i.e clearing the existing "QRCode". It
+              might be a bug or so but am not sure. Anyway, I modified the
+              script and in my source code am using "qrcode_ms.js" which has one
+              extra function which clears the QRCode. You can download the
+              Javascript file from my git repository if you cant make "clear()"
+              work with original script
             </p>
-
-            <p>
-              <b>PS</b> You will see that i have used callback functions to make
-              code reusable
-            </p>
-            <b
-              >Like we saw in the demo, we have 4 approaches to accomplish
-              this.I have added below a quick snapshot of the createDate()
-              function i wrote which is a wrapper over Javascripts Date
-              function. In the createDate() function you will see all the 4
-              approaches(if else statements)</b
-            >
             <br /><br />
-            <ul style="padding-left: 0px">
-              <li style="margin-left: 30px">
-                <p>
-                  First,we are creating Dates by calling new Date() and passing
-                  no arguments
-                </p>
-              </li>
-              <li style="margin-left: 30px">
-                <p style="margin-bottom: 0rem">
-                  Second, we take inputs of Year, Month and Day from the User.If
-                  you wish you can also take input of hours,seconds and
-                  milliseconds.<br />
-                  The inputs entered by User are captured and passed as argument
-                  to Javascript's Date function. Javascript's date function
-                  takes
-                </p>
-                <ul>
-                  <li>Year</li>
-                  <li>Month</li>
-                  <li>Day</li>
-                  <li>Hours</li>
-                  <li>Minutes</li>
-                  <li>Seconds</li>
-                  <li>Milliseconds</li>
-                </ul>
-                <p>
-                  as arguments, in the order they are passed. Incase you skip
-                  the argument, then it defaults to 0. In our eg, we only pass
-                  the first 3 arguments, i.e Year,Month and Day therefore rest
-                  all becomes 0. One interesting thing I learnt is that month is
-                  0 based in Javascript. i.e 0 refers to January and 11 means
-                  December.This is little tough to comprehend but yeah that is
-                  how the Date Javascript function works.
-                </p>
-              </li>
-              <li style="margin-left: 30px">
-                <p style="margin-bottom: 0rem">
-                  Third option is to pass the Date a String as a paramenter.
-                  Some Eg which you can try entering are:
-                </p>
-                <ul>
-                  <li>Ocotber 3</li>
-                  <li>Ocotber 3,2019</li>
-                  <li>October 13, 2019 11:13:00</li>
-                  <li>October 13, 2019 11:13:00</li>
-                </ul>
-              </li>
-              <li style="margin-left: 30px">
-                <p style="margin-bottom: 0rem">
-                  Last option we see is just passing the milliseconds.One thing
-                  to understand is that JavaScript stores dates as number of
-                  milliseconds since January 01, 1970, 00:00:00 UTC (Universal
-                  Time Coordinated).You can try passing values like
-                </p>
-                <ul>
-                  <li>0</li>
-                  <li>10000</li>
-                </ul>
-              </li>
-            </ul>
-
-            <pre style="margin: 0; background: lightgrey">
-function createDate(year,month,day,dateStr,milliseconds){
-            if(year==undefined && month==undefined && day==undefined
-                && dateStr==undefined && milliseconds==undefined)
-                    return new Date(); //First approach- No Arguments
-            else if (year !=undefined && month !=undefined && day !=undefined 
-                 && dateStr==undefined && milliseconds==undefined)
-                    return new Date(year,month,day);//Second approach- Year,Month and Day passed in
-            else if (dateStr !=undefined && year==undefined && month==undefined 
-                 && day==undefined && milliseconds==undefined)
-                    return new Date(dateStr);//Third approach- Date string passed in as argument
-            else
-                    return new Date(milliseconds);//Fourth approach- Argument pass in as milliseconds
-
-                    }
-                                </pre
-            >
-
             <p>
-              So this ends this tutorial where we saw various options to create
-              Dates in Javascript.You can download the code I shared from Github
+              In the demo code you will see 2 approaches.<b>First one</b> is
+              hardcoded QR code. You can just use any QRScanner app and scan the
+              code <b>Second One</b> is an approach which allows user to enter
+              any value and a corresponding QR code will be generated
+              dynamically. Then you can click on "Read QRCode generated above"
+              button which will read the QRCode programitically and display the
+              value(you entered initially)
+            </p>
+            <p>
+              So this ends this tutorial where we saw various ways to generate
+              and read QR Codes.You can download the code I shared from Github
               and extend it if you wish.Please feel free to leave comments or
-              questions below. Or you can drop me an email at
-              "techspacedeck@gmail.com"
+              questions below.Alterantively email me at "techspacedeck@gmail.com"
             </p>
           </div>
         </div>
