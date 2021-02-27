@@ -1,0 +1,498 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2264462236439566",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-131742548-1");
+    </script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../js/prism.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".header").load("../../baseheader.html", function () {
+          setTimeout(
+            $("#headermenu").load("../../header.html #menu", function () {}),
+            250
+          ); // try diff. values
+        });
+      });
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="robots" content="all,follow" />
+    <meta name="googlebot" content="index,follow,snippet,archive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SManju</title>
+
+    <meta name="keywords" content="" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Bootstrap and Font Awesome css -->
+    <link
+      rel="stylesheet"
+      href="../../vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS-->
+    <link
+      rel="stylesheet"
+      href="../../vendor/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../../css/style.default.css" />
+    <link rel="stylesheet" href="../../css/prism.css" />
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"
+    ></script>
+
+    <!-- *** NAVBAR ***
+_________________________________________________________ -->
+    <header class="header"></header>
+    <!-- /#navbar -->
+
+    <br />
+    <section class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h3>
+              Postman- creating API's
+              <span style="font-size: 12px; color: blueviolet"
+                >16th Feb 2021</span
+              >
+            </h3>
+            <p>
+              In this blog, we will learn how
+              <b>we can create API's </b> through Postman
+            </p>
+            <img
+              src="postmanapiandschema/createapithroughpostman1.png"
+              alt="createapitrhoughpostman"
+              class="img-fluid"
+            /><br /><br />
+            <h6>Creating API's</h6>
+            <p>
+              With Postman's version 7.1, they have introduced the most exciting
+              feature in the API development and testing industry, i.e, the
+              <b>ability to create an API in Postman itself</b>. This feature is
+              very handy for testing and development purposes. In this tutorial,
+              we will learn how to create an API in Postman.
+            </p>
+            <p>
+              If you are completely new to Postman then I have a complete
+              Postman tutorial. It's a series of 6 videos and hope that will be
+              helpful<br />
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/LHdGpjmOzTg"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </p>
+            <h6>Schema support for API creation in Postman</h6>
+            <p>
+              Postman has this feature where in you can create APIs.While
+              creating API's you can also create the <b>API schema</b>.A schema
+              in general is a computer science term which means an
+              outline,blueprint or a layout of something.
+            </p>
+            <p>
+              I have a separate blog on <b>what is API</b> and
+              <b>what is API Schema</b>.Links below<br /><br />
+              <a href="what-is-api.html">1) What are API's</a><br />
+              <a href="what-is-api.html">2) What is API schema afterall</a>
+            </p>
+            <p>
+              In Postman terms, schema, like I said above, means creating the
+              structure of the API. i.e to say, what parameters and different
+              values it will take and contain. With the schema support in
+              Postman, user can
+              <b> create their APIs, edit the APIs, or import the schema </b
+              >from outside Postman. (say you created a schema using Swagger and
+              then you have the schema on your local machine). <br />The most
+              important purpose for using the schema support is that the user
+              can escape the usage of different tools to perform these
+              operations. Postman can be used as a single software for all of
+              the tasks like a one-stop shop for all. There is support for RAML,
+              WADL, and OpenAPI types.
+            </p>
+            <h6>API tab in Postman and creating an API</h6>
+            <ul style="display: inline">
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                <b>Point 1)</b> The new "APIs" tab exists next to
+                <b>History</b> and <b>Collections </b> tab. Image for referece
+                below<br />
+                <img
+                  src="postmanapiandschema/1api.png"
+                  alt="apibtn"
+                  class="img-fluid"
+                /><br /><br />
+                Ensure that you are <b>signed in to use the APIs tab</b>. If you
+                are not signed in you will see API tab is disabled for
+                you.Therefore, create an account in Postman and sign in
+                succesfully.<br />
+                Click on <b>"+ New API"</b> to create a new API
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Point 2)</b> Clicking on the "+ New API" will open up a new
+                modal where in you can enter details<br />
+                <img
+                  src="postmanapiandschema/2createAPI.png"
+                  alt="createAPI"
+                  class="img-fluid"
+                /><br /><br />
+                If you notice above, I entered the api name as
+                <b>userdetails</b>, gave it a version (eg 1.0.0), chose schema
+                type and schema format.<br />
+                I select <b>YAML</b> as Schema Format for this eg . If you have
+                an API schema already you can import it here using "<b>
+                  select file </b
+                >".For now, i will proceed without selecting any file.Click on
+                <b>Create</b>.
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Point 3)</b> Now you will see a <b>workspace</b> that
+                contains tons of options. I will just talk about the
+                <b>5 tabs</b> you see below
+                <img
+                  src="postmanapiandschema/3workspaceAPI.PNG"
+                  alt="APIworkspace"
+                  class="img-fluid"
+                />
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Point 4)</b> All the tabs we see above help to create a
+                complete API.Each tab has it's own purpose and help developers
+                or testers at certain points in lifecycle of Software
+                Development
+              </li>
+            </ul>
+            <br />
+            <h6>
+              Now let's understand about how and what each tab does for us
+            </h6>
+            <br />
+            <ul style="display: inline">
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                <b>Define tab)</b> The first option
+                <b>holds the schema of the API</b>. By default, you will see a
+                schema is created for you.I will share the schema related with
+                userdetails API. But default schema provided is good enough as a
+                starting point, you know,for your reference.We will see the
+                userdetails schema in the next section subsequently.
+                <img
+                  src="postmanapiandschema/4sampleapischema.png"
+                  alt="sampleapischema"
+                  class="img-fluid"
+                /><br /><br />
+              </li>
+              <br />
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                <b>Develop tab)</b> This option provides
+                <b> additional API features </b>. Through this option, a user
+                can add the endpoint to the mock server, create and publish
+                documentation for the API. And to add to above all, the user can
+                also play with the environment to switch between different
+                setups without changing the request.
+                <img
+                  src="postmanapiandschema/5developtab.png"
+                  alt="developtab"
+                  class="img-fluid"
+                />
+              </li>
+              <li class="liStyleWithoutDots">
+                <b>Test tab)</b> This tab provides a
+                <b> variety of testing options for the tester </b>.Good testing
+                is the base of any good product.Testing ensures that you develop
+                a spotless and great API.It includes creating a new test suite
+                to test the API behaviour, performing integration testing on the
+                API to check if the API works well with the other
+                applications.You can even write <b>contract tests </b> to make
+                sure that the API works according to its specifications.
+                <img
+                  src="postmanapiandschema/6testtab.png"
+                  alt="testtab"
+                  class="img-fluid"
+                />
+              </li>
+              <li class="liStyleWithoutDots" style="margin-top: -5%">
+                <b>Observe tab)</b> This tab allows you to monitor the
+                performance of your API. You can use various conditions and
+                intervals with the help of the Postman Monitors.
+              </li>
+            </ul>
+            <br />
+            <p>
+              <b>All in all</b>, above tabs are quite handy for developing a
+              complete API and can be customized according to your need.<br /><b>
+                Now, let's take our userdetails api we created above forward.
+              </b>
+            </p>
+            <h6>Creating an API in Postman</h6>
+            <p>
+              In this section, we will see how to create a API in Postman. So if
+              you scroll above, in <b>Point 2</b>, I created a
+              <b>userdetails api</b>. For this tutorial, I have created an API
+              specification for your use using Swagger.I have put the schema for
+              your use in my github link.
+              <a href="https://github.com/manjusa/postmansamplecollection"
+                ><b>user details schema</b></a
+              >.You can download <b>userdetailsapischema</b> file and copy the
+              contents and paste it in <b>define tab</b> .<br />
+              Above schema is based on <b>OpenAPI scpecifications</b>. OpenAPI
+              scpecification is a separate topic all together and I may cover it
+              in a separate blog in future.For this tutorial, I will just
+              describe what the <b>userdetailsapischema</b> depicts. Basically,
+              through this schema we are telling that we have a:
+            </p>
+            <ul>
+              <li><b>userdetails</b> API</li>
+              <li>
+                This API supports two HTTP Verbs, namely the <b>GET</b> and a
+                <b>POST</b>
+              </li>
+              <li>
+                <b>GET</b> allows you to search based on a searchString query
+                parameter.
+              </li>
+              <li>
+                <b>GET</b> can either return a <b>200</b> wherein it returns the
+                <b>User</b> object based on the search string entered OR a
+                <b>400 response</b> which means bad input parameter
+              </li>
+              <li>
+                <b>POST</b> can either return a <b>201</b>,<b>400</b> or a
+                <b>409</b>. A successful POST (<b>i.e response 201</b>) means
+                user details entry is created.If response is <b>400</b> or a
+                <b>409</b> that means POST is unsuccessful.
+              </li>
+            </ul>
+            <ul style="display: inline">
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                I have copied the <b>userdetailsapi schema</b> in the Define
+                tab.Once you copy, verify if schema is validated like shown in
+                image below(green tick mark).Also ensure that you <b>Save</b> it
+                and select appropriate standard/format. <b>YAML</b> in this case
+                <img
+                  src="postmanapiandschema/7userdetailsapischemaindefine.PNG"
+                  alt="sampleapischema"
+                  class="img-fluid"
+                /><br /><br />
+              </li>
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                Once you save, you will get a notification as shown below<br />
+                <img
+                  src="postmanapiandschema/8changessaved.PNG"
+                  alt="changessaved"
+                  class="img-fluid"
+                />
+              </li>
+              <br /><br />
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                Now, in order to work upon this API, you need a
+                <b>collection</b>. <b>Postman Collections</b> are a group of
+                saved requests you can organize into folders.Thankfully, Postman
+                does that with just a click of a button. To generate the
+                collection, click on <b>Generate Collection</b>.
+                <img
+                  src="postmanapiandschema/9generateCollection.PNG"
+                  alt="generateCollection"
+                  class="img-fluid"
+                />
+              </li>
+              <br /><br />
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                Give any name of your choice (which makes sense ofcourse) to the
+                collecion and click on generate collection. I name it
+                <b>UserDetailsCollection</b>.You also need to enter
+                <b> What do you want to do with this collection? </b>. I
+                selected for <b>"API Mocking"</b> and then selected
+                <b> Generate Collection button </b>.Now it will also ask you to
+                enter the mockserver name<br /><br />
+
+                <img
+                  src="postmanapiandschema/10WhyCollectionrequired.PNG"
+                  alt="WhyCollectionrequired"
+                  class="img-fluid"
+                /><br /><br />
+                <p>
+                  I have a separte blog on Postman Mockserver.The blog actually
+                  covers differences between Postman Mock server and JSON
+                  server.Link below <br />
+                  <a href="postman-mock-server-vs-json-mock-server.html"
+                    >Postman Mock Server</a
+                  >
+                </p>
+              </li>
+              <br />
+
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                Go to the Collections tab and you will see your collection
+                <br />
+                <br />
+
+                <img
+                  src="postmanapiandschema/11seeyourcollectioninCollectionsTab.PNG"
+                  alt="seeyourcollectioninCollectionsTab"
+                  class="img-fluid"
+                />
+              </li>
+              <br /><br /><br /><br />
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                When you expand your collection,and then click the
+                <b>userdetails API </b> you will see 2 requests. One each for
+                <b>GET</b> and for <b>POST</b>
+
+                <img
+                  src="postmanapiandschema/12userdetailsgetandpost.PNG"
+                  alt="12userdetailsgetandpost"
+                  class="img-fluid"
+                />
+                <br /><br /><br /><br />
+              </li>
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                In the builder section of Postman, the API will be designed for
+                you with the parameters shown.Same way you can see for
+                <b>POST</b> as well
+
+                <img
+                  src="postmanapiandschema/13buildersectionofpostman.PNG"
+                  alt="buildersectionofpostman"
+                  class="img-fluid"
+                /><br /><br />
+              </li>
+            </ul>
+            <br />
+            <h6 style="display: inline">Conclusion.</h6>
+            <p style="display: inline">
+              To conclude,we can say that using this approach we can create a
+              new API within minutes. We also created a mock server. Through
+              mock server one can also achieve Dummy responses (Develop
+              Section). Postman in a way is gaining momentum because it has
+              become kind of one stop shop and is kind of a complete package
+              from where users can design,create an API and deploy it in mock
+              server.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <p>
+              And that's it. Hope you undertood how to customize JSON server.
+              .Email me at "techspacedeck@gmail.com" incase you have queries.
+              Alternatively, you can fill the "CONTACT" form or drop a comment
+              below
+            </p>
+            <a href="https://www.buymeacoffee.com/manjus"
+              ><img
+                src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=manjus&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+            /></a>
+          </div>
+          <br />
+        </div>
+      </div>
+    </section>
+    <section style="padding: 10px !important">
+      <div class="container">
+        <h4>
+          Did you like the blog or have questions, please add your comments
+        </h4>
+        <div id="graphcomment"></div>
+        <script type="text/javascript">
+          /* - - - CONFIGURATION VARIABLES - - - */
+
+          // make sure the id is yours
+          window.gc_params = {
+            graphcomment_id: "www-manjustechblog-com",
+
+            // if your website has a fixed header, indicate it's height in pixels
+            fixed_header_height: 0,
+          };
+
+          /* - - - DON'T EDIT BELOW THIS LINE - - - */
+
+          (function () {
+            var gc = document.createElement("script");
+            gc.type = "text/javascript";
+            gc.async = true;
+            gc.src =
+              "https://graphcomment.com/js/integration.js?" +
+              Math.round(Math.random() * 1e8);
+            (
+              document.getElementsByTagName("head")[0] ||
+              document.getElementsByTagName("body")[0]
+            ).appendChild(gc);
+          })();
+        </script>
+      </div>
+    </section>
+    <!-- /#navbar -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-left">
+            <p class="social">
+              <a
+                href="http://www.facebook.com/shenoyvnm
+                            "
+                class="external facebook wow fadeInUp"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a
+                style="background-color: grey"
+                href="http://www.linkedin.com/in/manjunathshenoywebdev"
+                class="external linkedin wow fadeInUp"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </p>
+          </div>
+
+          <!-- /.6-->
+          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+            <p>© 2018 SManju. All rights reserved.</p>
+          </div>
+          <div class="col-12 mt-4">
+            <p class="template-bootstrapious">
+              Designed by
+              <a href="https://www.bootstrapious.com">Bootstrapious</a>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -10,7 +10,10 @@ Inherits="MyPort.Default" %>
     <meta name="author" content="John Doe" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="all,follow" />
-    <meta name="google-site-verification" content="dWG2a1z3RHLlXh1S7qiO5smyAjLgX_IyD7Bb1ErLfWQ" />
+    <meta
+      name="google-site-verification"
+      content="dWG2a1z3RHLlXh1S7qiO5smyAjLgX_IyD7Bb1ErLfWQ"
+    />
     <script
       async
       src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
@@ -98,7 +101,7 @@ Inherits="MyPort.Default" %>
     <link rel="stylesheet" href="vendor/animate.css/animate.css" />
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet" />
-
+    <link rel="canonical" href="https://manjustechblog.com/" />
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.png" />
 
@@ -193,15 +196,15 @@ Inherits="MyPort.Default" %>
               <div class="col-sm-6 text-left" data-animate="fadeInUp">
                 <p class="pfont">
                   My name is <b>Manju</b> and I'm a Web developer, Mobile
-                  Developer,Freelancer and a partime Programming Trainer.I have 
-                  over 10 years of Web Development  experience. I love working 
-                  with modern technologies, building  and designing awesome projects 
-                  and pushing boundaries.I also possess a large array of experience and skills in everything
-                  from web development to web design to even software
-                  development. Passionate and serious about my work, I always
-                  give 100%. I like sharing my knowledge and learning from
-                  others.Apart from the technical front, am keen on music,sports
-                  and travelling .
+                  Developer,Freelancer and a partime Programming Trainer.I have
+                  over 10 years of Web Development experience. I love working
+                  with modern technologies, building and designing awesome
+                  projects and pushing boundaries.I also possess a large array
+                  of experience and skills in everything from web development to
+                  web design to even software development. Passionate and
+                  serious about my work, I always give 100%. I like sharing my
+                  knowledge and learning from others.Apart from the technical
+                  front, am keen on music,sports and travelling .
                 </p>
               </div>
 
