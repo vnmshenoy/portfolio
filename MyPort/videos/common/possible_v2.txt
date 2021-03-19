@@ -34,8 +34,7 @@ pivot
 
 C#
 blacklist validation/regex pattern for validations
-sending email from your custom domain and your first C# project
-postman mock server vs .net mock server
+
  How can I use optional parameters in a T-SQL stored procedure?
 	- https://stackoverflow.com/questions/1810638/optional-parameters-in-sql-server-stored-proc/1810663
 simple c# project creating steps
@@ -116,67 +115,20 @@ Calling XML auto from C#
 JS
 https://www.dashingd3js.com/lessons/javascript-callback-functions
 ---
-
-
-    
-
-
-
-
-
 --------
-misc 
- how to include prettier in notepad ++
-       plugin manager
-	xml tools
- html 11 visual studio extensio -gives desktop mobile preview
 
-local history -VSHistory
-how to insert code snippets in html retaining code highlights (use prism.js and prism .css -https://www.taniarascia.com/adding-syntax-highlighting-to-code-snippets/
+
 ----------
   
 ---------
 videos
 jquery templating-reusing code
-interestin quick - copy paste - https://stackoverflow.com/questions/22581345/click-button-copy-to-clipboard-using-jquery look at  answer by Aug 23 at 4:06
-			Ehsan88. I have used the sam logic i my portofloi's sqlBasicQueries.html
-json-mockserver
-    react and json server
-        https://spin.atomicobject.com/2018/10/08/mock-api-json-server/
-	faker-https://medium.com/codingthesmartway-com-blog/create-a-rest-api-with-json-server-36da8680136d
-        https://www.twilio.com/blog/react-app-with-node-js-server-proxy
-        https://www.section.io/engineering-education/guide-to-create-mock-server/
 
-	https://www.youtube.com/watch?v=xdxbbbm2aXU
-        https://codingthesmartway.com/create-a-rest-api-with-json-server/
-	https://java2blog.com/json-server/https://java2blog.com/json-server/
-	
-	https://www.rahulpnath.com/blog/setting-up-a-fake-rest-api-using-json-server/   - customizing and configuring JSON Server for som
-	https://shekhargulati.com/2019/07/10/how-to-setup-json-server-to-use-custom-id-and-route/
-	https://stackoverflow.com/questions/43278348/json-server-can-we-use-other-key-instead-of-id-for-post-and-put-request
-	https://developer.okta.com/blog/2018/09/13/build-and-understand-express-middleware-through-examples
 
-	
-
-		postman??how to use??
-		postman vs json-serve (can do put delete etc)
-		postman how to share and import (refer it in json server demo)
-                
-
-gitthrowing error which says git repo forbidden
-   1)create git repo on github website
-   2)pull
-   3)add
-   4)commit
-   5)push gives error forbidden 403
-   6_) to fix ,select folder, tortoise git-->settings -->git--> credential and simply enter username= manjusa
                    
 pivot db
 c# mock server-https://medium.com/fabricgroup/using-mock-server-with-refit-to-test-restful-api-integration-802f377c4c6e
-unit tests
-automapper -device api (look for  ClinicDisplayProfile:Profile etc)
-DRY
-react
+
 emmet-https://docs.emmet.io/cheat-sheet/
 	https://docs.emmet.io/abbreviations/syntax/
       https://code.visualstudio.com/docs/editor/emmet
@@ -188,16 +140,60 @@ reseeding database
 
 -----------------------
 future
- ldap queries
+
+
 RAISERROR vs THROW - SQL Tutorials -look at call qm-1304 and document attached with it
   appinsights
 https://blog.hubspot.com/marketing/youtube-thumbnail (also add lucidpress)
-github pluralsight
+
+
+
+
+----------next steps----
+1) learn pluralsight (bit by bit)
+2)react
+3)az-400
+4)videos from blogs
+
+
+simple blogs
+
+1)interestin quick - copy paste - https://stackoverflow.com/questions/22581345/click-button-copy-to-clipboard-using-jquery look at  answer by Aug 23 at 4:06
+			Ehsan88. I have used the sam logic i my portofloi's sqlBasicQueries.html
+
+2)  how to prevent a line break after h1 h2 tags  - i was having this issue, after h1 
+       i wanted my <p> tag to be inline when writing blog misc/what is api schema -referred https://www.ironpaper.com/webintel/articles/how-to-prevent-a-line-break-with-an-h1-h2-h3-tag/
+
+3)how to insert code snippets in html retaining code highlights (use prism.js and prism .css -https://www.taniarascia.com/adding-syntax-highlighting-to-code-snippets/
+
+4)how to include prettier in notepad ++ -https://www.youtube.com/watch?v=1hNiVklwgz8
+       plugin manager
+	xml tools
+
+5)
+ html 11 visual studio extensio -gives desktop mobile preview
+
+local history -VSHistory
+6) setting up local iis server -have images already in my folder
+
+7)
 embed youtub video on your site
 	https://www.youtube.com/watch?v=9YffrCViTVk
-integrating your app with linkied api(eg my blogs itself share using linkedin)
-drone prgoramming using pythin
-youtube
-	creating watermark 
-              https://www.youtube.com/watch?v=XbLD17LAlNc&feature=emb_logo quick and easy
-        banner images
+-----------
+
+aks someone to write
+1)create a sinple c# project with images and sending an email
+2)writing a blog on object orientation
+3) write a blog on why is unit testing important
+4)write a blog on why is automating testing imort
+5)write a seofriendly blog on why is testing important
+6)write a blog on agile methodlogy and how is it different from waterfall model
+------------------
+
+no pressure
+
+1OpenAPI is different from json schema
+	https://dzone.com/articles/schema-first-api-design
+2)unit tests
+3)automapper -device api (look for  ClinicDisplayProfile:Profile etc)
+4)DRY
