@@ -1,0 +1,30 @@
+<h4><span class="myheader">SQL NOT operator </span></h4>
+<p class="pstyle">Like <b>AND</b> & <b>OR</b>, we can use <b>NOT</b> operator as well
+with the WHERE clause. <br>
+<b> NOT operator </b>
+<p class="pstyle">'NOT', as the name suggests is the negation of what we are looking for. 
+For eg, if we want to see all employees NOT in Texas state for some reason, we can use
+the NOT operator.
+If you manually count number of records in our database, there are 4 employees in Texas state so doing NOT of 
+should give us 16 records.
+</p>
+<div class="code-toolbar">
+   <pre><code class="language-html">
+             <b>SELECT *  FROM [NorthwindSmall].[dbo].[employees]  
+                WHERE NOT STATE='Texas' </b>
+            </code></pre>
+</div>
+<p class="pstyle">Am attaching the result image.As expected we see 16 records
+</p>
+<div class="row" style="margin:10px">
+<img src="../../img/sqlQueriesBasics/7Not.png" alt="NOT operator" class="img-fluid"><br><br>
+</div>
+<br><br>
+<div class="row">
+<div class="col-sm-6 pull-left">
+<button type="button" class="btn btn-primary " onclick="prev('sqlAND,OR')">Previous</button><br><br>
+</div>
+<div class="col-sm-6 pull-right">
+<button type="button" class="btn btn-primary " onclick="next('sqlwhere')">Next</button><br><br>
+</div>
+</div>

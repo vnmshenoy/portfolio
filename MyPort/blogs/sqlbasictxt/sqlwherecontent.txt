@@ -5,8 +5,8 @@ to get all employees who work in <b>"Toys" department</b>
 <div class="code-toolbar">
    <pre><code class="language-html">
              <b>SELECT *
-F   ROM [NorthwindSmall].[dbo].[employees]
-WHERE department='Toys' </b>
+                FROM [NorthwindSmall].[dbo].[employees]
+                WHERE department='Toys' </b>
       </code></pre>
 </div>
 <p class="pstyle">Am attaching the result image where it shows the filtered results (2 records) based on the <b>department is Toys</b>
@@ -21,6 +21,6 @@ WHERE department='Toys' </b>
 <button type="button" class="btn btn-primary " onclick="prev('sqlcomment')">Previous</button><br><br>
 </div>
 <div class="col-sm-6 pull-right">
-<button type="button" class="btn btn-primary " onclick="next('sqlwhere')">Next</button><br><br>
+<button type="button" class="btn btn-primary " onclick="next('sqlAND,OR')">Next</button><br><br>
 </div>
 </div>
