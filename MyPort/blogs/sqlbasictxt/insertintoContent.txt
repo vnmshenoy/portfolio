@@ -2,7 +2,7 @@
 <p class="pstyle"><b>Insert INTO </b> allows you to insert records into the table
 There are 2 ways you can insert records.It purely depends upon case to case.
 <br><br>
-<b>Way 1: If you want to add values for <b>all the columns </b>,then you <b>Need Not </b> 
+<b>Way 1:</b> If you want to add values for <b>all the columns </b>,then you <b>Need Not </b> 
 specify the column names explicitly.Just insert the values in the same order as you have 
 the columns in the table.Let's try this approach <br>
 Our employees table in the database has 20 records. Let's run below statement
@@ -22,13 +22,13 @@ and after that you should see 21 records
 <p class="pstyle">Am attaching the result image for above <b> way 1 approach</b>
 </p>
 <div class="row" style="margin:10px">
-<img src="../../img/sqlQueriesBasics/8OrderBy.png" alt="with distinct" class="img-fluid"><br><br>
+<img src="../../img/sqlQueriesBasics/9InsertIntoWay1.png" alt="InsertIntoWay1" class="img-fluid"><br><br>
 </div>
 
 <br><br>
 
 <p class="pstyle">
-<b>Way 2: If you only want to insert values for specific columns of the table, 
+<b>Way 2:</b> If you only want to insert values for specific columns of the table, 
 then you need to specify both the column names and the corresponding values to be inserted
 <br>
 Our employees table in the database has 21 records after the previous insert. Let's run below statement
@@ -46,11 +46,11 @@ am only inserting values for 4 columns only i.e <b> id , last_name, first_name ,
 <p class="pstyle">Am attaching the result image for <b> way 2 approach</b>
 </p>
 <div class="row" style="margin:10px">
-<img src="../../img/sqlQueriesBasics/8aOrderByDesc.png" alt="OR operator" class="img-fluid"><br><br>
+<img src="../../img/sqlQueriesBasics/9InsertIntoWay2.png" alt="InsertIntoWay2" class="img-fluid"><br><br>
 </div>
 <div class="row">
 <div class="col-sm-6 pull-left">
-<button type="button" class="btn btn-primary " onclick="prev('sqlNOnT')">Previous</button><br><br>
+<button type="button" class="btn btn-primary " onclick="prev('orderBy')">Previous</button><br><br>
 </div>
 <div class="col-sm-6 pull-right">
 <button type="button" class="btn btn-primary " onclick="next('sqlAND,OR')">Next</button><br><br>
