@@ -1,0 +1,52 @@
+<h4><span class="myheader">Order By</span></h4>
+<p class="pstyle"><b>Order By</b> allows you to order the records as per your choice.
+With Order by, you specify a column or expression on which to sort the query result set.
+A sort column can be specified as a name or column alias,
+or a nonnegative integer representing the position of the column in the select list.
+<br><br>
+<b>Eg 1: Order By (column name) </b>- Order all employees by <b>name</b> in <b>Ascending</b> order then
+</p>
+
+<div class="code-toolbar">
+   <pre><code class="language-html">
+             <b>
+                SELECT * 
+                FROM dbo.employees
+                ORDER BY first_name ASC
+             </b>
+      </code></pre>
+</div>
+<p class="pstyle">Am attaching the result image where we see that result is ordered by first_name 
+(alphabetically)</b>
+</p>
+<div class="row" style="margin:10px">
+<img src="../../img/sqlQueriesBasics/8OrderBy.png" alt="with distinct" class="img-fluid"><br><br>
+</div>
+
+<br><br>
+
+<p class="pstyle">
+<b>Eg 2: Order By (position of column) </b>- Order employees in the <b>Descending</b> order of their <b>id</b>
+</p>
+<div class="code-toolbar">
+   <pre><code class="language-html">
+             <b>
+                SELECT * 
+                FROM dbo.employees 
+                ORDER BY 1 DESC
+             </b>
+      </code></pre>
+</div>
+<p class="pstyle">Am attaching the result image
+</p>
+<div class="row" style="margin:10px">
+<img src="../../img/sqlQueriesBasics/8aOrderByDesc.png" alt="OR operator" class="img-fluid"><br><br>
+</div>
+<div class="row">
+<div class="col-sm-6 pull-left">
+<button type="button" class="btn btn-primary " onclick="prev('sqlNOT')">Previous</button><br><br>
+</div>
+<div class="col-sm-6 pull-right">
+<button type="button" class="btn btn-primary " onclick="next('sqlAND,OR')">Next</button><br><br>
+</div>
+</div>

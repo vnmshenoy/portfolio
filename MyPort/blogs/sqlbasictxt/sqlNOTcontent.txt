@@ -25,6 +25,6 @@ should give us 16 records.
 <button type="button" class="btn btn-primary " onclick="prev('sqlAND,OR')">Previous</button><br><br>
 </div>
 <div class="col-sm-6 pull-right">
-<button type="button" class="btn btn-primary " onclick="next('sqlwhere')">Next</button><br><br>
+<button type="button" class="btn btn-primary " onclick="next('orderBy')">Next</button><br><br>
 </div>
 </div>
