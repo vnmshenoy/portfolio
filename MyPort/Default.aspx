@@ -145,6 +145,11 @@ Inherits="MyPort.Default" %>
                 <a href="#about" class="nav-link link-scroll">About Me</a>
               </li>
               <!-- <li class="nav-item"><a href="blogs/blogs.html" class="nav-link link-scroll">C# Blogs</a></li>-->
+             <li class="nav-item">
+                <a href="/blogs/azureblogs.html" class="nav-link link-scroll"
+                  >Azure Blogs</a
+                >
+              </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
