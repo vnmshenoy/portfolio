@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2264462236439566",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-131742548-1");
+    </script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../js/prism.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".header").load("../../baseheader.html", function () {
+          setTimeout(
+            $("#headermenu").load("../../header.html #menu", function () {}),
+            250
+          ); // try diff. values
+        });
+      });
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="robots" content="all,follow" />
+    <meta name="googlebot" content="index,follow,snippet,archive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SManju</title>
+
+    <meta name="keywords" content="" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Bootstrap and Font Awesome css -->
+    <link
+      rel="stylesheet"
+      href="../../vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS-->
+    <link
+      rel="stylesheet"
+      href="../../vendor/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../../css/style.default.css" />
+    <link rel="stylesheet" href="../../css/prism.css" />
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"
+    ></script>
+
+    <!-- *** NAVBAR ***
+_________________________________________________________ -->
+    <header class="header"></header>
+    <!-- /#navbar -->
+
+    <br />
+    <section class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h3>
+              Azure Durable Functions- What are these and why we need them
+              <span style="font-size: 12px; color: blueviolet"
+                >10th June 2021</span
+              >
+            </h3>
+
+            <img
+              src="DurableFunctionBasics/0heading.png"
+              alt="heading"
+              class="img-fluid"
+            />
+            <p>
+              Stateful Workflows on top of Stateless Serverless Cloud Functions
+              — this is the essence of the Azure Durable Functions library.This
+              is the one line definition of Azure durable functions.But then
+              this is lot of fancy words in one sentence, and they might be hard
+              for the majority of readers to understand.Let's see a little
+              background of web applications and then we will see where Azure
+              Durable functions fit in
+              <!--<a
+                href="https://scripts.affiliatefuture.com/AFClick.asp?affiliateID=349397&merchantID=7252&programmeID=26550&mediaID=169980&tracking=&afsource=10&url="
+                ><img
+                  border="0"
+                  src="https://banners.affiliatefuture.com/7252/169980.jpg"
+              /></a>-->
+            </p>
+            <h6>Monolith and Microservices</h6>
+            <p>
+              Originally, server-side applications were built in a style which
+              is now referred to as <b>Monolith</b>. A monolithic application is
+              built as a single unit.Enterprise Applications are built in three
+              parts: a database (mostly relational database), a client-side user
+              interface (HTML,Javascript on browser), and a server-side
+              application(Eg C#,Java etc). This server-side application will
+              handle HTTP requests, execute some business domain logic,
+              retrieve/update data from/to database, and finally populate the
+              HTML views to be sent back to the client's
+              browser(Chrome,Firefox,IE etc). It is a monolith – a single
+              logical executable. To make any alterations to the system, a
+              developer must build and deploy an updated version of the
+              server-side application.If multiple people and teams were
+              developing parts of the same application, they mostly contributed
+              to the same code base.
+            </p>
+            <p>
+              If the teams follow coding and design practises well, code base
+              would be structured well and it would have some distinct modules
+              or components, and a single team would typically own each
+              module.Normally, the modules would be packaged together at build
+              time and then deployed as a single unit, so a lot of interaction
+              between modules would stay inside the OS process. Although the
+              modules could stay loosely coupled, over a period of time, since
+              all teams would use a single centralized database, the coupling
+              almost always occurs on the level of the data store . This model
+              works great for small- to medium-size applications, but as the
+              team number swells,it turns out that teams start getting in each
+              other’s way as synchronization of contributions takes more and
+              more effort.<br />
+
+              Monolith approach Eg in diagram below <br />
+              <img
+                border="0"
+                src="DurableFunctionBasics/monolithapproach.jpg"
+                alt="monolith"
+              />
+              <br />
+              As an alternative, and as industry evolved, there was this new
+              approach which came up with a revised service-oriented strategy
+              commonly called <b>Microservices</b>. In this approach,teams split
+              the big application into “vertical slices” structured around the
+              distinct business capabilities.Microservice capabilities are
+              expressed formally with business-oriented APIs.Each microservice
+              encapsulate a core business capability and the same service can be
+              reused in more than one business processes(and thats the beauty if
+              microservices) or over different business sceanrios, depending on
+              the requirement. By ensuring that principles of loose coupling are
+              followed and implemented, dependencies between services and their
+              consumer are kept to minimal.Services talk to each other via
+              documented and versioned public contracts.If microservices’
+              interfaces are exposed with a standard protocol, such as a
+              REST-ful API, they can be consumed and reused by other services
+              and applications without direct coupling through language bindings
+              or shared libraries. If the borders for the split were selected
+              well—and that’s the most tricky part—the contracts are standarized
+              and stay stable over time, and thin enough to avoid too much
+              chattiness then team can change the implementation of the
+              service,and consumers wont be affected by changes .This gives each
+              team enough autonomy to innovate at their best pace and to make
+              independent technical decisions.
+            </p>
+            <p>
+              In microservices approach,each team then owns a whole
+              vertical—from communication contracts, or even UIs, down to the
+              data storage. Explicitly shared databases are not recommended at
+              all.There are few drawbacks of microservices as well.<br />
+              <img
+                border="0"
+                src="DurableFunctionBasics/microservices.jpg"
+                alt="microservices"
+              /><br />
+              The tradeoff of this flexibility is complexity. Managing a
+              multitude of distributed services at scale is difficult for the
+              following reasons:
+            </p>
+            <b>Trade offs:</b><br />
+            <h6 style="display: inline">1).</h6>
+            <p style="display: inline">
+              Teams need to easily discover services as potential resuse
+              candidates.We all know resuing services is easier than building
+              from scratch, but for that to happen these services should be well
+              documented etc.
+            </p>
+            <br />
+            <h6 style="display: inline">2).</h6>
+            <p style="display: inline">
+              Interdependencies between services need to be closely
+              monitored.The services are now deployed to separate servers
+              connected via a network. Networks are fundamentally
+              unreliable.They work fine most of the times,but when they fail it
+              fails in all kinds of unpredictable manner.Yeah network sometime
+              takes break 😊 <br />
+              <br />
+              <img
+                border="0"
+                style="margin-left: 10%"
+                src="DurableFunctionBasics/networkfailure.jpg"
+                alt="microservices"
+              /><br /><br />
+              Imagine a scenario when one service goes unhealthy and is down.It
+              can go offline for multiple reasons, for instance say a new
+              version of service is being deployed,or may be there are plenty of
+              requests coming in and it cant handle the request load etc.The
+              problem is that all the requests to this failed/down service start
+              failing.The dependent service waits for the response and thus
+              blocks incoming requests of its own.You can probably guess where
+              it is heading.The error cascades upstream and there are failures
+              all over the place.The application is down. Your manager ofcourse
+              is not happy
+            </p>
+            <br />
+            <br />
+            <img
+              src="apiandschema/analogyimage.jpg"
+              alt="analogy"
+              class="img-fluid"
+            /><br /><br />
+            <p>
+              Basically, API takes your requests and retrieve the response from
+              the server. It’s the stuff that lets your products and services
+              communicate or interact with other products and services without
+              having to constantly build new connectivity infrastructure.If you
+              are into computer science or IT industry, there is no escape from
+              APIs.We all are connected through APIs. Nearly all businesses that
+              use any kind of modern technology use APIs at some level to
+              retrieve data or interact with a database for customers to use.
+              <br /><br />Whenever you use an app on your phone or computer ,say
+              you log onto Twitter or Facebook, you’re interacting with several
+              different APIs behind the scenes.Or, say you’re planning to watch
+              a movie in a theatre over the weekend, and logonto your favorite
+              app to book the same. Then you type the "movie name", "dates",
+              "number of seats" etc to check availability and click on "search"
+              button.Then you see the movies nicely displayed on the UI with
+              timings and other details.Behind the scenes, in all probability,
+              there is some API sitting behind and retrieving the details for
+              you based on the search details you entered.
+            </p>
+            <h4>How do APIs work?</h4>
+            <p>
+              So we already learnt above that an API- Application Programming
+              Interface is a set of rules that define how computers,
+              applications, or machines can talk to each other. You can think of
+              it this way: the typical user interface is intended for use by a
+              human being, while APIs are intended for use by an application or
+              a computer or another software<br />
+              <img
+                src="apiandschema/api.jpeg"
+                alt="api"
+                class="img-fluid"
+              /><br /><br />
+              Most web APIs sit between the application and the web server. The
+              human initiates an API call that tells the application to do
+              something, then the application in turn will use an API to ask the
+              web server to do something. The response returned by the web
+              server is returned to the application which normally puts the
+              details in a user friendly way i.e shown nicely on the front end
+              so that the end user can read/understand <br />
+            </p>
+            <h4>Most Common Types of API</h4>
+            <img
+              src="apiandschema/soap_vs_rest.png"
+              alt="api"
+              class="img-fluid"
+            /><br /><br />
+            <ul style="display: inline">
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                <b>1 REST APIs)</b> - Stands for Representational State
+                Transfer. <br />
+                <img
+                  src="apiandschema/restapi.jpg"
+                  alt="api"
+                  class="img-fluid"
+                /><br /><br />
+                It is an architectural style. The
+                <b>REST architecture</b> generally consists of clients, servers,
+                resources, and a vocabulary of HTTP operations known as
+                <b>request methods</b>. REST relies on principles that are
+                ultimately simpler to follow than a prescribed protocol. Most of
+                the API's specially Public API's use REST standard these days
+                specifically because of its fast performance, reliability, and
+                ability to scale by reusing modular components without affecting
+                the system as a whole.<br />From developer point of view, REST
+                is a set of rules that they need to follow when they create
+                their API.<br />
+                One of the rules states that you should be able to get a piece
+                of data (called a resource) when you link to a specific URL.<b
+                  >Each URL</b
+                >
+                is called a <b>request</b> while the <b>data sent back</b> to
+                you is called a <b>response</b>.<br />The <b>payload</b> - the
+                data to be delivered (i.e the response) - will be
+                <b>formatted in a language</b>
+                such as <b>JSON</b>, or <b>XML</b>.<br />The
+                <b>set of operations</b>
+                are the methods available to HTTP, which is the underlying
+                protocol for how browsers retrieve websites from servers. These
+                methods include
+                <b>GET, POST, PUT, DELETE, and others</b>.<br />And thats why
+                it's easier for developer because even if they don't know
+                specifics of REST, they are likely to know how to work with
+                RESTful APIs thanks to the underlying foundation upon which they
+                are built: HTTP.<br /><br />
+                <h5>The Anatomy Of A REST API Request</h5>
+                <h6 style="display: inline">A).</h6>
+                <p style="display: inline">
+                  <b>URI (uniform resource identifier)</b>, which is the URL
+                  address, also known as an “endpoint”).The endpoint (or route)
+                  is the url you request for. It follows this structure:
+                  https://blog.postman.com/rest-api-examples/
+                  https://cat-fact.herokuapp.com/facts/. The root-endpoint is
+                  the starting point of the API you’re requesting from. The
+                  root-endpoint of Github’s API is https://api.github.com while
+                  the root-endpoint Twitter’s API is https://api.twitter.com.
+                </p>
+                <br />
+                <h6 style="display: inline">B).</h6>
+                <p style="display: inline">
+                  The method i.e <b>HTTP Verbs </b>like GET - for retrieving the
+                  details, POST-for insertion, PUT -for updating, DELETE - for
+                  deletion
+                </p>
+                <br />
+                <h6 style="display: inline">C).</h6>
+                <p style="display: inline">
+                  <b>Headers</b>- like authentication tokens,data format of
+                  request (mainly when you do a PUT/POST) (eg application/json)
+                </p>
+                <br />
+                <h6 style="display: inline">D).</h6>
+                <p style="display: inline"><b>Body</b> which is the data</p>
+                <br />
+              </li>
+              <br />
+              <br />
+
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                <b>2 SOAP APIs)</b> stands for “Simple Object Access Protocol,”
+                <br />
+                <img
+                  src="apiandschema/soapapi.png"
+                  alt="api"
+                  class="img-fluid"
+                /><br /><br />
+                This is more complex than REST because it requires more
+                information upfront about security and how to sends messages.
+                SOAP, unlike the REST pattern, supports the XML data format only
+                and strongly follows preset standards such as messaging
+                structure, a set of encoding rules, and a convention for
+                providing procedure requests and responses and therefore to lack
+                the lightweight portability and flexibility of REST.SOAP was
+                developed to help standardize message formats and requests.SOAP
+                API's are still used specially it can assist in certain
+                scenarios better. For instance, if you need more robust
+                security, SOAP’s support for WS-Security can come in handy. SOAP
+                can be extended with WS standard protocols. Another advantage of
+                SOAP is that it offers built-in retry logic to compensate for
+                failed communications. REST, on the other hand, doesn’t have a
+                built-in messaging system. If a communication fails, the client
+                has to deal with it by retrying. There’s also no standard set of
+                rules for REST. SOAP is highly extensible through other
+                protocols and technologies. In addition to WS-Security, SOAP
+                supports WS-Addressing, WS-Coordination, WS-ReliableMessaging,
+                and a lot of other web services standards. You can find full
+                list on W3C
+              </li>
+            </ul>
+            <br />
+            <h6 style="display: inline">Conclusion.</h6>
+            <p style="display: inline">
+              To conclude,I hope you understand what are API's, it's usage and
+              types of API.Do refer my blog to understand API-schema. Link
+              belowLink below <br />
+              <a href="what-is-api-schema.html">What is API-Schema</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <p>
+              And that's it. Hope you undertood how to customize JSON server.
+              .Email me at "techspacedeck@gmail.com" incase you have queries.
+              Alternatively, you can fill the "CONTACT" form or drop a comment
+              below
+            </p>
+          </div>
+        </div>
+        <a href="https://www.buymeacoffee.com/manjus"
+          ><img
+            src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=manjus&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+        /></a>
+      </div>
+    </section>
+    <section style="padding: 10px !important">
+      <div class="container">
+        <h4>
+          Did you like the blog or have questions, please add your comments
+        </h4>
+        <div id="graphcomment"></div>
+        <script type="text/javascript">
+          /* - - - CONFIGURATION VARIABLES - - - */
+
+          // make sure the id is yours
+          window.gc_params = {
+            graphcomment_id: "www-manjustechblog-com",
+
+            // if your website has a fixed header, indicate it's height in pixels
+            fixed_header_height: 0,
+          };
+
+          /* - - - DON'T EDIT BELOW THIS LINE - - - */
+
+          (function () {
+            var gc = document.createElement("script");
+            gc.type = "text/javascript";
+            gc.async = true;
+            gc.src =
+              "https://graphcomment.com/js/integration.js?" +
+              Math.round(Math.random() * 1e8);
+            (
+              document.getElementsByTagName("head")[0] ||
+              document.getElementsByTagName("body")[0]
+            ).appendChild(gc);
+          })();
+        </script>
+      </div>
+    </section>
+    <!-- /#navbar -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-left">
+            <p class="social">
+              <a
+                href="http://www.facebook.com/shenoyvnm
+                            "
+                class="external facebook wow fadeInUp"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a
+                style="background-color: grey"
+                href="http://www.linkedin.com/in/manjunathshenoywebdev"
+                class="external linkedin wow fadeInUp"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </p>
+          </div>
+
+          <!-- /.6-->
+          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+            <p>© 2018 SManju. All rights reserved.</p>
+          </div>
+          <div class="col-12 mt-4">
+            <p class="template-bootstrapious">
+              Designed by
+              <a href="https://www.bootstrapious.com">Bootstrapious</a>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
