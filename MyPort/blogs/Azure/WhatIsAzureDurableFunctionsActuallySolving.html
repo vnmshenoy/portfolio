@@ -200,12 +200,19 @@ _________________________________________________________ -->
             <br />
             <h6 style="display: inline">2).</h6>
             <p style="display: inline">
-              Interdependencies between services need to be closely
-              monitored.The services are now deployed to separate servers
-              connected via a network. Networks are fundamentally
-              unreliable.They work fine most of the times,but when they fail it
-              fails in all kinds of unpredictable manner.Yeah network sometime
-              takes break 😊 <br />
+              Interdependencies between services need to be closely monitored.If
+              not architectured well, an application based on microservices
+              might end up being a distributed monolith. In such scenario,
+              microservices are chatty, sometimes calling each other and
+              defeating the main purpose.Changes to one microservice required
+              changes to others(becomes highly coupled).
+            </p>
+            <h6 style="display: inline">3).</h6>
+            <p style="display: inline">
+              Services interact with each other through networks. Networks are
+              fundamentally unreliable.They work fine most of the times,but when
+              they fail it fails in all kinds of unpredictable manner.Yeah
+              network sometime takes break 😊 <br />
               <br />
               <img
                 border="0"
@@ -222,34 +229,27 @@ _________________________________________________________ -->
               blocks incoming requests of its own.You can probably guess where
               it is heading.The error cascades upstream and there are failures
               all over the place.The application is down. Your manager ofcourse
-              is not happy
+              is not happy.
             </p>
             <br />
             <br />
-            <img
-              src="apiandschema/analogyimage.jpg"
-              alt="analogy"
-              class="img-fluid"
-            /><br /><br />
+            <br />
+            <h6>Event-Driven Microservice</h6>
             <p>
-              Basically, API takes your requests and retrieve the response from
-              the server. It’s the stuff that lets your products and services
-              communicate or interact with other products and services without
-              having to constantly build new connectivity infrastructure.If you
-              are into computer science or IT industry, there is no escape from
-              APIs.We all are connected through APIs. Nearly all businesses that
-              use any kind of modern technology use APIs at some level to
-              retrieve data or interact with a database for customers to use.
-              <br /><br />Whenever you use an app on your phone or computer ,say
-              you log onto Twitter or Facebook, you’re interacting with several
-              different APIs behind the scenes.Or, say you’re planning to watch
-              a movie in a theatre over the weekend, and logonto your favorite
-              app to book the same. Then you type the "movie name", "dates",
-              "number of seats" etc to check availability and click on "search"
-              button.Then you see the movies nicely displayed on the UI with
-              timings and other details.Behind the scenes, in all probability,
-              there is some API sitting behind and retrieving the details for
-              you based on the search details you entered.
+              <img
+                style="margin-left: 10%"
+                src="DurableFunctionBasics/microserviceseventdriven.jpg"
+                alt="analogy"
+                class="img-fluid"
+              /><br /><br />
+            </p>
+
+            <p>
+              In an event-driven microservice architecture, services communicate
+              each-other via event messages. When a service performs some piece
+              of work that other services might be interested in, that service
+              produces an event. Other services consume them through event
+              listeners and perform any of their own tasks.
             </p>
             <h4>How do APIs work?</h4>
             <p>
