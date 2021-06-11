@@ -18,3 +18,13 @@ Its open source code and can be extended if required
 ---------
 
 https://resizeimage.net/ is good website to resize images
+
+
+image width and height
+
+1) top image (eg azure durable functions image)
+  1) 778 *178 png
+
+2) images with in the blog, like monolith application etc
+800 * 455 jpg
+
