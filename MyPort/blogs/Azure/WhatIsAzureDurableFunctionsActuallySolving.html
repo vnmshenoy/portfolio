@@ -229,9 +229,47 @@ _________________________________________________________ -->
               blocks incoming requests of its own.You can probably guess where
               it is heading.The error cascades upstream and there are failures
               all over the place.The application is down. Your manager ofcourse
-              is not happy.
+              is not happy. Lets quickly look at above scenario through a
+              diagram<br />
+              <img
+                style="margin-left: 10%"
+                src="DurableFunctionBasics/basicrestapproach.jpg"
+                alt="analogy"
+                class="img-fluid"
+              /><br /><br />
+              <b
+                >Issues with this approach even though your application will
+                work properly:</b
+              >
+              <br />
+            </p>
+
+            <h6 style="display: inline">1).</h6>
+            <p style="display: inline">
+              Module A makes a request to Module B and waits for the response
             </p>
             <br />
+            <h6 style="display: inline">2).</h6>
+            <p style="display: inline">
+              Module B may be down, offline or simply slow.
+            </p>
+            <br />
+            <h6 style="display: inline">3).</h6>
+            <p style="display: inline">
+              Network delays may further decrease performance.If data is
+              humongous, then it means there will be more REST calls
+            </p>
+            <br />
+            <h6 style="display: inline">4).</h6>
+            <p style="display: inline">
+              Module B will be under heavy load,and can respond very late
+            </p>
+            <br />
+            <p style="display: inline">
+              Above scenario,where your system becomes less efficient because
+              you have a synchronous API, is a perfect use case where you can
+              apply event-driven solution
+            </p>
             <br />
             <br />
             <h6>Event-Driven Microservice</h6>
@@ -246,11 +284,17 @@ _________________________________________________________ -->
 
             <p>
               In an event-driven microservice architecture, services communicate
-              each-other via event messages. When a service performs some piece
-              of work that other services might be interested in, that service
-              produces an event. Other services consume them through event
-              listeners and perform any of their own tasks.
+              each-other via <b>event messages</b>. When a service performs some
+              piece of work that other services might be interested in, that
+              service produces an event. Other services consume them through
+              event listeners and perform any of their own tasks.
             </p>
+
+            <img
+              src="DurableFunctionBasics/serviceeventdriven.jpg"
+              alt="eventdriven"
+              class="img-fluid"
+            /><br /><br />
             <h4>How do APIs work?</h4>
             <p>
               So we already learnt above that an API- Application Programming
