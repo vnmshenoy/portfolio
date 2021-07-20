@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2264462236439566",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-131742548-1");
+    </script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../js/prism.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".header").load("../../baseheader.html", function () {
+          setTimeout(
+            $("#headermenu").load("../../header.html #menu", function () {}),
+            250
+          ); // try diff. values
+        });
+      });
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="robots" content="all,follow" />
+    <meta name="googlebot" content="index,follow,snippet,archive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SManju</title>
+
+    <meta name="keywords" content="" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Bootstrap and Font Awesome css -->
+    <link
+      rel="stylesheet"
+      href="../../vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS-->
+    <link
+      rel="stylesheet"
+      href="../../vendor/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../../css/style.default.css" />
+    <link rel="stylesheet" href="../../css/prism.css" />
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"
+    ></script>
+
+    <!-- *** NAVBAR ***
+_________________________________________________________ -->
+    <header class="header"></header>
+    <!-- /#navbar -->
+
+    <br />
+    <section class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h3>
+              What is Azure Durable Function
+              <span style="font-size: 12px; color: blueviolet"
+                >17th July 2021</span
+              >
+            </h3>
+
+            <img
+              src="DurableFunctionBasics/0heading.png"
+              alt="heading"
+              class="img-fluid"
+            />
+            <p>
+              Stateful Workflows on top of Stateless Serverless Cloud Functions
+              i.e Durable Functions are an extension of Azure Functions that
+              lets you write stateful functions in a serverless environment. I
+              did write up on bit of history and why we need Azure Durable
+              functions. You can read that article here..link below
+              <a href="/why-do-we-need-azure-durable-functions"
+                >Why do we need Azure Durable Functions and its history</a
+              >
+              When there’s a workflow involved we require some stored state.
+              Like i mentioned in the previous artilce,Azure Functions are
+              stateless, so Microsoft Azure Durable Functions came into play to
+              cover such situation.Since Durable functions allow to orchestrate
+              other functions, they can help to create workflows in which status
+              is saved automatically using storage.Durable functions manage
+              state, checkpoints, and restarts for you.
+              <!--<a
+                href="https://scripts.affiliatefuture.com/AFClick.asp?affiliateID=349397&merchantID=7252&programmeID=26550&mediaID=169980&tracking=&afsource=10&url="
+                ><img
+                  border="0"
+                  src="https://banners.affiliatefuture.com/7252/169980.jpg"
+              /></a>-->
+            </p>
+            <p>
+              Durable Functions is a open source library that brings workflow
+              orchestration abstractions to azure functions.Being open source,
+              MS accepts exernal contributions and community is very actve
+            </p>
+            <p>
+              From the point of view of pricing, the durable functions extension
+              follows the same pricing model as Azure functions (more info
+              <a
+                href="https://azure.microsoft.com/it-it/pricing/details/functions/"
+                >here</a
+              >).
+            </p>
+            <p>
+              In the previous article we also saw few challenges in our
+              hypothetical egample. Now lets try to see how Azure Durable
+              functions can solve these. Bu before we go ahead,there are few
+              terminologies we should be aware of.Best i thought is to depict as
+              a diagram
+            </p>
+            <img
+              src="DurableFunctionBasics/durablefunctiontypes.jpeg"
+              alt="durablefunctiontypes"
+              class="img-fluid"
+            />
+            <p>
+              now that we know we require Activity Functions and Orchestrator
+              functuibs to build workflow functioanlity, lets dwell a little
+              further into each one of them to solve our challenge and adapt it
+              to our scenario
+            </p>
+            <img
+              src="DurableFunctionBasics/orchestrationfunction.jpeg"
+              alt="durablefunctiontypes"
+              class="img-fluid"
+            /><br />
+            <p>
+              Above we see that a client function starts an instance of an
+              orchestration. Cleint function may be a triggered as a HTTP
+              endpoing we hit from an applicaton. Cleint functuis starts an
+              instance of orchestration and we get an <b>instance id</b>, our
+              unieuq ref to theat speciifc flow.Next we try to carry out
+              everything iside of the orchestration. Orchestrations most basic
+              form where it cains multiple independent activites into a single
+              sequential workflow manage the flow of execution and data among
+              several activity functions.
+            </p>
+            <p>
+              In our eganmpme, book tech sympoisum tickets, reserve a seat on
+              bus and book accomodation have their own actiity functions held
+              togther by an orchestrarot function.Ypur orchetstra function code
+              may look like something below
+            </p>
+            <pre><code class="language-html">
+
+              [FunctionName("Myworkflow")]
+              public static async Task Sequential([OrchestrationTrigger] DurableOrchestrationContext context)
+              {
+                  var symposium = await context.CallActivityAsync("BookTechSymposium", "Trip");
+                  var travel = await context.CallActivityAsync("ReserveBus", symposium.Response.Dates);
+                  await context.CallActivityAsync("BookAccomodation", travel.Response.Dates);
+              }
+              </code>
+              </pre>
+            <p>
+              <b>CallActivityAsync</b> is key here. When Orchestrator starts
+              running and comes across this methiod, it sends a queue message to
+              the corresponding Activity functon.In this case, firste
+              BookTechSymposium activity function runs which peforms its task
+              i.e Booking the tech sympoisum tickets and returns the result. It
+              sends a queue messae back to the orcehstrator. when message
+              arrives, orchestrator get triggered again and moves on to the enxt
+              activity. This way both remainin activity functions get triggered
+              too one by one i.e Reserve bus and book accomodation runs one by
+              one
+            </p>
+            <p>
+              Now the interesting part is <b>Billing</b>.Azure Functions on the
+              serverless consumption-based plan are billed per execution + per
+              duration of execution.One thing to notes with orchestration is
+              that what it orchestreates usaauly isasynchronous which means we
+              don't know exactly when something finishes.So that you dont pay
+              the runing csts for it, durable functions powers down and saves
+              the state.
+            </p>
+            <p>
+              When an orhcstration functoins is given more work to do, for eg
+              say a response message is recieved, the orchestrator wakes up and
+              and re-executes the entire function .It always starts with the
+              first line and means that the same line is executed multiple
+              times.Ofcourse its not dumb to restart everything from sctarch.It
+              stores the hstry of the past executuins in Azure Storage,so the
+              effect of second pass or every subseqeunt pass of the first line
+              is different. During the replay,if code ties to call a function,
+              then Durable Task frameowkrs internally checks exucetion hisoty of
+              current orchestration If it finds that activity function has
+              already exiected and yieled a resilt,it replays the funciton's
+              reuslt and the orchestrator code continues to run.
+            </p>
+            <p>
+              Because of these “replays”, the orchestrator’s implementation has
+              to be deterministic: don’t use DateTime.Now, random numbers or
+              multi-thread operations; more details here.The whole behavious of
+              orcehstraot is like stop-resume behaoir
+            </p>
+            <h6>Error handling</h6>
+            <img
+              src="DurableFunctionBasics/errorhandling.jpg"
+              alt="errorhandling"
+              class="img-fluid"
+              style="margin-left: 10em"
+            /><br />
+            <p>
+              Now in the previous artilce we also discussed about the
+              possibility of errors, like what if third pary bus reserving
+              application is down.Then our application need to handle the error
+              gracefully or even run some compesnating logic, for instance roll
+              back the whole workflow or book a cab may be. Instead of silently
+              failing,activity function, in tis case booking bus functoin sends
+              a message contiantoin information about error back to the
+              orchestarot. Orchestraor dersealised the error detial, and at the
+              time of replays throws a .NET epection. The developer can handle
+              the expcetion using a try..catch block around the call and decide
+              what to do.For eg.
+            </p>
+            <pre><code class="language-html">
+
+              [FunctionName("MyworkflowWithCompensatingLogic")]
+              public static async Task Sequential([OrchestrationTrigger] DurableOrchestrationContext context)
+              {
+                  var symposium = await context.CallActivityAsync("BookTechSymposium", "Trip");
+                  try{
+                  var travelViaBus = await context.CallActivityAsync("ReserveBus", symposium.Response.Dates);
+                  }catch(Exception){
+                    var travelViaCab= await context.CallActivityAsync("BookCab", symposium.Response.Dates);
+                  }
+                  await context.CallActivityAsync("BookAccomodation", travel.Response.Dates);
+              }
+              </code>
+              </pre>
+            <p>
+              You can even apply a automatic retry policy.All you need to use is
+              <b>RetryOptions</b>.Below code asks the library to:
+            </p>
+            <ul style="display: inline">
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                Retry upto 3 times
+              </li>
+              <li>Wait for 1 minute before the first retry</li>
+              <li>
+                If error is not intermittient, there is no point retying
+                immediatly. We can configure client to retry the request
+                periodically with increased delays between requests. Here we
+                have Backoff coefficient as 2 which means delays increase y
+                factor of 2. i.e first one happens in 1 min, sec one after 2
+                .thired adrer 4 mins and so on etc.)
+              </li>
+            </ul>
+
+            <pre><code class="language-html">
+
+              [FunctionName("MyworkflowWithRetry")]
+              public static async Task Sequential([OrchestrationTrigger] DurableOrchestrationContext context)
+              {
+                  var symposium = await context.CallActivityAsync("BookTechSymposium", "Trip");
+
+                  var myRetryOptions= new RetryOptions(
+                    firstRetryInterval: TimeSpan.FromMinutes(1),
+                    maxNumberOfAttempts: 3);
+                   myRetryOptions.BackoffCoefficient = 2.0;
+
+                    var travelViaBus = await context.CallActivityAsync("ReserveBus",myRetryOptions, symposium.Response.Dates);                   
+                    await context.CallActivityAsync("BookAccomodation", travel.Response.Dates);
+              }
+              </code>
+              </pre>
+
+            <h6 style="display: inline">Conclusion.</h6>
+            <p style="display: inline">
+              To conclude,I hope you would have got better hold on Azure Durable
+              functions. I have written a separate article comparing Azure
+              Durable Functions with logic apps. Link <a href="">here</a> <br />
+              There is another article where I have mentioned various
+              application patterns that can benefit from Azure Durable functions
+              <a href="what-is-api-schema.html">What is API-Schema</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <p>
+              Email me at "techspacedeck@gmail.com" incase you have queries.
+              Alternatively, you can fill the "CONTACT" form or drop a comment
+              below
+            </p>
+          </div>
+        </div>
+        <a href="https://www.buymeacoffee.com/manjus"
+          ><img
+            src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=manjus&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+        /></a>
+      </div>
+    </section>
+    <section style="padding: 10px !important">
+      <div class="container">
+        <h4>
+          Did you like the blog or have questions, please add your comments
+        </h4>
+        <div id="graphcomment"></div>
+        <script type="text/javascript">
+          /* - - - CONFIGURATION VARIABLES - - - */
+
+          // make sure the id is yours
+          window.gc_params = {
+            graphcomment_id: "www-manjustechblog-com",
+
+            // if your website has a fixed header, indicate it's height in pixels
+            fixed_header_height: 0,
+          };
+
+          /* - - - DON'T EDIT BELOW THIS LINE - - - */
+
+          (function () {
+            var gc = document.createElement("script");
+            gc.type = "text/javascript";
+            gc.async = true;
+            gc.src =
+              "https://graphcomment.com/js/integration.js?" +
+              Math.round(Math.random() * 1e8);
+            (
+              document.getElementsByTagName("head")[0] ||
+              document.getElementsByTagName("body")[0]
+            ).appendChild(gc);
+          })();
+        </script>
+      </div>
+    </section>
+    <!-- /#navbar -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-left">
+            <p class="social">
+              <a
+                href="http://www.facebook.com/shenoyvnm
+                            "
+                class="external facebook wow fadeInUp"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a
+                style="background-color: grey"
+                href="http://www.linkedin.com/in/manjunathshenoywebdev"
+                class="external linkedin wow fadeInUp"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </p>
+          </div>
+
+          <!-- /.6-->
+          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+            <p>© 2018 SManju. All rights reserved.</p>
+          </div>
+          <div class="col-12 mt-4">
+            <p class="template-bootstrapious">
+              Designed by
+              <a href="https://www.bootstrapious.com">Bootstrapious</a>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

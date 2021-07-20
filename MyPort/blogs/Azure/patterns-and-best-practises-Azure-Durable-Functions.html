@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2264462236439566",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-131742548-1");
+    </script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../js/prism.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".header").load("../../baseheader.html", function () {
+          setTimeout(
+            $("#headermenu").load("../../header.html #menu", function () {}),
+            250
+          ); // try diff. values
+        });
+      });
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="robots" content="all,follow" />
+    <meta name="googlebot" content="index,follow,snippet,archive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SManju</title>
+
+    <meta name="keywords" content="" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Bootstrap and Font Awesome css -->
+    <link
+      rel="stylesheet"
+      href="../../vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS-->
+    <link
+      rel="stylesheet"
+      href="../../vendor/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../../css/style.default.css" />
+    <link rel="stylesheet" href="../../css/prism.css" />
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"
+    ></script>
+
+    <!-- *** NAVBAR ***
+_________________________________________________________ -->
+    <header class="header"></header>
+    <!-- /#navbar -->
+
+    <br />
+    <section class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h3>
+              Patterns and Best Practises:Azure Durable Functions
+              <span style="font-size: 12px; color: blueviolet"
+                >21st July 2021</span
+              >
+            </h3>
+
+            <img
+              src="DurableFunctionBasics/azuredurablefunctionpatterns.jpg"
+              alt="azuredurablefunctionpatterns"
+              class="img-fluid"
+            />
+            <p>
+              We have already discussed a quite a bit about Azure Durable
+              Functions. I did write up on bit of history and why we need Azure
+              Durable functions. You can read that article here..link below
+              <a href="/why-do-we-need-azure-durable-functions"
+                >Why do we need Azure Durable Functions and its history</a
+              ><br />
+              I also wrote about
+              <a href="/what-is-azure-durable-function"
+                >what are azure durable functions</a
+              ><br />
+            </p>
+            <p>
+              We know that Durable Functions helps us simplify complex scearios
+              where state management is required in serverless applications.In
+              this article we will discuss about various application
+              patterns.These kinds of functions can be used for the following
+              patterns:
+            </p>
+            <h6 style="display: inline">Chaining:</h6>
+            To chain a sequence of functions in a specific order; <br />
+            <h6 style="display: inline">Fan-Out/Fan-In:</h6>
+            To execute one or more functions in parallel and based on the
+            results you run some other tasks.<br />
+            <h6 style="display: inline">Async HTTP APIs:</h6>
+            Usually implemented for long-running jobs;<br />
+            <h6 style="display: inline">Monitoring:</h6>
+            To monitor processes or operations; <br />
+            <h6 style="display: inline">Human interaction:</h6>
+            To create a process that needs manual intervention in order for the
+            task to complete.
+
+            <p>
+              I always like to depict the comparison as diagram as i guess it
+              helps understand the difference better. Please find below the
+              comaprison
+            </p>
+
+            <img
+              src="DurableFunctionBasics/applicationpatterns.jpeg"
+              alt="applicationpatterns"
+              class="img-fluid"
+            />
+            <p>
+              I have already discussed Function Chaining approach in my previous
+              article. I used that approach to solve our hypothetical egample
+              complexity. Link to that article
+              <a href="/what-is-azure-durable-function"
+                >what are azure durable functions</a
+              ><br />
+            </p>
+            <p>
+              In
+              <a href="/why-do-we-need-azure-durable-functions"
+                >Why do we need Azure Durable Functions and its history</a
+              >
+              we also discussed about a scenario when we might have to run
+              functions/actions parallely.For instance, what if we need to
+              reconcoile outputs of each task. Say your manager wants to know
+              how much the whole trip cost to the company. In this case,
+              <b>Book Bus</b> action and <b>Book accomodation</b> action results
+              need to be reconciled and then run a separate azure function may
+              be called <b>CostToCompany</b> which will do reporting
+              task.CostToCompany function may link to database and add it to say
+              some expenses table.Or may be wil generate some report. It is upto
+              you/CostToCompany task what you want to do with the expenses
+              received.To solve these kind of problems we need
+              <b>Sub-orchestrators</b>.Sub-orchestrators/child orchestratos are
+              called by "parent" orchestrator. Parent calls the chold
+              orchestrator using <b>context.CallSubOrchestratorAsync</b> method:
+            </p>
+            <pre><code class="language-html">
+
+              [FunctionName("MyParallelWorkFlow")]
+              public static async Task Sequential([OrchestrationTrigger] DurableOrchestrationContext context)
+              {
+                  //Any other actions go here
+                  var reserveBus = context.CallSubOrchestratorAsync("ReserveBus", bookBus);
+                  var bookAccomodation = context.CallSubOrchestratorAsync("BookAccomodation", bookAccomodation);
+                  var expenses= await Task.WhenAll(reserveBus, bookAccomodation);
+                  await context.CallActivityAsync("CostToCompany", expenses);
+
+              }
+              </code>
+              </pre>
+            <p>
+              <b>Task.WhenAll</b> returns an array of results (one result per
+              each input task).This array of result is then passed on to the
+              reporting activity.
+            </p>
+            <p>
+              Now the interesting part is <b>Billing</b>.Azure Functions on the
+              serverless consumption-based plan are billed per execution + per
+              duration of execution.One thing to notes with orchestration is
+              that what it orchestreates usaauly isasynchronous which means we
+              don't know exactly when something finishes.So that you dont pay
+              the runing csts for it, durable functions powers down and saves
+              the state.
+            </p>
+            <p>
+              When an orhcstration functoins is given more work to do, for eg
+              say a response message is recieved, the orchestrator wakes up and
+              and re-executes the entire function .It always starts with the
+              first line and means that the same line is executed multiple
+              times.Ofcourse its not dumb to restart everything from sctarch.It
+              stores the hstry of the past executuins in Azure Storage,so the
+              effect of second pass or every subseqeunt pass of the first line
+              is different. During the replay,if code ties to call a function,
+              then Durable Task frameowkrs internally checks exucetion hisoty of
+              current orchestration If it finds that activity function has
+              already exiected and yieled a resilt,it replays the funciton's
+              reuslt and the orchestrator code continues to run.
+            </p>
+            <p>
+              Because of these “replays”, the orchestrator’s implementation has
+              to be deterministic: don’t use DateTime.Now, random numbers or
+              multi-thread operations; more details here.The whole behavious of
+              orcehstraot is like stop-resume behaoir
+            </p>
+            <h6>Error handling</h6>
+            <img
+              src="DurableFunctionBasics/errorhandling.jpg"
+              alt="errorhandling"
+              class="img-fluid"
+              style="margin-left: 10em"
+            /><br />
+            <p>
+              Now in the previous artilce we also discussed about the
+              possibility of errors, like what if third pary bus reserving
+              application is down.Then our application need to handle the error
+              gracefully or even run some compesnating logic, for instance roll
+              back the whole workflow or book a cab may be. Instead of silently
+              failing,activity function, in tis case booking bus functoin sends
+              a message contiantoin information about error back to the
+              orchestarot. Orchestraor dersealised the error detial, and at the
+              time of replays throws a .NET epection. The developer can handle
+              the expcetion using a try..catch block around the call and decide
+              what to do.For eg.
+            </p>
+            <pre><code class="language-html">
+
+              [FunctionName("MyworkflowWithCompensatingLogic")]
+              public static async Task Sequential([OrchestrationTrigger] DurableOrchestrationContext context)
+              {
+                  var symposium = await context.CallActivityAsync("BookTechSymposium", "Trip");
+                  try{
+                  var travelViaBus = await context.CallActivityAsync("ReserveBus", symposium.Response.Dates);
+                  }catch(Exception){
+                    var travelViaCab= await context.CallActivityAsync("BookCab", symposium.Response.Dates);
+                  }
+                  await context.CallActivityAsync("BookAccomodation", travel.Response.Dates);
+              }
+              </code>
+              </pre>
+            <p>
+              You can even apply a automatic retry policy.All you need to use is
+              <b>RetryOptions</b>.Below code asks the library to:
+            </p>
+            <ul style="display: inline">
+              <li class="liStyleWithoutDots" style="margin-top: -2%">
+                Retry upto 3 times
+              </li>
+              <li>Wait for 1 minute before the first retry</li>
+              <li>
+                If error is not intermittient, there is no point retying
+                immediatly. We can configure client to retry the request
+                periodically with increased delays between requests. Here we
+                have Backoff coefficient as 2 which means delays increase y
+                factor of 2. i.e first one happens in 1 min, sec one after 2
+                .thired adrer 4 mins and so on etc.)
+              </li>
+            </ul>
+
+            <pre><code class="language-html">
+
+              [FunctionName("MyworkflowWithRetry")]
+              public static async Task Sequential([OrchestrationTrigger] DurableOrchestrationContext context)
+              {
+                  var symposium = await context.CallActivityAsync("BookTechSymposium", "Trip");
+
+                  var myRetryOptions= new RetryOptions(
+                    firstRetryInterval: TimeSpan.FromMinutes(1),
+                    maxNumberOfAttempts: 3);
+                   myRetryOptions.BackoffCoefficient = 2.0;
+
+                    var travelViaBus = await context.CallActivityAsync("ReserveBus",myRetryOptions, symposium.Response.Dates);                   
+                    await context.CallActivityAsync("BookAccomodation", travel.Response.Dates);
+              }
+              </code>
+              </pre>
+
+            <h6 style="display: inline">Conclusion.</h6>
+            <p style="display: inline">
+              To conclude,I hope you would have got better hold on Azure Durable
+              functions. I have written a separate article comparing Azure
+              Durable Functions with logic apps. Link <a href="">here</a> <br />
+              There is another article where I have mentioned various
+              application patterns that can benefit from Azure Durable functions
+              <a href="what-is-api-schema.html">What is API-Schema</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <p>
+              Email me at "techspacedeck@gmail.com" incase you have queries.
+              Alternatively, you can fill the "CONTACT" form or drop a comment
+              below
+            </p>
+          </div>
+        </div>
+        <a href="https://www.buymeacoffee.com/manjus"
+          ><img
+            src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=manjus&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+        /></a>
+      </div>
+    </section>
+    <section style="padding: 10px !important">
+      <div class="container">
+        <h4>
+          Did you like the blog or have questions, please add your comments
+        </h4>
+        <div id="graphcomment"></div>
+        <script type="text/javascript">
+          /* - - - CONFIGURATION VARIABLES - - - */
+
+          // make sure the id is yours
+          window.gc_params = {
+            graphcomment_id: "www-manjustechblog-com",
+
+            // if your website has a fixed header, indicate it's height in pixels
+            fixed_header_height: 0,
+          };
+
+          /* - - - DON'T EDIT BELOW THIS LINE - - - */
+
+          (function () {
+            var gc = document.createElement("script");
+            gc.type = "text/javascript";
+            gc.async = true;
+            gc.src =
+              "https://graphcomment.com/js/integration.js?" +
+              Math.round(Math.random() * 1e8);
+            (
+              document.getElementsByTagName("head")[0] ||
+              document.getElementsByTagName("body")[0]
+            ).appendChild(gc);
+          })();
+        </script>
+      </div>
+    </section>
+    <!-- /#navbar -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-left">
+            <p class="social">
+              <a
+                href="http://www.facebook.com/shenoyvnm
+                            "
+                class="external facebook wow fadeInUp"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a
+                style="background-color: grey"
+                href="http://www.linkedin.com/in/manjunathshenoywebdev"
+                class="external linkedin wow fadeInUp"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </p>
+          </div>
+
+          <!-- /.6-->
+          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+            <p>© 2018 SManju. All rights reserved.</p>
+          </div>
+          <div class="col-12 mt-4">
+            <p class="template-bootstrapious">
+              Designed by
+              <a href="https://www.bootstrapious.com">Bootstrapious</a>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
