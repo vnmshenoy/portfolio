@@ -155,12 +155,14 @@ _________________________________________________________ -->
               we also discussed about a scenario when we might have to run
               functions/actions parallely.For instance, what if we need to
               reconcoile outputs of each task. Say your manager wants to know
-              how much the whole trip cost to the company. In this case,
-              <b>Book Bus</b> action and <b>Book accomodation</b> action results
-              need to be reconciled and then run a separate azure function may
-              be called <b>CostToCompany</b> which will do reporting
-              task.CostToCompany function may link to database and add it to say
-              some expenses table.Or may be wil generate some report. It is upto
+              how much the whole trip cost to the company. And
+              <b>Fan out/Fan-in</b> is the perfect use case to solve that
+              issue.In our egample, <b>Book Bus</b> action and
+              <b>Book accomodation</b> action results need to be reconciled and
+              then run a separate azure function may be called
+              <b>CostToCompany</b> which will do reporting task.CostToCompany
+              function may link to database and add it to say some expenses
+              table.Or may be wil generate some report. It is upto
               you/CostToCompany task what you want to do with the expenses
               received.To solve these kind of problems we need
               <b>Sub-orchestrators</b>.Sub-orchestrators/child orchestratos are
@@ -186,115 +188,15 @@ _________________________________________________________ -->
               each input task).This array of result is then passed on to the
               reporting activity.
             </p>
-            <p>
-              Now the interesting part is <b>Billing</b>.Azure Functions on the
-              serverless consumption-based plan are billed per execution + per
-              duration of execution.One thing to notes with orchestration is
-              that what it orchestreates usaauly isasynchronous which means we
-              don't know exactly when something finishes.So that you dont pay
-              the runing csts for it, durable functions powers down and saves
-              the state.
-            </p>
-            <p>
-              When an orhcstration functoins is given more work to do, for eg
-              say a response message is recieved, the orchestrator wakes up and
-              and re-executes the entire function .It always starts with the
-              first line and means that the same line is executed multiple
-              times.Ofcourse its not dumb to restart everything from sctarch.It
-              stores the hstry of the past executuins in Azure Storage,so the
-              effect of second pass or every subseqeunt pass of the first line
-              is different. During the replay,if code ties to call a function,
-              then Durable Task frameowkrs internally checks exucetion hisoty of
-              current orchestration If it finds that activity function has
-              already exiected and yieled a resilt,it replays the funciton's
-              reuslt and the orchestrator code continues to run.
-            </p>
-            <p>
-              Because of these “replays”, the orchestrator’s implementation has
-              to be deterministic: don’t use DateTime.Now, random numbers or
-              multi-thread operations; more details here.The whole behavious of
-              orcehstraot is like stop-resume behaoir
-            </p>
-            <h6>Error handling</h6>
-            <img
-              src="DurableFunctionBasics/errorhandling.jpg"
-              alt="errorhandling"
-              class="img-fluid"
-              style="margin-left: 10em"
-            /><br />
-            <p>
-              Now in the previous artilce we also discussed about the
-              possibility of errors, like what if third pary bus reserving
-              application is down.Then our application need to handle the error
-              gracefully or even run some compesnating logic, for instance roll
-              back the whole workflow or book a cab may be. Instead of silently
-              failing,activity function, in tis case booking bus functoin sends
-              a message contiantoin information about error back to the
-              orchestarot. Orchestraor dersealised the error detial, and at the
-              time of replays throws a .NET epection. The developer can handle
-              the expcetion using a try..catch block around the call and decide
-              what to do.For eg.
-            </p>
-            <pre><code class="language-html">
-
-              [FunctionName("MyworkflowWithCompensatingLogic")]
-              public static async Task Sequential([OrchestrationTrigger] DurableOrchestrationContext context)
-              {
-                  var symposium = await context.CallActivityAsync("BookTechSymposium", "Trip");
-                  try{
-                  var travelViaBus = await context.CallActivityAsync("ReserveBus", symposium.Response.Dates);
-                  }catch(Exception){
-                    var travelViaCab= await context.CallActivityAsync("BookCab", symposium.Response.Dates);
-                  }
-                  await context.CallActivityAsync("BookAccomodation", travel.Response.Dates);
-              }
-              </code>
-              </pre>
-            <p>
-              You can even apply a automatic retry policy.All you need to use is
-              <b>RetryOptions</b>.Below code asks the library to:
-            </p>
-            <ul style="display: inline">
-              <li class="liStyleWithoutDots" style="margin-top: -2%">
-                Retry upto 3 times
-              </li>
-              <li>Wait for 1 minute before the first retry</li>
-              <li>
-                If error is not intermittient, there is no point retying
-                immediatly. We can configure client to retry the request
-                periodically with increased delays between requests. Here we
-                have Backoff coefficient as 2 which means delays increase y
-                factor of 2. i.e first one happens in 1 min, sec one after 2
-                .thired adrer 4 mins and so on etc.)
-              </li>
-            </ul>
-
-            <pre><code class="language-html">
-
-              [FunctionName("MyworkflowWithRetry")]
-              public static async Task Sequential([OrchestrationTrigger] DurableOrchestrationContext context)
-              {
-                  var symposium = await context.CallActivityAsync("BookTechSymposium", "Trip");
-
-                  var myRetryOptions= new RetryOptions(
-                    firstRetryInterval: TimeSpan.FromMinutes(1),
-                    maxNumberOfAttempts: 3);
-                   myRetryOptions.BackoffCoefficient = 2.0;
-
-                    var travelViaBus = await context.CallActivityAsync("ReserveBus",myRetryOptions, symposium.Response.Dates);                   
-                    await context.CallActivityAsync("BookAccomodation", travel.Response.Dates);
-              }
-              </code>
-              </pre>
-
             <h6 style="display: inline">Conclusion.</h6>
             <p style="display: inline">
-              To conclude,I hope you would have got better hold on Azure Durable
-              functions. I have written a separate article comparing Azure
-              Durable Functions with logic apps. Link <a href="">here</a> <br />
-              There is another article where I have mentioned various
-              application patterns that can benefit from Azure Durable functions
-              <a href="what-is-api-schema.html">What is API-Schema</a>
+              To conclude,I hope you guys would have got the basics of various
+              application patterns available and that can benefit from Azure
+              Durable function.If you want to know the difference between Azure
+              Durable functions and logic apps please refer my blog. T
+              <a href="patterns-and-best-practises-Azure-Durable-Functions.html"
+                >Patterns And Best Practises- Azure Durable Functions</a
+              >
             </p>
           </div>
         </div>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2264462236439566",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131742548-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-131742548-1");
+    </script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../js/prism.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".header").load("../../baseheader.html", function () {
+          setTimeout(
+            $("#headermenu").load("../../header.html #menu", function () {}),
+            250
+          ); // try diff. values
+        });
+      });
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="robots" content="all,follow" />
+    <meta name="googlebot" content="index,follow,snippet,archive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SManju</title>
+
+    <meta name="keywords" content="" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Bootstrap and Font Awesome css -->
+    <link
+      rel="stylesheet"
+      href="../../vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS-->
+    <link
+      rel="stylesheet"
+      href="../../vendor/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../../css/style.default.css" />
+    <link rel="stylesheet" href="../../css/prism.css" />
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"
+    ></script>
+
+    <!-- *** NAVBAR ***
+_________________________________________________________ -->
+    <header class="header"></header>
+    <!-- /#navbar -->
+
+    <br />
+    <section class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 themed-grid-col">
+            <h3>
+              What is difference between Azure Durable Function & Logic App
+              <span style="font-size: 12px; color: blueviolet"
+                >21st July 2021</span
+              >
+            </h3>
+
+            <img
+              src="DurableFunctionBasics/logicappvsazuredurablefunction.jpg"
+              alt="logicappvsazuredurablefunction"
+              class="img-fluid"
+            />
+            <p>
+              We have already discussed a quite a bit about Azure Durable
+              Functions. I did write up on bit of history and why we need Azure
+              Durable functions. You can read that article here..link below
+              <a href="/why-do-we-need-azure-durable-functions.html"
+                >Why do we need Azure Durable Functions and its history</a
+              ><br />
+              I also wrote about
+              <a href="/what-is-azure-durable-function.html"
+                >what are azure durable functions</a
+              ><br />
+              And then if you are keen to know about various application
+              patterns available and that can benefit from Azure Durable
+              function then read my article
+              <a
+                href="/patterns-and-best-practises-Azure-Durable-Functions.html"
+                >Patterns and Best Practises:Azure Durable Functions</a
+              ><br />
+            </p>
+            <p>
+              Microsoft's Azure has two great tools for creating a workflow. One
+              is <b>Azure Logic Apps</b> and other is <b> Azure Functions</b>.
+              Until recently, one could argue that Azure Functions were code
+              triggered by events while Logic Apps were event-triggered
+              workflows. However, after the release of Azure Durable Functions,
+              things changed. Azure Durable Functions, a cloud implementation of
+              the durable task framework, offers you a way to define a workflow
+              using code and therefore I guess developers love it more since it
+              offers more control to developers.Durable Functions is an
+              extension of Azure Functions that allows you to add statefullness
+              to otherwise stateless serverless applications. On the other
+              hand,with Azure Logic Apps you can create stateful and serverless
+              workflows through a visual designer and there is no need to write
+              any code. If you are architecting a solution and you have to
+              choose one of these two options, you might be wondering how to
+              choose between Azure Durable Functions and Logic Apps. This blog
+              of mine,tries to solve exactly that by comparing both platforms
+              and therefore shedding some light that may help you better choose
+              a platform that fits your needs
+            </p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Solution</th>
+                  <th scope="col">Azure Durable Functions</th>
+                  <th scope="col">Logic Apps</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Summary</th>
+                  <td>
+                    Azure Functions is a serverless compute service that lets
+                    you run event-triggered code without having to explicitly
+                    provision or manage infrastructure. You can build Azure
+                    Functions in various languages like C#, F#, Node.js &
+                    Typescript, Python, Java and Powershell.
+                  </td>
+                  <td>
+                    Azure Logic Apps is a cloud service that helps you schedule,
+                    automate, and orchestrate tasks, business processes, and
+                    workflows when you need to integrate apps, data, systems,
+                    and services across enterprises or organizations.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Development</th>
+                  <td>
+                    Code First (imperative) <br />Since it is code first
+                    developers love it more
+                  </td>
+                  <td>“Designer-First” (declarative) experience</td>
+                </tr>
+                <tr>
+                  <th scope="row">Connectivity & Actions</th>
+                  <td>
+                    About a dozen built-in binding types(mainly for other Azure
+                    services).<br />You can write custom code to create bindings
+                    as per your need (If there isn’t an existing binding
+                    available already). <br />There is lightweight but limited
+                    configuration available within the Azure Portal. Unlike
+                    Logic Apps there is no visual workflow designer
+                    available.<br />Azure Functions do not have connectors. It
+                    relies on triggers and input and output bindings – like
+                    Event Hubs, Service Bus, Cosmos DB and Storage.
+                    <br />Bindings in Azure Functions provide a way to connect
+                    to data with code declaratively. List of bindings are very
+                    much limited when you compare with Logic Apps
+                  </td>
+                  <td>
+                    <ul style="margin-left: -2em">
+                      Logic Apps have plenty of connectors to:<br />
+                      <li style="margin-left: 2em">Azure Services,</li>
+                      <li style="margin-left: 2em">
+                        SaaS applications (Microsoft and others),
+                      </li>
+                      <li style="margin-left: 2em">FTP and</li>
+                      <li style="margin-left: 2em">
+                        Enterprise Integration Pack for B2B scenarios
+                      </li>
+                    </ul>
+                    Furthermore, it has the ability to build custom connectors
+                    if one isn’t available.Each pre-existing connector has a
+                    collection of ready-made actions. You integrate custom logic
+                    through custom connectors.Has a visual workflow designer
+                    available via the Azure Portal.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Execution Context</th>
+                  <td>
+                    Can run locally, on any self managed server, in containers
+                    or in Azure (serverless).
+                  </td>
+                  <td>Runs only in Azure</td>
+                </tr>
+                <tr>
+                  <th scope="row">Development Experience</th>
+                  <td>
+                    Code being triggered by an event <br />Can be developed and
+                    debugged on local workstation, which is a big plus to
+                    increase developer productivity
+                  </td>
+                  <td>
+                    Worfklow triggered by an event <br />
+                    Cannot debug ,test or run run Logic Apps locally, as it runs
+                    only in cloud and has a depdency on Microsoft-managed
+                    connectors(mixed)
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Monitoring</th>
+                  <td>
+                    Done through Azure Application Insights . Its little tough
+                    to manage/monitor for non-technical users
+                  </td>
+                  <td>
+                    Azure portal, Azure Monitor logs. Much easier for
+                    non-technical users to manage as .Each run can be monitored
+                    within the Azure portal (mixed)
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Deployment</th>
+                  <td>
+                    Like mentioned above, Azure functions are code first.
+                    <ul style="margin-left: -2.5em">
+                      Options for deployment are through:
+                      <li style="margin-left: 2em">Visual Studio,</li>
+                      <li style="margin-left: 2em">Azure DevOps,</li>
+                      <li style="margin-left: 2em">FTP</li>
+                    </ul>
+                  </td>
+                  <td>
+                    Logic apps can be created & updated directly in the azure
+                    portal. What it also means is that it will create a JSON
+                    template. This JSON template can also be deployed via Az
+                    DevOps and Visual Studio (Mixed)
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Exception Handling</th>
+                  <td>
+                    Since it is code driven, you need to build your own
+                    exceptional handling. For eg, say you want to handle a
+                    scenario where your application falls over when trying to
+                    connect to third party system, then you should create the
+                    logic yourself. There are no retry, resume or resubmit
+                    capabilities, unless ofcourse your develop them yourself
+                    using standard <b>try-catch</b> .With Azure Functions you do
+                    not have the out-of-the-box retry capability like Logic Apps
+                    except for Azure Queue and Blob Storage
+                  </td>
+                  <td>
+                    Provide out of the box functionality with retries,scopes and
+                    run after configuration. Incase you still have issues, you
+                    can solve the problem by reviewing it in the azure portal,
+                    looking for a workflow that gets a failed status and then
+                    you can easily resubmit it.
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Details</th>
+                  <td>
+                    <a
+                      href="https://azure.microsoft.com/en-us/pricing/details/functions"
+                      >Azure Documentation link for Azure functions on
+                      pricing</a
+                    >
+                  </td>
+                  <td>
+                    <a
+                      href="https://azure.microsoft.com/en-us/pricing/details/logic-apps/"
+                      >Azure Documentation link for Logic Apps on pricing</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h6 style="display: inline">Conclusion.</h6>
+            <p style="display: inline">
+              To conclude,I hope you would have got a better understanding on
+              which platform to select when given a choice to architect your
+              application. The platform better suited really depends on the
+              functional and non-functional requirements and also on your
+              preferences.The choice between the two is on how much control you
+              need and how complex is your target solution.As a wrap up,we could
+              say that <br /><b>Use Logic apps when:</b>
+            </p>
+            <br />
+            <h6 style="display: inline">1.</h6>
+            For fast and codeless services integrations. Use it for high-load
+            and performance sensitive tasks.Since there are extensive list of
+            connectors,time-to-market may be shortened
+            <br />
+            <h6 style="display: inline">2.</h6>
+            If it's ok to just run on Azure
+            <br />
+            <h6 style="display: inline">3.</h6>
+            Less coding is preferred.It has a visual designer
+            <br />
+            <h6 style="display: inline">4.</h6>
+            Visual tools to manage and troubleshoot workflows are required
+            <br />
+            <b>Use Azure Durable functions when:</b>
+            <h6 style="display: inline">1.</h6>
+            Provides an excellent out-of-the-box solution for various scenarios
+            that cannot be held by Azure FaaS service alone.
+            <br />
+            <h6 style="display: inline">2.</h6>
+            The list of available bindings is sufficient to meet the
+            requirements,
+
+            <br />
+            <h6 style="display: inline">3.</h6>
+            You prefer to have all the power and flexibility of a robust
+            programming language.
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-9 themed-grid-col">
+            <p>
+              Email me at "techspacedeck@gmail.com" incase you have queries.
+              Alternatively, you can fill the "CONTACT" form or drop a comment
+              below
+            </p>
+          </div>
+        </div>
+        <a href="https://www.buymeacoffee.com/manjus"
+          ><img
+            src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=manjus&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+        /></a>
+      </div>
+    </section>
+    <section style="padding: 10px !important">
+      <div class="container">
+        <h4>
+          Did you like the blog or have questions, please add your comments
+        </h4>
+        <div id="graphcomment"></div>
+        <script type="text/javascript">
+          /* - - - CONFIGURATION VARIABLES - - - */
+
+          // make sure the id is yours
+          window.gc_params = {
+            graphcomment_id: "www-manjustechblog-com",
+
+            // if your website has a fixed header, indicate it's height in pixels
+            fixed_header_height: 0,
+          };
+
+          /* - - - DON'T EDIT BELOW THIS LINE - - - */
+
+          (function () {
+            var gc = document.createElement("script");
+            gc.type = "text/javascript";
+            gc.async = true;
+            gc.src =
+              "https://graphcomment.com/js/integration.js?" +
+              Math.round(Math.random() * 1e8);
+            (
+              document.getElementsByTagName("head")[0] ||
+              document.getElementsByTagName("body")[0]
+            ).appendChild(gc);
+          })();
+        </script>
+      </div>
+    </section>
+    <!-- /#navbar -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-left">
+            <p class="social">
+              <a
+                href="http://www.facebook.com/shenoyvnm
+                            "
+                class="external facebook wow fadeInUp"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a
+                style="background-color: grey"
+                href="http://www.linkedin.com/in/manjunathshenoywebdev"
+                class="external linkedin wow fadeInUp"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </p>
+          </div>
+
+          <!-- /.6-->
+          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+            <p>© 2018 SManju. All rights reserved.</p>
+          </div>
+          <div class="col-12 mt-4">
+            <p class="template-bootstrapious">
+              Designed by
+              <a href="https://www.bootstrapious.com">Bootstrapious</a>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
